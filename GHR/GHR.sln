@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Duty Management", "Duty Management", "{23BF2484-038D-4F22-A722-0AD45D5B8A04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Access Control", "Access Control", "{912C52D8-9EBC-4F04-AF9C-86949862BBEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Guest Experience", "Guest Experience", "{24F1A85A-4DA2-4D22-AD64-1E7E2917EFBA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facility", "Facility", "{012C3579-B9FD-485B-952F-CFA39F19B709}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rating", "Rating", "{51C23A56-2ACF-4587-99A1-3430891BCD28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notification", "Notification", "{9A9D7FFD-7AE2-43A0-801A-227D6A288C88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Restaurant", "Restaurant", "{D8C77E7A-813F-42AD-B83A-1E22F33C8855}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fitness", "Fitness", "{38398136-1CA1-4569-BC9D-D6773D0F2EFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DiscoClub", "DiscoClub", "{A701A0D4-35A1-467D-B59A-E90799AD1EC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bar", "Bar", "{CAA8609F-1F4F-4C38-B743-66AA1DA402AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Casino", "Casino", "{AFB0E6A4-2D6D-42F7-95D4-F9B6575D8EC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reviews", "Reviews", "{537978F5-1109-42F0-92E9-58AA5ABF5004}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.DutyManagement", "GHR.DutyManagement\GHR.DutyManagement.csproj", "{D03BA096-8DC9-47CC-84A3-64FF6E564D40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedKernel", "SharedKernel", "{671CC6B9-C8D6-4C8C-ABA8-9B6032FD2CC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.SharedKernel", "SharedKernel\GHR.SharedKernel.csproj", "{57414928-2AA1-40B8-B38E-817D335AE486}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D03BA096-8DC9-47CC-84A3-64FF6E564D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D03BA096-8DC9-47CC-84A3-64FF6E564D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D03BA096-8DC9-47CC-84A3-64FF6E564D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D03BA096-8DC9-47CC-84A3-64FF6E564D40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57414928-2AA1-40B8-B38E-817D335AE486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57414928-2AA1-40B8-B38E-817D335AE486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57414928-2AA1-40B8-B38E-817D335AE486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57414928-2AA1-40B8-B38E-817D335AE486}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D03BA096-8DC9-47CC-84A3-64FF6E564D40} = {23BF2484-038D-4F22-A722-0AD45D5B8A04}
+		{57414928-2AA1-40B8-B38E-817D335AE486} = {671CC6B9-C8D6-4C8C-ABA8-9B6032FD2CC6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC485270-F995-4C95-BE73-8B2BFFECB5CD}
+	EndGlobalSection
+EndGlobal

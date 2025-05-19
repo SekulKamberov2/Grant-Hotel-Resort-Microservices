@@ -1,0 +1,6 @@
+@GHR.DutyManagement_HostAddress = http://localhost:5254
+
+GET {{GHR.DutyManagement_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
