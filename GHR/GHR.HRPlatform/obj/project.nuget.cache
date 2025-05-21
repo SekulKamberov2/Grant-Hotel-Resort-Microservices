@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "/VnPSz7BuuE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\GHR.HRPlatform.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.5\\microsoft.aspnetcore.authentication.jwtbearer.9.0.5.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.5\\microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.5\\microsoft.extensions.dependencyinjection.abstractions.9.0.5.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.5\\microsoft.extensions.logging.abstractions.9.0.5.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.10.0\\microsoft.identitymodel.abstractions.8.10.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.10.0\\microsoft.identitymodel.jsonwebtokens.8.10.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.identitymodel.logging\\8.10.0\\microsoft.identitymodel.logging.8.10.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.identitymodel.protocols\\8.0.1\\microsoft.identitymodel.protocols.8.0.1.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\8.0.1\\microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.10.0\\microsoft.identitymodel.tokens.8.10.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.22.1-preview.1\\microsoft.visualstudio.azure.containers.tools.targets.1.22.1-preview.1.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.0.1\\system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

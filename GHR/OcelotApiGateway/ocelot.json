@@ -55,6 +55,38 @@
       "LoadBalancerOptions": {
         "Type": "RoundRobin"
       }
+    },
+    {
+      "DownstreamPathTemplate": "/api/hrplatform/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8082,
+          "#" "Pointing",
+          "to" "the",
+          "HR" "Platform",
+          "service"
+        }
+      ],
+      "UpstreamPathTemplate": "/hrplatform/api/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 60,
+        "Limit": 10
+      },
+      "AddHeadersToRequest": {
+        "X-Gateway-From": "Ocelot"
+      },
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
     }
   ],
   "GlobalConfiguration": {

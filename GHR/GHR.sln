@@ -41,6 +41,108 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ocelot", "Ocelot", "{8936E4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGateway", "OcelotApiGateway\OcelotApiGateway.csproj", "{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityClient", "IdentityClient", "{516A7882-EFDC-45B8-9E93-E69A23D67651}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\.gitignore = IdentityClient\.gitignore
+		IdentityClient\package-lock.json = IdentityClient\package-lock.json
+		IdentityClient\package.json = IdentityClient\package.json
+		IdentityClient\README.md = IdentityClient\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "public", "public", "{E964265B-6626-447F-8CB1-4F930E9B69DA}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\public\favicon.ico = IdentityClient\public\favicon.ico
+		IdentityClient\public\index.html = IdentityClient\public\index.html
+		IdentityClient\public\logo192.png = IdentityClient\public\logo192.png
+		IdentityClient\public\logo512.png = IdentityClient\public\logo512.png
+		IdentityClient\public\manifest.json = IdentityClient\public\manifest.json
+		IdentityClient\public\robots.txt = IdentityClient\public\robots.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{37284228-5A06-4017-B101-1BCF1109DCC9}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\src\App.css = IdentityClient\src\App.css
+		IdentityClient\src\App.js = IdentityClient\src\App.js
+		IdentityClient\src\App.test.js = IdentityClient\src\App.test.js
+		IdentityClient\src\index.css = IdentityClient\src\index.css
+		IdentityClient\src\index.js = IdentityClient\src\index.js
+		IdentityClient\src\logo.svg = IdentityClient\src\logo.svg
+		IdentityClient\src\reportWebVitals.js = IdentityClient\src\reportWebVitals.js
+		IdentityClient\src\setupTests.js = IdentityClient\src\setupTests.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{FAE9C9C5-2789-40AC-B3E2-B7C7BBB6F33F}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\src\api\axios.js = IdentityClient\src\api\axios.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{FDB5B54C-BA23-4665-8987-3358E37C39E9}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\src\components\Button.jsx = IdentityClient\src\components\Button.jsx
+		IdentityClient\src\components\ErrorNotification.jsx = IdentityClient\src\components\ErrorNotification.jsx
+		IdentityClient\src\components\Input.jsx = IdentityClient\src\components\Input.jsx
+		IdentityClient\src\components\UserLayout.jsx = IdentityClient\src\components\UserLayout.jsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pages", "pages", "{B6083F8F-9233-4504-9D53-4E3E248F1BD3}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\src\pages\AllUsers.jsx = IdentityClient\src\pages\AllUsers.jsx
+		IdentityClient\src\pages\CreateRole.jsx = IdentityClient\src\pages\CreateRole.jsx
+		IdentityClient\src\pages\EditUser.jsx = IdentityClient\src\pages\EditUser.jsx
+		IdentityClient\src\pages\Login.jsx = IdentityClient\src\pages\Login.jsx
+		IdentityClient\src\pages\ProfilePage.jsx = IdentityClient\src\pages\ProfilePage.jsx
+		IdentityClient\src\pages\Roles.jsx = IdentityClient\src\pages\Roles.jsx
+		IdentityClient\src\pages\SignIn.jsx = IdentityClient\src\pages\SignIn.jsx
+		IdentityClient\src\pages\SignUp.jsx = IdentityClient\src\pages\SignUp.jsx
+		IdentityClient\src\pages\UnauthorizedPage.jsx = IdentityClient\src\pages\UnauthorizedPage.jsx
+		IdentityClient\src\pages\UpdateUserPage.jsx = IdentityClient\src\pages\UpdateUserPage.jsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "redux", "redux", "{DF061EE5-901C-4416-A7DB-6C4DEACAA9D5}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\src\redux\store.js = IdentityClient\src\redux\store.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "routes", "routes", "{36087983-D7CB-4D4A-B6A3-B1F6EBA6F9CE}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\src\routes\ProtectedRoute.js = IdentityClient\src\routes\ProtectedRoute.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{077376C5-623C-4827-8834-6CFBFECEDA9F}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\src\services\apiService.js = IdentityClient\src\services\apiService.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "styles", "styles", "{BE47036F-055D-41D9-A8F6-474DF8B51242}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\src\styles\ProfilePage.css = IdentityClient\src\styles\ProfilePage.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utils", "utils", "{911674B5-74AC-422C-8F51-2676BF368371}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\src\utils\auth.js = IdentityClient\src\utils\auth.js
+		IdentityClient\src\utils\roles.js = IdentityClient\src\utils\roles.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "features", "features", "{34502BF7-3C99-4FC9-9870-D2123259D606}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\src\redux\features\usersSlice.js = IdentityClient\src\redux\features\usersSlice.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{FD7180A6-ABFC-4855-90AC-757A77A60B81}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\src\redux\services\apiSlice.js = IdentityClient\src\redux\services\apiSlice.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "auth", "auth", "{B8973237-2CA4-411C-861E-AA37C58EC033}"
+	ProjectSection(SolutionItems) = preProject
+		IdentityClient\src\redux\features\auth\authSlice.js = IdentityClient\src\redux\features\auth\authSlice.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HR Platform", "HR Platform", "{A12D0CA7-1C36-446E-94A8-5D53CB53F11B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.HRPlatform", "GHR.HRPlatform\GHR.HRPlatform.csproj", "{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +165,10 @@ Global
 		{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +178,20 @@ Global
 		{57414928-2AA1-40B8-B38E-817D335AE486} = {671CC6B9-C8D6-4C8C-ABA8-9B6032FD2CC6}
 		{56604C4E-613A-40B3-980C-4D9A59BD4728} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{B81826A8-5C3D-4063-9F7A-9A5A9863BC45} = {8936E41D-56F4-4D79-A5A4-EBC9A6766700}
+		{E964265B-6626-447F-8CB1-4F930E9B69DA} = {516A7882-EFDC-45B8-9E93-E69A23D67651}
+		{37284228-5A06-4017-B101-1BCF1109DCC9} = {516A7882-EFDC-45B8-9E93-E69A23D67651}
+		{FAE9C9C5-2789-40AC-B3E2-B7C7BBB6F33F} = {37284228-5A06-4017-B101-1BCF1109DCC9}
+		{FDB5B54C-BA23-4665-8987-3358E37C39E9} = {37284228-5A06-4017-B101-1BCF1109DCC9}
+		{B6083F8F-9233-4504-9D53-4E3E248F1BD3} = {37284228-5A06-4017-B101-1BCF1109DCC9}
+		{DF061EE5-901C-4416-A7DB-6C4DEACAA9D5} = {37284228-5A06-4017-B101-1BCF1109DCC9}
+		{36087983-D7CB-4D4A-B6A3-B1F6EBA6F9CE} = {37284228-5A06-4017-B101-1BCF1109DCC9}
+		{077376C5-623C-4827-8834-6CFBFECEDA9F} = {37284228-5A06-4017-B101-1BCF1109DCC9}
+		{BE47036F-055D-41D9-A8F6-474DF8B51242} = {37284228-5A06-4017-B101-1BCF1109DCC9}
+		{911674B5-74AC-422C-8F51-2676BF368371} = {37284228-5A06-4017-B101-1BCF1109DCC9}
+		{34502BF7-3C99-4FC9-9870-D2123259D606} = {DF061EE5-901C-4416-A7DB-6C4DEACAA9D5}
+		{FD7180A6-ABFC-4855-90AC-757A77A60B81} = {DF061EE5-901C-4416-A7DB-6C4DEACAA9D5}
+		{B8973237-2CA4-411C-861E-AA37C58EC033} = {34502BF7-3C99-4FC9-9870-D2123259D606}
+		{272F2276-BE2A-4E03-A6CC-55298C0CD7AD} = {A12D0CA7-1C36-446E-94A8-5D53CB53F11B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC485270-F995-4C95-BE73-8B2BFFECB5CD}

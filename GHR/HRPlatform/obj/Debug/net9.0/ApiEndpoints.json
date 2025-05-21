@@ -1,0 +1,208 @@
+[
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/People/admin/all-roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "AssignRoleToUser",
+    "RelativePath": "api/People/admin/assign-role",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "body",
+        "Type": "PeopleManagementAPI.Models.AssignRoleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "ResetPasswordAsync",
+    "RelativePath": "api/People/admin/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "body",
+        "Type": "PeopleManagementAPI.Models.ResetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/People/all-users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "CreateRole",
+    "RelativePath": "api/People/create-role",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleModel",
+        "Type": "PeopleManagementAPI.Models.RoleBindingDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "DeleteRole",
+    "RelativePath": "api/People/delete-role/{roleId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/People/delete-user/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "GetUserInfo",
+    "RelativePath": "api/People/me/info/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "ResetUserPasswordAsync",
+    "RelativePath": "api/People/me/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "body",
+        "Type": "PeopleManagementAPI.Models.ResetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "SignIn",
+    "RelativePath": "api/People/signin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "signIn",
+        "Type": "PeopleManagementAPI.Models.SignInRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "SignUp",
+    "RelativePath": "api/People/signup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "PeopleManagementAPI.Models.SignUpRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "UpdateRole",
+    "RelativePath": "api/People/update-role/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "roleModel",
+        "Type": "PeopleManagementAPI.Models.RoleBindingDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeopleManagementAPI.Controllers.PeopleController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/People/update-user/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "body",
+        "Type": "PeopleManagementAPI.Models.UpdateUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

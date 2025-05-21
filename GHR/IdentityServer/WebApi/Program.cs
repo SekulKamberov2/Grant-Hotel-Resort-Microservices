@@ -17,7 +17,18 @@ using System.Text.Json;
 using IdentityServer.Domain.Exceptions; 
 
 var builder = WebApplication.CreateBuilder(args);
- 
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowGHRclient", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000")
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials();
+    });
+});
+
 builder.Services.AddScoped<IDbConnection>(sp => new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<IUserRepository, UserRepository>(); 
 builder.Services.AddScoped<IRoleRepository, RoleRepository>(); 
@@ -41,7 +52,9 @@ builder.Services.AddLogging(config =>
 
 builder.Services.AddControllers();
 
-var app = builder.Build(); 
+var app = builder.Build();
+
+app.UseCors("AllowGHRclient");
 
 app.MapControllers();
 

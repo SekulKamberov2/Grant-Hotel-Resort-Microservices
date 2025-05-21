@@ -12,8 +12,9 @@ services:
     depends_on:
       - duty-service
       - identity-service
+      - hr-platform-service
     networks:
-      - hotelnet 
+      - hotelnet
 
   duty-service:
     build:
@@ -38,6 +39,19 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=IdentityGHRDB;User=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+    networks:
+      - hotelnet
+
+  hr-platform-service:
+    build:
+      context: .
+      dockerfile: GHR.HRPlatform/Dockerfile
+    ports:
+      - "5003:8082"  # Exposing the new port for HR Platform service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
     depends_on:
       - sqlserver
     networks:
