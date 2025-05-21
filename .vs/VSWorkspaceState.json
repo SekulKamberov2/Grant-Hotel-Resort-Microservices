@@ -3,10 +3,14 @@
     "",
     "\\GHR",
     "\\GHR\\HRPlatform",
-    "\\GHR\\HRPlatform\\Controllers",
-    "\\GHR\\HRPlatform\\Services",
-    "\\GHR\\IdentityClient"
+    "\\GHR\\IdentityClient",
+    "\\GHR\\IdentityServer\\Application",
+    "\\GHR\\IdentityServer\\Application\\Commands",
+    "\\GHR\\IdentityServer\\Application\\Commands\\SignIn",
+    "\\GHR\\IdentityServer\\Infrastructure",
+    "\\GHR\\IdentityServer\\Infrastructure\\Identity",
+    "\\GHR\\IdentityServer\\Infrastructure\\Repositories"
   ],
-  "SelectedNode": "\\GHR\\IdentityClient",
+  "SelectedNode": "\\GHR\\HRPlatform",
   "PreviewInSolutionExplorer": false
 }

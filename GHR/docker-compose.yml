@@ -49,7 +49,7 @@ services:
       context: .
       dockerfile: GHR.HRPlatform/Dockerfile
     ports:
-      - "5003:8082"  # Exposing the new port for HR Platform service
+      - "5003:8082"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     depends_on:
@@ -58,20 +58,31 @@ services:
       - hotelnet
 
   sqlserver:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=SekulKamberov2025!@
+    image: mcr.microsoft.com/mssql/server:2022-latest
     ports:
       - "1433:1433"
     volumes:
-      - sql_data:/var/opt/mssql  # Mount volume for data persistence
+      - sql_data:/var/opt/mssql
     networks:
       - hotelnet
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SekulKamberov2025!@
+
+  identity-client:
+    build:
+      context: ./IdentityClient
+      dockerfile: Dockerfile
+    ports:
+      - "3000:90"  
+    networks:
+      - hotelnet
+    depends_on:
+      - ocelot-gateway 
 
 networks:
   hotelnet:
     driver: bridge
 
 volumes:
-  sql_data:  # Create a named volume for persistent storage
+  sql_data:

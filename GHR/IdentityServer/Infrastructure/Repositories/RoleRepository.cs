@@ -25,7 +25,7 @@
 
         public async Task<bool> AddUserToRoleAsync(int userId, int roleId)
         {
-            const string deleteQuery = "DELETE FROM UserRoles WHERE UserId = @UserId";
+            const string sql = "DELETE FROM UserRoles WHERE UserId = @UserId";
             const string insertQuery = "INSERT INTO UserRoles (UserId, RoleId) VALUES (@UserId, @RoleId)";
             var parameters = new { UserId = userId, RoleId = roleId };
 
@@ -37,7 +37,7 @@
             try
             {
                 // Delete previous roles
-                await connection.ExecuteAsync(deleteQuery, new { UserId = userId }, transaction);
+                await connection.ExecuteAsync(sql, new { UserId = userId }, transaction);
 
                 // Insert the new role
                 var rowsInserted = await connection.ExecuteAsync(insertQuery, parameters, transaction);

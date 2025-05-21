@@ -41,7 +41,7 @@
                 return IdentityResult<CreateUserResponse>.Failure("Failed to create user.");
 
             // Assign role after creating the user
-            var addRoleResult = await _roleManager.AddToRoleAsync(createdUser.Data.Id, 3); // Assuming roleId 3 is valid
+            var addRoleResult = await _roleManager.AddToRoleAsync(createdUser.Data.Id, 1);  
             if (!addRoleResult.IsSuccess)
                 return IdentityResult<CreateUserResponse>.Failure("Failed to assign role to user.");
 

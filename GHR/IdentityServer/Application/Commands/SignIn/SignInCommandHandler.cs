@@ -23,22 +23,18 @@
         public async Task<IdentityResult<SignInResponse>> Handle(SignInCommand request, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();
-
-            // Validate user credentials
+             
             var user = await _userManager.ValidateUserAsync(request.Email, request.Password);
             if (!user.IsSuccess)
                 return IdentityResult<SignInResponse>.Failure("Invalid credentials");
-
-            // Retrieve user roles
+             
             var roles = await _roleManager.GetRolesAsync(user.Data.Id);  
-            var roleList = roles.Data ?? Enumerable.Empty<string>();
-
-            // Generate token for user
+            var roleList = roles.Data?.Any() == true ? roles.Data : new[] { "Employee" };
+             
             var tokenResult = _tokenService.GenerateToken(user.Data.Id.ToString(), user.Data, roleList);
             if (!tokenResult.IsSuccess)
                 return IdentityResult<SignInResponse>.Failure(tokenResult.Error ?? "Token generation failed");
-
-            // Return successful response with token and user information
+             
             return IdentityResult<SignInResponse>.Success(
                 new SignInResponse(tokenResult.Data, new AuthenticatedUser(
                     user.Data.Id, user.Data.UserName, user.Data.Email,
