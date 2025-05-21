@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "GHR.DutyManagement.API.Controllers.DutiesController",
+    "Method": "AssignDuty",
+    "RelativePath": "api/Duties/Assign",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "GHR.DutyManagement.Application.Commands.AssignDuty.AssignDutyCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

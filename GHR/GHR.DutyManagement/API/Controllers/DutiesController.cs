@@ -1,18 +1,18 @@
 ﻿namespace GHR.DutyManagement.API.Controllers
 { 
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
      
     using MediatR;
-
     using GHR.DutyManagement.Application.Commands.AssignDuty;
-
     public class DutiesController : BaseApiController
     {
         private readonly IMediator _mediator;
         public DutiesController(IMediator mediator) => _mediator = mediator;
 
-        [HttpPost("create")]
-        public async Task<IActionResult> CreateTask([FromBody] AssignDutyCommand command) =>
+        [Authorize(Roles = "Boss")]
+        [HttpPost("Assign")]
+        public async Task<IActionResult> AssignDuty([FromBody] AssignDutyCommand command) =>
             AsActionResult(await _mediator.Send(command));
 
 

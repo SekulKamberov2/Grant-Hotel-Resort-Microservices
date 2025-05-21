@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36109.1 d17.14
+VisualStudioVersion = 17.14.36109.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -35,6 +35,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedKernel", "SharedKerne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.SharedKernel", "SharedKernel\GHR.SharedKernel.csproj", "{57414928-2AA1-40B8-B38E-817D335AE486}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{56604C4E-613A-40B3-980C-4D9A59BD4728}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ocelot", "Ocelot", "{8936E41D-56F4-4D79-A5A4-EBC9A6766700}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGateway", "OcelotApiGateway\OcelotApiGateway.csproj", "{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +55,14 @@ Global
 		{57414928-2AA1-40B8-B38E-817D335AE486}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57414928-2AA1-40B8-B38E-817D335AE486}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57414928-2AA1-40B8-B38E-817D335AE486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56604C4E-613A-40B3-980C-4D9A59BD4728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56604C4E-613A-40B3-980C-4D9A59BD4728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56604C4E-613A-40B3-980C-4D9A59BD4728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56604C4E-613A-40B3-980C-4D9A59BD4728}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +70,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D03BA096-8DC9-47CC-84A3-64FF6E564D40} = {23BF2484-038D-4F22-A722-0AD45D5B8A04}
 		{57414928-2AA1-40B8-B38E-817D335AE486} = {671CC6B9-C8D6-4C8C-ABA8-9B6032FD2CC6}
+		{56604C4E-613A-40B3-980C-4D9A59BD4728} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{B81826A8-5C3D-4063-9F7A-9A5A9863BC45} = {8936E41D-56F4-4D79-A5A4-EBC9A6766700}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC485270-F995-4C95-BE73-8B2BFFECB5CD}

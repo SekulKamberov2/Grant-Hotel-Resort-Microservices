@@ -1,0 +1,6 @@
+@IdentityServer_HostAddress = http://localhost:5216
+
+GET {{IdentityServer_HostAddress}}/users/signin
+Accept: application/json
+
+###

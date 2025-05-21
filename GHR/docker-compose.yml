@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  ocelot-gateway:
+    build:
+      context: .
+      dockerfile: OcelotApiGateway/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - duty-service
+      - identity-service
+    networks:
+      - hotelnet 
+
+  duty-service:
+    build:
+      context: .
+      dockerfile: GHR.DutyManagement/Dockerfile
+    ports:
+      - "5002:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=DutyManagementDB;User=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+    networks:
+      - hotelnet
+
+  identity-service:
+    build:
+      context: .
+      dockerfile: IdentityServer/Dockerfile
+    ports:
+      - "5001:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=IdentityGHRDB;User=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+    networks:
+      - hotelnet
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SekulKamberov2025!@
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql  # Mount volume for data persistence
+    networks:
+      - hotelnet
+
+networks:
+  hotelnet:
+    driver: bridge
+
+volumes:
+  sql_data:  # Create a named volume for persistent storage

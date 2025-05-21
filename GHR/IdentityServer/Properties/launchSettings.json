@@ -1,0 +1,31 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5216" // Local HTTP port
+    },
+    "https": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7193;http://localhost:5216" // Both HTTP and HTTPS for local development
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "https://{ServiceHost}:8081", // Launch URL, use the port that you want to expose
+      "environmentVariables": {
+        "ASPNETCORE_HTTPS_PORTS": "8081", // Expose HTTPS inside the container
+        "ASPNETCORE_HTTP_PORTS": "8080" // Expose HTTP inside the container
+      },
+      "publishAllPorts": true, // Expose all ports in the container
+      "useSSL": true // Use SSL if required
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json"
+}
