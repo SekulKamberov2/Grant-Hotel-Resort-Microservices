@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  ocelot-gateway:
+    build:
+      context: .
+      dockerfile: OcelotApiGateway/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - duty-service
+      - identity-service
+      - hr-platform-service
+    networks:
+      - hotelnet
+
+  duty-service:
+    build:
+      context: .
+      dockerfile: GHR.DutyManagement/Dockerfile
+    ports:
+      - "5002:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=DutyManagementDB;User=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+    networks:
+      - hotelnet
+
+  identity-service:
+    build:
+      context: .
+      dockerfile: IdentityServer/Dockerfile
+    ports:
+      - "5001:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=IdentityGHRDB;User=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+    networks:
+      - hotelnet  # Ensure identity-service is on the correct network
+
+  hr-platform-service:
+    build:
+      context: .
+      dockerfile: GHR.HRPlatform/Dockerfile
+    ports:
+      - "5003:8082"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - sqlserver
+    networks:
+      - hotelnet
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+    networks:
+      - hotelnet
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SekulKamberov2025!@
+
+  identity-client:
+    build:
+      context: ./IdentityClient
+      dockerfile: Dockerfile
+    ports:
+      - "3000:90"
+    networks:
+      - hotelnet
+    depends_on:
+      - ocelot-gateway
+
+networks:
+  hotelnet:
+    driver: bridge
+
+volumes:
+  sql_data:

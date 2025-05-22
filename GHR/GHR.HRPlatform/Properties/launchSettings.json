@@ -6,7 +6,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "http://localhost:5057"
+      "applicationUrl": "http://localhost:5003" // Match external port for HR Platform service (5003)
     },
     "https": {
       "commandName": "Project",
@@ -14,18 +14,18 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7083;http://localhost:5057"
+      "applicationUrl": "https://localhost:7083;http://localhost:5003" // Match with docker-compose port 5003
     },
-    "Container (Dockerfile)": {
+    "Docker": {
       "commandName": "Docker",
       "launchUrl": "http://{ServiceHost}:{ServicePort}",
       "environmentVariables": {
-        "ASPNETCORE_HTTPS_PORTS": "8081",
-        "ASPNETCORE_HTTP_PORTS": "8082",
-        "ASPNETCORE_URLS": "http://0.0.0.0:8082"
+        "ASPNETCORE_HTTPS_PORTS": "8082", // HR platform internal port
+        "ASPNETCORE_HTTP_PORTS": "8081", // Identity service internal port
+        "ASPNETCORE_URLS": "http://0.0.0.0:8082" // Match the HR platform service internal port
       },
       "publishAllPorts": true,
-      "useSSL": true
+      "useSSL": false
     }
   },
   "$schema": "https://json.schemastore.org/launchsettings.json"

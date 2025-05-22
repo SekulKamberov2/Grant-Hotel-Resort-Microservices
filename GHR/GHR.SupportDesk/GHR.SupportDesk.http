@@ -1,0 +1,6 @@
+@GHR.SupportDesk_HostAddress = http://localhost:5229
+
+GET {{GHR.SupportDesk_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
