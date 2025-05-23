@@ -19,20 +19,20 @@
 
         public async Task<IEnumerable<LeaveApplication>> GetAllAsync()
         {
-            var sql = "SELECT * FROM LeaveRequests";
+            var sql = "SELECT * FROM LeaveApplications";
             return await _db.QueryAsync<LeaveApplication>(sql);
         }
 
         public async Task<LeaveApplication?> GetByIdAsync(int id)
         {
-            var sql = "SELECT * FROM LeaveRequests WHERE Id = @Id";
+            var sql = "SELECT * FROM LeaveApplications WHERE Id = @Id";
             return await _db.QueryFirstOrDefaultAsync<LeaveApplication>(sql, new { Id = id });
         }
 
         public async Task<int> AddAsync(LeaveAppBindingModel request)
         {
             var sql = @"
-            INSERT INTO LeaveRequests (
+            INSERT INTO LeaveApplications (
                 UserId, LeaveTypeId, FullName, Department, Email, PhoneNumber, StartDate, EndDate, TotalDays, Reason, Status, ApproverId, DecisionDate, RequestedAt
             )
             VALUES (
@@ -50,7 +50,7 @@
         public async Task UpdateAsync(LeaveApplication request)
         {
             var sql = @"
-            UPDATE LeaveRequests
+            UPDATE LeaveApplications
             SET
                 UserId = @UserId,
                 FullName = @FullName, 
@@ -73,7 +73,7 @@
 
         public async Task DeleteAsync(int id)
         {
-            var sql = "DELETE FROM LeaveRequests WHERE Id = @Id";
+            var sql = "DELETE FROM LeaveApplications WHERE Id = @Id";
             await _db.ExecuteAsync(sql, new { Id = id });
         }  
     } 

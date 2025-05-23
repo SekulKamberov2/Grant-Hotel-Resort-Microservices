@@ -43,11 +43,7 @@ namespace HRPlatform.Services
             // Send the request and read the response content
             var response = await _http.SendAsync(requestMessage, cancellationToken);
             var rawJson = await response.Content.ReadAsStringAsync();
-            Console.WriteLine($"Raw response: {rawJson}");
-            if (string.IsNullOrEmpty(rawJson))
-            {
-                return IdentityResult<TResponse>.Failure("Response body is empty.");
-            }
+
             if (response.IsSuccessStatusCode)
             {
                 try
@@ -82,11 +78,6 @@ namespace HRPlatform.Services
             var requestMessage = new HttpRequestMessage(method, endpoint);
             var response = await _http.SendAsync(requestMessage, cancellationToken);
             var rawJson = await response.Content.ReadAsStringAsync();
-            Console.WriteLine($"Raw response: {rawJson}");
-            if (string.IsNullOrEmpty(rawJson))
-            {
-                return IdentityResult<TResponse>.Failure("Response body is empty.");
-            }
 
             if (response.IsSuccessStatusCode)
             {

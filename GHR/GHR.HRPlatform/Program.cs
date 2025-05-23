@@ -21,7 +21,7 @@ builder.Services.AddCors(options =>
 
 //builder.Services.AddHttpClient<IUserHttpClient, UserHttpClient>(client =>
 //{
-//    client.BaseAddress = new Uri("http://localhost:5001"); http://identity-service:8081  http://localhost:5216
+//    client.BaseAddress = new Uri("http://localhost:5001");
 //});
 builder.Services.AddHttpClient<IUserHttpClient, UserHttpClient>(client =>
 { 

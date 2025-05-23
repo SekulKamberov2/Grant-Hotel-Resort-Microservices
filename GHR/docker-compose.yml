@@ -79,6 +79,24 @@ services:
       - hotelnet
     depends_on:
       - ocelot-gateway 
+  
+  leave-management:
+    build:
+      context: .
+      dockerfile: GHR.LeaveManagement/Dockerfile
+    ports:
+      - "5004:95"
+      - "5005:96"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development 
+      - ASPNETCORE_URLS=http://+:95
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=LeaveManagementGHRDB;User Id=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True
+
+    depends_on:
+      - sqlserver
+    networks:
+      - hotelnet
+
 
 networks:
   hotelnet:

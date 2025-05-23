@@ -1,0 +1,278 @@
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\appsettings.json
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.staticwebassets.endpoints.json
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.exe
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.deps.json
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.runtimeconfig.json
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.pdb
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\MediatR.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\MediatR.Contracts.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.csproj.AssemblyReference.cache
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.AssemblyInfoInputs.cache
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.AssemblyInfo.cs
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.csproj.CoreCompileInputs.cache
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\scopedcss\bundle\PeopleManagementAPI.styles.css
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.PeopleManagementAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.PeopleManagementAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.build.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\PeopleMa.C04166FE.Up2Date
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\refint\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.pdb
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.genruntimeconfig.cache
+C:\Users\smkwo\Desktop\UKG\PeopleManagementAPI\obj\Debug\net9.0\ref\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\appsettings.json
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.staticwebassets.endpoints.json
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.exe
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.deps.json
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.runtimeconfig.json
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.pdb
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\MediatR.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\MediatR.Contracts.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.csproj.AssemblyReference.cache
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.AssemblyInfoInputs.cache
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.AssemblyInfo.cs
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.csproj.CoreCompileInputs.cache
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\scopedcss\bundle\PeopleManagementAPI.styles.css
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.PeopleManagementAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.PeopleManagementAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.build.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\PeopleMa.C04166FE.Up2Date
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\refint\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.pdb
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.genruntimeconfig.cache
+C:\Users\smkwo\Desktop\COPY\PeopleManagementAPI\obj\Debug\net9.0\ref\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\appsettings.json
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.staticwebassets.endpoints.json
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.exe
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.deps.json
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.runtimeconfig.json
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.pdb
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\MediatR.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\MediatR.Contracts.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.csproj.AssemblyReference.cache
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.AssemblyInfoInputs.cache
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.AssemblyInfo.cs
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.csproj.CoreCompileInputs.cache
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.sourcelink.json
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\scopedcss\bundle\PeopleManagementAPI.styles.css
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.PeopleManagementAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.PeopleManagementAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.build.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\PeopleMa.C04166FE.Up2Date
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\refint\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.pdb
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.genruntimeconfig.cache
+C:\Users\smkwo\Desktop\GitHub\HCM-app-UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR-SQL-Server-Testing\PeopleManagementAPI\obj\Debug\net9.0\ref\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\appsettings.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.staticwebassets.endpoints.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.exe
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.deps.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.runtimeconfig.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.pdb
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\MediatR.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\MediatR.Contracts.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.csproj.AssemblyReference.cache
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.AssemblyInfoInputs.cache
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.AssemblyInfo.cs
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.csproj.CoreCompileInputs.cache
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\scopedcss\bundle\PeopleManagementAPI.styles.css
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.PeopleManagementAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.PeopleManagementAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.build.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\PeopleMa.C04166FE.Up2Date
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\refint\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.pdb
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.genruntimeconfig.cache
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR\PeopleManagementAPI\obj\Debug\net9.0\ref\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\appsettings.json
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.staticwebassets.endpoints.json
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.exe
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.deps.json
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.runtimeconfig.json
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.pdb
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\MediatR.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\MediatR.Contracts.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.csproj.AssemblyReference.cache
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.AssemblyInfoInputs.cache
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.AssemblyInfo.cs
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.csproj.CoreCompileInputs.cache
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\scopedcss\bundle\PeopleManagementAPI.styles.css
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.PeopleManagementAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.PeopleManagementAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.build.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\PeopleMa.C04166FE.Up2Date
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\refint\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.pdb
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.genruntimeconfig.cache
+C:\Users\smkwo\Desktop\New folder\PeopleManagementAPI\obj\Debug\net9.0\ref\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\appsettings.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.staticwebassets.endpoints.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.exe
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.deps.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.runtimeconfig.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\PeopleManagementAPI.pdb
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\MediatR.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\MediatR.Contracts.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.csproj.AssemblyReference.cache
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.AssemblyInfoInputs.cache
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.AssemblyInfo.cs
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.csproj.CoreCompileInputs.cache
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.sourcelink.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\scopedcss\bundle\PeopleManagementAPI.styles.css
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.PeopleManagementAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.PeopleManagementAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.build.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.PeopleManagementAPI.props
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\PeopleMa.C04166FE.Up2Date
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\refint\PeopleManagementAPI.dll
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.pdb
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\PeopleManagementAPI.genruntimeconfig.cache
+C:\Users\smkwo\Desktop\GitHub\UKG-Task-IdentityServer-ASP.NET-Core-9-API-Core-CQRS-MediatR2\PeopleManagementAPI\obj\Debug\net9.0\ref\PeopleManagementAPI.dll

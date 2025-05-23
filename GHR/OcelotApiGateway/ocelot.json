@@ -57,7 +57,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/HR/{everything}",
+      "DownstreamPathTemplate": "/api/hrplatform/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -85,40 +85,15 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/HR/signin",
+      "DownstreamPathTemplate": "/api/leavemanagement/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "hr-platform-service",
-          "Port": 8082
+          "Host": "leave-management",
+          "Port": 95
         }
       ],
-      "UpstreamPathTemplate": "/hrplatform/api/HR/signin",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "",
-        "AllowedScopes": []
-      },
-      "RateLimitOptions": {
-        "EnableRateLimiting": false
-      },
-      "AddHeadersToRequest": {
-        "X-Gateway-From": "Ocelot"
-      },
-      "LoadBalancerOptions": {
-        "Type": "RoundRobin"
-      }
-    },
-    {
-      "DownstreamPathTemplate": "/api/leave/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "leave-management-service",
-          "Port": 8080
-        }
-      ],
-      "UpstreamPathTemplate": "/leave/api/{everything}",
+      "UpstreamPathTemplate": "/leavemanagement/api/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
