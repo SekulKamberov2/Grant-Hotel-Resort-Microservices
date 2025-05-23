@@ -10,7 +10,7 @@
         public LeaveController(ILeaveService leaveService) =>
             _leaveService = leaveService;
 
-        [Authorize(Roles = "EMPLOYEE,MANAGER")]
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> SubmitLeaveRequest([FromBody] LeaveAppBindingModel request) =>
             AsActionResult(await _leaveService.SubmitLeaveRequestAsync(request));
