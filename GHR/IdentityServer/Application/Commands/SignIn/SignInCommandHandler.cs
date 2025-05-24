@@ -29,7 +29,7 @@
                 return IdentityResult<SignInResponse>.Failure("Invalid credentials");
              
             var roles = await _roleManager.GetRolesAsync(user.Data.Id);  
-            var roleList = roles.Data?.Any() == true ? roles.Data : new[] { "Employee" };
+            var roleList = roles.Data?.Any() == true ? roles.Data : new[] { "EMPLOYEE" };
              
             var tokenResult = _tokenService.GenerateToken(user.Data.Id.ToString(), user.Data, roleList);
             if (!tokenResult.IsSuccess)

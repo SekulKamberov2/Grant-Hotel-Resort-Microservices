@@ -3,7 +3,9 @@
     using GHR.LeaveManagement.DTOs.Input; 
     using GHR.LeaveManagement.Services.Interfaces;
     using Microsoft.AspNetCore.Authorization;
-    using Microsoft.AspNetCore.Mvc; 
+    using Microsoft.AspNetCore.Mvc;
+    using System.Security.Claims;
+
     public class LeaveController : BaseApiController
     {
         private readonly ILeaveService _leaveService;  
@@ -25,6 +27,7 @@
         public async Task<IActionResult> Reject(int id, [FromQuery] int approverId) =>
              AsActionResult(await _leaveService.RejectLeaveRequestAsync(id, approverId));
 
+        //http://localhost:5004/api/leave/4002/cancel?userId=1
         [Authorize(Roles = "EMPLOYEE")]
         [HttpDelete("{id}/cancel")]
         public async Task<IActionResult> Cancel(int id, [FromQuery] int userId) =>
@@ -45,9 +48,15 @@
         public async Task<IActionResult> GetUserLeaveRequests(int userId) =>   
             AsActionResult(await _leaveService.GetLeaveRequestsByUserIdAsync(userId));
 
-        //[Authorize(Roles = "MANAGER")]
+        [Authorize(Roles = "MANAGER")]
         [HttpGet("applicants/{status}")]
         public async Task<IActionResult> GetPendingLeaveApplicants([FromRoute] string status) =>
             AsActionResult(await _leaveService.GetApplicantsAsync(status));
+
+        [Authorize]
+        [HttpGet("balance/{userId}")]
+        public async Task<IActionResult> GetCurrentUserLeaveBalance() =>
+            AsActionResult(await _leaveService.GeUsersRemainingDaysAsync(int.TryParse(User.FindFirstValue("user_id"), out var id) ? id : 0));
+ 
     }
 }

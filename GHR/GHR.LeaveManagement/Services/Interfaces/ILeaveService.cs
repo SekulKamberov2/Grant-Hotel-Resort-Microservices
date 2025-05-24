@@ -14,6 +14,6 @@
         Task<IdentityResult<LeaveApplication>> GetLeaveRequestByIdAsync(int requestId);
         Task<IdentityResult<bool>> CancelLeaveRequestAsync(int requestId, int userId);
         Task<IdentityResult<IEnumerable<UserBindingModel>>> GetApplicantsAsync(string status);
-
+        Task<IdentityResult<decimal>> GeUsersRemainingDaysAsync(decimal userId);
     } 
 }

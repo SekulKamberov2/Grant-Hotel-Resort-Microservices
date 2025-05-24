@@ -1,13 +1,12 @@
 ﻿namespace GHR.LeaveManagement.Services
 {
-    using System.Collections.Generic;
-    using Identity.Grpc;
-    using GHR.SharedKernel;
-
     using GHR.LeaveManagement.DTOs.Input;
     using GHR.LeaveManagement.Entities;
     using GHR.LeaveManagement.Repositories.Interfaces;
     using GHR.LeaveManagement.Services.Interfaces;
+    using GHR.SharedKernel;
+    using Identity.Grpc;
+    using System.Collections.Generic;
 
     public class LeaveService : ILeaveService
     {
@@ -21,7 +20,10 @@
 
         public async Task<IdentityResult<int>> SubmitLeaveRequestAsync(LeaveAppBindingModel request)
         {
-            if(request.StartDate > request.EndDate)
+            var exists = await _leaveRepo.ExistAsync(request.UserId, "Pending");
+            if (exists) return IdentityResult<int>.Failure("You've already have Pending request to leave.");
+
+            if (request.StartDate > request.EndDate)
                 return IdentityResult<int>.Failure("Start date cannot be after end date.");
 
             request.TotalDays = (decimal)(request.EndDate - request.StartDate).TotalDays + 1;
@@ -36,27 +38,26 @@
         }
 
         public async Task<IdentityResult<bool>> ApproveLeaveRequestAsync(int requestId, int approverId)
-        {
+        { 
             var request = await _leaveRepo.GetByIdAsync(requestId);
             if (request == null)
-                return IdentityResult<bool>.Failure("Leave request not found.");  
-
+                return IdentityResult<bool>.Failure("Leave request not found.");
+             
             if (request.Status != "Pending")
-                return IdentityResult<bool>.Failure("Only pending requests can be approved.");  
-
+                return IdentityResult<bool>.Failure("Only pending requests can be approved.");
+             
             request.Status = "Approved";
             request.ApproverId = approverId;
             request.DecisionDate = DateTime.UtcNow;
-
-            try
-            {
-                await _leaveRepo.UpdateAsync(request);
-            }
-            catch (Exception ex)
-            {
-                return IdentityResult<bool>.Failure($"Error during update: {ex.Message}"); 
-            }
-
+             
+            var result = await _leaveRepo.UpdateAsync(request);
+            if (result == 0)
+                return IdentityResult<bool>.Failure("Approve fails. Please try again.");
+             
+            var success = await _leaveRepo.ReduceUsersRemainingDays(request.TotalDays, request.UserId);
+            if (success == 0)
+                return IdentityResult<bool>.Failure("Unable to reduce the user's remaining days. Please try again.");
+             
             return IdentityResult<bool>.Success(true);
         }
 
@@ -108,7 +109,8 @@
             { 
                 var allLeaveRequests = await _leaveRepo.GetAllAsync(); 
                 var userLeaveRequests = allLeaveRequests.Where(lr => lr.UserId == userId).ToList(); 
-                if (!userLeaveRequests.Any()) return IdentityResult<IEnumerable<LeaveApplication>>.Failure("No leave requests found for the given user.");
+                if (!userLeaveRequests.Any()) 
+                    return IdentityResult<IEnumerable<LeaveApplication>>.Failure("No leave requests found for the given user.");
                
                 return IdentityResult<IEnumerable<LeaveApplication>>.Success(userLeaveRequests);
             }
@@ -151,7 +153,7 @@
             }
             catch (Exception ex)
             { 
-                return IdentityResult<bool>.Failure($"Error during delete: {ex.Message}", 500);
+                return IdentityResult<bool>.Failure($"Error during delete: {ex.Message}");
             }
             return IdentityResult<bool>.Success(true);
         }
@@ -187,6 +189,20 @@
             {
                 return IdentityResult<IEnumerable<UserBindingModel>>.Failure("An error occurred while retrieving leave applications.");
             }
+        }
+
+        public async Task<IdentityResult<decimal>> GeUsersRemainingDaysAsync(decimal userId)
+        {
+            if (userId == 0) return IdentityResult<decimal>.Failure("It's not you.");   
+            try
+            {
+                var days = await _leaveRepo.GetUsersRemainingDays(userId); 
+                return IdentityResult<decimal>.Success((days > 0) ? days : 0);
+            }
+            catch (Exception ex)
+            {
+                return IdentityResult<decimal>.Failure($"Error during calculations: {ex.Message}");
+            }  
         }
     }
 }

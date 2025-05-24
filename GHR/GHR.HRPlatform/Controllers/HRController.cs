@@ -75,7 +75,7 @@
             return HandleResult(result);
         }
 
-        [Authorize(Roles = "EMPLOYEE,MANAGER,HR ADMIN")] //ONLY OWN PASSWORD
+        [Authorize] 
         [HttpPost("me/reset-password")]
         public async Task<IActionResult> ResetUserPasswordAsync(
             [FromBody] ResetPasswordRequest body,
