@@ -23,9 +23,27 @@ builder.Services.AddScoped<ILeaveRepository, LeaveRepository>();
 builder.Services.AddScoped<ILeaveService, LeaveService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+//builder.Services.AddGrpcClient<IdentityService.IdentityServiceClient>(options =>
+//{
+//    //options.Address = new Uri("http://identity-service:8081");
+//    options.Address = new Uri("http://identity-service:5000");
+
+//});
+
 builder.Services.AddGrpcClient<IdentityService.IdentityServiceClient>(options =>
 {
-    options.Address = new Uri("https://identity-service:8081");
+    options.Address = new Uri("http://identity-service:5000");
+})
+.ConfigurePrimaryHttpMessageHandler(() =>
+{
+    var handler = new HttpClientHandler();
+    // Configure handler if needed
+    return handler;
+})
+.ConfigureChannel(options =>
+{
+    options.HttpHandler = new HttpClientHandler();
+    options.HttpVersion = new Version(2, 0);  // Force HTTP/1.1
 });
 
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));

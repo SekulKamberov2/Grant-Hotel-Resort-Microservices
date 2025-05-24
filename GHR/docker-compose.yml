@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: OcelotApiGateway/Dockerfile
     ports:
-      - "5000:8080"
+      - "5000:8080"  # Ocelot gateway port unchanged
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     depends_on:
@@ -74,12 +74,12 @@ services:
       context: ./IdentityClient
       dockerfile: Dockerfile
     ports:
-      - "3000:90"  
+      - "3000:90"
     networks:
       - hotelnet
     depends_on:
-      - ocelot-gateway 
-  
+      - ocelot-gateway
+
   leave-management:
     build:
       context: .
@@ -87,16 +87,15 @@ services:
     ports:
       - "5004:95"
       - "5005:96"
+      - "7000:95"  # Additional external port mapped to 95
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development 
+      - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:95
       - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=LeaveManagementGHRDB;User Id=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True
-
     depends_on:
       - sqlserver
     networks:
       - hotelnet
-
 
 networks:
   hotelnet:

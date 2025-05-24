@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "njC4bZUqx6g=",
+  "dgSpecHash": "KyTxCTeHUKg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\GHR.DutyManagement.csproj",
+  "projectFilePath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.DutyManagement\\GHR.DutyManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sekne\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\sekne\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -58,9 +58,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 12.5.0 was resolved.",
-      "projectPath": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\GHR.DutyManagement.csproj",
+      "projectPath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.DutyManagement\\GHR.DutyManagement.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\GHR.DutyManagement.csproj",
+      "filePath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.DutyManagement\\GHR.DutyManagement.csproj",
       "libraryId": "MediatR",
       "targetGraphs": [
         "net9.0"

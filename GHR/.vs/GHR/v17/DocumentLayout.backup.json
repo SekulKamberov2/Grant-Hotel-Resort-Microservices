@@ -7,80 +7,60 @@
       "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\services\\leaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\services\\leaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\ghr.leavemanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\ghr.leavemanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\repositories\\leaverepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\repositories\\leaverepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\repositories\\interfaces\\ileaverepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\repositories\\interfaces\\ileaverepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\services\\interfaces\\ileaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\services\\interfaces\\ileaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\dtos\\input\\userbindingmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\dtos\\input\\userbindingmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\infrastructure\\identity\\identitygrpcservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\infrastructure\\identity\\identitygrpcservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\application\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\application\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\identityserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\identityserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\protos\\identity.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\protos\\identity.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.hrplatform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|solutionrelative:ghr.hrplatform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}|OcelotApiGateway\\OcelotApiGateway.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ocelotapigateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}|OcelotApiGateway\\OcelotApiGateway.csproj|solutionrelative:ocelotapigateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.hrplatform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|solutionrelative:ghr.hrplatform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.hrplatform\\controllers\\hrcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|solutionrelative:ghr.hrplatform\\controllers\\hrcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\ghr.leavemanagement.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\ghr.leavemanagement.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\services\\leaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\services\\leaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\repositories\\leaverepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\repositories\\leaverepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,32 +70,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ocelot.json",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\OcelotApiGateway\\ocelot.json",
-              "RelativeDocumentMoniker": "OcelotApiGateway\\ocelot.json",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\OcelotApiGateway\\ocelot.json",
-              "RelativeToolTip": "OcelotApiGateway\\ocelot.json",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAkwFwAAAASAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\appsettings.json",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\appsettings.json",
+              "RelativeToolTip": "GHR.LeaveManagement\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-22T17:27:49.117Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.HRPlatform\\Program.cs",
-              "RelativeDocumentMoniker": "GHR.HRPlatform\\Program.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.HRPlatform\\Program.cs",
-              "RelativeToolTip": "GHR.HRPlatform\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T18:13:41.471Z",
+              "WhenOpened": "2025-05-24T09:03:13.513Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -127,165 +94,181 @@
               "RelativeDocumentMoniker": "GHR.LeaveManagement\\Program.cs",
               "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Program.cs",
               "RelativeToolTip": "GHR.LeaveManagement\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwC0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T06:22:39.881Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GHR.LeaveManagement",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\GHR.LeaveManagement.csproj",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\GHR.LeaveManagement.csproj",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\GHR.LeaveManagement.csproj",
-              "RelativeToolTip": "GHR.LeaveManagement\\GHR.LeaveManagement.csproj",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-24T06:21:43.026Z",
+              "WhenOpened": "2025-05-24T09:03:22.524Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LeaveRepository.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
-              "RelativeToolTip": "GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwAoAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T06:13:58.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ILeaveRepository.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Repositories\\Interfaces\\ILeaveRepository.cs",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Repositories\\Interfaces\\ILeaveRepository.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Repositories\\Interfaces\\ILeaveRepository.cs",
-              "RelativeToolTip": "GHR.LeaveManagement\\Repositories\\Interfaces\\ILeaveRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T06:13:29.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserBindingModel.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\DTOs\\Input\\UserBindingModel.cs",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\DTOs\\Input\\UserBindingModel.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\DTOs\\Input\\UserBindingModel.cs",
-              "RelativeToolTip": "GHR.LeaveManagement\\DTOs\\Input\\UserBindingModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T06:11:40.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ILeaveService.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Services\\Interfaces\\ILeaveService.cs",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Services\\Interfaces\\ILeaveService.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Services\\Interfaces\\ILeaveService.cs",
-              "RelativeToolTip": "GHR.LeaveManagement\\Services\\Interfaces\\ILeaveService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T06:11:06.83Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LeaveService.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Services\\LeaveService.cs",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Services\\LeaveService.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Services\\LeaveService.cs",
-              "RelativeToolTip": "GHR.LeaveManagement\\Services\\LeaveService.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAAABIAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T06:11:04.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Application\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "IdentityServer\\Application\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Application\\Interfaces\\IUserRepository.cs",
-              "RelativeToolTip": "IdentityServer\\Application\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T06:07:40.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "IdentityServer\\Infrastructure\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "IdentityServer\\Infrastructure\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAnwA8AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T06:07:38.86Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IdentityGrpcService.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Infrastructure\\Identity\\IdentityGrpcService.cs",
-              "RelativeDocumentMoniker": "IdentityServer\\Infrastructure\\Identity\\IdentityGrpcService.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Infrastructure\\Identity\\IdentityGrpcService.cs",
-              "RelativeToolTip": "IdentityServer\\Infrastructure\\Identity\\IdentityGrpcService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T05:59:27.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\WebApi\\Program.cs",
               "RelativeDocumentMoniker": "IdentityServer\\WebApi\\Program.cs",
               "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\WebApi\\Program.cs",
               "RelativeToolTip": "IdentityServer\\WebApi\\Program.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAYwG0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T05:58:30.762Z",
+              "WhenOpened": "2025-05-24T06:50:59.763Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "identity.proto",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Protos\\identity.proto",
-              "RelativeDocumentMoniker": "IdentityServer\\Protos\\identity.proto",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Protos\\identity.proto",
-              "RelativeToolTip": "IdentityServer\\Protos\\identity.proto",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
-              "WhenOpened": "2025-05-24T05:57:42.777Z",
+              "DocumentIndex": 9,
+              "Title": "LeaveController.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Controllers\\LeaveController.cs",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Controllers\\LeaveController.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Controllers\\LeaveController.cs",
+              "RelativeToolTip": "GHR.LeaveManagement\\Controllers\\LeaveController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswDIAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T06:24:53.669Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
+              "Title": "LeaveService.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Services\\LeaveService.cs",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Services\\LeaveService.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Services\\LeaveService.cs",
+              "RelativeToolTip": "GHR.LeaveManagement\\Services\\LeaveService.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAADgv6EAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T06:25:22.61Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LeaveRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
+              "RelativeToolTip": "GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T06:25:19.63Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "IdentityServer\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Properties\\launchSettings.json",
+              "RelativeToolTip": "IdentityServer\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-24T10:45:22.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "IdentityServer",
               "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\IdentityServer.csproj",
               "RelativeDocumentMoniker": "IdentityServer\\IdentityServer.csproj",
               "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\IdentityServer.csproj",
               "RelativeToolTip": "IdentityServer\\IdentityServer.csproj",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-24T05:27:54.883Z",
+              "WhenOpened": "2025-05-24T08:58:09.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\appsettings.json",
+              "RelativeDocumentMoniker": "IdentityServer\\appsettings.json",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\appsettings.json",
+              "RelativeToolTip": "IdentityServer\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-24T09:55:54.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Properties\\launchSettings.json",
+              "RelativeToolTip": "GHR.LeaveManagement\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-24T09:03:03.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GHR.LeaveManagement",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\GHR.LeaveManagement.csproj",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\GHR.LeaveManagement.csproj",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\GHR.LeaveManagement.csproj",
+              "RelativeToolTip": "GHR.LeaveManagement\\GHR.LeaveManagement.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-24T09:03:02.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HRController.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.HRPlatform\\Controllers\\HRController.cs",
+              "RelativeDocumentMoniker": "GHR.HRPlatform\\Controllers\\HRController.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.HRPlatform\\Controllers\\HRController.cs",
+              "RelativeToolTip": "GHR.HRPlatform\\Controllers\\HRController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T08:10:40.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Dockerfile",
+              "RelativeDocumentMoniker": "IdentityServer\\Dockerfile",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Dockerfile",
+              "RelativeToolTip": "IdentityServer\\Dockerfile",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-24T07:25:03.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.HRPlatform\\Program.cs",
+              "RelativeDocumentMoniker": "GHR.HRPlatform\\Program.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.HRPlatform\\Program.cs",
+              "RelativeToolTip": "GHR.HRPlatform\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T07:12:04.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\OcelotApiGateway\\ocelot.json",
+              "RelativeDocumentMoniker": "OcelotApiGateway\\ocelot.json",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\OcelotApiGateway\\ocelot.json",
+              "RelativeToolTip": "OcelotApiGateway\\ocelot.json",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAQwHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-24T07:03:20.36Z",
               "EditorCaption": ""
             },
             {
@@ -299,67 +282,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\appsettings.json",
-              "RelativeDocumentMoniker": "IdentityServer\\appsettings.json",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\appsettings.json",
-              "RelativeToolTip": "IdentityServer\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-22T20:07:52.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\appsettings.json",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\appsettings.json",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\appsettings.json",
-              "RelativeToolTip": "GHR.LeaveManagement\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-22T19:45:59.631Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Properties\\launchSettings.json",
-              "RelativeToolTip": "GHR.LeaveManagement\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-22T19:35:35.081Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Dockerfile",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Dockerfile",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Dockerfile",
-              "RelativeToolTip": "GHR.LeaveManagement\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-22T18:37:27.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LeaveController.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Controllers\\LeaveController.cs",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Controllers\\LeaveController.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Controllers\\LeaveController.cs",
-              "RelativeToolTip": "GHR.LeaveManagement\\Controllers\\LeaveController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowDIAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T18:27:18.786Z",
-              "EditorCaption": ""
             }
           ]
         }
