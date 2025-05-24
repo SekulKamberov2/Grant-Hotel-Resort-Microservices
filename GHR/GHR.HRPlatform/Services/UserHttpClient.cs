@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using HRPlatform.Models;
-using System.Security.Claims;
-using System.Threading;
-
-namespace HRPlatform.Services
+﻿namespace HRPlatform.Services
 {
     using System.Text.Json;
     using System.Threading;

@@ -58,22 +58,6 @@
               "target": "Package",
               "version": "[2.1.66, )"
             },
-            "FluentValidation": {
-              "target": "Package",
-              "version": "[12.0.0, )"
-            },
-            "FluentValidation.AspNetCore": {
-              "target": "Package",
-              "version": "[11.3.0, )"
-            },
-            "MediatR": {
-              "target": "Package",
-              "version": "[12.5.0, )"
-            },
-            "MediatR.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[11.1.0, )"
-            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.5, )"

@@ -9,11 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.1.66" />
-    <PackageReference Include="FluentValidation" Version="12.0.0" />
-    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-    <PackageReference Include="MediatR" Version="12.5.0" />
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <Compile Remove="Domain\**" />
+    <Compile Remove="Shared\**" />
+    <Content Remove="Domain\**" />
+    <Content Remove="Shared\**" />
+    <EmbeddedResource Remove="Domain\**" />
+    <EmbeddedResource Remove="Shared\**" />
+    <None Remove="Domain\**" />
+    <None Remove="Shared\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.66" /> 
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.5" /> 
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
@@ -22,15 +29,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\Queries\" />
-    <Folder Include="Domain\Entities\" />
-    <Folder Include="Domain\ValueObjects\" />
-    <Folder Include="Infrastructure\Persistence\" />
-    <Folder Include="Shared\DTOs\" />
+    <ProjectReference Include="..\SharedKernel\GHR.SharedKernel.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SharedKernel\GHR.SharedKernel.csproj" />
+    <Folder Include="DTOs\Input\" />
+    <Folder Include="DTOs\Output\" />
   </ItemGroup>
 
 </Project>

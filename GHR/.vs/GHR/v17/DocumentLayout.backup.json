@@ -3,16 +3,88 @@
   "WorkspaceRootPath": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\application\\commands\\signin\\signincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\application\\commands\\signin\\signincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\repositories\\dutyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\repositories\\dutyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\services\\dutyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\services\\dutyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\controllers\\dutiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\controllers\\dutiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\entities\\duty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\entities\\duty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\dtos\\dutydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\dtos\\dutydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\ghr.dutymanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\ghr.dutymanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}|OcelotApiGateway\\OcelotApiGateway.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ocelotapigateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}|OcelotApiGateway\\OcelotApiGateway.csproj|solutionrelative:ocelotapigateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\application\\results\\identityresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\application\\results\\identityresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57414928-2AA1-40B8-B38E-817D335AE486}|SharedKernel\\GHR.SharedKernel.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\sharedkernel\\identityresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57414928-2AA1-40B8-B38E-817D335AE486}|SharedKernel\\GHR.SharedKernel.csproj|solutionrelative:sharedkernel\\identityresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\models\\identityresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\models\\identityresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\dtos\\dutyassignmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\dtos\\dutyassignmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\entities\\periodtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\entities\\periodtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\entities\\shift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\entities\\shift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\entities\\dutyassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\entities\\dutyassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.dutymanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\services\\leaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\services\\leaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\identityserver\\application\\commands\\signin\\signincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\application\\commands\\signin\\signincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\downloads\\24.05\\1\\ghr\\ghr.leavemanagement\\entities\\leaveapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,17 +114,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "LeaveController.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Controllers\\LeaveController.cs",
               "RelativeDocumentMoniker": "GHR.LeaveManagement\\Controllers\\LeaveController.cs",
               "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Controllers\\LeaveController.cs",
               "RelativeToolTip": "GHR.LeaveManagement\\Controllers\\LeaveController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAArwB0AAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAArwBYAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T12:55:31.279Z",
               "IsPinned": true,
@@ -61,12 +133,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "DutiesController.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Controllers\\DutiesController.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Controllers\\DutiesController.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Controllers\\DutiesController.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Controllers\\DutiesController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:36:04.771Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Controllers\\BaseController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:40:01.376Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "LeaveService.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Services\\LeaveService.cs",
               "RelativeDocumentMoniker": "GHR.LeaveManagement\\Services\\LeaveService.cs",
               "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Services\\LeaveService.cs",
               "RelativeToolTip": "GHR.LeaveManagement\\Services\\LeaveService.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAvwEIAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAvwFMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T13:00:52.592Z",
               "IsPinned": true,
@@ -74,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 24,
               "Title": "ILeaveService.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Services\\Interfaces\\ILeaveService.cs",
               "RelativeDocumentMoniker": "GHR.LeaveManagement\\Services\\Interfaces\\ILeaveService.cs",
@@ -83,12 +183,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T13:31:52.474Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 22,
               "Title": "LeaveRepository.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
               "RelativeDocumentMoniker": "GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
@@ -97,12 +196,11 @@
               "ViewState": "AgIAACwAAAAAAAAAAADgvy8AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T13:01:33.642Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 23,
               "Title": "ILeaveRepository.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Repositories\\Interfaces\\ILeaveRepository.cs",
               "RelativeDocumentMoniker": "GHR.LeaveManagement\\Repositories\\Interfaces\\ILeaveRepository.cs",
@@ -111,46 +209,214 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T13:00:50.578Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SignInCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Application\\Commands\\SignIn\\SignInCommandHandler.cs",
-              "RelativeDocumentMoniker": "IdentityServer\\Application\\Commands\\SignIn\\SignInCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Application\\Commands\\SignIn\\SignInCommandHandler.cs",
-              "RelativeToolTip": "IdentityServer\\Application\\Commands\\SignIn\\SignInCommandHandler.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwB8AAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T15:39:49.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LeaveApplication.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Entities\\LeaveApplication.cs",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Entities\\LeaveApplication.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Entities\\LeaveApplication.cs",
-              "RelativeToolTip": "GHR.LeaveManagement\\Entities\\LeaveApplication.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBEAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T15:12:53.755Z",
+              "DocumentIndex": 6,
+              "Title": "GHR.DutyManagement",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\GHR.DutyManagement.csproj",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\GHR.DutyManagement.csproj",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\GHR.DutyManagement.csproj",
+              "RelativeToolTip": "GHR.DutyManagement\\GHR.DutyManagement.csproj",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-24T16:50:43.973Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "LeaveAppBindingModel.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\DTOs\\Input\\LeaveAppBindingModel.cs",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\DTOs\\Input\\LeaveAppBindingModel.cs",
-              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\DTOs\\Input\\LeaveAppBindingModel.cs",
-              "RelativeToolTip": "GHR.LeaveManagement\\DTOs\\Input\\LeaveAppBindingModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Program.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Program.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Program.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAUAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T13:10:15.747Z",
+              "WhenOpened": "2025-05-24T16:49:55.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\OcelotApiGateway\\ocelot.json",
+              "RelativeDocumentMoniker": "OcelotApiGateway\\ocelot.json",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\OcelotApiGateway\\ocelot.json",
+              "RelativeToolTip": "OcelotApiGateway\\ocelot.json",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-24T16:48:19.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IdentityResult.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\SharedKernel\\IdentityResult.cs",
+              "RelativeDocumentMoniker": "SharedKernel\\IdentityResult.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\SharedKernel\\IdentityResult.cs",
+              "RelativeToolTip": "SharedKernel\\IdentityResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:44:16.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IdentityResult.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Application\\Results\\IdentityResult.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\Application\\Results\\IdentityResult.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Application\\Results\\IdentityResult.cs",
+              "RelativeToolTip": "IdentityServer\\Application\\Results\\IdentityResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:44:02.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IdentityResult.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Models\\IdentityResult.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Models\\IdentityResult.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Models\\IdentityResult.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Models\\IdentityResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:42:29.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DutyService.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Services\\DutyService.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Services\\DutyService.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Services\\DutyService.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Services\\DutyService.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAUwIQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:31:51.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DutyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Repositories\\DutyRepository.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Repositories\\DutyRepository.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Repositories\\DutyRepository.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Repositories\\DutyRepository.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAwwFkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:25:11.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DutyAssignmentDTO.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\DTOs\\DutyAssignmentDTO.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\DTOs\\DutyAssignmentDTO.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\DTOs\\DutyAssignmentDTO.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\DTOs\\DutyAssignmentDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:24:42.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DutyDTO.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\DTOs\\DutyDTO.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\DTOs\\DutyDTO.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\DTOs\\DutyDTO.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\DTOs\\DutyDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:24:19.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PeriodType.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Entities\\PeriodType.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Entities\\PeriodType.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Entities\\PeriodType.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Entities\\PeriodType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:23:58.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Shift.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Entities\\Shift.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Entities\\Shift.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Entities\\Shift.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Entities\\Shift.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:23:40.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DutyAssignment.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Entities\\DutyAssignment.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Entities\\DutyAssignment.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Entities\\DutyAssignment.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Entities\\DutyAssignment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:23:18.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Duty.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Entities\\Duty.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Entities\\Duty.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\Entities\\Duty.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Entities\\Duty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:22:53.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\appsettings.json",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.DutyManagement\\appsettings.json",
+              "RelativeToolTip": "GHR.DutyManagement\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-24T16:10:35.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\appsettings.json",
+              "RelativeDocumentMoniker": "IdentityServer\\appsettings.json",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\appsettings.json",
+              "RelativeToolTip": "IdentityServer\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-24T16:18:48.854Z",
               "EditorCaption": ""
             },
             {
@@ -164,6 +430,42 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SignInCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Application\\Commands\\SignIn\\SignInCommandHandler.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\Application\\Commands\\SignIn\\SignInCommandHandler.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\IdentityServer\\Application\\Commands\\SignIn\\SignInCommandHandler.cs",
+              "RelativeToolTip": "IdentityServer\\Application\\Commands\\SignIn\\SignInCommandHandler.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:39:49.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LeaveApplication.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Entities\\LeaveApplication.cs",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Entities\\LeaveApplication.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\Entities\\LeaveApplication.cs",
+              "RelativeToolTip": "GHR.LeaveManagement\\Entities\\LeaveApplication.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:12:53.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LeaveAppBindingModel.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\DTOs\\Input\\LeaveAppBindingModel.cs",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\DTOs\\Input\\LeaveAppBindingModel.cs",
+              "ToolTip": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.LeaveManagement\\DTOs\\Input\\LeaveAppBindingModel.cs",
+              "RelativeToolTip": "GHR.LeaveManagement\\DTOs\\Input\\LeaveAppBindingModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T13:10:15.747Z"
             }
           ]
         }

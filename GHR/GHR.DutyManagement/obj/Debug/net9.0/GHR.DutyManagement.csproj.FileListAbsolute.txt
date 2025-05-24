@@ -98,12 +98,6 @@ C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\GHR.Dut
 C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\Azure.Identity.dll
 C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\Dapper.dll
-C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\FluentValidation.dll
-C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
-C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
-C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\MediatR.dll
-C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\MediatR.Contracts.dll
-C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\sekne\Downloads\24.05\1\GHR\GHR.DutyManagement\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
