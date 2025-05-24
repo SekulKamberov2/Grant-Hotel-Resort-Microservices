@@ -8,7 +8,8 @@
         Task<LeaveApplication> GetByIdAsync(int id);
         Task <int> AddAsync(LeaveAppBindingModel request);
         Task UpdateAsync(LeaveApplication request);
-        Task DeleteAsync(int id); 
+        Task DeleteAsync(int id);
+        Task<IEnumerable<int>> GetLeaveApplicationsIdsAsync(string status);
     }
 
 }

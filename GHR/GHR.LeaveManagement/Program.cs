@@ -5,6 +5,8 @@ using System.Data;
 using System.Security.Cryptography;
 using System.Text;
 
+using Identity.Grpc;
+
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Data.SqlClient;
 using Microsoft.IdentityModel.JsonWebTokens;
@@ -13,15 +15,18 @@ using Microsoft.IdentityModel.Tokens;
 using GHR.LeaveManagement.Services;
 using GHR.LeaveManagement.Services.Interfaces;
 using GHR.SharedKernel;
- 
+
 var builder = WebApplication.CreateBuilder(args);
 
- 
 builder.Services.AddScoped<IDbConnection>(sp => new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddScoped<ILeaveRequestRepository, LeaveRequestRepository>();
+builder.Services.AddScoped<ILeaveRepository, LeaveRepository>();
 builder.Services.AddScoped<ILeaveService, LeaveService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+builder.Services.AddGrpcClient<IdentityService.IdentityServiceClient>(options =>
+{
+    options.Address = new Uri("https://identity-service:8081");
+});
 
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();

@@ -1,7 +1,7 @@
 ﻿namespace GHR.LeaveManagement.Services
 {
     using System.Collections.Generic;
-
+    using Identity.Grpc;
     using GHR.SharedKernel;
 
     using GHR.LeaveManagement.DTOs.Input;
@@ -11,11 +11,12 @@
 
     public class LeaveService : ILeaveService
     {
-        private readonly ILeaveRequestRepository _leaveRepo;
-
-        public LeaveService(ILeaveRequestRepository leaveRepo)
+        private readonly ILeaveRepository _leaveRepo;
+        private readonly IdentityService.IdentityServiceClient _identityClient;
+        public LeaveService(ILeaveRepository leaveRepo, IdentityService.IdentityServiceClient identityClient)
         {
             _leaveRepo = leaveRepo;
+            _identityClient = identityClient; 
         }
 
         public async Task<IdentityResult<int>> SubmitLeaveRequestAsync(LeaveAppBindingModel request)
@@ -153,7 +154,39 @@
                 return IdentityResult<bool>.Failure($"Error during delete: {ex.Message}", 500);
             }
             return IdentityResult<bool>.Success(true);
-        } 
-    }
+        }
 
+        public async Task<IdentityResult<IEnumerable<UserBindingModel>>> GetApplicantsAsync(string status)
+        {
+            if (string.IsNullOrWhiteSpace(status))
+                return IdentityResult<IEnumerable<UserBindingModel>>.Failure("Status must be provided.");
+
+            try
+            {
+                var userIds = await _leaveRepo.GetLeaveApplicationsIdsAsync(status);
+                if (userIds == null || !userIds.Any())
+                    return IdentityResult<IEnumerable<UserBindingModel>>.Failure($"No applications ids found with status '{status}'");
+
+                //gRPC call
+                var request = new UserIdsRequest();
+                request.Ids.AddRange(userIds);
+                var reply = await _identityClient.GetUsersByIdsAsync(request);
+                var users = reply.Users.Select((User u) => new UserBindingModel
+                {
+                    Id = u.Id,
+                    UserName = u.Username,
+                    Email = u.Email,
+                    PhoneNumber = u.PhoneNumber,
+                    DateCreated = DateTime.Parse(u.DateCreated)
+                }).ToList();
+
+
+                return IdentityResult<IEnumerable<UserBindingModel>>.Success(users);
+            }
+            catch (Exception ex)
+            {
+                return IdentityResult<IEnumerable<UserBindingModel>>.Failure("An error occurred while retrieving leave applications.");
+            }
+        }
+    }
 }

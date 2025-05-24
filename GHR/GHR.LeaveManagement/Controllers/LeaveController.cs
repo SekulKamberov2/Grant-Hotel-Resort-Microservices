@@ -43,6 +43,11 @@
         [Authorize(Roles = "EMPLOYEE")]
         [HttpGet("user/{userId}")]
         public async Task<IActionResult> GetUserLeaveRequests(int userId) =>   
-            AsActionResult(await _leaveService.GetLeaveRequestsByUserIdAsync(userId)); 
+            AsActionResult(await _leaveService.GetLeaveRequestsByUserIdAsync(userId));
+
+        //[Authorize(Roles = "MANAGER")]
+        [HttpGet("applicants/{status}")]
+        public async Task<IActionResult> GetPendingLeaveApplicants([FromRoute] string status) =>
+            AsActionResult(await _leaveService.GetApplicantsAsync(status));
     }
 }

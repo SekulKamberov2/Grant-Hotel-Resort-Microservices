@@ -52,7 +52,11 @@ builder.Services.AddLogging(config =>
 
 builder.Services.AddControllers();
 
+builder.Services.AddGrpc();
+
 var app = builder.Build();
+
+app.MapGrpcService<IdentityGrpcService>();
 
 app.UseCors("AllowGHRclient");
 

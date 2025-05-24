@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "Identity.Grpc";
+
+service IdentityService {
+  rpc GetUsersByIds (UserIdsRequest) returns (UsersReply);
+}
+
+message UserIdsRequest {
+  repeated int32 ids = 1;
+}
+
+message User {
+  int32 id = 1;
+  string username = 2;
+  string email = 3;
+  string phoneNumber = 4;
+  string dateCreated = 5;
+}
+
+message UsersReply {
+  repeated User users = 1;
+}

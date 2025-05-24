@@ -23,3 +23,15 @@ C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Serv
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\SharedKernel\obj\Debug\net9.0\refint\GHR.SharedKernel.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\SharedKernel\obj\Debug\net9.0\GHR.SharedKernel.pdb
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\SharedKernel\obj\Debug\net9.0\ref\GHR.SharedKernel.dll
+C:\Users\sekne\Downloads\24.05\1\GHR\SharedKernel\bin\Debug\net9.0\GHR.SharedKernel.deps.json
+C:\Users\sekne\Downloads\24.05\1\GHR\SharedKernel\bin\Debug\net9.0\GHR.SharedKernel.dll
+C:\Users\sekne\Downloads\24.05\1\GHR\SharedKernel\bin\Debug\net9.0\GHR.SharedKernel.pdb
+C:\Users\sekne\Downloads\24.05\1\GHR\SharedKernel\obj\Debug\net9.0\GHR.SharedKernel.csproj.AssemblyReference.cache
+C:\Users\sekne\Downloads\24.05\1\GHR\SharedKernel\obj\Debug\net9.0\GHR.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sekne\Downloads\24.05\1\GHR\SharedKernel\obj\Debug\net9.0\GHR.SharedKernel.AssemblyInfoInputs.cache
+C:\Users\sekne\Downloads\24.05\1\GHR\SharedKernel\obj\Debug\net9.0\GHR.SharedKernel.AssemblyInfo.cs
+C:\Users\sekne\Downloads\24.05\1\GHR\SharedKernel\obj\Debug\net9.0\GHR.SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\sekne\Downloads\24.05\1\GHR\SharedKernel\obj\Debug\net9.0\GHR.SharedKernel.dll
+C:\Users\sekne\Downloads\24.05\1\GHR\SharedKernel\obj\Debug\net9.0\refint\GHR.SharedKernel.dll
+C:\Users\sekne\Downloads\24.05\1\GHR\SharedKernel\obj\Debug\net9.0\GHR.SharedKernel.pdb
+C:\Users\sekne\Downloads\24.05\1\GHR\SharedKernel\obj\Debug\net9.0\ref\GHR.SharedKernel.dll

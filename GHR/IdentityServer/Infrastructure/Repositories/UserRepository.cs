@@ -259,5 +259,12 @@
                 throw new RepositoryException("Unexpected error occurred while resetting the password.", ex);
             }
         }
+
+        public async Task<IEnumerable<User>> GetUserProfilesByIds(IEnumerable<int> ids)
+        {
+            if (ids == null || !ids.Any()) return Enumerable.Empty<User>();
+            var sql = @"SELECT Id, Username, Email, PhoneNumber, DateCreated FROM Users WHERE Id IN @Ids;";
+            return await _dbConnection.QueryAsync<User>(sql, new { Ids = ids.ToArray() });
+        }
     } 
 }

@@ -1,13 +1,13 @@
 ﻿namespace GHR.LeaveManagement.Repositories
 {
-    using System.Data;
-    using Microsoft.Data.SqlClient;
-
     using Dapper;
-
     using GHR.LeaveManagement.DTOs.Input;
     using GHR.LeaveManagement.Entities;
     using GHR.LeaveManagement.Repositories.Interfaces;
+    using Microsoft.Data.SqlClient;
+    using System.Data;
+    using System.Data.Common;
+
     public class LeaveRequestRepository : ILeaveRequestRepository
     {
         private readonly IDbConnection _db;
@@ -75,6 +75,13 @@
         {
             var sql = "DELETE FROM LeaveApplications WHERE Id = @Id";
             await _db.ExecuteAsync(sql, new { Id = id });
-        }  
+        }
+
+        public async Task<IEnumerable<int>> GetLeaveApplicationsIdsAsync(string status)
+        {
+            const string sql = @"SELECT UserId FROM LeaveApplications WHERE Status = @Status"; 
+            return await _db.QueryAsync<int>(sql, new { Status = status });
+
+        }
     } 
 }

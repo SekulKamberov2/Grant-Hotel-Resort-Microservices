@@ -12,6 +12,7 @@
         Task<User?> GetUserByEmailAsync(string email); 
         Task<bool> CheckPasswordAsync(int userId, string passwordHash); 
         Task<bool> ResetPasswordAsync(int userId, string newPassword);
+        Task<IEnumerable<User>> GetUserProfilesByIds(IEnumerable<int> ids);
     }
 
 }
