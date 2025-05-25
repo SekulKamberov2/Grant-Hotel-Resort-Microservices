@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.leavemanagement\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,19 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LeaveController.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.LeaveManagement\\Controllers\\LeaveController.cs",
-              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Controllers\\LeaveController.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.LeaveManagement\\Controllers\\LeaveController.cs",
-              "RelativeToolTip": "GHR.LeaveManagement\\Controllers\\LeaveController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAswDgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T04:31:02.171Z",
-              "EditorCaption": ""
             }
           ]
         }
