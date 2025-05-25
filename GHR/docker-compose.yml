@@ -6,13 +6,14 @@ services:
       context: .
       dockerfile: OcelotApiGateway/Dockerfile
     ports:
-      - "5000:8080"  # Ocelot gateway port unchanged
+      - "5000:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     depends_on:
       - duty-service
       - identity-service
       - hr-platform-service
+      - helpdesk-service 
     networks:
       - hotelnet
 
@@ -57,6 +58,22 @@ services:
     networks:
       - hotelnet
 
+  helpdesk-service:
+    build:
+      context: .
+      dockerfile: GHR.HelpDesk/Dockerfile
+    ports:
+      - "5006:97" 
+      - "5007:98"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:97  
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=HelpDeskGHRDB;User=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+    networks:
+      - hotelnet
+
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     ports:
@@ -96,7 +113,7 @@ services:
       - sqlserver
     networks:
       - hotelnet
-
+       
 networks:
   hotelnet:
     driver: bridge
