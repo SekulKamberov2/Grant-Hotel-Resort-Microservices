@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ye2Sqf7SfA0=",
+  "dgSpecHash": "/VnPSz7BuuE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sekne\\Downloads\\24.05\\1\\GHR\\GHR.HRPlatform\\GHR.HRPlatform.csproj",
+  "projectFilePath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\GHR.HRPlatform.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sekne\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.5\\microsoft.aspnetcore.authentication.jwtbearer.9.0.5.nupkg.sha512",
     "C:\\Users\\sekne\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.5\\microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
