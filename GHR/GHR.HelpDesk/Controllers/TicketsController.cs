@@ -15,21 +15,13 @@
         public async Task<IActionResult> GetAllTickets() =>
             AsActionResult(await _ticketService.GetAllTicketsAsync());
 
-        [Authorize(Roles = "HD MANAGER")]
+        //only HD ADMIN & The owner of the ticket!
+        [Authorize]
         [HttpGet("{ticketId}")]
         public async Task<IActionResult> GetTicket(int ticketId) =>
-            AsActionResult(await _ticketService.GetTicketAsync(ticketId));
-
-        //customer role!
-        //only your own ticket!
-        [HttpGet("client/{ticketId}")]
-        public async Task<IActionResult> GetOwnTicket(int ticketId)
-        {  
-            if (!User.TryGetUserIdAsInt(out int userId)) return Unauthorized("Invalid or missing user Id."); 
-            return AsActionResult(await _ticketService.GetOwnTicketAsync(ticketId, userId));
-        }
-             
-
+            AsActionResult(await _ticketService.GetTicketAsync(
+                ticketId, User.TryGetUserIdAsInt(out int userId) ? userId : null, User.GetRole()));
+         
         //customer role!
         [HttpPost]
         public async Task<IActionResult> CreateTicket([FromBody] TicketDto ticket) =>

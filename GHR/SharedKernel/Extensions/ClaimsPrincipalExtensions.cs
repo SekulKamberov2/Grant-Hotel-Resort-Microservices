@@ -4,7 +4,8 @@
     public static class ClaimsPrincipalExtensions
     {
         public static string? GetUserId(this ClaimsPrincipal user) =>
-            user?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            user?.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? user?.FindFirst("userId")?.Value;
+
 
         public static bool TryGetUserIdAsInt(this ClaimsPrincipal user, out int userId)
         {

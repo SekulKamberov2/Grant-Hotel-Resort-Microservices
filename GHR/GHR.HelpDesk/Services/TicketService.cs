@@ -3,12 +3,12 @@
     using GHR.HelpDesk.DTOs;
     using GHR.HelpDesk.Entities;
     using GHR.HelpDesk.Repositories;
-    using GHR.SharedKernel; 
+    using GHR.SharedKernel;
+    using System.Text.Json;
 
     public interface ITicketService
     {
-        Task<IdentityResult<TicketDto>> GetTicketAsync(int ticketId);
-        Task<IdentityResult<TicketDto>> GetOwnTicketAsync(int ticketId, int userId);
+        Task<IdentityResult<TicketDto>> GetTicketAsync(int ticketId, int? userId, string? role); 
         Task<IdentityResult<IEnumerable<TicketDto>>> GetAllTicketsAsync();
         Task<IdentityResult<TicketDto>> CreateTicketAsync(TicketDto ticket);
         Task<IdentityResult<bool>> UpdateTicketAsync(TicketDto ticket);
@@ -32,16 +32,19 @@
     public class TicketService : ITicketService
     {
         private readonly ITicketRepository _ticketRepository;
-        public TicketService(ITicketRepository ticketRepository) => _ticketRepository = ticketRepository;
+        public TicketService(ITicketRepository ticketRepository) => _ticketRepository = ticketRepository; 
 
-        public async Task<IdentityResult<TicketDto>> GetTicketAsync(int ticketId)
-        {
+        public async Task<IdentityResult<TicketDto>> GetTicketAsync(int ticketId, int? userId, string? role)
+        {     
             try
             {
-                var ticket = await _ticketRepository.GetByIdAsync(ticketId);
+                var ticket = await _ticketRepository.GetByIdAsync(ticketId); 
                 if (ticket == null)
                     return IdentityResult<TicketDto>.Failure("Ticket not found.", 404);
-
+               
+                if (ticket.UserId != userId && role != "HD ADMIN")
+                    return IdentityResult<TicketDto>.Failure("Unauthorized access to this ticket.", 401);
+                  
                 var result = new TicketDto
                 {
                     Id = ticket.Id,
@@ -56,38 +59,7 @@
                     StatusId = ticket.StatusId,
                     CreatedAt = ticket.CreatedAt,
                     UpdatedAt = ticket.UpdatedAt
-                };
-                return IdentityResult<TicketDto>.Success(result);
-            }
-            catch
-            { 
-                return IdentityResult<TicketDto>.Failure("An error occurred while retrieving the ticket. Please try again later.", 500);
-            }
-        }
-
-        public async Task<IdentityResult<TicketDto>> GetOwnTicketAsync(int ticketId, int userId)
-        {
-            try
-            {
-                var ticket = await _ticketRepository.GetByIdAsync(ticketId);
-                if (ticket == null)
-                    return IdentityResult<TicketDto>.Failure("Ticket not found.", 404);
-
-                var result = new TicketDto
-                {
-                    Id = ticket.Id,
-                    Title = ticket.Title,
-                    Description = ticket.Description,
-                    UserId = ticket.UserId,
-                    StaffId = ticket.StaffId,
-                    DepartmentId = ticket.DepartmentId,
-                    LocationId = ticket.LocationId,
-                    CategoryId = ticket.CategoryId,
-                    PriorityId = ticket.PriorityId,
-                    StatusId = ticket.StatusId,
-                    CreatedAt = ticket.CreatedAt,
-                    UpdatedAt = ticket.UpdatedAt
-                };
+                };  
                 return IdentityResult<TicketDto>.Success(result);
             }
             catch
@@ -95,6 +67,7 @@
                 return IdentityResult<TicketDto>.Failure("An error occurred while retrieving the ticket. Please try again later.", 500);
             }
         }
+
 
         public async Task<IdentityResult<IEnumerable<TicketDto>>> GetAllTicketsAsync()
         {
