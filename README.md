@@ -27,7 +27,12 @@ X GUEST
 Mid-level guest, moderate access to features,  
 limited perks.
 
+GUEST  
+4 ⭐⭐ (2/5 stars)  
+Basic guest or casual visitor with minimal access,  
+mostly browsing or limited use.
+
 Visitor  
-4 (Lowest) ⭐⭐ (2/5 stars)  
+5 (Lowest) ⭐ (1/5 stars)  
 Basic guest or casual visitor with minimal access,  
 mostly browsing or limited use.
