@@ -2,6 +2,7 @@
 {
     using GHR.HelpDesk.DTOs; 
     using GHR.HelpDesk.Services;
+    using GHR.SharedKernel.Extensions;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     public class TicketsController : BaseApiController
@@ -21,9 +22,13 @@
 
         //customer role!
         //only your own ticket!
-        [HttpGet("{ticketId}")]
-        public async Task<IActionResult> GetTicket2(int ticketId) =>
-            AsActionResult(await _ticketService.GetTicketAsync(ticketId));
+        [HttpGet("client/{ticketId}")]
+        public async Task<IActionResult> GetOwnTicket(int ticketId)
+        {  
+            if (!User.TryGetUserIdAsInt(out int userId)) return Unauthorized("Invalid or missing user Id."); 
+            return AsActionResult(await _ticketService.GetOwnTicketAsync(ticketId, userId));
+        }
+             
 
         //customer role!
         [HttpPost]

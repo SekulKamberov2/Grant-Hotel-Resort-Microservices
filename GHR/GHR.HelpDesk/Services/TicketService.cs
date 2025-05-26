@@ -8,6 +8,7 @@
     public interface ITicketService
     {
         Task<IdentityResult<TicketDto>> GetTicketAsync(int ticketId);
+        Task<IdentityResult<TicketDto>> GetOwnTicketAsync(int ticketId, int userId);
         Task<IdentityResult<IEnumerable<TicketDto>>> GetAllTicketsAsync();
         Task<IdentityResult<TicketDto>> CreateTicketAsync(TicketDto ticket);
         Task<IdentityResult<bool>> UpdateTicketAsync(TicketDto ticket);
@@ -60,6 +61,37 @@
             }
             catch
             { 
+                return IdentityResult<TicketDto>.Failure("An error occurred while retrieving the ticket. Please try again later.", 500);
+            }
+        }
+
+        public async Task<IdentityResult<TicketDto>> GetOwnTicketAsync(int ticketId, int userId)
+        {
+            try
+            {
+                var ticket = await _ticketRepository.GetByIdAsync(ticketId);
+                if (ticket == null)
+                    return IdentityResult<TicketDto>.Failure("Ticket not found.", 404);
+
+                var result = new TicketDto
+                {
+                    Id = ticket.Id,
+                    Title = ticket.Title,
+                    Description = ticket.Description,
+                    UserId = ticket.UserId,
+                    StaffId = ticket.StaffId,
+                    DepartmentId = ticket.DepartmentId,
+                    LocationId = ticket.LocationId,
+                    CategoryId = ticket.CategoryId,
+                    PriorityId = ticket.PriorityId,
+                    StatusId = ticket.StatusId,
+                    CreatedAt = ticket.CreatedAt,
+                    UpdatedAt = ticket.UpdatedAt
+                };
+                return IdentityResult<TicketDto>.Success(result);
+            }
+            catch
+            {
                 return IdentityResult<TicketDto>.Failure("An error occurred while retrieving the ticket. Please try again later.", 500);
             }
         }
