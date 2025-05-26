@@ -31,12 +31,13 @@
             {
                 if (string.IsNullOrWhiteSpace(userId) || user == null)
                     return IdentityResult<string>.Failure("Invalid user data");
-
+                Console.WriteLine(user.Email);
                 var claims = new List<Claim>
                 {
                     new Claim("userId", userId),
                     new Claim("userName", user.UserName ?? ""),
-                    new Claim("email", user.Email ?? "")
+                    new Claim("phone", user.PhoneNumber ?? ""),
+                    new Claim("mail", user.Email ?? "")
                 };
 
                 if (roles != null)

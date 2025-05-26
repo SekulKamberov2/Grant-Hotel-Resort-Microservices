@@ -20,7 +20,7 @@
         [HttpGet("{ticketId}")]
         public async Task<IActionResult> GetTicket(int ticketId) =>
             AsActionResult(await _ticketService.GetTicketAsync(
-                ticketId, User.TryGetUserIdAsInt(out int userId) ? userId : null, User.GetRole()));
+                ticketId, User.ToCurrentUser(), User.GetRole()));  //User.TryGetUserIdAsInt(out int userId) ? userId : null, User.GetRole()));
          
         //customer role!
         [HttpPost]

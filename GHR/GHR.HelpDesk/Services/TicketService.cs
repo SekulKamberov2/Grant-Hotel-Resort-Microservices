@@ -4,11 +4,12 @@
     using GHR.HelpDesk.Entities;
     using GHR.HelpDesk.Repositories;
     using GHR.SharedKernel;
+    using GHR.SharedKernel.Models;
     using System.Text.Json;
 
     public interface ITicketService
     {
-        Task<IdentityResult<TicketDto>> GetTicketAsync(int ticketId, int? userId, string? role); 
+        Task<IdentityResult<TicketWithUserDetailsDto>> GetTicketAsync(int ticketId, CurrentUser currentUser, string? role); 
         Task<IdentityResult<IEnumerable<TicketDto>>> GetAllTicketsAsync();
         Task<IdentityResult<TicketDto>> CreateTicketAsync(TicketDto ticket);
         Task<IdentityResult<bool>> UpdateTicketAsync(TicketDto ticket);
@@ -34,18 +35,18 @@
         private readonly ITicketRepository _ticketRepository;
         public TicketService(ITicketRepository ticketRepository) => _ticketRepository = ticketRepository; 
 
-        public async Task<IdentityResult<TicketDto>> GetTicketAsync(int ticketId, int? userId, string? role)
+        public async Task<IdentityResult<TicketWithUserDetailsDto>> GetTicketAsync(int ticketId, CurrentUser currentUser, string? role)
         {     
             try
             {
                 var ticket = await _ticketRepository.GetByIdAsync(ticketId); 
                 if (ticket == null)
-                    return IdentityResult<TicketDto>.Failure("Ticket not found.", 404);
+                    return IdentityResult<TicketWithUserDetailsDto>.Failure("Ticket not found.", 404);
                
-                if (ticket.UserId != userId && role != "HD ADMIN")
-                    return IdentityResult<TicketDto>.Failure("Unauthorized access to this ticket.", 401);
-                  
-                var result = new TicketDto
+                if (ticket.UserId != currentUser.Id && role != "HD ADMIN")
+                    return IdentityResult<TicketWithUserDetailsDto>.Failure("Unauthorized access to this ticket.", 401);
+                
+                var result = new TicketWithUserDetailsDto
                 {
                     Id = ticket.Id,
                     Title = ticket.Title,
@@ -58,13 +59,17 @@
                     PriorityId = ticket.PriorityId,
                     StatusId = ticket.StatusId,
                     CreatedAt = ticket.CreatedAt,
-                    UpdatedAt = ticket.UpdatedAt
+                    UpdatedAt = ticket.UpdatedAt,
+
+                    UserName = currentUser.UserName,
+                    Email = currentUser.Email,
+                    PhoneNumber = currentUser.PhoneNumber 
                 };  
-                return IdentityResult<TicketDto>.Success(result);
+                return IdentityResult<TicketWithUserDetailsDto>.Success(result);
             }
             catch
             {
-                return IdentityResult<TicketDto>.Failure("An error occurred while retrieving the ticket. Please try again later.", 500);
+                return IdentityResult<TicketWithUserDetailsDto>.Failure("An error occurred while retrieving the ticket. Please try again later.", 500);
             }
         }
 
