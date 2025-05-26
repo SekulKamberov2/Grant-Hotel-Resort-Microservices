@@ -1,11 +1,3 @@
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.csproj.AssemblyReference.cache
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.AssemblyInfoInputs.cache
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.AssemblyInfo.cs
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.csproj.CoreCompileInputs.cache
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.sourcelink.json
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\bin\Debug\net9.0\appsettings.json
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\bin\Debug\net9.0\GHR.HelpDesk.staticwebassets.endpoints.json
@@ -67,6 +59,14 @@ C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Serv
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\bin\Debug\net9.0\GHR.SharedKernel.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\bin\Debug\net9.0\GHR.SharedKernel.pdb
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.csproj.AssemblyReference.cache
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.AssemblyInfoInputs.cache
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.AssemblyInfo.cs
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.csproj.CoreCompileInputs.cache
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\GHR.HelpDesk.sourcelink.json
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\scopedcss\bundle\GHR.HelpDesk.styles.css
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.HelpDesk\obj\Debug\net9.0\staticwebassets.build.json.cache
