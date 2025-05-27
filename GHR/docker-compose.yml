@@ -113,6 +113,21 @@ services:
       - sqlserver
     networks:
       - hotelnet
+      
+  rating-service:
+    build:
+      context: .
+      dockerfile: GHR.Rating/Dockerfile
+    ports:
+      - "5008:99"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:99
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=RatingGHRDB;User=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+    networks:
+      - hotelnet 
        
 networks:
   hotelnet:
