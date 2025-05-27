@@ -1,13 +1,13 @@
 ﻿namespace GHR.Rating.Infrastructure.Repositories
 {
-    using System.Data;
-    using System.Text;
-
     using Dapper;
-
     using GHR.Rating.Domain.Entities; 
     using GHR.Rating.Domain.Repositories;
     using GHR.SharedKernel.Exceptions;
+    using System.Data;
+    using System.Text;
+    using System.Text.Json;
+
     public class RatingRepository : IRatingRepository
     {
         private readonly IDbConnection _db; 
@@ -28,11 +28,15 @@
 
         public async Task<int> AddAsync(Rating rating)
         {
-            const string sql = @"INSERT INTO Ratings (UserId, ServiceId, DepartmentId, Stars, Comment, RatingDate)
-                                 VALUES (@UserId, @ServiceId, @DepartmentId, @Stars, @Comment, @RatingDate)";
+            const string sql = @"
+                INSERT INTO 
+                    Ratings (UserId, ServiceId, DepartmentId, Stars, Comment, RatingDate)
+                    VALUES (@UserId, @ServiceId, @DepartmentId, @Stars, @Comment, @RatingDate)";
             try
-            {
-                return await _db.ExecuteAsync(sql, rating);
+            { 
+                var result = await _db.ExecuteAsync(sql, rating);
+                var options = new JsonSerializerOptions { WriteIndented = true }; 
+                return result;
             }
             catch (Exception ex)
             {

@@ -1,33 +1,40 @@
+using System.Data;
+using System.Security.Cryptography;
+using System.Text;
+ 
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Data.SqlClient;
+using Microsoft.IdentityModel.JsonWebTokens;
+using Microsoft.IdentityModel.Tokens;
+
+using MediatR;
 using FluentValidation;
-using FluentValidation.AspNetCore;
+ 
 using GHR.Rating.Application.Commands;
 using GHR.Rating.Application.Commands.ApproveRating;
+using GHR.Rating.Application.Commands.AwardTopPerformers;
 using GHR.Rating.Application.Commands.BulkDeleteRatings;
+using GHR.Rating.Application.Commands.CreateAward;
 using GHR.Rating.Application.Commands.CreateRating;
+using GHR.Rating.Application.Commands.DeleteAward;
 using GHR.Rating.Application.Commands.DeleteRating;
 using GHR.Rating.Application.Commands.RestoreRating;
+using GHR.Rating.Application.Commands.UpdateAward;
 using GHR.Rating.Application.Commands.UpdateRating;
 using GHR.Rating.Application.Queries;
 using GHR.Rating.Application.Queries.GetAllRatings;
 using GHR.Rating.Application.Queries.GetAverageRatin;
+using GHR.Rating.Application.Queries.GetAwardById;
+using GHR.Rating.Application.Queries.GetAwardsByPeriod;
 using GHR.Rating.Application.Queries.GetRankingByPeriod;
 using GHR.Rating.Application.Queries.GetRatingById;
 using GHR.Rating.Application.Queries.GetRatingsByStatus;
 using GHR.Rating.Application.Queries.Validators;
 using GHR.Rating.Application.Services;
 using GHR.Rating.Application.Validators;
- 
 using GHR.Rating.Domain.Repositories;
 using GHR.Rating.Infrastructure.Repositories;
 using GHR.SharedKernel;
-using MediatR;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Data.SqlClient;
-using Microsoft.IdentityModel.JsonWebTokens;
-using Microsoft.IdentityModel.Tokens;
-using System.Data;
-using System.Security.Cryptography;
-using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
  
@@ -35,17 +42,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddTransient<IDbConnection>(sp =>
-    new SqlConnection(builder.Configuration.GetConnectionString("Default")));
+    new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection"))); 
 
 builder.Services.AddScoped<IRatingRepository, RatingRepository>();
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddScoped<IRatingService, RatingService>();
+builder.Services.AddScoped<IAwardService, AwardService>();
+builder.Services.AddScoped<IAwardRepository, AwardRepository>();
 
 builder.Services.AddMediatR(typeof(CreateRatingCommandHandler).Assembly);
-builder.Services.AddFluentValidationAutoValidation(); // for automatic model validation
+//builder.Services.AddFluentValidationAutoValidation(); // for automatic model validation
 builder.Services.AddValidatorsFromAssemblyContaining<CreateRatingCommandValidator>();
-builder.Services.AddValidatorsFromAssemblyContaining<RestoreRatingCommandValidator>();
-builder.Services.AddValidatorsFromAssemblyContaining<GetRatingsByServiceQueryValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<RestoreRatingCommandValidator>(); 
 builder.Services.AddValidatorsFromAssemblyContaining<ApproveRatingCommandValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<BulkDeleteRatingsCommandValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<DeleteRatingCommandHandler>();
@@ -60,10 +68,12 @@ builder.Services.AddValidatorsFromAssemblyContaining<GetRatingsByDepartmentQuery
 builder.Services.AddValidatorsFromAssemblyContaining<GetRatingsByServiceQueryValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<GetRatingsByStatusQueryValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<GetRatingsByUserQueryValidator>();
-
-
-
-//builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+builder.Services.AddValidatorsFromAssemblyContaining<AwardTopPerformersCommandValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateAwardCommandValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<DeleteAwardCommandValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<GetAwardByIdQueryValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<GetAwardsByPeriodQueryValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<UpdateAwardCommandValidator>(); 
 
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();

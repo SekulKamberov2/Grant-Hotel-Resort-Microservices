@@ -9,7 +9,7 @@
         public int Stars { get; private set; }
         public string Comment { get; private set; }
         public DateTime RatingDate { get; private set; }
-
+        public Rating() { }
         public Rating(int userId, int serviceId, int departmentId, int stars, string comment)
         {
             if (stars < 1 || stars > 10)

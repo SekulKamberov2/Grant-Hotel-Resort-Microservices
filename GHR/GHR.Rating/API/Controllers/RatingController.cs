@@ -18,6 +18,7 @@
     using GHR.Rating.Application.Queries.GetRankingByPeriod;
     using GHR.Rating.Application.Queries.GetRatingById;
     using GHR.Rating.Application.Queries.GetRatingsByStatus;
+
     public class RatingController : BaseApiController
     {
         private readonly IMediator _mediator;

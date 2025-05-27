@@ -1,7 +1,5 @@
 ﻿namespace GHR.Rating.Application.Services
 {
-    using Microsoft.Data.SqlClient;
-
     using GHR.Rating.Application.Commands.BulkDeleteRatings;
     using GHR.Rating.Application.Commands.CreateRating;
     using GHR.Rating.Application.Dtos;
@@ -9,6 +7,9 @@
     using GHR.Rating.Domain.Factories;
     using GHR.Rating.Domain.Repositories;
     using GHR.SharedKernel;  
+    using Microsoft.Data.SqlClient;
+    using System.Text.Json;
+
     public class RatingService : IRatingService
     {
         private readonly IRatingRepository _ratingRepository;
@@ -29,7 +30,8 @@
 
             try
             {
-                var rating = RatingFactory.Create(cmd.UserId, cmd.ServiceId, cmd.DepartmentId, cmd.Stars, cmd.Comment);
+                var rating = RatingFactory.Create(cmd.UserId, cmd.ServiceId, cmd.DepartmentId, cmd.Stars, cmd.Comment); 
+
                 var newId = await _ratingRepository.AddAsync(rating);
                 return IdentityResult<int>.Success(newId);
             }
