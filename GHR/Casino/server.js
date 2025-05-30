@@ -217,8 +217,123 @@ app.post('/login', async (req, res) => {
       );
   }
 });
-
  
+app.post('/games/roulette/play', checkJwt, async (req, res) => {
+  const { betAmount, betChoice } = req.body; // betChoice: number (0-36) or 'red'/'black'
+  const sqlUserId = Number(req.auth.userId);
+
+  if (!betAmount || betAmount <= 0) {
+    return res.status(400).json(new ApiResponse({ success: false, message: 'Bet amount must be > 0' }));
+  }
+  if (
+    !(
+      (typeof betChoice === 'number' && betChoice >= 0 && betChoice <= 36) ||
+      (typeof betChoice === 'string' && ['red', 'black'].includes(betChoice.toLowerCase()))
+    )
+  ) {
+    return res.status(400).json(new ApiResponse({ success: false, message: 'Invalid bet choice: must be 0-36 or "red"/"black"' }));
+  }
+
+  try {
+    const user = await User.findOne({ sqlUserId });
+    if (!user) {
+      return res.status(404).json(new ApiResponse({ success: false, message: 'User not found' }));
+    }
+    if (user.walletBalance < betAmount) {
+      return res.status(400).json(new ApiResponse({ success: false, message: 'Insufficient balance' }));
+    }
+
+    user.walletBalance -= betAmount;
+
+    const spinNumber = Math.floor(Math.random() * 37);
+    const redNumbers = [
+      1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36
+    ];
+    let spinColor = 'green';
+    if (spinNumber !== 0) {
+      spinColor = redNumbers.includes(spinNumber) ? 'red' : 'black';
+    }
+
+    let didWin = false;
+    let winAmount = 0;
+
+    if (typeof betChoice === 'number') {
+      // Bet on digit
+      didWin = (betChoice === spinNumber);
+      if (didWin) winAmount = betAmount * 35;
+    } else {
+      // Bet on color (case insensitive)
+      didWin = (betChoice.toLowerCase() === spinColor);
+      if (didWin) winAmount = betAmount * 2;
+    }
+
+    if (didWin) {
+      user.walletBalance += winAmount;
+    }
+
+    await user.save();
+
+    res.json(new ApiResponse({
+      success: true,
+      message: didWin
+        ? `You won! The ball landed on ${spinNumber} (${spinColor}).`
+        : `You lost. The ball landed on ${spinNumber} (${spinColor}).`,
+      data: {
+        betAmount,
+        betChoice,
+        spinNumber,
+        spinColor,
+        winAmount,
+        finalBalance: user.walletBalance
+      }
+    }));
+  } catch (error) {
+    res.status(500).json(new ApiResponse({ success: false, message: 'Server error', error: error.message }));
+  }
+});
+ 
+app.post('/games/cointoss/play', checkJwt, async (req, res) => {
+  const { betAmount, betChoice } = req.body; // betChoice: 'heads' or 'tails'
+  const sqlUserId = Number(req.auth.userId);
+
+  if (!betAmount || betAmount <= 0 || !['heads', 'tails'].includes(betChoice)) {
+    return res.status(400).json(new ApiResponse({ success: false, message: 'Invalid bet amount or choice' }));
+  }
+
+  try {
+    const user = await User.findOne({ sqlUserId });
+    if (!user) {
+      return res.status(404).json(new ApiResponse({ success: false, message: 'User not found' }));
+    }
+
+    if (user.walletBalance < betAmount) {
+      return res.status(400).json(new ApiResponse({ success: false, message: 'Insufficient balance' }));
+    }
+
+    user.walletBalance -= betAmount;
+
+    const tossResult = Math.random() < 0.5 ? 'heads' : 'tails';
+    let winAmount = 0;
+    const didWin = (betChoice === tossResult);
+
+    if (didWin) {
+      winAmount = betAmount * 2;
+      user.walletBalance += winAmount;
+    }
+
+    await user.save();
+
+    res.json(new ApiResponse({
+      success: true,
+      message: didWin ? `You won! The toss was ${tossResult}.` : `You lost! The toss was ${tossResult}.`,
+      data: { betAmount, betChoice, tossResult, winAmount, finalBalance: user.walletBalance }
+    }));
+  } catch (error) {
+    res.status(500).json(new ApiResponse({ success: false, message: 'Server error', error: error.message }));
+  }
+});
+
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
