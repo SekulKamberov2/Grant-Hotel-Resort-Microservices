@@ -289,3 +289,11 @@ C:\Users\sekne\Downloads\1\1\GHR\IdentityServer\obj\Debug\net9.0\refint\Identity
 C:\Users\sekne\Downloads\1\1\GHR\IdentityServer\obj\Debug\net9.0\IdentityServer.pdb
 C:\Users\sekne\Downloads\1\1\GHR\IdentityServer\obj\Debug\net9.0\IdentityServer.genruntimeconfig.cache
 C:\Users\sekne\Downloads\1\1\GHR\IdentityServer\obj\Debug\net9.0\ref\IdentityServer.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\IPAddressRange.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\Ocelot.dll

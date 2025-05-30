@@ -42,6 +42,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityClient", "IdentityClient", "{516A7882-EFDC-45B8-9E93-E69A23D67651}"
 	ProjectSection(SolutionItems) = preProject
 		IdentityClient\.gitignore = IdentityClient\.gitignore
+		Dockerfile = Dockerfile
+		nginx.conf = nginx.conf
 		IdentityClient\package-lock.json = IdentityClient\package-lock.json
 		IdentityClient\package.json = IdentityClient\package.json
 		IdentityClient\README.md = IdentityClient\README.md

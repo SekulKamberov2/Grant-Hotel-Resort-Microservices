@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowGHRclient", policy =>
     {
-        policy.WithOrigins("http://localhost:3000")
+        policy.WithOrigins("http://localhost:3003")
               .AllowAnyMethod()
               .AllowAnyHeader()
               .AllowCredentials();

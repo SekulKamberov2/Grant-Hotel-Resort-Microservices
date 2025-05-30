@@ -164,3 +164,4 @@ C:\Users\sekne\Downloads\1\1\GHR\GHR.DutyManagement\obj\Debug\net9.0\refint\GHR.
 C:\Users\sekne\Downloads\1\1\GHR\GHR.DutyManagement\obj\Debug\net9.0\GHR.DutyManagement.pdb
 C:\Users\sekne\Downloads\1\1\GHR\GHR.DutyManagement\obj\Debug\net9.0\GHR.DutyManagement.genruntimeconfig.cache
 C:\Users\sekne\Downloads\1\1\GHR\GHR.DutyManagement\obj\Debug\net9.0\ref\GHR.DutyManagement.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DutyManagement\bin\Debug\net9.0\.filenesting.json

@@ -91,7 +91,7 @@ services:
       context: ./IdentityClient
       dockerfile: Dockerfile
     ports:
-      - "3000:90"
+      - "3003:90"  
     networks:
       - hotelnet
     depends_on:
@@ -104,7 +104,7 @@ services:
     ports:
       - "5004:95"
       - "5005:96"
-      - "7000:95"  # Additional external port mapped to 95
+      - "7000:95"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:95
@@ -131,7 +131,7 @@ services:
 
   casino:
     build:
-      context: ./casino
+      context: ./GHR.Casino
       dockerfile: Dockerfile
     ports:
       - "3001:3001"

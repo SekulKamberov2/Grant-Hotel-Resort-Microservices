@@ -127,3 +127,11 @@ C:\Users\sekne\Downloads\1\1\GHR\OcelotApiGateway\obj\Debug\net9.0\refint\Ocelot
 C:\Users\sekne\Downloads\1\1\GHR\OcelotApiGateway\obj\Debug\net9.0\OcelotApiGateway.pdb
 C:\Users\sekne\Downloads\1\1\GHR\OcelotApiGateway\obj\Debug\net9.0\OcelotApiGateway.genruntimeconfig.cache
 C:\Users\sekne\Downloads\1\1\GHR\OcelotApiGateway\obj\Debug\net9.0\ref\OcelotApiGateway.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\OcelotApiGateway\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\OcelotApiGateway\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\OcelotApiGateway\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\OcelotApiGateway\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\OcelotApiGateway\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\OcelotApiGateway\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\OcelotApiGateway\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\OcelotApiGateway\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
