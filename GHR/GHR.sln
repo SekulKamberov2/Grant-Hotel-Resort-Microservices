@@ -151,7 +151,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.HelpDesk", "GHR.HelpDes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.Rating", "GHR.Rating\GHR.Rating.csproj", "{3957926B-BB97-4BB3-A065-E6D4A5987F4C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Casion", "Casion", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Casiono", "GHR.Casiono", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
 		Casino\.env = Casino\.env
 		Casino\package.json = Casino\package.json

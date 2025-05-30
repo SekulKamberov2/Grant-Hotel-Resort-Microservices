@@ -128,10 +128,34 @@ services:
       - sqlserver
     networks:
       - hotelnet 
-       
+
+  casino:
+    build:
+      context: ./casino
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/casino-db
+    depends_on:
+      - mongo
+    networks:
+      - hotelnet
+
+  mongo:
+    image: mongo:6
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - hotelnet
+
 networks:
   hotelnet:
     driver: bridge
 
 volumes:
   sql_data:
+  mongo-data:

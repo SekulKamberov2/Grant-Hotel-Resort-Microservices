@@ -178,7 +178,8 @@ app.post('/login', async (req, res) => {
         .json(new ApiResponse({ success: false, message: 'Missing credentials' }));
     }
  
-    const response = await axios.post('http://localhost:5001/api/users/signin', { email, password });
+    //calling my inner container not like postman 5001
+    const response = await axios.post('http://identity-service:8081/api/users/signin', { email, password });
     const { token, user } = response.data.data; 
     const sqlUserId = Number(user.id);   
 
