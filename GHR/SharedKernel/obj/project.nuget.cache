@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EQMJ9XUHGQI=",
+  "dgSpecHash": "nABUU8y+qSg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\SharedKernel\\GHR.SharedKernel.csproj",
+  "projectFilePath": "C:\\Users\\sekne\\Downloads\\1\\1\\GHR\\SharedKernel\\GHR.SharedKernel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.5\\microsoft.extensions.dependencyinjection.abstractions.9.0.5.nupkg.sha512",
     "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.5\\microsoft.extensions.logging.abstractions.9.0.5.nupkg.sha512"

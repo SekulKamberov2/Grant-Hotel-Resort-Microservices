@@ -25,7 +25,7 @@
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateDuty(int id, [FromBody] Duty duty)
         {
-            if (id != duty.Id) return BadRequest("ID mismatch");
+            if (id != duty.Id) return BadRequest("Id mismatch");
             return AsActionResult(await _dutyservice.UpdateDutyAsync(duty));
         }
 

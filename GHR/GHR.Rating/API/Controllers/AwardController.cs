@@ -22,7 +22,7 @@
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateAwardCommand command)
         {
-            if (id != command.Id) return BadRequest("ID mismatch.");
+            if (id != command.Id) return BadRequest("Id mismatch.");
             return AsActionResult(await _mediator.Send(command));
         }
 

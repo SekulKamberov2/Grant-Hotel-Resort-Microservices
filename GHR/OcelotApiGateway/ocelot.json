@@ -1,7 +1,7 @@
 ﻿{
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/helpdesk/{everything}",
+      "DownstreamPathTemplate": "/api/tickets/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -9,12 +9,12 @@
           "Port": 97
         }
       ],
-      "UpstreamPathTemplate": "/helpdesk/api/{everything}",
+      "UpstreamPathTemplate": "/api/tickets/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer",
-        "AllowedScopes": []
-      },
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": []
+      //},
       "RateLimitOptions": {
         "EnableRateLimiting": true,
         "Period": "1m",
@@ -37,12 +37,12 @@
           "Port": 8081
         }
       ],
-      "UpstreamPathTemplate": "/users/api/{everything}",
+      "UpstreamPathTemplate": "/api/users/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer",
-        "AllowedScopes": []
-      },
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": []
+      //},
       "RateLimitOptions": {
         "EnableRateLimiting": true,
         "Period": "1m",
@@ -57,7 +57,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/duty/{everything}",
+      "DownstreamPathTemplate": "/api/duties/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -65,7 +65,7 @@
           "Port": 8080
         }
       ],
-      "UpstreamPathTemplate": "/duty/{everything}",
+      "UpstreamPathTemplate": "/api/duty/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/hrplatform/{everything}",
+      "DownstreamPathTemplate": "/api/hr/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -93,7 +93,7 @@
           "Port": 8082
         }
       ],
-      "UpstreamPathTemplate": "/hrplatform/api/{everything}",
+      "UpstreamPathTemplate": "/api/hr/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
@@ -113,7 +113,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/leavemanagement/{everything}",
+      "DownstreamPathTemplate": "/api/leave/user/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -121,12 +121,12 @@
           "Port": 95
         }
       ],
-      "UpstreamPathTemplate": "/leavemanagement/api/{everything}",
+      "UpstreamPathTemplate": "/api/leave/user/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer",
-        "AllowedScopes": []
-      },
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": []
+      //},
       "RateLimitOptions": {
         "EnableRateLimiting": true,
         "Period": "1m",
@@ -149,12 +149,12 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/rating/api/{everything}",
+      "UpstreamPathTemplate": "/api/rating/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer",
-        "AllowedScopes": []
-      },
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": []
+      //},
       "RateLimitOptions": {
         "EnableRateLimiting": true,
         "Period": "1m",
@@ -167,6 +167,92 @@
       "LoadBalancerOptions": {
         "Type": "RoundRobin"
       }
+    },  
+    {
+      "DownstreamPathTemplate": "/api/users/me/info/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/users/me/info/{userId}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "Identity",
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //},
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 60,
+        "Limit": 20
+      },
+      "AddHeadersToRequest": {
+        "X-Gateway-From": "Ocelot"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/leave/user/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/leave/user/{userId}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "Leave",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 60,
+        "Limit": 10
+      },
+      "AddHeadersToRequest": {
+        "X-Gateway-From": "Ocelot"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/rating/user/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5008
+        }
+      ],
+      "UpstreamPathTemplate": "/api/rating/user/{userId}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "Rating",
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //},
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 60,
+        "Limit": 10
+      },
+      "AddHeadersToRequest": {
+        "X-Gateway-From": "Ocelot"
+      }
+    }
+  ],
+  "Aggregates": [
+    {
+      "RouteKeys": [ 
+        "Identity",
+        "Leave"  
+      ],
+      "UpstreamPathTemplate": "/aggregate/user-info/{userId}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Aggregator": "CustomAggregator"
     }
   ],
   "GlobalConfiguration": {

@@ -22,6 +22,5 @@
             Comment = comment;
             RatingDate = DateTime.UtcNow;
         }
-    }
-
+    } 
 }

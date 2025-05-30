@@ -98,7 +98,7 @@
             return HandleResult(result);
         }  
 
-        [Authorize(Roles = "EMPLOYEE,MANAGER,HR ADMIN")] //200 OK
+        //[Authorize(Roles = "EMPLOYEE,MANAGER,HR ADMIN")] //200 OK
         [HttpGet("me/info/{userId}")]
         public async Task<IActionResult> GetUserInfo(int userId, CancellationToken cancellationToken)
         {
