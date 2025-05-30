@@ -25,8 +25,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DiscoClub", "DiscoClub", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bar", "Bar", "{CAA8609F-1F4F-4C38-B743-66AA1DA402AB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Casino", "Casino", "{AFB0E6A4-2D6D-42F7-95D4-F9B6575D8EC0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reviews", "Reviews", "{537978F5-1109-42F0-92E9-58AA5ABF5004}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.DutyManagement", "GHR.DutyManagement\GHR.DutyManagement.csproj", "{D03BA096-8DC9-47CC-84A3-64FF6E564D40}"
@@ -153,6 +151,28 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.HelpDesk", "GHR.HelpDes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.Rating", "GHR.Rating\GHR.Rating.csproj", "{3957926B-BB97-4BB3-A065-E6D4A5987F4C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Casion", "Casion", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		Casino\.env = Casino\.env
+		Casino\package.json = Casino\package.json
+		Casino\server.js = Casino\server.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{55E3E8A1-1234-43D8-82B9-3CBD58051660}"
+	ProjectSection(SolutionItems) = preProject
+		Casino\config\db.js = Casino\config\db.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "models", "models", "{94A6E8E7-2FAB-4A36-94B0-FE6B3C625CC8}"
+	ProjectSection(SolutionItems) = preProject
+		Casino\models\User.js = Casino\models\User.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utils", "utils", "{F3782735-B413-4892-AFD3-96369C391E23}"
+	ProjectSection(SolutionItems) = preProject
+		Casino\utils\ApiResponse.js = Casino\utils\ApiResponse.js
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -217,6 +237,9 @@ Global
 		{B610C808-AE95-18D2-0508-BF227768C988} = {D74D0842-4EA4-46AB-9675-0A5BE101F5D1}
 		{9C04927E-58BC-443E-A657-8D83352C4CF6} = {0A86A46E-ACF0-4C1B-A60D-7FA2DD1D2E11}
 		{3957926B-BB97-4BB3-A065-E6D4A5987F4C} = {51C23A56-2ACF-4587-99A1-3430891BCD28}
+		{55E3E8A1-1234-43D8-82B9-3CBD58051660} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
+		{94A6E8E7-2FAB-4A36-94B0-FE6B3C625CC8} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
+		{F3782735-B413-4892-AFD3-96369C391E23} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC485270-F995-4C95-BE73-8B2BFFECB5CD}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sekne\\Downloads\\1\\1\\GHR\\GHR.Rating\\GHR.Rating.csproj": {}
+    "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\GHR.Rating.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sekne\\Downloads\\1\\1\\GHR\\GHR.Rating\\GHR.Rating.csproj": {
+    "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\GHR.Rating.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sekne\\Downloads\\1\\1\\GHR\\GHR.Rating\\GHR.Rating.csproj",
+        "projectUniqueName": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\GHR.Rating.csproj",
         "projectName": "GHR.Rating",
-        "projectPath": "C:\\Users\\sekne\\Downloads\\1\\1\\GHR\\GHR.Rating\\GHR.Rating.csproj",
+        "projectPath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\GHR.Rating.csproj",
         "packagesPath": "C:\\Users\\sekne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sekne\\Downloads\\1\\1\\GHR\\GHR.Rating\\obj\\",
+        "outputPath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\sekne\\Downloads\\1\\1\\GHR\\SharedKernel\\GHR.SharedKernel.csproj": {
-                "projectPath": "C:\\Users\\sekne\\Downloads\\1\\1\\GHR\\SharedKernel\\GHR.SharedKernel.csproj"
+              "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\SharedKernel\\GHR.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\SharedKernel\\GHR.SharedKernel.csproj"
               }
             }
           }
@@ -118,14 +118,14 @@
         }
       }
     },
-    "C:\\Users\\sekne\\Downloads\\1\\1\\GHR\\SharedKernel\\GHR.SharedKernel.csproj": {
+    "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\SharedKernel\\GHR.SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sekne\\Downloads\\1\\1\\GHR\\SharedKernel\\GHR.SharedKernel.csproj",
+        "projectUniqueName": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\SharedKernel\\GHR.SharedKernel.csproj",
         "projectName": "GHR.SharedKernel",
-        "projectPath": "C:\\Users\\sekne\\Downloads\\1\\1\\GHR\\SharedKernel\\GHR.SharedKernel.csproj",
+        "projectPath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\SharedKernel\\GHR.SharedKernel.csproj",
         "packagesPath": "C:\\Users\\sekne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sekne\\Downloads\\1\\1\\GHR\\SharedKernel\\obj\\",
+        "outputPath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
