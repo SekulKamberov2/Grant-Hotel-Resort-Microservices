@@ -141,7 +141,24 @@ services:
       - mongo
     networks:
       - hotelnet
-
+      
+  fitness-service:
+    build:
+      context: ./GHR.Fitness
+      dockerfile: Dockerfile
+    ports:
+      - "3021:3021"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/fitness-db
+      - PORT=3021
+      - JWT_SECRET=super-secret-key-diojszh$%^$*^^&TYGxduiashauish$@#%#^$&TIGYOTF%$E#^%$%^$*^^&TYGYF^$E#$%E%$ERGFJHYGUILasdhcsjkfhdsjgfd
+      - JWT_ISSUER=Grant Hotel Resort
+      - JWT_AUDIENCE=my-app-Grant Hotel Resort
+    depends_on:
+      - mongo
+    networks:
+      - hotelnet
+ 
   mongo:
     image: mongo:6
     container_name: mongo
