@@ -3,43 +3,46 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36109.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Identity", "GHR.Identity", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Duty Management", "Duty Management", "{23BF2484-038D-4F22-A722-0AD45D5B8A04}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Duty Management", "GHR.Duty Management", "{23BF2484-038D-4F22-A722-0AD45D5B8A04}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Access Control", "Access Control", "{912C52D8-9EBC-4F04-AF9C-86949862BBEC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Guest Experience", "GHR.Guest Experience", "{24F1A85A-4DA2-4D22-AD64-1E7E2917EFBA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Guest Experience", "Guest Experience", "{24F1A85A-4DA2-4D22-AD64-1E7E2917EFBA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Department Facility Management", "GHR.Department Facility Management", "{012C3579-B9FD-485B-952F-CFA39F19B709}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facility", "Facility", "{012C3579-B9FD-485B-952F-CFA39F19B709}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Rating", "GHR.Rating", "{51C23A56-2ACF-4587-99A1-3430891BCD28}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rating", "Rating", "{51C23A56-2ACF-4587-99A1-3430891BCD28}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Notification", "GHR.Notification", "{9A9D7FFD-7AE2-43A0-801A-227D6A288C88}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notification", "Notification", "{9A9D7FFD-7AE2-43A0-801A-227D6A288C88}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Restaurant", "GHR.Restaurant", "{D8C77E7A-813F-42AD-B83A-1E22F33C8855}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Restaurant", "Restaurant", "{D8C77E7A-813F-42AD-B83A-1E22F33C8855}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Fitness", "GHR.Fitness", "{38398136-1CA1-4569-BC9D-D6773D0F2EFF}"
+	ProjectSection(SolutionItems) = preProject
+		GHR.Fitness\.env = GHR.Fitness\.env
+		GHR.Fitness\Dockerfile = GHR.Fitness\Dockerfile
+		GHR.Fitness\package-lock.json = GHR.Fitness\package-lock.json
+		GHR.Fitness\package.json = GHR.Fitness\package.json
+		GHR.Fitness\tsconfig.json = GHR.Fitness\tsconfig.json
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fitness", "Fitness", "{38398136-1CA1-4569-BC9D-D6773D0F2EFF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.DiscoClub", "GHR.DiscoClub", "{A701A0D4-35A1-467D-B59A-E90799AD1EC0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DiscoClub", "DiscoClub", "{A701A0D4-35A1-467D-B59A-E90799AD1EC0}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bar", "Bar", "{CAA8609F-1F4F-4C38-B743-66AA1DA402AB}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reviews", "Reviews", "{537978F5-1109-42F0-92E9-58AA5ABF5004}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Bar", "GHR.Bar", "{CAA8609F-1F4F-4C38-B743-66AA1DA402AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.DutyManagement", "GHR.DutyManagement\GHR.DutyManagement.csproj", "{D03BA096-8DC9-47CC-84A3-64FF6E564D40}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedKernel", "SharedKernel", "{671CC6B9-C8D6-4C8C-ABA8-9B6032FD2CC6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.SharedKernel", "GHR.SharedKernel", "{671CC6B9-C8D6-4C8C-ABA8-9B6032FD2CC6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.SharedKernel", "SharedKernel\GHR.SharedKernel.csproj", "{57414928-2AA1-40B8-B38E-817D335AE486}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{56604C4E-613A-40B3-980C-4D9A59BD4728}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ocelot", "Ocelot", "{8936E41D-56F4-4D79-A5A4-EBC9A6766700}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Ocelot", "GHR.Ocelot", "{8936E41D-56F4-4D79-A5A4-EBC9A6766700}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGateway", "OcelotApiGateway\OcelotApiGateway.csproj", "{B81826A8-5C3D-4063-9F7A-9A5A9863BC45}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityClient", "IdentityClient", "{516A7882-EFDC-45B8-9E93-E69A23D67651}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.IdentityClient", "GHR.IdentityClient", "{516A7882-EFDC-45B8-9E93-E69A23D67651}"
 	ProjectSection(SolutionItems) = preProject
 		IdentityClient\.gitignore = IdentityClient\.gitignore
 		Dockerfile = Dockerfile
@@ -139,15 +142,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "auth", "auth", "{B8973237-2
 		IdentityClient\src\redux\features\auth\authSlice.js = IdentityClient\src\redux\features\auth\authSlice.js
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HR Platform", "HR Platform", "{A12D0CA7-1C36-446E-94A8-5D53CB53F11B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.HR Platform", "GHR.HR Platform", "{A12D0CA7-1C36-446E-94A8-5D53CB53F11B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.HRPlatform", "GHR.HRPlatform\GHR.HRPlatform.csproj", "{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Leave Management", "Leave Management", "{D74D0842-4EA4-46AB-9675-0A5BE101F5D1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Leave Management", "GHR.Leave Management", "{D74D0842-4EA4-46AB-9675-0A5BE101F5D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.LeaveManagement", "GHR.LeaveManagement\GHR.LeaveManagement.csproj", "{B610C808-AE95-18D2-0508-BF227768C988}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelpDesk", "HelpDesk", "{0A86A46E-ACF0-4C1B-A60D-7FA2DD1D2E11}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.HelpDesk", "GHR.HelpDesk", "{0A86A46E-ACF0-4C1B-A60D-7FA2DD1D2E11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.HelpDesk", "GHR.HelpDesk\GHR.HelpDesk.csproj", "{9C04927E-58BC-443E-A657-8D83352C4CF6}"
 EndProject
@@ -174,6 +177,46 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utils", "utils", "{F3782735
 	ProjectSection(SolutionItems) = preProject
 		Casino\utils\ApiResponse.js = Casino\utils\ApiResponse.js
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FFAD1148-976A-4956-9D3E-D2B9D6A6D9FF}"
+	ProjectSection(SolutionItems) = preProject
+		GHR.Fitness\src\app.ts = GHR.Fitness\src\app.ts
+		GHR.Fitness\src\index.ts = GHR.Fitness\src\index.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "controllers", "controllers", "{8AD6DC08-8BBA-4DF0-B82E-ADC2DA37A6B1}"
+	ProjectSection(SolutionItems) = preProject
+		GHR.Fitness\src\controllers\authController.ts = GHR.Fitness\src\controllers\authController.ts
+		GHR.Fitness\src\controllers\planController.ts = GHR.Fitness\src\controllers\planController.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "middlewares", "middlewares", "{C98F209A-A002-42E6-8E56-CDC9914269B3}"
+	ProjectSection(SolutionItems) = preProject
+		GHR.Fitness\src\middlewares\auth.ts = GHR.Fitness\src\middlewares\auth.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "models", "models", "{AA9AE945-033C-4841-A23C-C90F2DB94FFA}"
+	ProjectSection(SolutionItems) = preProject
+		GHR.Fitness\src\models\User.ts = GHR.Fitness\src\models\User.ts
+		GHR.Fitness\src\models\WorkoutPlan.ts = GHR.Fitness\src\models\WorkoutPlan.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "routes", "routes", "{F977E049-4324-4821-9326-0E68C2092AA1}"
+	ProjectSection(SolutionItems) = preProject
+		GHR.Fitness\src\routes\authRoutes.ts = GHR.Fitness\src\routes\authRoutes.ts
+		GHR.Fitness\src\routes\planRoutes.ts = GHR.Fitness\src\routes\planRoutes.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utils", "utils", "{2CA25FAD-0240-406A-BE19-B81C78FD25A0}"
+	ProjectSection(SolutionItems) = preProject
+		GHR.Fitness\src\utils\ApiResponse.ts = GHR.Fitness\src\utils\ApiResponse.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GHR.Employee Management", "GHR.Employee Management", "{C38950EC-9E5E-4081-9D04-8059381D1630}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.EmployeeManagement", "GHR.EmployeeManagement\GHR.EmployeeManagement.csproj", "{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GHR.DFM", "GHR.DFM\GHR.DFM.csproj", "{2855F85C-1063-4EA8-ACC9-AF7C8EFF393C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -213,6 +256,14 @@ Global
 		{3957926B-BB97-4BB3-A065-E6D4A5987F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3957926B-BB97-4BB3-A065-E6D4A5987F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3957926B-BB97-4BB3-A065-E6D4A5987F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2855F85C-1063-4EA8-ACC9-AF7C8EFF393C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2855F85C-1063-4EA8-ACC9-AF7C8EFF393C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2855F85C-1063-4EA8-ACC9-AF7C8EFF393C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2855F85C-1063-4EA8-ACC9-AF7C8EFF393C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -242,6 +293,14 @@ Global
 		{55E3E8A1-1234-43D8-82B9-3CBD58051660} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
 		{94A6E8E7-2FAB-4A36-94B0-FE6B3C625CC8} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
 		{F3782735-B413-4892-AFD3-96369C391E23} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
+		{FFAD1148-976A-4956-9D3E-D2B9D6A6D9FF} = {38398136-1CA1-4569-BC9D-D6773D0F2EFF}
+		{8AD6DC08-8BBA-4DF0-B82E-ADC2DA37A6B1} = {FFAD1148-976A-4956-9D3E-D2B9D6A6D9FF}
+		{C98F209A-A002-42E6-8E56-CDC9914269B3} = {FFAD1148-976A-4956-9D3E-D2B9D6A6D9FF}
+		{AA9AE945-033C-4841-A23C-C90F2DB94FFA} = {FFAD1148-976A-4956-9D3E-D2B9D6A6D9FF}
+		{F977E049-4324-4821-9326-0E68C2092AA1} = {FFAD1148-976A-4956-9D3E-D2B9D6A6D9FF}
+		{2CA25FAD-0240-406A-BE19-B81C78FD25A0} = {FFAD1148-976A-4956-9D3E-D2B9D6A6D9FF}
+		{A9B4A2FC-2E3B-47E0-9695-198BA12385F9} = {C38950EC-9E5E-4081-9D04-8059381D1630}
+		{2855F85C-1063-4EA8-ACC9-AF7C8EFF393C} = {012C3579-B9FD-485B-952F-CFA39F19B709}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC485270-F995-4C95-BE73-8B2BFFECB5CD}

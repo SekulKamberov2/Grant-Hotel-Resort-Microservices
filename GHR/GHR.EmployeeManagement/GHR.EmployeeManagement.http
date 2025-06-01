@@ -1,0 +1,6 @@
+@GHR.EmployeeManagement_HostAddress = http://localhost:5047
+
+GET {{GHR.EmployeeManagement_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,35 @@
+using FluentValidation;
+using GHR.EmployeeManagement.Application.Queries.GetEmployeeById;
+using GHR.EmployeeManagement.Application.Services;
+using GHR.EmployeeManagement.Infrastructure.Repositories;
+using MediatR;
+using Microsoft.Data.SqlClient;
+using System.Data;
+using System.Reflection;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IDbConnection>(sp =>
+    new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>(); 
+builder.Services.AddScoped<IEmployeeService, EmployeeService>(); 
+builder.Services.AddScoped<IOnBoardingService, OnBoardingService>(); 
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+//builder.Services.AddValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
+//builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeeByIdQueryValidator>();
+
+builder.Services.AddControllers(); 
+
+var app = builder.Build();
+
+ 
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();

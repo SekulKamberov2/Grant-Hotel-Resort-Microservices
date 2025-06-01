@@ -1,0 +1,6 @@
+@GHR.DFM_HostAddress = http://localhost:5148
+
+GET {{GHR.DFM_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,7 +1,6 @@
 ﻿namespace GHR.SharedKernel
 {
-    using Microsoft.Extensions.Logging;
-
+    using Microsoft.Extensions.Logging; 
     using GHR.SharedKernel.Exceptions;
     public static class ExecuteLogging
     {   
