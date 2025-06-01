@@ -2,6 +2,7 @@
 { 
     using GHR.EmployeeManagement.Application.Commands.Create;
     using GHR.EmployeeManagement.Application.Commands.Delete;
+    using GHR.EmployeeManagement.Application.Commands.Search;
     using GHR.EmployeeManagement.Application.Commands.Update;
     using GHR.EmployeeManagement.Application.DTOs;
     using GHR.EmployeeManagement.Application.Queries.GetAllEmployees;
@@ -34,5 +35,11 @@
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id) =>
             AsActionResult(await _mediator.Send(new DeleteEmployeeCommand(id)));
+
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchByName([FromQuery] string name) =>
+            AsActionResult(await _mediator.Send(new SearchEmployeesByNameQuery(name)));
+
+
     }
 }

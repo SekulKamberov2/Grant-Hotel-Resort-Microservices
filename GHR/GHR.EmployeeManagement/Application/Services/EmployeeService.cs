@@ -100,8 +100,7 @@
                 return IdentityResult<EmployeeDTO>.Failure($"Error: {ex.Message}", 500);
             }
         }
-
-
+         
         public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> SearchByNameAsync(string name)
         {
             try
