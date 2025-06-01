@@ -9,6 +9,7 @@
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesByDepartment;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesByFacility;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesByManager;
+    using GHR.EmployeeManagement.Application.Queries.GetEmployeesByStatus;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesHiredAfter;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesSalaryAbove;
     using GHR.EmployeeManagement.Application.Queries.Search;
@@ -61,12 +62,13 @@
             AsActionResult(await _mediator.Send(new GetEmployeesSalaryAboveQuery(salary)));
 
         [HttpGet("manager/{managerId:int}")]
-        public async Task<IActionResult> GetByManager(int managerId)
-            =>
+        public async Task<IActionResult> GetByManager(int managerId) =>
             AsActionResult(await _mediator.Send(new GetEmployeesByManagerQuery(managerId)));
 
 
-
+        [HttpGet("status/{status}")]
+        public async Task<IActionResult> GetByStatus(string status) =>
+            AsActionResult(await _mediator.Send(new GetEmployeesByStatusQuery(status)));
 
 
 
