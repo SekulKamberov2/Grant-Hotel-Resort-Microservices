@@ -1,6 +1,7 @@
 using FluentValidation;
 using GHR.EmployeeManagement.Application.Behaviors;
 using GHR.EmployeeManagement.Application.Commands.Create;
+using GHR.EmployeeManagement.Application.Commands.Update;
 using GHR.EmployeeManagement.Application.Queries.GetEmployeeById;
 using GHR.EmployeeManagement.Application.Services;
 using GHR.EmployeeManagement.Infrastructure.Repositories;
@@ -24,6 +25,7 @@ builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBeh
 builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeeByIdQueryValidator>(); 
 builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeeByIdQueryValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<CreateEmployeeCommandValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<UpdateEmployeeCommandValidator>();
 
 builder.Services.AddControllers(); 
 
