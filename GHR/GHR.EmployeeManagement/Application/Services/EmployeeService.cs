@@ -249,8 +249,7 @@
                 return IdentityResult<int>.Failure($"Failed to create employee", 500);
             }
         }
-
-
+         
         public async Task<IdentityResult<bool>> UpdateAsync(int id, UpdateEmployeeDTO dto)
         {
             try
