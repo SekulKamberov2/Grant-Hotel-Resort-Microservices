@@ -1,6 +1,7 @@
 ﻿namespace GHR.EmployeeManagement.Controllers
 { 
     using GHR.EmployeeManagement.Application.Commands.Create;
+    using GHR.EmployeeManagement.Application.Commands.Delete;
     using GHR.EmployeeManagement.Application.Commands.Update;
     using GHR.EmployeeManagement.Application.DTOs;
     using GHR.EmployeeManagement.Application.Queries.GetAllEmployees;
@@ -30,6 +31,8 @@
         public async Task<IActionResult> Update(int id, [FromBody] UpdateEmployeeDTO dto) =>
             AsActionResult(await _mediator.Send(new UpdateEmployeeCommand(id, dto)));
 
-
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Delete(int id) =>
+            AsActionResult(await _mediator.Send(new DeleteEmployeeCommand(id)));
     }
 }
