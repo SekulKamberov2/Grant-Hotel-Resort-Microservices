@@ -4,6 +4,7 @@
     using Microsoft.AspNetCore.Mvc;
 
     using GHR.EmployeeManagement.Application.Queries.GetAllEmployees;
+    using GHR.EmployeeManagement.Application.Queries.GetEmployeeById;
 
     public class EmployeeController : BaseApiController
     {
@@ -14,8 +15,9 @@
         public async Task<IActionResult> GetAll() =>
             AsActionResult(await _mediator.Send(new GetAllEmployeesQuery()));
 
-
-
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetById(int id) =>
+            AsActionResult(await _mediator.Send(new GetEmployeeByIdQuery(id)));
 
 
 

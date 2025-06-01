@@ -1,4 +1,5 @@
 using FluentValidation;
+using GHR.EmployeeManagement.Application.Behaviors;
 using GHR.EmployeeManagement.Application.Queries.GetEmployeeById;
 using GHR.EmployeeManagement.Application.Services;
 using GHR.EmployeeManagement.Infrastructure.Repositories;
@@ -16,9 +17,11 @@ builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>(); 
 builder.Services.AddScoped<IOnBoardingService, OnBoardingService>(); 
 
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-//builder.Services.AddValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
-//builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly())); 
+builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeeByIdQueryValidator>();
+
+// If using MediatR pipeline validation (optional but recommended): 
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeeByIdQueryValidator>();
 
 builder.Services.AddControllers(); 
