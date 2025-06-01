@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GHR.DFM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9172e8931370ee26ca772b78737a9f0452bd1f4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca8e837245b828f672fd36dd3955694c56257eea")]
 [assembly: System.Reflection.AssemblyProductAttribute("GHR.DFM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GHR.DFM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -503,7 +503,6 @@
             {
                 return IdentityResult<bool>.Failure($"Failed to increase salaries: {ex.Message}", 500);
             }
-        }
-
+        } 
     }
 }

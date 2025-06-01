@@ -1,10 +1,12 @@
 ﻿namespace GHR.EmployeeManagement.Controllers
 {
     using GHR.EmployeeManagement.Application.Commands.Create;
-    using GHR.EmployeeManagement.Application.Commands.Delete; 
+    using GHR.EmployeeManagement.Application.Commands.Delete;
+    using GHR.EmployeeManagement.Application.Commands.IncreaseSalary;
     using GHR.EmployeeManagement.Application.Commands.Update;
     using GHR.EmployeeManagement.Application.DTOs;
     using GHR.EmployeeManagement.Application.Queries.GetAllEmployees;
+    using GHR.EmployeeManagement.Application.Queries.GetBirthdaysThisMonth;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeeById;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesByDepartment;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesByFacility;
@@ -13,6 +15,7 @@
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesHiredAfter;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesSalaryAbove;
     using GHR.EmployeeManagement.Application.Queries.Search;
+    using Grpc.Core;
     using MediatR;
     using Microsoft.AspNetCore.Mvc;
   
@@ -70,7 +73,12 @@
         public async Task<IActionResult> GetByStatus(string status) =>
             AsActionResult(await _mediator.Send(new GetEmployeesByStatusQuery(status)));
 
+        [HttpGet("birthdays/month")]
+        public async Task<IActionResult> GetBirthdaysThisMonth() =>
+            AsActionResult(await _mediator.Send(new GetBirthdaysThisMonthQuery()));
 
-
+        [HttpPut("increase-salary")]
+        public async Task<IActionResult> IncreaseSalary([FromQuery] int years, [FromQuery] decimal percentage) =>
+            AsActionResult(await _mediator.Send(new IncreaseSalaryCommand(years, percentage))); 
     }
 }

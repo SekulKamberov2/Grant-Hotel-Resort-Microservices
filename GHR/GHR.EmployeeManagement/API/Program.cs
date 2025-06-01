@@ -2,6 +2,7 @@ using FluentValidation;
 using GHR.EmployeeManagement.Application.Behaviors;
 using GHR.EmployeeManagement.Application.Commands.Create;
 using GHR.EmployeeManagement.Application.Commands.Delete;
+using GHR.EmployeeManagement.Application.Commands.IncreaseSalary;
 using GHR.EmployeeManagement.Application.Commands.Update;
 using GHR.EmployeeManagement.Application.Queries.GetEmployeeById;
 using GHR.EmployeeManagement.Application.Queries.GetEmployeesByDepartment;
@@ -42,6 +43,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesHiredAfterQuery
 builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesSalaryAboveQueryValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesByManagerQueryValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesByStatusQueryValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<IncreaseSalaryCommandValidator>();
 
 builder.Services.AddControllers(); 
 
