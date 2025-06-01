@@ -9,7 +9,8 @@
   </PropertyGroup>
  
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.1.66" /> 
+    <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.5" /> 
     
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1-Preview.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5" />

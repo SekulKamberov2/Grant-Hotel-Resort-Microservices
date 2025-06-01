@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.employeemanagement\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|solutionrelative:ghr.employeemanagement\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.employeemanagement\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|solutionrelative:ghr.employeemanagement\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.employeemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|solutionrelative:ghr.employeemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.employeemanagement\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|solutionrelative:ghr.employeemanagement\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.employeemanagement\\application\\commands\\increasesalary\\increasesalarycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,17 +82,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Controllers\\EmployeeController.cs",
               "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "GHR.EmployeeManagement\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAgwFEAAABgAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAA3wFEAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T10:05:29.623Z",
               "IsPinned": true,
@@ -92,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "GetAllEmployeesQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Queries\\GetAllEmployees\\GetAllEmployeesQueryHandler.cs",
               "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Queries\\GetAllEmployees\\GetAllEmployeesQueryHandler.cs",
@@ -101,12 +109,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T13:11:00.401Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "EmployeeService.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Services\\EmployeeService.cs",
               "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Services\\EmployeeService.cs",
@@ -115,12 +122,11 @@
               "ViewState": "AgIAAOcBAAAAAAAAAAD4v/kBAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T15:17:57.44Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "EmployeeRepository.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Infrastructure\\Repositories\\EmployeeRepository.cs",
               "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Infrastructure\\Repositories\\EmployeeRepository.cs",
@@ -133,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "GetAllRolesQuery.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Application\\Queries\\GetAllRoles\\GetAllRolesQuery.cs",
               "RelativeDocumentMoniker": "IdentityServer\\Application\\Queries\\GetAllRoles\\GetAllRolesQuery.cs",
@@ -146,13 +152,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\API\\Program.cs",
               "RelativeDocumentMoniker": "GHR.EmployeeManagement\\API\\Program.cs",
               "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\API\\Program.cs",
               "RelativeToolTip": "GHR.EmployeeManagement\\API\\Program.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAAC0AAABTAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T07:53:08.482Z",
               "IsPinned": true,
@@ -160,41 +166,29 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\API\\Program.cs",
+              "RelativeDocumentMoniker": "GHR.Rating\\API\\Program.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\API\\Program.cs",
+              "RelativeToolTip": "GHR.Rating\\API\\Program.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T16:49:44.769Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IncreaseSalaryCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommandHandler.cs",
-              "RelativeToolTip": "GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:42:30.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IncreaseSalaryCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommand.cs",
-              "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommand.cs",
-              "RelativeToolTip": "GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:42:02.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetBirthdaysThisMonthQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Queries\\GetBirthdaysThisMonth\\GetBirthdaysThisMonthQueryHandler.cs",
-              "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Queries\\GetBirthdaysThisMonth\\GetBirthdaysThisMonthQueryHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Queries\\GetBirthdaysThisMonth\\GetBirthdaysThisMonthQueryHandler.cs",
-              "RelativeToolTip": "GHR.EmployeeManagement\\Application\\Queries\\GetBirthdaysThisMonth\\GetBirthdaysThisMonthQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:35:33.489Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "GHR.EmployeeManagement\\appsettings.json",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\appsettings.json",
+              "RelativeToolTip": "GHR.EmployeeManagement\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-01T16:49:06.847Z",
               "EditorCaption": ""
             },
             {
@@ -211,7 +205,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
+              "Title": "IncreaseSalaryCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommandHandler.cs",
+              "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommandHandler.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommandHandler.cs",
+              "RelativeToolTip": "GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T16:42:30.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IncreaseSalaryCommand.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommand.cs",
+              "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommand.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommand.cs",
+              "RelativeToolTip": "GHR.EmployeeManagement\\Application\\Commands\\IncreaseSalary\\IncreaseSalaryCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T16:42:02.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetBirthdaysThisMonthQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Queries\\GetBirthdaysThisMonth\\GetBirthdaysThisMonthQueryHandler.cs",
+              "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Queries\\GetBirthdaysThisMonth\\GetBirthdaysThisMonthQueryHandler.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Queries\\GetBirthdaysThisMonth\\GetBirthdaysThisMonthQueryHandler.cs",
+              "RelativeToolTip": "GHR.EmployeeManagement\\Application\\Queries\\GetBirthdaysThisMonth\\GetBirthdaysThisMonthQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T16:35:33.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "GetEmployeesByStatusQueryValidator.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesByStatus\\GetEmployeesByStatusQueryValidator.cs",
               "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesByStatus\\GetEmployeesByStatusQueryValidator.cs",
@@ -223,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "GetEmployeesByStatusQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesByStatus\\GetEmployeesByStatusQueryHandler.cs",
               "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesByStatus\\GetEmployeesByStatusQueryHandler.cs",
@@ -235,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "GetEmployeesByStatusQuery.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesByStatus\\GetEmployeesByStatusQuery.cs",
               "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesByStatus\\GetEmployeesByStatusQuery.cs",
@@ -247,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "GetEmployeesByManagerQuery.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesByManager\\GetEmployeesByManagerQuery.cs",
               "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesByManager\\GetEmployeesByManagerQuery.cs",
@@ -259,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "GetEmployeesSalaryAboveQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesSalaryAbove\\GetEmployeesSalaryAboveQueryHandler.cs",
               "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesSalaryAbove\\GetEmployeesSalaryAboveQueryHandler.cs",
@@ -271,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "GetEmployeesSalaryAboveQuery.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesSalaryAbove\\GetEmployeesSalaryAboveQuery.cs",
               "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesSalaryAbove\\GetEmployeesSalaryAboveQuery.cs",
@@ -283,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "GetEmployeesHiredAfterQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesHiredAfter\\GetEmployeesHiredAfterQueryHandler.cs",
               "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Queries\\GetEmployeesHiredAfter\\GetEmployeesHiredAfterQueryHandler.cs",
