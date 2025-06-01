@@ -7,6 +7,7 @@ using GHR.EmployeeManagement.Application.Queries.GetEmployeeById;
 using GHR.EmployeeManagement.Application.Queries.GetEmployeesByDepartment;
 using GHR.EmployeeManagement.Application.Queries.GetEmployeesByFacility;
 using GHR.EmployeeManagement.Application.Queries.GetEmployeesHiredAfter;
+using GHR.EmployeeManagement.Application.Queries.GetEmployeesSalaryAbove;
 using GHR.EmployeeManagement.Application.Queries.Search;
 using GHR.EmployeeManagement.Application.Services;
 using GHR.EmployeeManagement.Infrastructure.Repositories;
@@ -36,6 +37,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<SearchEmployeesByNameQueryV
 builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesByDepartmentQueryValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesByFacilityQueryValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesHiredAfterQueryValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesSalaryAboveQueryValidator>();
 
 builder.Services.AddControllers(); 
 

@@ -9,6 +9,7 @@
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesByDepartment;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesByFacility;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesHiredAfter;
+    using GHR.EmployeeManagement.Application.Queries.GetEmployeesSalaryAbove;
     using GHR.EmployeeManagement.Application.Queries.Search;
     using MediatR;
     using Microsoft.AspNetCore.Mvc;
@@ -53,5 +54,9 @@
         [HttpGet("hiredafter/{date}")]
         public async Task<IActionResult> GetHiredAfter(DateTime date) =>
             AsActionResult(await _mediator.Send(new GetEmployeesHiredAfterQuery(date)));
+
+        [HttpGet("salaryabove/{salary:decimal}")]
+        public async Task<IActionResult> GetSalaryAbove(decimal salary) =>
+            AsActionResult(await _mediator.Send(new GetEmployeesSalaryAboveQuery(salary)));
     }
 }
