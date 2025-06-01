@@ -5,6 +5,7 @@ using GHR.EmployeeManagement.Application.Commands.Delete;
 using GHR.EmployeeManagement.Application.Commands.Update;
 using GHR.EmployeeManagement.Application.Queries.GetEmployeeById;
 using GHR.EmployeeManagement.Application.Queries.GetEmployeesByDepartment;
+using GHR.EmployeeManagement.Application.Queries.GetEmployeesByFacility;
 using GHR.EmployeeManagement.Application.Queries.Search;
 using GHR.EmployeeManagement.Application.Services;
 using GHR.EmployeeManagement.Infrastructure.Repositories;
@@ -32,6 +33,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<UpdateEmployeeCommandValida
 builder.Services.AddValidatorsFromAssemblyContaining<DeleteEmployeeCommandValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<SearchEmployeesByNameQueryValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesByDepartmentQueryValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesByFacilityQueryValidator>();
 
 builder.Services.AddControllers(); 
 

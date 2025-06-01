@@ -1,5 +1,5 @@
 ﻿namespace GHR.EmployeeManagement.Controllers
-{ 
+{
     using GHR.EmployeeManagement.Application.Commands.Create;
     using GHR.EmployeeManagement.Application.Commands.Delete; 
     using GHR.EmployeeManagement.Application.Commands.Update;
@@ -7,11 +7,11 @@
     using GHR.EmployeeManagement.Application.Queries.GetAllEmployees;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeeById;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesByDepartment;
+    using GHR.EmployeeManagement.Application.Queries.GetEmployeesByFacility;
     using GHR.EmployeeManagement.Application.Queries.Search;
     using MediatR;
     using Microsoft.AspNetCore.Mvc;
- 
-
+  
     public class EmployeeController : BaseApiController
     {
         private readonly IMediator _mediator;
@@ -44,5 +44,11 @@
         [HttpGet("department/{departmentId:int}")]
         public async Task<IActionResult> GetByDepartment(int departmentId) =>
             AsActionResult(await _mediator.Send(new GetEmployeesByDepartmentQuery(departmentId)));
+
+        [HttpGet("facility/{facilityId:int}")]
+        public async Task<IActionResult> GetByFacility(int facilityId) =>
+            AsActionResult(await _mediator.Send(new GetEmployeesByFacilityQuery(facilityId)));
+
+
     }
 }
