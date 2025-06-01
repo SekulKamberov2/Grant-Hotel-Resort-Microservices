@@ -1,6 +1,7 @@
-﻿namespace GHR.EmployeeManagement.Application.Commands.Search
+﻿namespace GHR.EmployeeManagement.Application.Queries.Search
 {
     using FluentValidation;
+
     public class SearchEmployeesByNameQueryValidator : AbstractValidator<SearchEmployeesByNameQuery>
     {
         public SearchEmployeesByNameQueryValidator()

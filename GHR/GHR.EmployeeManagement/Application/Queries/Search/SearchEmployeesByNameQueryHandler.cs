@@ -1,9 +1,10 @@
-﻿namespace GHR.EmployeeManagement.Application.Commands.Search
+﻿namespace GHR.EmployeeManagement.Application.Queries.Search
 {
     using MediatR;
     using GHR.EmployeeManagement.Application.DTOs;
     using GHR.EmployeeManagement.Application.Services;
-    using GHR.SharedKernel; 
+    using GHR.SharedKernel;
+
     public class SearchEmployeesByNameQueryHandler : IRequestHandler<SearchEmployeesByNameQuery, IdentityResult<IEnumerable<EmployeeDTO>>>
     {
         private readonly IEmployeeService _employeeService; 

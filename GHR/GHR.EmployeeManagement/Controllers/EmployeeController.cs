@@ -1,12 +1,13 @@
 ﻿namespace GHR.EmployeeManagement.Controllers
 { 
     using GHR.EmployeeManagement.Application.Commands.Create;
-    using GHR.EmployeeManagement.Application.Commands.Delete;
-    using GHR.EmployeeManagement.Application.Commands.Search;
+    using GHR.EmployeeManagement.Application.Commands.Delete; 
     using GHR.EmployeeManagement.Application.Commands.Update;
     using GHR.EmployeeManagement.Application.DTOs;
     using GHR.EmployeeManagement.Application.Queries.GetAllEmployees;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeeById;
+    using GHR.EmployeeManagement.Application.Queries.GetEmployeesByDepartment;
+    using GHR.EmployeeManagement.Application.Queries.Search;
     using MediatR;
     using Microsoft.AspNetCore.Mvc;
  
@@ -40,6 +41,8 @@
         public async Task<IActionResult> SearchByName([FromQuery] string name) =>
             AsActionResult(await _mediator.Send(new SearchEmployeesByNameQuery(name)));
 
-
+        [HttpGet("department/{departmentId:int}")]
+        public async Task<IActionResult> GetByDepartment(int departmentId) =>
+            AsActionResult(await _mediator.Send(new GetEmployeesByDepartmentQuery(departmentId)));
     }
 }

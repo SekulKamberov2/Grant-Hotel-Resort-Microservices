@@ -2,9 +2,10 @@ using FluentValidation;
 using GHR.EmployeeManagement.Application.Behaviors;
 using GHR.EmployeeManagement.Application.Commands.Create;
 using GHR.EmployeeManagement.Application.Commands.Delete;
-using GHR.EmployeeManagement.Application.Commands.Search;
 using GHR.EmployeeManagement.Application.Commands.Update;
 using GHR.EmployeeManagement.Application.Queries.GetEmployeeById;
+using GHR.EmployeeManagement.Application.Queries.GetEmployeesByDepartment;
+using GHR.EmployeeManagement.Application.Queries.Search;
 using GHR.EmployeeManagement.Application.Services;
 using GHR.EmployeeManagement.Infrastructure.Repositories;
 using MediatR;
@@ -30,6 +31,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<CreateEmployeeCommandValida
 builder.Services.AddValidatorsFromAssemblyContaining<UpdateEmployeeCommandValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<DeleteEmployeeCommandValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<SearchEmployeesByNameQueryValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesByDepartmentQueryValidator>();
 
 builder.Services.AddControllers(); 
 

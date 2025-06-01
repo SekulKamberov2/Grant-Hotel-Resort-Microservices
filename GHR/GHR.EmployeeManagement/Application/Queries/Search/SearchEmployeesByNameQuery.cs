@@ -1,4 +1,4 @@
-﻿namespace GHR.EmployeeManagement.Application.Commands.Search
+﻿namespace GHR.EmployeeManagement.Application.Queries.Search
 {
     using MediatR;
     using GHR.EmployeeManagement.Application.DTOs;
