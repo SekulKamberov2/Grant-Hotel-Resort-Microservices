@@ -1,13 +1,15 @@
 ﻿namespace GHR.EmployeeManagement.Application.Commands.Update
 {
-    using MediatR;
-    using GHR.SharedKernel;
     using GHR.EmployeeManagement.Application.Services;
-    public class UpdateEmployeeCommandHandler : IRequestHandler<UpdateEmployeeCommand, IdentityResult<bool>>
+    using GHR.EmployeeManagement.Domain.Entities;
+    using GHR.SharedKernel;
+    using MediatR;
+
+    public class UpdateEmployeeCommandHandler : IRequestHandler<UpdateEmployeeCommand, IdentityResult<Employee>>
     {
         private readonly IEmployeeService _employeeService; 
         public UpdateEmployeeCommandHandler(IEmployeeService employeeService) => _employeeService = employeeService; 
-        public async Task<IdentityResult<bool>> Handle(UpdateEmployeeCommand request, CancellationToken cancellationToken)
+        public async Task<IdentityResult<Employee>> Handle(UpdateEmployeeCommand request, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();
             return await _employeeService.UpdateAsync(request.Id, request.Employee);

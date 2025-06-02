@@ -1,20 +1,21 @@
 ﻿namespace GHR.EmployeeManagement.Infrastructure.Repositories
 {
-    using System.Data;
-    using Microsoft.Data.SqlClient;
-
     using Dapper;
     using GHR.EmployeeManagement.Domain.Entities;
+    using Microsoft.Data.SqlClient;
+    using System.Data;
+    using System.Text.Json;
 
     public interface IEmployeeRepository
     {
         Task<IEnumerable<Employee>> GetAllAsync();
         Task<Employee?> GetByIdAsync(int id);
+        Task<Employee?> GetByUserIdAsync(int id);
         Task<IEnumerable<Employee>> SearchByNameAsync(string name);
         Task<IEnumerable<Employee>> GetByDepartmentAsync(int departmentId);
         Task<IEnumerable<Employee>> GetByFacilityAsync(int facilityId);
-        Task AddAsync(Employee employee);
-        Task UpdateAsync(Employee employee);
+        Task<Employee> AddAsync(Employee employee);
+        Task<Employee> UpdateAsync(Employee employee);
         Task DeleteAsync(Employee employee);
         Task<IEnumerable<Employee>> GetByManagerAsync(int managerId);
         Task<IEnumerable<Employee>> GetBirthdaysThisMonthAsync();
@@ -40,11 +41,29 @@
             return await _dbConnection.QueryFirstOrDefaultAsync<Employee>(sql, new { Id = id });
         }
 
-        public async Task<IEnumerable<Employee>> SearchByNameAsync(string name)
+        public async Task<Employee?> GetByUserIdAsync(int userId)
         { 
-            var sql = "SELECT * FROM Employees WHERE Name LIKE @Name";
-            return await _dbConnection.QueryAsync<Employee>(sql, new { Name = $"%{name}%" });
+            var sql = "SELECT * FROM Employees WHERE UserId = @UserId";
+            return await _dbConnection.QueryFirstOrDefaultAsync<Employee>(sql, new { UserId = userId });
         }
+
+        public async Task<IEnumerable<Employee>> SearchByNameAsync(string name)
+        {
+            var sql = @"
+                SELECT * FROM Employees
+                WHERE FirstName LIKE @Name OR LastName LIKE @Name
+                ORDER BY
+                    CASE 
+                        WHEN FirstName = @ExactName THEN 0
+                        WHEN LastName = @ExactName THEN 1
+                        ELSE 2
+                    END,
+                    FirstName, LastName
+                ";
+
+            return await _dbConnection.QueryAsync<Employee>(sql, new { Name = $"%{name}%", ExactName = name });
+        }
+
 
         public async Task<IEnumerable<Employee>> GetByDepartmentAsync(int departmentId)
         { 
@@ -59,39 +78,68 @@
             return await _dbConnection.QueryAsync<Employee>(sql, new { FacilityId = facilityId });
         }
 
-        public async Task AddAsync(Employee employee)
+        public async Task<Employee> AddAsync(Employee employee)
         {
             try
-            { 
+            {
                 var sql = @"
-                    INSERT INTO Employees (Id, Name, Email, DepartmentId, FacilityId)
-                    VALUES (@Id, @Name, @Email, @DepartmentId, @FacilityId)";
-            await _dbConnection.ExecuteAsync(sql, employee);
+            INSERT INTO Employees (FirstName, LastName, DateOfBirth, Gender, HireDate,
+                DepartmentId, FacilityId, JobTitle, Email, PhoneNumber, Address, Salary, Status, 
+                ManagerId, EmergencyContact, Notes)
+            VALUES (@FirstName, @LastName, @DateOfBirth, @Gender, @HireDate,
+                @DepartmentId, @FacilityId, @JobTitle, @Email, @PhoneNumber, @Address, @Salary, @Status, 
+                @ManagerId, @EmergencyContact, @Notes);
+            SELECT CAST(SCOPE_IDENTITY() as int);";
+
+                var id = await _dbConnection.ExecuteScalarAsync<int>(sql, employee);
+                employee.Id = id;
+                return employee;
             }
-            catch
-            { 
-                throw;   
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error inserting employee: " + ex.Message);
+                throw;  
             }
         }
 
-        public async Task UpdateAsync(Employee employee)
+        public async Task<Employee> UpdateAsync(Employee employee)
         {
             try
             {
                 var sql = @"
-                    UPDATE Employees
-                    SET Name = @Name,
-                        Email = @Email,
+                    UPDATE Employees SET
+                        FirstName = @FirstName,
+                        LastName = @LastName,
+                        DateOfBirth = @DateOfBirth,
+                        Gender = @Gender,
+                        HireDate = @HireDate,
                         DepartmentId = @DepartmentId,
-                        FacilityId = @FacilityId
+                        FacilityId = @FacilityId,
+                        JobTitle = @JobTitle,
+                        Email = @Email,
+                        PhoneNumber = @PhoneNumber,
+                        Address = @Address,
+                        Salary = @Salary,
+                        Status = @Status,
+                        ManagerId = @ManagerId,
+                        EmergencyContact = @EmergencyContact,
+                        Notes = @Notes
                     WHERE Id = @Id";
-                await _dbConnection.ExecuteAsync(sql, employee);
+
+                var rowsAffected = await _dbConnection.ExecuteAsync(sql, employee);
+
+                if (rowsAffected == 0)
+                    throw new Exception($"No employee found with Id = {employee.Id}");
+
+                return employee;
             }
-            catch
+            catch (Exception ex)
             {
-                throw; 
+                Console.WriteLine("Error updating employee: " + ex.Message);
+                throw;
             }
         }
+
 
         public async Task DeleteAsync(Employee employee)
         {

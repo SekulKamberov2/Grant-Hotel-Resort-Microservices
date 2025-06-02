@@ -8,6 +8,7 @@
     using GHR.EmployeeManagement.Application.Queries.GetAllEmployees;
     using GHR.EmployeeManagement.Application.Queries.GetBirthdaysThisMonth;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeeById;
+    using GHR.EmployeeManagement.Application.Queries.GetEmployeeLeaveRequests;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesByDepartment;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesByFacility;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesByManager;
@@ -56,7 +57,8 @@
         public async Task<IActionResult> GetByFacility(int facilityId) =>
             AsActionResult(await _mediator.Send(new GetEmployeesByFacilityQuery(facilityId)));
 
-        [HttpGet("hiredafter/{date}")]
+        //http://localhost:7010/api/Employee/hiredafter/2021-12-22
+        [HttpGet("hiredafter/{date}")]  //to alter HiredData
         public async Task<IActionResult> GetHiredAfter(DateTime date) =>
             AsActionResult(await _mediator.Send(new GetEmployeesHiredAfterQuery(date)));
 
@@ -80,5 +82,9 @@
         [HttpPut("increase-salary")]
         public async Task<IActionResult> IncreaseSalary([FromQuery] int years, [FromQuery] decimal percentage) =>
             AsActionResult(await _mediator.Send(new IncreaseSalaryCommand(years, percentage))); 
+        
+        [HttpGet("all-requests/{UserId:int}")]
+        public async Task<IActionResult> GetEmployeeLeaveRequests(int userId) =>
+            AsActionResult(await _mediator.Send(new GetEmployeeLeaveRequestsQuery(userId))); 
     }
 }

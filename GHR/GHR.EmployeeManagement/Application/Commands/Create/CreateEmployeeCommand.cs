@@ -1,11 +1,18 @@
 ﻿namespace GHR.EmployeeManagement.Application.Commands.Create
 {
-    using MediatR;
     using GHR.EmployeeManagement.Application.DTOs;
-    using GHR.SharedKernel; 
-    public class CreateEmployeeCommand : IRequest<IdentityResult<int>>
+    using GHR.EmployeeManagement.Domain.Entities;
+    using GHR.SharedKernel;
+    using MediatR;
+    using System;
+
+    public class CreateEmployeeCommand : IRequest<IdentityResult<Employee>>
     {
-        public CreateEmployeeDTO Employee { get; set; } 
-        public CreateEmployeeCommand(CreateEmployeeDTO employee) => Employee = employee;
+        public CreateEmployeeDTO Employee { get; set; }
+
+        public CreateEmployeeCommand(CreateEmployeeDTO employee)
+        {
+            Employee = employee;
+        }
     } 
 }

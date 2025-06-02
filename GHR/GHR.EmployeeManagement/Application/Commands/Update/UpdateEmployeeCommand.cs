@@ -1,10 +1,11 @@
 ﻿namespace GHR.EmployeeManagement.Application.Commands.Update
 {
+    using GHR.EmployeeManagement.Application.DTOs;
+    using GHR.EmployeeManagement.Domain.Entities;
+    using GHR.SharedKernel;
     using MediatR;
 
-    using GHR.SharedKernel;
-    using GHR.EmployeeManagement.Application.DTOs;
-    public class UpdateEmployeeCommand : IRequest<IdentityResult<bool>>
+    public class UpdateEmployeeCommand : IRequest<IdentityResult<Employee>>
     {
         public int Id { get; set; }
         public UpdateEmployeeDTO Employee { get; set; }

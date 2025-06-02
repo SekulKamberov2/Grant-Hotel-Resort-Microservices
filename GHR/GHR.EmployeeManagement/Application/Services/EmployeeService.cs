@@ -4,16 +4,19 @@
     using GHR.EmployeeManagement.Domain.Entities;
     using GHR.EmployeeManagement.Infrastructure.Repositories;
     using GHR.SharedKernel;
+    using Leaverequests.Grpc;
+    using System.Text.Json;
 
     public interface IEmployeeService
     {
         Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetAllAsync();
         Task<IdentityResult<EmployeeDTO>> GetByIdAsync(int id);
+        Task<IdentityResult<EmployeeDTO>> GetByUserIdAsync(int userId);
         Task<IdentityResult<IEnumerable<EmployeeDTO>>> SearchByNameAsync(string name);
         Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetByDepartmentAsync(int departmentId);
         Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetByFacilityAsync(int facilityId);
-        Task<IdentityResult<int>> CreateAsync(CreateEmployeeDTO dto);
-        Task<IdentityResult<bool>> UpdateAsync(int id, UpdateEmployeeDTO dto);
+        Task<IdentityResult<Employee>> CreateAsync(CreateEmployeeDTO dto);
+        Task<IdentityResult<Employee>> UpdateAsync(int id, UpdateEmployeeDTO dto);
         Task<IdentityResult<bool>> DeleteAsync(int id);
         Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetHiredAfterAsync(DateTime date);
         Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetSalaryAboveAsync(decimal salary);
@@ -21,13 +24,21 @@
         Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetByStatusAsync(string status);
         Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetBirthdaysThisMonthAsync();
         Task<IdentityResult<bool>> IncreaseSalaryHiredBeforeAsync(int years, decimal percentage);
+        Task<IdentityResult<EmployeeWithAllLeaveRequestsDTO>> GetAllLeaveRequestsByUserIdAsync(int userId);
     }
 
     public class EmployeeService : IEmployeeService
     {
-        private readonly IEmployeeRepository _repository; 
-        public EmployeeService(IEmployeeRepository repository) => _repository = repository;  
-
+        private readonly IEmployeeRepository _repository;
+        private readonly LeaverequestsService.LeaverequestsServiceClient _leaveRequestsClient;
+        public EmployeeService(
+            IEmployeeRepository repository,
+            LeaverequestsService.LeaverequestsServiceClient leaveRequestsClient)
+        {
+            _repository = repository;
+            _leaveRequestsClient = leaveRequestsClient;
+        }
+         
         public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetAllAsync()
         {
             try
@@ -100,7 +111,101 @@
                 return IdentityResult<EmployeeDTO>.Failure($"Error: {ex.Message}", 500);
             }
         }
-         
+
+        public async Task<IdentityResult<EmployeeDTO>> GetByUserIdAsync(int userId)
+        {
+            try
+            {
+                var employee = await _repository.GetByUserIdAsync(userId);
+                if (employee == null)
+                    return IdentityResult<EmployeeDTO>.Failure("Employee not found", 404);
+
+                var dto = new EmployeeDTO
+                {
+                    Id = employee.Id,
+                    FirstName = employee.FirstName,
+                    LastName = employee.LastName,
+                    DateOfBirth = employee.DateOfBirth,
+                    Gender = employee.Gender,
+                    HireDate = employee.HireDate,
+                    DepartmentId = employee.DepartmentId,
+                    FacilityId = employee.FacilityId,
+                    JobTitle = employee.JobTitle,
+                    Email = employee.Email,
+                    PhoneNumber = employee.PhoneNumber,
+                    Address = employee.Address,
+                    Salary = employee.Salary,
+                    Status = employee.Status,
+                    ManagerId = employee.ManagerId,
+                    EmergencyContact = employee.EmergencyContact,
+                    Notes = employee.Notes
+                };
+
+                return IdentityResult<EmployeeDTO>.Success(dto);
+            }
+            catch (Exception ex)
+            {
+                return IdentityResult<EmployeeDTO>.Failure($"Error: {ex.Message}", 500);
+            }
+        }
+
+        public async Task<IdentityResult<EmployeeWithAllLeaveRequestsDTO>> GetAllLeaveRequestsByUserIdAsync(int userId)
+        {
+            try
+            { 
+                var employee = await _repository.GetByUserIdAsync(userId);  
+                if (employee == null)
+                    return IdentityResult<EmployeeWithAllLeaveRequestsDTO>.Failure("Employee not found", 404);
+                //Console.WriteLine("CreateAsync Service BEFORE=========================================>");
+                //string jsonString = JsonSerializer.Serialize(employee, new JsonSerializerOptions { WriteIndented = true });
+                //Console.WriteLine(jsonString);
+                var dto = new EmployeeWithAllLeaveRequestsDTO
+                { 
+                    FirstName = employee.FirstName,
+                    LastName = employee.LastName,
+                    DateOfBirth = employee.DateOfBirth,
+                    Gender = employee.Gender,
+                    HireDate = employee.HireDate,
+                    DepartmentId = employee.DepartmentId,
+                    FacilityId = employee.FacilityId,
+                    JobTitle = employee.JobTitle,
+                    Email = employee.Email,
+                    PhoneNumber = employee.PhoneNumber,
+                    Address = employee.Address,
+                    Salary = employee.Salary,
+                    Status = employee.Status,
+                    ManagerId = employee.ManagerId,
+                    EmergencyContact = employee.EmergencyContact,
+                    Notes = employee.Notes
+                };
+                var request = new GetLeaveRequest();
+                request.UserId = userId;
+                var allLeaveRequests = await _leaveRequestsClient.GetLeaveRequestsByEmployeeAsync(request); // gRPC call
+             
+                if (allLeaveRequests != null)
+                {
+                    dto.AllLeaveRequests = allLeaveRequests.Leaves.Select(l => new LeaveRequestDTO
+                    {  
+                        Department = l.Department,   // Bar = 1, Hotel = 2, Restaurant = 3, Casino = 4, Beach = 5, Fitness = 6, Disco = 7 
+                        LeaveTypeId = l.LeaveTypeId,
+                        StartDate = string.IsNullOrEmpty(l.StartDate) ? (DateTime?)null : DateTime.Parse(l.StartDate),
+                        EndDate = string.IsNullOrEmpty(l.EndDate) ? (DateTime?)null : DateTime.Parse(l.EndDate),
+                        TotalDays = decimal.TryParse(l.TotalDays, out var totalDaysValue) ? totalDaysValue : (decimal?)null,
+                        Reason = l.Reason,
+                        ApproverId = l.ApproverId,
+                        DecisionDate = string.IsNullOrEmpty(l.DecisionDate) ? (DateTime?)null : DateTime.Parse(l.DecisionDate),
+                        RequestedAt = string.IsNullOrEmpty(l.RequestedAt) ? (DateTime?)null : DateTime.Parse(l.RequestedAt)
+                    });
+                }
+
+                return IdentityResult<EmployeeWithAllLeaveRequestsDTO>.Success(dto);
+            }
+            catch (Exception ex)
+            {
+                return IdentityResult<EmployeeWithAllLeaveRequestsDTO>.Failure($"Error: {ex.Message}", 500);
+            }
+        }
+
         public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> SearchByNameAsync(string name)
         {
             try
@@ -214,7 +319,7 @@
                 return IdentityResult<IEnumerable<EmployeeDTO>>.Failure($"Error", 500);
             }
         } 
-        public async Task<IdentityResult<int>> CreateAsync(CreateEmployeeDTO dto)
+        public async Task<IdentityResult<Employee>> CreateAsync(CreateEmployeeDTO dto)
         {
             try
             {
@@ -237,25 +342,29 @@
                     EmergencyContact = dto.EmergencyContact,
                     Notes = dto.Notes  
                 };
+              
+                var createdEmployee = await _repository.AddAsync(employee); 
+                if(createdEmployee != null)
+                    return IdentityResult<Employee>.Success(createdEmployee);
 
-                await _repository.AddAsync(employee);
-
-                
-                return IdentityResult<int>.Success(employee.Id);
+                return IdentityResult<Employee>.Failure("Failed to create employee");
             }
             catch (Exception ex)
             {
-                return IdentityResult<int>.Failure($"Failed to create employee", 500);
+                return IdentityResult<Employee>.Failure($"Failed to create employee", 500);
             }
         }
          
-        public async Task<IdentityResult<bool>> UpdateAsync(int id, UpdateEmployeeDTO dto)
+        public async Task<IdentityResult<Employee>> UpdateAsync(int id, UpdateEmployeeDTO dto)
         {
             try
             {
+                if (id != dto.Id)
+                    return IdentityResult<Employee>.Failure("Employee not found", 404);
+
                 var employee = await _repository.GetByIdAsync(id);
                 if (employee == null)
-                    return IdentityResult<bool>.Failure("Employee not found", 404);
+                    return IdentityResult<Employee>.Failure("Employee not found", 404);
 
                 employee.FirstName = dto.FirstName;
                 employee.LastName = dto.LastName;
@@ -274,13 +383,15 @@
                 employee.EmergencyContact = dto.EmergencyContact;
                 employee.Notes = dto.Notes; 
 
-                await _repository.UpdateAsync(employee);
+               var updatedEmployee = await _repository.UpdateAsync(employee);
+                if (updatedEmployee == null)
+                    return IdentityResult<Employee>.Failure($"Failed to update employee.", 500);
 
-                return IdentityResult<bool>.Success(true);
+                return IdentityResult<Employee>.Success(updatedEmployee);
             }
             catch (Exception ex)
             {
-                return IdentityResult<bool>.Failure($"Failed to update employee.", 500);
+                return IdentityResult<Employee>.Failure($"Failed to update employee.", 500);
             }
         }  
         public async Task<IdentityResult<bool>> DeleteAsync(int id)
@@ -305,7 +416,7 @@
             try
             {
                 var employees = await _repository.GetAllAsync();
-                var filtered = employees.Where(e => e.HireDate > date).ToList();
+                var filtered = employees.Where(e => e.HireDate >= date).ToList();
 
                 if (!filtered.Any())
                     return IdentityResult<IEnumerable<EmployeeDTO>>.Failure("No employees hired after the specified date", 404);

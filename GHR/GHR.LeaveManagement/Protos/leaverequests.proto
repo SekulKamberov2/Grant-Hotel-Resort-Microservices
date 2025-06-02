@@ -1,0 +1,29 @@
+syntax = "proto3";
+ 
+option csharp_namespace = "Leaverequests.Grpc";
+
+service LeaverequestsService {
+  rpc GetLeaveRequestsByEmployee (GetLeaveRequest) returns (LeaveReply);
+}
+
+message GetLeaveRequest {
+	int32 userId = 1;
+}
+
+message Leaverequest { 
+	int32 userId = 1;
+	int32 Department = 2;  
+	int32 LeaveTypeId = 3;
+	string StartDate = 4;    
+	string EndDate = 5;       
+	string TotalDays = 6;
+	string Reason = 7;  
+	int32 ApproverId = 8;    
+	string DecisionDate = 9;
+	string RequestedAt = 10;  
+}
+
+message LeaveReply {
+  repeated Leaverequest leaves = 1;
+}
+

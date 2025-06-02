@@ -9,6 +9,5 @@
     {
         public int Id { get; set; } 
         public GetEmployeeByIdQuery(int id) => Id = id;
-    }
-
+    } 
 }

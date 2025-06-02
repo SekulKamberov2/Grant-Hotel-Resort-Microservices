@@ -1,35 +1,28 @@
 using GHR.LeaveManagement.Mapping;
 using GHR.LeaveManagement.Repositories;
 using GHR.LeaveManagement.Repositories.Interfaces;
-using System.Data;
-using System.Security.Cryptography;
-using System.Text;
-
-using Identity.Grpc;
-
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Data.SqlClient;
-using Microsoft.IdentityModel.JsonWebTokens;
-using Microsoft.IdentityModel.Tokens;
  
 using GHR.LeaveManagement.Services;
 using GHR.LeaveManagement.Services.Interfaces;
 using GHR.SharedKernel;
+using Identity.Grpc;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.Data.SqlClient;
+using Microsoft.IdentityModel.JsonWebTokens;
+using Microsoft.IdentityModel.Tokens;
+using System.Data;
+using System.Security.Cryptography;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
+  
 builder.Services.AddScoped<IDbConnection>(sp => new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<ILeaveRepository, LeaveRepository>();
+builder.Services.AddScoped<ILeaveRequestRepository, LeaveRequestRepository>();
 builder.Services.AddScoped<ILeaveService, LeaveService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
-
-//builder.Services.AddGrpcClient<IdentityService.IdentityServiceClient>(options =>
-//{
-//    //options.Address = new Uri("http://identity-service:8081");
-//    options.Address = new Uri("http://identity-service:5000");
-
-//});
-
+  
 builder.Services.AddGrpcClient<IdentityService.IdentityServiceClient>(options =>
 {
     options.Address = new Uri("http://identity-service:5000");
@@ -43,7 +36,19 @@ builder.Services.AddGrpcClient<IdentityService.IdentityServiceClient>(options =>
 .ConfigureChannel(options =>
 {
     options.HttpHandler = new HttpClientHandler();
-    options.HttpVersion = new Version(2, 0);  // Force HTTP/1.1
+    options.HttpVersion = new Version(2, 0);   
+});
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5004, listenOptions =>
+    {
+        listenOptions.Protocols = HttpProtocols.Http2; //gRPC
+    });
+    options.ListenAnyIP(95, listenOptions =>
+    {
+        listenOptions.Protocols = HttpProtocols.Http1; // REST API
+    });
 });
 
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
@@ -105,11 +110,18 @@ builder.Services.AddControllers();
  
 builder.Services.AddOpenApi();
 
-var app = builder.Build(); 
+builder.Services.AddGrpc();
 
+var app = builder.Build();
+
+app.MapGrpcService<LeaveRequestsGrpcService>();
+
+app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+
+ 
 app.MapControllers();
 
 app.Run();

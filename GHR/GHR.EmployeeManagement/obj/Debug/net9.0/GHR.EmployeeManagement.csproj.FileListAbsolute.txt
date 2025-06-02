@@ -1,3 +1,11 @@
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.csproj.AssemblyReference.cache
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.AssemblyInfoInputs.cache
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.AssemblyInfo.cs
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.csproj.CoreCompileInputs.cache
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.sourcelink.json
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\appsettings.json
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\GHR.EmployeeManagement.staticwebassets.endpoints.json
@@ -13,8 +21,6 @@ C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Serv
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\Google.Protobuf.dll
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\Grpc.AspNetCore.Server.dll
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\Grpc.AspNetCore.Server.ClientFactory.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\Grpc.Core.Api.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\Grpc.Net.Client.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\Grpc.Net.ClientFactory.dll
@@ -23,6 +29,7 @@ C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Serv
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\MediatR.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\MediatR.Contracts.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\Microsoft.AspNetCore.MiddlewareAnalysis.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
@@ -79,14 +86,8 @@ C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Serv
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.csproj.AssemblyReference.cache
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.AssemblyInfoInputs.cache
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.AssemblyInfo.cs
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.csproj.CoreCompileInputs.cache
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.sourcelink.json
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\GHR.SharedKernel.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\GHR.SharedKernel.pdb
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\scopedcss\bundle\GHR.EmployeeManagement.styles.css
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\staticwebassets.build.json.cache
@@ -99,5 +100,3 @@ C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Serv
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.pdb
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\GHR.EmployeeManagement.genruntimeconfig.cache
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\obj\Debug\net9.0\ref\GHR.EmployeeManagement.dll
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\GHR.SharedKernel.dll
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.EmployeeManagement\bin\Debug\net9.0\GHR.SharedKernel.pdb

@@ -12,6 +12,8 @@ using MediatR;
 
 using FluentValidation;
 
+using Leaverequests.Grpc;  
+
 using GHR.EmployeeManagement.Application.Behaviors;
 using GHR.EmployeeManagement.Application.Commands.Create;
 using GHR.EmployeeManagement.Application.Commands.Delete;
@@ -27,9 +29,26 @@ using GHR.EmployeeManagement.Application.Queries.GetEmployeesSalaryAbove;
 using GHR.EmployeeManagement.Application.Queries.Search;
 using GHR.EmployeeManagement.Application.Services;
 using GHR.EmployeeManagement.Infrastructure.Repositories;
-using GHR.SharedKernel; 
+using GHR.SharedKernel;
+ 
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddGrpcClient<LeaverequestsService.LeaverequestsServiceClient>(options =>
+{
+    options.Address = new Uri("http://leave-management:5004");
+})
+.ConfigurePrimaryHttpMessageHandler(() =>
+{
+    return new HttpClientHandler();
+})
+.ConfigureChannel(options =>
+{
+    options.HttpHandler = new HttpClientHandler();
+    options.HttpVersion = new Version(2, 0);
+});
+
+
 
 builder.Services.AddScoped<IDbConnection>(sp =>
     new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -54,6 +73,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesSalaryAboveQuer
 builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesByManagerQueryValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<GetEmployeesByStatusQueryValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<IncreaseSalaryCommandValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateEmployeeDTOValidator>();
 
 builder.Services.AddControllers();
 

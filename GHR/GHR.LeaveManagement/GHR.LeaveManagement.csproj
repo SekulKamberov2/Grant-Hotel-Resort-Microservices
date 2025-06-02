@@ -13,6 +13,8 @@
     <PackageReference Include="Dapper" Version="2.1.66" />
 
     <PackageReference Include="Google.Protobuf" Version="3.25.3" />
+
+    <PackageReference Include="Grpc.AspNetCore" Version="2.57.0" />
     <PackageReference Include="Grpc.Net.Client" Version="2.71.0" />
     <PackageReference Include="Grpc.Net.ClientFactory" Version="2.71.0" />
     <PackageReference Include="Grpc.Tools" Version="2.71.0">
@@ -30,9 +32,7 @@
     <ProjectReference Include="..\SharedKernel\GHR.SharedKernel.csproj" />
     <Protobuf Include="Protos/identity.proto" GrpcServices="Client" />
   </ItemGroup>
-
   <ItemGroup>
-    <Folder Include="Protos\" />
+    <Protobuf Include="Protos\leaverequests.proto" GrpcServices="Server" />
   </ItemGroup>
-
 </Project>
