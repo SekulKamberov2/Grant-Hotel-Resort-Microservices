@@ -3,208 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\services\\iawardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\services\\iawardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.dutymanagement\\entities\\dutyassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\entities\\dutyassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\services\\ratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\services\\ratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.dutymanagement\\entities\\duty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\entities\\duty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\services\\iratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\services\\iratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.employeemanagement\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|solutionrelative:ghr.employeemanagement\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\services\\awardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\services\\awardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getratingsbyuser\\getratingsbyuserqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getratingsbyuser\\getratingsbyuserqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getratingsbyuser\\getratingsbyuserquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getratingsbyuser\\getratingsbyuserquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getratingsbystatus\\getratingsbystatusqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getratingsbystatus\\getratingsbystatusqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getratingsbystatus\\getratingsbystatusquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getratingsbystatus\\getratingsbystatusquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getrankingbyperiod\\getrankingbyperiodqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getrankingbyperiod\\getrankingbyperiodqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getratingsbyservice\\getratingsbyservicequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getratingsbyservice\\getratingsbyservicequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getratingsbyservice\\getratingsbyservicequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getratingsbyservice\\getratingsbyservicequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getratingsbydepartment\\getratingsbydepartmentqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getratingsbydepartment\\getratingsbydepartmentqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getratingsbydepartment\\getratingsbydepartmentquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getratingsbydepartment\\getratingsbydepartmentquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getratingbyid\\getratingbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getratingbyid\\getratingbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getratingbyid\\getratingbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getratingbyid\\getratingbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getrankingbyperiod\\getrankingbyperiodquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getrankingbyperiod\\getrankingbyperiodquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getawardsbyperiod\\getawardsbyperiodqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getawardsbyperiod\\getawardsbyperiodqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getawardsbyperiod\\getawardsbyperiodquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getawardsbyperiod\\getawardsbyperiodquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getawardbyuserid\\getawardbyuseridquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getawardbyuserid\\getawardbyuseridquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getawardbyuserid\\getawardbyuseridqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getawardbyuserid\\getawardbyuseridqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getawardbyid\\getawardbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getawardbyid\\getawardbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getawardbyid\\getawardbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getawardbyid\\getawardbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getaverageratin\\getaverageratingqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getaverageratin\\getaverageratingqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getaverageratin\\getaverageratingquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getaverageratin\\getaverageratingquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getallratings\\getallratingsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getallratings\\getallratingsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\queries\\getallratings\\getallratingsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\queries\\getallratings\\getallratingsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\updaterating\\updateratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\updaterating\\updateratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\updaterating\\updateratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\updaterating\\updateratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\updateaward\\updateawardcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\updateaward\\updateawardcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\updateaward\\updateawardcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\updateaward\\updateawardcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\unflagrating\\unflagratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\unflagrating\\unflagratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\unflagrating\\unflagratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\unflagrating\\unflagratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\restorerating\\restoreratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\restorerating\\restoreratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\restorerating\\restoreratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\restorerating\\restoreratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\flagrating\\flagratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\flagrating\\flagratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\flagrating\\flagratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\flagrating\\flagratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\deleterating\\deleteratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\deleterating\\deleteratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\deleterating\\deleteratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\deleterating\\deleteratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\deleteaward\\deleteawardcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\deleteaward\\deleteawardcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\deleteaward\\deleteawardcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\deleteaward\\deleteawardcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\createrating\\createratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\createrating\\createratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\createrating\\createratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\createrating\\createratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\createaward\\createawardcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\createaward\\createawardcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\createaward\\createawardcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\createaward\\createawardcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\bulkdeleteratings\\bulkdeleteratingscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\bulkdeleteratings\\bulkdeleteratingscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\bulkdeleteratings\\bulkdeleteratingscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\bulkdeleteratings\\bulkdeleteratingscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\awardtopperformers\\awardtopperformerscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\awardtopperformers\\awardtopperformerscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\approverating\\approveratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\approverating\\approveratingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\awardtopperformers\\awardtopperformerscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\awardtopperformers\\awardtopperformerscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\application\\commands\\approverating\\approveratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\application\\commands\\approverating\\approveratingcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.rating\\api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3957926B-BB97-4BB3-A065-E6D4A5987F4C}|GHR.Rating\\GHR.Rating.csproj|solutionrelative:ghr.rating\\api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.dutymanagement\\controllers\\dutiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D03BA096-8DC9-47CC-84A3-64FF6E564D40}|GHR.DutyManagement\\GHR.DutyManagement.csproj|solutionrelative:ghr.dutymanagement\\controllers\\dutiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -214,8 +26,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DutiesController.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.DutyManagement\\Controllers\\DutiesController.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Controllers\\DutiesController.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.DutyManagement\\Controllers\\DutiesController.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Controllers\\DutiesController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBUAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T11:41:52.323Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "GHR.EmployeeManagement\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowEsAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T11:41:14.096Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DutyAssignment.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.DutyManagement\\Entities\\DutyAssignment.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Entities\\DutyAssignment.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.DutyManagement\\Entities\\DutyAssignment.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Entities\\DutyAssignment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T11:51:21.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Duty.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.DutyManagement\\Entities\\Duty.cs",
+              "RelativeDocumentMoniker": "GHR.DutyManagement\\Entities\\Duty.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.DutyManagement\\Entities\\Duty.cs",
+              "RelativeToolTip": "GHR.DutyManagement\\Entities\\Duty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T11:51:18.934Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:5:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
@@ -227,619 +93,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RatingService.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Services\\RatingService.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Services\\RatingService.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Services\\RatingService.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Services\\RatingService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:05:23.05Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IRatingService.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Services\\IRatingService.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Services\\IRatingService.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Services\\IRatingService.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Services\\IRatingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:05:11.601Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IAwardService.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Services\\IAwardService.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Services\\IAwardService.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Services\\IAwardService.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Services\\IAwardService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:04:01.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AwardService.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Services\\AwardService.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Services\\AwardService.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Services\\AwardService.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Services\\AwardService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAsAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:03:51.896Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetRatingsByUserQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByUser\\GetRatingsByUserQueryHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetRatingsByUser\\GetRatingsByUserQueryHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByUser\\GetRatingsByUserQueryHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetRatingsByUser\\GetRatingsByUserQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:03:44.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetRatingsByUserQuery.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByUser\\GetRatingsByUserQuery.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetRatingsByUser\\GetRatingsByUserQuery.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByUser\\GetRatingsByUserQuery.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetRatingsByUser\\GetRatingsByUserQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:03:40.41Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetRatingsByStatusQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByStatus\\GetRatingsByStatusQueryHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetRatingsByStatus\\GetRatingsByStatusQueryHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByStatus\\GetRatingsByStatusQueryHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetRatingsByStatus\\GetRatingsByStatusQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:03:34.358Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GetRatingsByStatusQuery.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByStatus\\GetRatingsByStatusQuery.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetRatingsByStatus\\GetRatingsByStatusQuery.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByStatus\\GetRatingsByStatusQuery.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetRatingsByStatus\\GetRatingsByStatusQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:03:29.286Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GetRatingsByServiceQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByService\\GetRatingsByServiceQueryHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetRatingsByService\\GetRatingsByServiceQueryHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByService\\GetRatingsByServiceQueryHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetRatingsByService\\GetRatingsByServiceQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:02:49.503Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GetRatingsByServiceQuery.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByService\\GetRatingsByServiceQuery.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetRatingsByService\\GetRatingsByServiceQuery.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByService\\GetRatingsByServiceQuery.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetRatingsByService\\GetRatingsByServiceQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:02:43.64Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GetRatingsByDepartmentQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByDepartment\\GetRatingsByDepartmentQueryHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetRatingsByDepartment\\GetRatingsByDepartmentQueryHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByDepartment\\GetRatingsByDepartmentQueryHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetRatingsByDepartment\\GetRatingsByDepartmentQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:02:36.995Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GetRatingsByDepartmentQuery.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByDepartment\\GetRatingsByDepartmentQuery.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetRatingsByDepartment\\GetRatingsByDepartmentQuery.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingsByDepartment\\GetRatingsByDepartmentQuery.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetRatingsByDepartment\\GetRatingsByDepartmentQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:02:32.641Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GetRatingByIdQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingById\\GetRatingByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetRatingById\\GetRatingByIdQueryHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingById\\GetRatingByIdQueryHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetRatingById\\GetRatingByIdQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:02:26.496Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GetRankingByPeriodQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRankingByPeriod\\GetRankingByPeriodQueryHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetRankingByPeriod\\GetRankingByPeriodQueryHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRankingByPeriod\\GetRankingByPeriodQueryHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetRankingByPeriod\\GetRankingByPeriodQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:02:17.148Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "GetRatingByIdQuery.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingById\\GetRatingByIdQuery.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetRatingById\\GetRatingByIdQuery.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRatingById\\GetRatingByIdQuery.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetRatingById\\GetRatingByIdQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:02:21.833Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "GetRankingByPeriodQuery.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRankingByPeriod\\GetRankingByPeriodQuery.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetRankingByPeriod\\GetRankingByPeriodQuery.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetRankingByPeriod\\GetRankingByPeriodQuery.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetRankingByPeriod\\GetRankingByPeriodQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:02:17.789Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "GetAwardsByPeriodQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAwardsByPeriod\\GetAwardsByPeriodQueryHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetAwardsByPeriod\\GetAwardsByPeriodQueryHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAwardsByPeriod\\GetAwardsByPeriodQueryHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetAwardsByPeriod\\GetAwardsByPeriodQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:02:10.528Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "GetAwardsByPeriodQuery.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAwardsByPeriod\\GetAwardsByPeriodQuery.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetAwardsByPeriod\\GetAwardsByPeriodQuery.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAwardsByPeriod\\GetAwardsByPeriodQuery.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetAwardsByPeriod\\GetAwardsByPeriodQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:02:06.918Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "GetAwardByIdQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAwardById\\GetAwardByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetAwardById\\GetAwardByIdQueryHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAwardById\\GetAwardByIdQueryHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetAwardById\\GetAwardByIdQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:01:55.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "GetAwardByIdQuery.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAwardById\\GetAwardByIdQuery.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetAwardById\\GetAwardByIdQuery.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAwardById\\GetAwardByIdQuery.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetAwardById\\GetAwardByIdQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:01:50.317Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "GetAwardByUserIdQuery.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAwardByUserId\\GetAwardByUserIdQuery.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetAwardByUserId\\GetAwardByUserIdQuery.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAwardByUserId\\GetAwardByUserIdQuery.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetAwardByUserId\\GetAwardByUserIdQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:01:42.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GetAwardByUserIdQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAwardByUserId\\GetAwardByUserIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetAwardByUserId\\GetAwardByUserIdQueryHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAwardByUserId\\GetAwardByUserIdQueryHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetAwardByUserId\\GetAwardByUserIdQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:01:35.975Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "GetAverageRatingQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAverageRatin\\GetAverageRatingQueryHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetAverageRatin\\GetAverageRatingQueryHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAverageRatin\\GetAverageRatingQueryHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetAverageRatin\\GetAverageRatingQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:01:21.354Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "GetAverageRatingQuery.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAverageRatin\\GetAverageRatingQuery.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetAverageRatin\\GetAverageRatingQuery.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAverageRatin\\GetAverageRatingQuery.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetAverageRatin\\GetAverageRatingQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:01:08.724Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "GetAllRatingsQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAllRatings\\GetAllRatingsQueryHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetAllRatings\\GetAllRatingsQueryHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAllRatings\\GetAllRatingsQueryHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetAllRatings\\GetAllRatingsQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:01:02.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "GetAllRatingsQuery.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAllRatings\\GetAllRatingsQuery.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Queries\\GetAllRatings\\GetAllRatingsQuery.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Queries\\GetAllRatings\\GetAllRatingsQuery.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Queries\\GetAllRatings\\GetAllRatingsQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:00:57.341Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "UpdateRatingCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\UpdateRating\\UpdateRatingCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\UpdateRating\\UpdateRatingCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\UpdateRating\\UpdateRatingCommandHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\UpdateRating\\UpdateRatingCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:00:52.08Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "UpdateRatingCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\UpdateRating\\UpdateRatingCommand.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\UpdateRating\\UpdateRatingCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\UpdateRating\\UpdateRatingCommand.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\UpdateRating\\UpdateRatingCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:00:48.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "UpdateAwardCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\UpdateAward\\UpdateAwardCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\UpdateAward\\UpdateAwardCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\UpdateAward\\UpdateAwardCommandHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\UpdateAward\\UpdateAwardCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:00:43.035Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "UpdateAwardCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\UpdateAward\\UpdateAwardCommand.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\UpdateAward\\UpdateAwardCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\UpdateAward\\UpdateAwardCommand.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\UpdateAward\\UpdateAwardCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:00:39.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "UnflagRatingCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\UnflagRating\\UnflagRatingCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\UnflagRating\\UnflagRatingCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\UnflagRating\\UnflagRatingCommandHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\UnflagRating\\UnflagRatingCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:00:33.321Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "UnflagRatingCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\UnflagRating\\UnflagRatingCommand.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\UnflagRating\\UnflagRatingCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\UnflagRating\\UnflagRatingCommand.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\UnflagRating\\UnflagRatingCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:00:29.078Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "RestoreRatingCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\RestoreRating\\RestoreRatingCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\RestoreRating\\RestoreRatingCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\RestoreRating\\RestoreRatingCommandHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\RestoreRating\\RestoreRatingCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:00:24.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "RestoreRatingCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\RestoreRating\\RestoreRatingCommand.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\RestoreRating\\RestoreRatingCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\RestoreRating\\RestoreRatingCommand.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\RestoreRating\\RestoreRatingCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:00:20.72Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "FlagRatingCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\FlagRating\\FlagRatingCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\FlagRating\\FlagRatingCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\FlagRating\\FlagRatingCommandHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\FlagRating\\FlagRatingCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:00:13.702Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "FlagRatingCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\FlagRating\\FlagRatingCommand.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\FlagRating\\FlagRatingCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\FlagRating\\FlagRatingCommand.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\FlagRating\\FlagRatingCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:00:09.273Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "DeleteRatingCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\DeleteRating\\DeleteRatingCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\DeleteRating\\DeleteRatingCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\DeleteRating\\DeleteRatingCommandHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\DeleteRating\\DeleteRatingCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:00:00.166Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "DeleteRatingCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\DeleteRating\\DeleteRatingCommand.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\DeleteRating\\DeleteRatingCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\DeleteRating\\DeleteRatingCommand.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\DeleteRating\\DeleteRatingCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:59:56.715Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "DeleteAwardCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\DeleteAward\\DeleteAwardCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\DeleteAward\\DeleteAwardCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\DeleteAward\\DeleteAwardCommandHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\DeleteAward\\DeleteAwardCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:59:51.484Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "DeleteAwardCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\DeleteAward\\DeleteAwardCommand.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\DeleteAward\\DeleteAwardCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\DeleteAward\\DeleteAwardCommand.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\DeleteAward\\DeleteAwardCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:59:46.988Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "CreateRatingCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\CreateRating\\CreateRatingCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\CreateRating\\CreateRatingCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\CreateRating\\CreateRatingCommandHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\CreateRating\\CreateRatingCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:59:39.676Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "CreateRatingCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\CreateRating\\CreateRatingCommand.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\CreateRating\\CreateRatingCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\CreateRating\\CreateRatingCommand.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\CreateRating\\CreateRatingCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:59:35.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "CreateAwardCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\CreateAward\\CreateAwardCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\CreateAward\\CreateAwardCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\CreateAward\\CreateAwardCommandHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\CreateAward\\CreateAwardCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:59:27.335Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "CreateAwardCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\CreateAward\\CreateAwardCommand.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\CreateAward\\CreateAwardCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\CreateAward\\CreateAwardCommand.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\CreateAward\\CreateAwardCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:59:22.845Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "BulkDeleteRatingsCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\BulkDeleteRatings\\BulkDeleteRatingsCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\BulkDeleteRatings\\BulkDeleteRatingsCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\BulkDeleteRatings\\BulkDeleteRatingsCommandHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\BulkDeleteRatings\\BulkDeleteRatingsCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:59:15.07Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "BulkDeleteRatingsCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\BulkDeleteRatings\\BulkDeleteRatingsCommand.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\BulkDeleteRatings\\BulkDeleteRatingsCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\BulkDeleteRatings\\BulkDeleteRatingsCommand.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\BulkDeleteRatings\\BulkDeleteRatingsCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:59:10.556Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "AwardTopPerformersCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\AwardTopPerformers\\AwardTopPerformersCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\AwardTopPerformers\\AwardTopPerformersCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\AwardTopPerformers\\AwardTopPerformersCommandHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\AwardTopPerformers\\AwardTopPerformersCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:59:03.458Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "ApproveRatingCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\ApproveRating\\ApproveRatingCommandHandler.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\ApproveRating\\ApproveRatingCommandHandler.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\ApproveRating\\ApproveRatingCommandHandler.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\ApproveRating\\ApproveRatingCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:58:56.587Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "AwardTopPerformersCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\AwardTopPerformers\\AwardTopPerformersCommand.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\AwardTopPerformers\\AwardTopPerformersCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\AwardTopPerformers\\AwardTopPerformersCommand.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\AwardTopPerformers\\AwardTopPerformersCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:58:49.805Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "ApproveRatingCommand.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\ApproveRating\\ApproveRatingCommand.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\Application\\Commands\\ApproveRating\\ApproveRatingCommand.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\Application\\Commands\\ApproveRating\\ApproveRatingCommand.cs",
-              "RelativeToolTip": "GHR.Rating\\Application\\Commands\\ApproveRating\\ApproveRatingCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:58:46.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "BaseApiController.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\API\\Controllers\\BaseApiController.cs",
-              "RelativeDocumentMoniker": "GHR.Rating\\API\\Controllers\\BaseApiController.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.Rating\\API\\Controllers\\BaseApiController.cs",
-              "RelativeToolTip": "GHR.Rating\\API\\Controllers\\BaseApiController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAwAkAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:56:43.783Z"
             }
           ]
         }
