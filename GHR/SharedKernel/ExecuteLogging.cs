@@ -4,7 +4,7 @@
     using GHR.SharedKernel.Exceptions;
     public static class ExecuteLogging
     {   
-        public static async Task<IdentityResult<T>> ExecuteWithLogging<T>(
+        public static async Task<Result<T>> ExecuteWithLogging<T>(
             Func<Task<T>> action,
             ILogger logger,
             string successMessage,
@@ -15,20 +15,20 @@
             {
                 var result = await action();
                 if (EqualityComparer<T>.Default.Equals(result, default)) 
-                    return IdentityResult<T>.Failure(errorMessage);
+                    return Result<T>.Failure(errorMessage);
               
                 logger.LogInformation(successMessage, args);
-                return IdentityResult<T>.Success(result);
+                return Result<T>.Success(result);
             }
             catch (RepositoryException ex)
             {
                 logger.LogError(ex, errorMessage, args);
-                return IdentityResult<T>.Failure(errorMessage);
+                return Result<T>.Failure(errorMessage);
             }
             catch (Exception ex)
             {
                 logger.LogError(ex, "Unexpected error occurred while executing action.");
-                throw; // Rethrow unexpected exceptions
+                throw; 
             }
         }
     }

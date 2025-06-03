@@ -2,7 +2,7 @@
 {
     using MediatR;
     using GHR.SharedKernel;
-    public class CreateRatingCommand : IRequest<IdentityResult<int>>
+    public class CreateRatingCommand : IRequest<Result<int>>
     {
         public int UserId { get; set; }
         public int ServiceId { get; set; }  

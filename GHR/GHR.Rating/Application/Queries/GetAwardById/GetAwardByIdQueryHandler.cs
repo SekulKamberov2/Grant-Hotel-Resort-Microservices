@@ -6,11 +6,11 @@
     using GHR.Rating.Domain.Entities;
     using GHR.SharedKernel;
 
-    public class GetAwardByIdQueryHandler : IRequestHandler<GetAwardByIdQuery, IdentityResult<Award>>
+    public class GetAwardByIdQueryHandler : IRequestHandler<GetAwardByIdQuery, Result<Award>>
     {
         private readonly IAwardService _awardService; 
         public GetAwardByIdQueryHandler(IAwardService awardService) => _awardService = awardService;  
-        public async Task<IdentityResult<Award>> Handle(GetAwardByIdQuery request, CancellationToken cancellationToken)
+        public async Task<Result<Award>> Handle(GetAwardByIdQuery request, CancellationToken cancellationToken)
         {
             return await _awardService.GetAwardByIdAsync(request.Id);
         }

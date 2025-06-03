@@ -18,13 +18,13 @@
             _identityClient = identityClient; 
         }
 
-        public async Task<IdentityResult<int>> SubmitLeaveRequestAsync(LeaveAppBindingModel request)
+        public async Task<Result<int>> SubmitLeaveRequestAsync(LeaveAppBindingModel request)
         {
             var exists = await _leaveRepo.ExistAsync(request.UserId, "Pending");
-            if (exists) return IdentityResult<int>.Failure("You've already have Pending request to leave.");
+            if (exists) return Result<int>.Failure("You've already have Pending request to leave.");
 
             if (request.StartDate > request.EndDate)
-                return IdentityResult<int>.Failure("Start date cannot be after end date.");
+                return Result<int>.Failure("Start date cannot be after end date.");
 
             request.TotalDays = (decimal)(request.EndDate - request.StartDate).TotalDays + 1;
             request.Status = "Pending";
@@ -32,19 +32,19 @@
 
             var newId = await _leaveRepo.AddAsync(request);
             if (newId <= 0)
-                return IdentityResult<int>.Failure("Failed to add leave request to the database.");
+                return Result<int>.Failure("Failed to add leave request to the database.");
 
-            return IdentityResult<int>.Success(newId);
+            return Result<int>.Success(newId);
         }
 
-        public async Task<IdentityResult<bool>> ApproveLeaveRequestAsync(int requestId, int approverId)
+        public async Task<Result<bool>> ApproveLeaveRequestAsync(int requestId, int approverId)
         { 
             var request = await _leaveRepo.GetByIdAsync(requestId);
             if (request == null)
-                return IdentityResult<bool>.Failure("Leave request not found.");
+                return Result<bool>.Failure("Leave request not found.");
              
             if (request.Status != "Pending")
-                return IdentityResult<bool>.Failure("Only pending requests can be approved.");
+                return Result<bool>.Failure("Only pending requests can be approved.");
              
             request.Status = "Approved";
             request.ApproverId = approverId;
@@ -52,24 +52,24 @@
              
             var result = await _leaveRepo.UpdateAsync(request);
             if (result == 0)
-                return IdentityResult<bool>.Failure("Approve fails. Please try again.");
+                return Result<bool>.Failure("Approve fails. Please try again.");
              
             var success = await _leaveRepo.ReduceUsersRemainingDays(request.TotalDays, request.UserId);
             if (success == 0)
-                return IdentityResult<bool>.Failure("Unable to reduce the user's remaining days. Please try again.");
+                return Result<bool>.Failure("Unable to reduce the user's remaining days. Please try again.");
              
-            return IdentityResult<bool>.Success(true);
+            return Result<bool>.Success(true);
         }
 
 
-        public async Task<IdentityResult<bool>> RejectLeaveRequestAsync(int requestId, int approverId)
+        public async Task<Result<bool>> RejectLeaveRequestAsync(int requestId, int approverId)
         {
             var request = await _leaveRepo.GetByIdAsync(requestId);
             if (request == null)
-                return IdentityResult<bool>.Failure("Leave request not found.");
+                return Result<bool>.Failure("Leave request not found.");
 
             if (request.Status != "Pending")
-                return IdentityResult<bool>.Failure("Only pending requests can be rejected.");
+                return Result<bool>.Failure("Only pending requests can be rejected.");
 
             request.Status = "Rejected";
             request.ApproverId = approverId;
@@ -81,71 +81,71 @@
             }
             catch (Exception ex)
             { 
-                return IdentityResult<bool>.Failure($"Error during update: {ex.Message}");
+                return Result<bool>.Failure($"Error during update: {ex.Message}");
             } 
-            return IdentityResult<bool>.Success(true);
+            return Result<bool>.Success(true);
         }
 
-        public async Task<IdentityResult<IEnumerable<LeaveApplication>>> GetAllLeaveRequestsAsync()
+        public async Task<Result<IEnumerable<LeaveApplication>>> GetAllLeaveRequestsAsync()
         {
             try
             { 
                 var leaveRequests = await _leaveRepo.GetAllAsync();
                  
                 if (leaveRequests == null || !leaveRequests.Any())
-                    return IdentityResult<IEnumerable<LeaveApplication>>.Failure("No leave requests found.");   
+                    return Result<IEnumerable<LeaveApplication>>.Failure("No leave requests found.");   
                  
-                return IdentityResult<IEnumerable<LeaveApplication>>.Success(leaveRequests);
+                return Result<IEnumerable<LeaveApplication>>.Success(leaveRequests);
             }
             catch (Exception ex)
             { 
-                return IdentityResult<IEnumerable<LeaveApplication>>.Failure($"Error fetching leave requests: {ex.Message}");
+                return Result<IEnumerable<LeaveApplication>>.Failure($"Error fetching leave requests: {ex.Message}");
             }
         }
 
-        public async Task<IdentityResult<IEnumerable<LeaveApplication>>> GetLeaveRequestsByUserIdAsync(int userId)
+        public async Task<Result<IEnumerable<LeaveApplication>>> GetLeaveRequestsByUserIdAsync(int userId)
         {
             try
             { 
                 var allLeaveRequests = await _leaveRepo.GetAllAsync(); 
                 var userLeaveRequests = allLeaveRequests.Where(lr => lr.UserId == userId).ToList(); 
                 if (!userLeaveRequests.Any()) 
-                    return IdentityResult<IEnumerable<LeaveApplication>>.Failure("No leave requests found for the given user.");
+                    return Result<IEnumerable<LeaveApplication>>.Failure("No leave requests found for the given user.");
                
-                return IdentityResult<IEnumerable<LeaveApplication>>.Success(userLeaveRequests);
+                return Result<IEnumerable<LeaveApplication>>.Success(userLeaveRequests);
             }
             catch (Exception ex)
             { 
-                return IdentityResult<IEnumerable<LeaveApplication>>.Failure($"Error fetching leave requests: {ex.Message}");
+                return Result<IEnumerable<LeaveApplication>>.Failure($"Error fetching leave requests: {ex.Message}");
             }
         }
 
-        public async Task<IdentityResult<LeaveApplication>> GetLeaveRequestByIdAsync(int requestId)
+        public async Task<Result<LeaveApplication>> GetLeaveRequestByIdAsync(int requestId)
         {
             try
             { 
                 var request = await _leaveRepo.GetByIdAsync(requestId); 
-                if (request == null) return IdentityResult<LeaveApplication>.Failure("Leave request not found.");
+                if (request == null) return Result<LeaveApplication>.Failure("Leave request not found.");
                 
-                return IdentityResult<LeaveApplication>.Success(request);
+                return Result<LeaveApplication>.Success(request);
             }
             catch (Exception ex)
             { 
-                return IdentityResult<LeaveApplication>.Failure($"Error fetching leave request: {ex.Message}");
+                return Result<LeaveApplication>.Failure($"Error fetching leave request: {ex.Message}");
             }
         }
 
-        public async Task<IdentityResult<bool>> CancelLeaveRequestAsync(int requestId, int userId)
+        public async Task<Result<bool>> CancelLeaveRequestAsync(int requestId, int userId)
         {
             var request = await _leaveRepo.GetByIdAsync(requestId);
             if (request == null)
-                return IdentityResult<bool>.Failure("Leave request not found.");
+                return Result<bool>.Failure("Leave request not found.");
 
             if (request.UserId != userId)
-                return IdentityResult<bool>.Failure("You can only cancel your own leave.");
+                return Result<bool>.Failure("You can only cancel your own leave.");
 
             if (request.Status != "Pending")
-                return IdentityResult<bool>.Failure("Only pending requests can be cancelled.");
+                return Result<bool>.Failure("Only pending requests can be cancelled.");
 
             try
             { 
@@ -153,21 +153,21 @@
             }
             catch (Exception ex)
             { 
-                return IdentityResult<bool>.Failure($"Error during delete: {ex.Message}");
+                return Result<bool>.Failure($"Error during delete: {ex.Message}");
             }
-            return IdentityResult<bool>.Success(true);
+            return Result<bool>.Success(true);
         }
 
-        public async Task<IdentityResult<IEnumerable<UserBindingModel>>> GetApplicantsAsync(string status)
+        public async Task<Result<IEnumerable<UserBindingModel>>> GetApplicantsAsync(string status)
         {
             if (string.IsNullOrWhiteSpace(status))
-                return IdentityResult<IEnumerable<UserBindingModel>>.Failure("Status must be provided.");
+                return Result<IEnumerable<UserBindingModel>>.Failure("Status must be provided.");
 
             try
             {
                 var userIds = await _leaveRepo.GetLeaveApplicationsIdsAsync(status);
                 if (userIds == null || !userIds.Any())
-                    return IdentityResult<IEnumerable<UserBindingModel>>.Failure($"No applications ids found with status '{status}'");
+                    return Result<IEnumerable<UserBindingModel>>.Failure($"No applications ids found with status '{status}'");
 
                 //gRPC call
                 var request = new UserIdsRequest();
@@ -183,25 +183,25 @@
                 }).ToList();
 
 
-                return IdentityResult<IEnumerable<UserBindingModel>>.Success(users);
+                return Result<IEnumerable<UserBindingModel>>.Success(users);
             }
             catch (Exception ex)
             {
-                return IdentityResult<IEnumerable<UserBindingModel>>.Failure("An error occurred while retrieving leave applications.");
+                return Result<IEnumerable<UserBindingModel>>.Failure("An error occurred while retrieving leave applications.");
             }
         }
 
-        public async Task<IdentityResult<decimal>> GeUsersRemainingDaysAsync(decimal userId)
+        public async Task<Result<decimal>> GeUsersRemainingDaysAsync(decimal userId)
         {
-            if (userId == 0) return IdentityResult<decimal>.Failure("It's not you.");   
+            if (userId == 0) return Result<decimal>.Failure("It's not you.");   
             try
             {
                 var days = await _leaveRepo.GetUsersRemainingDays(userId); 
-                return IdentityResult<decimal>.Success((days > 0) ? days : 0);
+                return Result<decimal>.Success((days > 0) ? days : 0);
             }
             catch (Exception ex)
             {
-                return IdentityResult<decimal>.Failure($"Error during calculations: {ex.Message}");
+                return Result<decimal>.Failure($"Error during calculations: {ex.Message}");
             }  
         }
     }

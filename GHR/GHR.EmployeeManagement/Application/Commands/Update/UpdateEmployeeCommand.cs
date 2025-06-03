@@ -5,7 +5,7 @@
     using GHR.SharedKernel;
     using MediatR;
 
-    public class UpdateEmployeeCommand : IRequest<IdentityResult<Employee>>
+    public class UpdateEmployeeCommand : IRequest<Result<Employee>>
     {
         public int Id { get; set; }
         public UpdateEmployeeDTO Employee { get; set; }

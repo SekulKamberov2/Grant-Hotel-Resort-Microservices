@@ -2,5 +2,5 @@
 {
     using MediatR;
     using GHR.SharedKernel; 
-    public record RestoreRatingCommand(int Id) : IRequest<IdentityResult<bool>>; 
+    public record RestoreRatingCommand(int Id) : IRequest<Result<bool>>; 
 }

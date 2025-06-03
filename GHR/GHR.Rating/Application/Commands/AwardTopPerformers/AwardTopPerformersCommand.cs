@@ -3,7 +3,7 @@
     using MediatR;
     using GHR.Rating.Domain.Entities;
     using GHR.SharedKernel; 
-    public class AwardTopPerformersCommand : IRequest<IdentityResult<List<Award>>>
+    public class AwardTopPerformersCommand : IRequest<Result<List<Award>>>
     {
         public string Period { get; set; } // Weekly, Monthly, Yearly
 

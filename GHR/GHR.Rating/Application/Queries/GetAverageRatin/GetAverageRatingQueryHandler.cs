@@ -6,11 +6,11 @@
     using GHR.SharedKernel;
     using GHR.Rating.Application.Services;
 
-    public class GetAverageRatingQueryHandler : IRequestHandler<GetAverageRatingQuery, IdentityResult<double>>
+    public class GetAverageRatingQueryHandler : IRequestHandler<GetAverageRatingQuery, Result<double>>
     {
         private readonly IRatingService _ratingService; 
         public GetAverageRatingQueryHandler(IRatingService ratingService) => _ratingService = ratingService;  
-        public async Task<IdentityResult<double>> Handle(GetAverageRatingQuery request, CancellationToken cancellationToken)
+        public async Task<Result<double>> Handle(GetAverageRatingQuery request, CancellationToken cancellationToken)
         {
             return await _ratingService.GetAverageRatingAsync(request.DepartmentId);
         }

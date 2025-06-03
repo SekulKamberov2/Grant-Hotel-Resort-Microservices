@@ -3,7 +3,7 @@
     using MediatR;
     using GHR.EmployeeManagement.Application.DTOs;
     using GHR.SharedKernel; 
-    public class GetBirthdaysThisMonthQuery : IRequest<IdentityResult<IEnumerable<EmployeeDTO>>>
+    public class GetBirthdaysThisMonthQuery : IRequest<Result<IEnumerable<EmployeeDTO>>>
     {
     } 
 }

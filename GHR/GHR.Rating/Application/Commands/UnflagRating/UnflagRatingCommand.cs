@@ -2,6 +2,6 @@
 { 
     using MediatR;
     using GHR.SharedKernel;
-    public record UnflagRatingCommand(int Id) : IRequest<IdentityResult<bool>>;
+    public record UnflagRatingCommand(int Id) : IRequest<Result<bool>>;
 }
 

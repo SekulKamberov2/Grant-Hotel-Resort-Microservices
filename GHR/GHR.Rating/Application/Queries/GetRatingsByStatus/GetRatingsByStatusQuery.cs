@@ -8,6 +8,6 @@
         bool? IsApproved = null,
         bool? IsFlagged = null,
         bool? IsDeleted = null
-    ) : IRequest<IdentityResult<IEnumerable<RatingDto>>>;
+    ) : IRequest<Result<IEnumerable<RatingDto>>>;
 
 }

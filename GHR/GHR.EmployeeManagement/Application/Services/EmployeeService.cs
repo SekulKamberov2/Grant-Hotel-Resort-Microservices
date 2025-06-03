@@ -9,22 +9,22 @@
 
     public interface IEmployeeService
     {
-        Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetAllAsync();
-        Task<IdentityResult<EmployeeDTO>> GetByIdAsync(int id);
-        Task<IdentityResult<EmployeeDTO>> GetByUserIdAsync(int userId);
-        Task<IdentityResult<IEnumerable<EmployeeDTO>>> SearchByNameAsync(string name);
-        Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetByDepartmentAsync(int departmentId);
-        Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetByFacilityAsync(int facilityId);
-        Task<IdentityResult<Employee>> CreateAsync(CreateEmployeeDTO dto);
-        Task<IdentityResult<Employee>> UpdateAsync(int id, UpdateEmployeeDTO dto);
-        Task<IdentityResult<bool>> DeleteAsync(int id);
-        Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetHiredAfterAsync(DateTime date);
-        Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetSalaryAboveAsync(decimal salary);
-        Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetByManagerAsync(int managerId);
-        Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetByStatusAsync(string status);
-        Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetBirthdaysThisMonthAsync();
-        Task<IdentityResult<bool>> IncreaseSalaryHiredBeforeAsync(int years, decimal percentage);
-        Task<IdentityResult<EmployeeWithAllLeaveRequestsDTO>> GetAllLeaveRequestsByUserIdAsync(int userId);
+        Task<Result<IEnumerable<EmployeeDTO>>> GetAllAsync();
+        Task<Result<EmployeeDTO>> GetByIdAsync(int id);
+        Task<Result<EmployeeDTO>> GetByUserIdAsync(int userId);
+        Task<Result<IEnumerable<EmployeeDTO>>> SearchByNameAsync(string name);
+        Task<Result<IEnumerable<EmployeeDTO>>> GetByDepartmentAsync(int departmentId);
+        Task<Result<IEnumerable<EmployeeDTO>>> GetByFacilityAsync(int facilityId);
+        Task<Result<Employee>> CreateAsync(CreateEmployeeDTO dto);
+        Task<Result<Employee>> UpdateAsync(int id, UpdateEmployeeDTO dto);
+        Task<Result<bool>> DeleteAsync(int id);
+        Task<Result<IEnumerable<EmployeeDTO>>> GetHiredAfterAsync(DateTime date);
+        Task<Result<IEnumerable<EmployeeDTO>>> GetSalaryAboveAsync(decimal salary);
+        Task<Result<IEnumerable<EmployeeDTO>>> GetByManagerAsync(int managerId);
+        Task<Result<IEnumerable<EmployeeDTO>>> GetByStatusAsync(string status);
+        Task<Result<IEnumerable<EmployeeDTO>>> GetBirthdaysThisMonthAsync();
+        Task<Result<bool>> IncreaseSalaryHiredBeforeAsync(int years, decimal percentage);
+        Task<Result<EmployeeWithAllLeaveRequestsDTO>> GetAllLeaveRequestsByUserIdAsync(int userId);
     }
 
     public class EmployeeService : IEmployeeService
@@ -39,13 +39,13 @@
             _leaveRequestsClient = leaveRequestsClient;
         }
          
-        public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetAllAsync()
+        public async Task<Result<IEnumerable<EmployeeDTO>>> GetAllAsync()
         {
             try
             {
                 var employees = await _repository.GetAllAsync(); 
                 if (employees == null || !employees.Any())
-                    return IdentityResult<IEnumerable<EmployeeDTO>>.Failure("No employees found", 404);
+                    return Result<IEnumerable<EmployeeDTO>>.Failure("No employees found", 404);
 
                 var dtos = employees.Select(e => new EmployeeDTO
                 {
@@ -67,21 +67,21 @@
                     EmergencyContact = e.EmergencyContact,
                     Notes = e.Notes 
                 }); 
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Success(dtos);
+                return Result<IEnumerable<EmployeeDTO>>.Success(dtos);
             }
             catch (Exception ex)
             {
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Failure($"Error.", 500);
+                return Result<IEnumerable<EmployeeDTO>>.Failure($"Error.", 500);
             }
         }
 
-        public async Task<IdentityResult<EmployeeDTO>> GetByIdAsync(int id)
+        public async Task<Result<EmployeeDTO>> GetByIdAsync(int id)
         {
             try
             {
                 var employee = await _repository.GetByIdAsync(id); 
                 if (employee == null)
-                    return IdentityResult<EmployeeDTO>.Failure("Employee not found", 404);
+                    return Result<EmployeeDTO>.Failure("Employee not found", 404);
 
                 var dto = new EmployeeDTO
                 {
@@ -104,21 +104,21 @@
                     Notes = employee.Notes 
                 };
 
-                return IdentityResult<EmployeeDTO>.Success(dto);
+                return Result<EmployeeDTO>.Success(dto);
             }
             catch (Exception ex)
             {
-                return IdentityResult<EmployeeDTO>.Failure($"Error: {ex.Message}", 500);
+                return Result<EmployeeDTO>.Failure($"Error: {ex.Message}", 500);
             }
         }
 
-        public async Task<IdentityResult<EmployeeDTO>> GetByUserIdAsync(int userId)
+        public async Task<Result<EmployeeDTO>> GetByUserIdAsync(int userId)
         {
             try
             {
                 var employee = await _repository.GetByUserIdAsync(userId);
                 if (employee == null)
-                    return IdentityResult<EmployeeDTO>.Failure("Employee not found", 404);
+                    return Result<EmployeeDTO>.Failure("Employee not found", 404);
 
                 var dto = new EmployeeDTO
                 {
@@ -141,21 +141,21 @@
                     Notes = employee.Notes
                 };
 
-                return IdentityResult<EmployeeDTO>.Success(dto);
+                return Result<EmployeeDTO>.Success(dto);
             }
             catch (Exception ex)
             {
-                return IdentityResult<EmployeeDTO>.Failure($"Error: {ex.Message}", 500);
+                return Result<EmployeeDTO>.Failure($"Error: {ex.Message}", 500);
             }
         }
 
-        public async Task<IdentityResult<EmployeeWithAllLeaveRequestsDTO>> GetAllLeaveRequestsByUserIdAsync(int userId)
+        public async Task<Result<EmployeeWithAllLeaveRequestsDTO>> GetAllLeaveRequestsByUserIdAsync(int userId)
         {
             try
             { 
                 var employee = await _repository.GetByUserIdAsync(userId);  
                 if (employee == null)
-                    return IdentityResult<EmployeeWithAllLeaveRequestsDTO>.Failure("Employee not found", 404);
+                    return Result<EmployeeWithAllLeaveRequestsDTO>.Failure("Employee not found", 404);
                 //Console.WriteLine("CreateAsync Service BEFORE=========================================>");
                 //string jsonString = JsonSerializer.Serialize(employee, new JsonSerializerOptions { WriteIndented = true });
                 //Console.WriteLine(jsonString);
@@ -198,22 +198,22 @@
                     });
                 }
 
-                return IdentityResult<EmployeeWithAllLeaveRequestsDTO>.Success(dto);
+                return Result<EmployeeWithAllLeaveRequestsDTO>.Success(dto);
             }
             catch (Exception ex)
             {
-                return IdentityResult<EmployeeWithAllLeaveRequestsDTO>.Failure($"Error: {ex.Message}", 500);
+                return Result<EmployeeWithAllLeaveRequestsDTO>.Failure($"Error: {ex.Message}", 500);
             }
         }
 
-        public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> SearchByNameAsync(string name)
+        public async Task<Result<IEnumerable<EmployeeDTO>>> SearchByNameAsync(string name)
         {
             try
             { 
                 var employees = await _repository.SearchByNameAsync(name);
                  
                 if (employees == null || !employees.Any())
-                    return IdentityResult<IEnumerable<EmployeeDTO>>.Failure("No employees found with the given name", 404);
+                    return Result<IEnumerable<EmployeeDTO>>.Failure("No employees found with the given name", 404);
                  
                 var dtos = employees.Select(e => new EmployeeDTO
                 {
@@ -236,22 +236,22 @@
                     Notes = e.Notes 
                 });
                  
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Success(dtos);
+                return Result<IEnumerable<EmployeeDTO>>.Success(dtos);
             }
             catch (Exception ex)
             { 
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Failure($"Error: {ex.Message}", 500);
+                return Result<IEnumerable<EmployeeDTO>>.Failure($"Error: {ex.Message}", 500);
             }
         }
 
-        public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetByDepartmentAsync(int departmentId)
+        public async Task<Result<IEnumerable<EmployeeDTO>>> GetByDepartmentAsync(int departmentId)
         {
             try
             { 
                 var employees = await _repository.GetByDepartmentAsync(departmentId);
                  
                 if (employees == null || !employees.Any())
-                    return IdentityResult<IEnumerable<EmployeeDTO>>.Failure("No employees found in this department", 404);
+                    return Result<IEnumerable<EmployeeDTO>>.Failure("No employees found in this department", 404);
                  
                 var dtos = employees.Select(e => new EmployeeDTO
                 {
@@ -274,22 +274,22 @@
                     Notes = e.Notes 
                 });
                  
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Success(dtos);
+                return Result<IEnumerable<EmployeeDTO>>.Success(dtos);
             }
             catch (Exception ex)
             { 
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Failure($"Error.", 500);
+                return Result<IEnumerable<EmployeeDTO>>.Failure($"Error.", 500);
             }
         } 
 
-        public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetByFacilityAsync(int facilityId)
+        public async Task<Result<IEnumerable<EmployeeDTO>>> GetByFacilityAsync(int facilityId)
         {
             try
             {
                 var employees = await _repository.GetByFacilityAsync(facilityId);
 
                 if (employees == null || !employees.Any())
-                    return IdentityResult<IEnumerable<EmployeeDTO>>.Failure("No employees found for the given facility", 404);
+                    return Result<IEnumerable<EmployeeDTO>>.Failure("No employees found for the given facility", 404);
 
                 var dtos = employees.Select(e => new EmployeeDTO
                 {
@@ -312,14 +312,14 @@
                     Notes = e.Notes 
                 });
 
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Success(dtos);
+                return Result<IEnumerable<EmployeeDTO>>.Success(dtos);
             }
             catch (Exception ex)
             {
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Failure($"Error", 500);
+                return Result<IEnumerable<EmployeeDTO>>.Failure($"Error", 500);
             }
         } 
-        public async Task<IdentityResult<Employee>> CreateAsync(CreateEmployeeDTO dto)
+        public async Task<Result<Employee>> CreateAsync(CreateEmployeeDTO dto)
         {
             try
             {
@@ -345,26 +345,26 @@
               
                 var createdEmployee = await _repository.AddAsync(employee); 
                 if(createdEmployee != null)
-                    return IdentityResult<Employee>.Success(createdEmployee);
+                    return Result<Employee>.Success(createdEmployee);
 
-                return IdentityResult<Employee>.Failure("Failed to create employee");
+                return Result<Employee>.Failure("Failed to create employee");
             }
             catch (Exception ex)
             {
-                return IdentityResult<Employee>.Failure($"Failed to create employee", 500);
+                return Result<Employee>.Failure($"Failed to create employee", 500);
             }
         }
          
-        public async Task<IdentityResult<Employee>> UpdateAsync(int id, UpdateEmployeeDTO dto)
+        public async Task<Result<Employee>> UpdateAsync(int id, UpdateEmployeeDTO dto)
         {
             try
             {
                 if (id != dto.Id)
-                    return IdentityResult<Employee>.Failure("Employee not found", 404);
+                    return Result<Employee>.Failure("Employee not found", 404);
 
                 var employee = await _repository.GetByIdAsync(id);
                 if (employee == null)
-                    return IdentityResult<Employee>.Failure("Employee not found", 404);
+                    return Result<Employee>.Failure("Employee not found", 404);
 
                 employee.FirstName = dto.FirstName;
                 employee.LastName = dto.LastName;
@@ -385,33 +385,33 @@
 
                var updatedEmployee = await _repository.UpdateAsync(employee);
                 if (updatedEmployee == null)
-                    return IdentityResult<Employee>.Failure($"Failed to update employee.", 500);
+                    return Result<Employee>.Failure($"Failed to update employee.", 500);
 
-                return IdentityResult<Employee>.Success(updatedEmployee);
+                return Result<Employee>.Success(updatedEmployee);
             }
             catch (Exception ex)
             {
-                return IdentityResult<Employee>.Failure($"Failed to update employee.", 500);
+                return Result<Employee>.Failure($"Failed to update employee.", 500);
             }
         }  
-        public async Task<IdentityResult<bool>> DeleteAsync(int id)
+        public async Task<Result<bool>> DeleteAsync(int id)
         {
             try
             {
                 var employee = await _repository.GetByIdAsync(id);
                 if (employee == null)
-                    return IdentityResult<bool>.Failure("Employee not found", 404);
+                    return Result<bool>.Failure("Employee not found", 404);
 
                 await _repository.DeleteAsync(employee);
-                return IdentityResult<bool>.Success(true);
+                return Result<bool>.Success(true);
             }
             catch (Exception ex)
             {
-                return IdentityResult<bool>.Failure($"Failed to delete employee.", 500);
+                return Result<bool>.Failure($"Failed to delete employee.", 500);
             }
         }
 
-        public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetHiredAfterAsync(DateTime date)
+        public async Task<Result<IEnumerable<EmployeeDTO>>> GetHiredAfterAsync(DateTime date)
         {
             try
             {
@@ -419,7 +419,7 @@
                 var filtered = employees.Where(e => e.HireDate >= date).ToList();
 
                 if (!filtered.Any())
-                    return IdentityResult<IEnumerable<EmployeeDTO>>.Failure("No employees hired after the specified date", 404);
+                    return Result<IEnumerable<EmployeeDTO>>.Failure("No employees hired after the specified date", 404);
 
                 var dtos = filtered.Select(e => new EmployeeDTO
                 {
@@ -440,15 +440,15 @@
                      EmergencyContact = e.EmergencyContact,
                      Notes = e.Notes
                 });
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Success(dtos);
+                return Result<IEnumerable<EmployeeDTO>>.Success(dtos);
             }
             catch (Exception ex)
             {
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Failure($"Error: {ex.Message}", 500);
+                return Result<IEnumerable<EmployeeDTO>>.Failure($"Error: {ex.Message}", 500);
             }
         }
 
-        public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetSalaryAboveAsync(decimal salary)
+        public async Task<Result<IEnumerable<EmployeeDTO>>> GetSalaryAboveAsync(decimal salary)
         {
             try
             {
@@ -456,7 +456,7 @@
                 var filtered = employees.Where(e => e.Salary > salary).ToList();
 
                 if (!filtered.Any())
-                    return IdentityResult<IEnumerable<EmployeeDTO>>.Failure("No employees with salary above the specified amount", 404);
+                    return Result<IEnumerable<EmployeeDTO>>.Failure("No employees with salary above the specified amount", 404);
 
                 var dtos = filtered.Select(e => new EmployeeDTO
                 {
@@ -477,21 +477,21 @@
                     EmergencyContact = e.EmergencyContact,
                     Notes = e.Notes
                 });
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Success(dtos);
+                return Result<IEnumerable<EmployeeDTO>>.Success(dtos);
             }
             catch (Exception ex)
             {
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Failure($"Error: {ex.Message}", 500);
+                return Result<IEnumerable<EmployeeDTO>>.Failure($"Error: {ex.Message}", 500);
             }
         }
 
-        public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetByManagerAsync(int managerId)
+        public async Task<Result<IEnumerable<EmployeeDTO>>> GetByManagerAsync(int managerId)
         {
             try
             {
                 var employees = await _repository.GetByManagerAsync(managerId);
                 if (employees == null || !employees.Any())
-                    return IdentityResult<IEnumerable<EmployeeDTO>>.Failure("No employees found under the specified manager", 404);
+                    return Result<IEnumerable<EmployeeDTO>>.Failure("No employees found under the specified manager", 404);
 
                 var dtos = employees.Select(e => new EmployeeDTO
                 {
@@ -512,21 +512,21 @@
                     EmergencyContact = e.EmergencyContact,
                     Notes = e.Notes
                 });
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Success(dtos);
+                return Result<IEnumerable<EmployeeDTO>>.Success(dtos);
             }
             catch (Exception ex)
             {
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Failure($"Error: {ex.Message}", 500);
+                return Result<IEnumerable<EmployeeDTO>>.Failure($"Error: {ex.Message}", 500);
             }
         }
 
-        public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetByStatusAsync(string status)
+        public async Task<Result<IEnumerable<EmployeeDTO>>> GetByStatusAsync(string status)
         {
             try
             {
                 var employees = await _repository.GetByStatusAsync(status);
                 if (employees == null || !employees.Any())
-                    return IdentityResult<IEnumerable<EmployeeDTO>>.Failure("No employees found with the specified status", 404);
+                    return Result<IEnumerable<EmployeeDTO>>.Failure("No employees found with the specified status", 404);
 
                 var dtos = employees.Select(e => new EmployeeDTO
                 {
@@ -547,15 +547,15 @@
                     EmergencyContact = e.EmergencyContact,
                     Notes = e.Notes
                 });
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Success(dtos);
+                return Result<IEnumerable<EmployeeDTO>>.Success(dtos);
             }
             catch (Exception ex)
             {
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Failure($"Error: {ex.Message}", 500);
+                return Result<IEnumerable<EmployeeDTO>>.Failure($"Error: {ex.Message}", 500);
             }
         }
 
-        public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> GetBirthdaysThisMonthAsync()
+        public async Task<Result<IEnumerable<EmployeeDTO>>> GetBirthdaysThisMonthAsync()
         {
             try
             {
@@ -564,7 +564,7 @@
                 var result = await _repository.GetBirthdaysThisMonthAsync();
 
                 if (!result.Any())
-                    return IdentityResult<IEnumerable<EmployeeDTO>>.Failure("No employees have birthdays this month", 404);
+                    return Result<IEnumerable<EmployeeDTO>>.Failure("No employees have birthdays this month", 404);
 
                 var dtos = result.Select(e => new EmployeeDTO
                 {
@@ -585,22 +585,22 @@
                     EmergencyContact = e.EmergencyContact,
                     Notes = e.Notes
                 });
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Success(dtos);
+                return Result<IEnumerable<EmployeeDTO>>.Success(dtos);
             }
             catch (Exception ex)
             {
-                return IdentityResult<IEnumerable<EmployeeDTO>>.Failure($"Error.", 500);
+                return Result<IEnumerable<EmployeeDTO>>.Failure($"Error.", 500);
             }
         }
 
-        public async Task<IdentityResult<bool>> IncreaseSalaryHiredBeforeAsync(int years, decimal percentage)
+        public async Task<Result<bool>> IncreaseSalaryHiredBeforeAsync(int years, decimal percentage)
         {
             try
             {
                 var cutoffDate = DateTime.UtcNow.AddYears(-years);
                 var employees = await _repository.GetByHireDateBeforeAsync(cutoffDate); 
                 if (employees == null || !employees.Any())
-                    return IdentityResult<bool>.Failure($"No employees hired more than {years} years ago.", 404);
+                    return Result<bool>.Failure($"No employees hired more than {years} years ago.", 404);
 
                 foreach (var employee in employees)
                 {
@@ -608,11 +608,11 @@
                     await _repository.UpdateAsync(employee);
                 }
 
-                return IdentityResult<bool>.Success(true);
+                return Result<bool>.Success(true);
             }
             catch (Exception ex)
             {
-                return IdentityResult<bool>.Failure($"Failed to increase salaries: {ex.Message}", 500);
+                return Result<bool>.Failure($"Failed to increase salaries: {ex.Message}", 500);
             }
         } 
     }

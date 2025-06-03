@@ -3,7 +3,7 @@
     using MediatR;
     using GHR.EmployeeManagement.Application.DTOs;
     using GHR.SharedKernel; 
-    public class GetEmployeesByStatusQuery : IRequest<IdentityResult<IEnumerable<EmployeeDTO>>>
+    public class GetEmployeesByStatusQuery : IRequest<Result<IEnumerable<EmployeeDTO>>>
     {
         public string Status { get; } 
         public GetEmployeesByStatusQuery(string status) => Status = status; 

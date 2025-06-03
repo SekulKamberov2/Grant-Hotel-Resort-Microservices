@@ -7,7 +7,7 @@
     [ApiController]
     public class BaseApiController : ControllerBase
     {
-        protected IActionResult AsActionResult<T>(IdentityResult<T> result)
+        protected IActionResult AsActionResult<T>(Result<T> result)
         {
             if (result == null)
                 return NotFound("The requested result was not found.");

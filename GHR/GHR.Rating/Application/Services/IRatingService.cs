@@ -8,21 +8,21 @@
 
     public interface IRatingService
     {
-        Task<IdentityResult<int>> CreateRatingAsync(CreateRatingCommand cmd);
-        Task<IdentityResult<bool>> ApproveRatingAsync(int ratingId);
-        Task<IdentityResult<bool>> DeleteRatingAsync(int ratingId);
-        Task<IdentityResult<int>> BulkDeleteRatingsAsync(BulkDeleteRatingsCommand command);
-        Task<IdentityResult<bool>> FlagRatingAsync(int ratingId, string reason);
-        Task<IdentityResult<bool>> RestoreRatingAsync(int ratingId);
-        Task<IdentityResult<bool>> UnflagRatingAsync(int ratingId); 
-        Task<IdentityResult<bool>> UpdateRatingAsync(int id, int stars, string comment);
-        Task<IdentityResult<IEnumerable<RatingDto>>> GetAllRatingsAsync();
-        Task<IdentityResult<double>> GetAverageRatingAsync(int departmentId); 
-        Task<IdentityResult<IEnumerable<EmployeeRankingDto>>> GetRankingByPeriodAsync(string period);
-        Task<IdentityResult<RatingDto>> GetRatingByIdAsync(int id);
-        Task<IdentityResult<IEnumerable<RatingDto>>> GetRatingsByDepartmentAsync(int departmentId);
-        Task<IdentityResult<IEnumerable<RatingDto>>> GetRatingsByServiceAsync(int serviceId);
-        Task<IdentityResult<IEnumerable<RatingDto>>> GetRatingsByStatusAsync(bool? isApproved, bool? isFlagged, bool? isDeleted);
-        Task<IdentityResult<IEnumerable<RatingDto>>> GetRatingsByUserAsync(int userId);
+        Task<Result<int>> CreateRatingAsync(CreateRatingCommand cmd);
+        Task<Result<bool>> ApproveRatingAsync(int ratingId);
+        Task<Result<bool>> DeleteRatingAsync(int ratingId);
+        Task<Result<int>> BulkDeleteRatingsAsync(BulkDeleteRatingsCommand command);
+        Task<Result<bool>> FlagRatingAsync(int ratingId, string reason);
+        Task<Result<bool>> RestoreRatingAsync(int ratingId);
+        Task<Result<bool>> UnflagRatingAsync(int ratingId); 
+        Task<Result<bool>> UpdateRatingAsync(int id, int stars, string comment);
+        Task<Result<IEnumerable<RatingDto>>> GetAllRatingsAsync();
+        Task<Result<double>> GetAverageRatingAsync(int departmentId); 
+        Task<Result<IEnumerable<EmployeeRankingDto>>> GetRankingByPeriodAsync(string period);
+        Task<Result<RatingDto>> GetRatingByIdAsync(int id);
+        Task<Result<IEnumerable<RatingDto>>> GetRatingsByDepartmentAsync(int departmentId);
+        Task<Result<IEnumerable<RatingDto>>> GetRatingsByServiceAsync(int serviceId);
+        Task<Result<IEnumerable<RatingDto>>> GetRatingsByStatusAsync(bool? isApproved, bool? isFlagged, bool? isDeleted);
+        Task<Result<IEnumerable<RatingDto>>> GetRatingsByUserAsync(int userId);
     }
 }

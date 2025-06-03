@@ -1,0 +1,2 @@
+obj\Release\net9.0\Protos/Identity.cs \
+obj\Release\net9.0\Protos/IdentityGrpc.cs: Protos/identity.proto

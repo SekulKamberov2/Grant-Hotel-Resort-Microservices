@@ -6,7 +6,7 @@
     using MediatR;
     using System;
 
-    public class CreateEmployeeCommand : IRequest<IdentityResult<Employee>>
+    public class CreateEmployeeCommand : IRequest<Result<Employee>>
     {
         public CreateEmployeeDTO Employee { get; set; }
 

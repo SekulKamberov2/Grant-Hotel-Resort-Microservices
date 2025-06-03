@@ -2,7 +2,7 @@
 {
     using MediatR;
     using GHR.SharedKernel;
-    public class IncreaseSalaryCommand : IRequest<IdentityResult<bool>>
+    public class IncreaseSalaryCommand : IRequest<Result<bool>>
     {
         public int Years { get; set; }
         public decimal Percentage { get; set; }

@@ -5,12 +5,12 @@
     using GHR.Rating.Application.Services;
     using GHR.SharedKernel;
 
-    public class DeleteAwardCommandHandler : IRequestHandler<DeleteAwardCommand, IdentityResult<bool>>
+    public class DeleteAwardCommandHandler : IRequestHandler<DeleteAwardCommand, Result<bool>>
     {
         private readonly IAwardService _awardService; 
         public DeleteAwardCommandHandler(IAwardService awardService) => _awardService = awardService; 
 
-        public async Task<IdentityResult<bool>> Handle(DeleteAwardCommand request, CancellationToken cancellationToken)
+        public async Task<Result<bool>> Handle(DeleteAwardCommand request, CancellationToken cancellationToken)
         {
             return await _awardService.DeleteAwardAsync(request.Id);
         }

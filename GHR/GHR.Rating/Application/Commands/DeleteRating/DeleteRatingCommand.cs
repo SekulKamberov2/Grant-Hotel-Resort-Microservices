@@ -2,5 +2,5 @@
 {
     using MediatR;
     using GHR.SharedKernel;
-    public record DeleteRatingCommand(int Id) : IRequest<IdentityResult<bool>>; 
+    public record DeleteRatingCommand(int Id) : IRequest<Result<bool>>; 
 }

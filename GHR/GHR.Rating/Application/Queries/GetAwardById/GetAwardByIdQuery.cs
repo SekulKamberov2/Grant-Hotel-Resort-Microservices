@@ -4,7 +4,7 @@
     using GHR.Rating.Domain.Entities;
     using GHR.SharedKernel;
 
-    public class GetAwardByIdQuery : IRequest<IdentityResult<Award>>
+    public class GetAwardByIdQuery : IRequest<Result<Award>>
     {
         public int Id { get; set; } 
         public GetAwardByIdQuery(int id) => Id = id;

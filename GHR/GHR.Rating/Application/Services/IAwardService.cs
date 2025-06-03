@@ -9,12 +9,12 @@
 
     public interface IAwardService
     {
-        Task<IdentityResult<int>> CreateAwardAsync(CreateAwardCommand command);
-        Task<IdentityResult<bool>> DeleteAwardAsync(int awardId); 
-        Task<IdentityResult<bool>> UpdateAwardAsync(UpdateAwardCommand command); 
-        Task<IdentityResult<Award>> GetAwardByIdAsync(int id);
-        Task<IdentityResult<IEnumerable<Award>>> GetAwardsByPeriodAsync(string period);
-        Task<IdentityResult<List<Award>>> GenerateAwardsAsync(string period);
+        Task<Result<int>> CreateAwardAsync(CreateAwardCommand command);
+        Task<Result<bool>> DeleteAwardAsync(int awardId); 
+        Task<Result<bool>> UpdateAwardAsync(UpdateAwardCommand command); 
+        Task<Result<Award>> GetAwardByIdAsync(int id);
+        Task<Result<IEnumerable<Award>>> GetAwardsByPeriodAsync(string period);
+        Task<Result<List<Award>>> GenerateAwardsAsync(string period);
 
     }
 }

@@ -2,6 +2,6 @@
 {
     using MediatR;
     using GHR.SharedKernel;
-    public record GetAverageRatingQuery(int DepartmentId) : IRequest<IdentityResult<double>>;
+    public record GetAverageRatingQuery(int DepartmentId) : IRequest<Result<double>>;
 }
 

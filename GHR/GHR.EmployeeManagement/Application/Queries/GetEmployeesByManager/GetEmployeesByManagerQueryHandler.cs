@@ -4,11 +4,11 @@
     using GHR.EmployeeManagement.Application.DTOs;
     using GHR.EmployeeManagement.Application.Services;
     using GHR.SharedKernel; 
-    public class GetEmployeesByManagerQueryHandler : IRequestHandler<GetEmployeesByManagerQuery, IdentityResult<IEnumerable<EmployeeDTO>>>
+    public class GetEmployeesByManagerQueryHandler : IRequestHandler<GetEmployeesByManagerQuery, Result<IEnumerable<EmployeeDTO>>>
     {
         private readonly IEmployeeService _employeeService;
         public GetEmployeesByManagerQueryHandler(IEmployeeService employeeService) => _employeeService = employeeService;
-        public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> Handle(GetEmployeesByManagerQuery request, CancellationToken cancellationToken)
+        public async Task<Result<IEnumerable<EmployeeDTO>>> Handle(GetEmployeesByManagerQuery request, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();
             return await _employeeService.GetByManagerAsync(request.ManagerId);

@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GHR"
+    "\\GHR",
+    "\\GHR\\GHR.DutyManagement",
+    "\\GHR\\GHR.DutyManagement\\Controllers",
+    "\\GHR\\SharedKernel"
   ],
-  "SelectedNode": "\\GHR",
+  "SelectedNode": "\\GHR\\GHR.DutyManagement\\GHR.DutyManagement.csproj.user",
   "PreviewInSolutionExplorer": false
 }

@@ -2,7 +2,7 @@
 {
     using MediatR;
     using GHR.SharedKernel;
-    public class DeleteEmployeeCommand : IRequest<IdentityResult<bool>>
+    public class DeleteEmployeeCommand : IRequest<Result<bool>>
     {
         public int Id { get; }
         public DeleteEmployeeCommand(int id) => Id = id;

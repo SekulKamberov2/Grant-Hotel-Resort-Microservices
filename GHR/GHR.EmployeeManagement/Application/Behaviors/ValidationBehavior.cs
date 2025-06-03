@@ -28,7 +28,7 @@
             {
                 var error = string.Join("; ", failures.Select(f => f.ErrorMessage));
                 var errorResultType = typeof(TResponse).GetGenericArguments()[0];
-                var failureMethod = typeof(IdentityResult<>)
+                var failureMethod = typeof(Result<>)
                     .MakeGenericType(errorResultType)
                     .GetMethod("Failure");
 

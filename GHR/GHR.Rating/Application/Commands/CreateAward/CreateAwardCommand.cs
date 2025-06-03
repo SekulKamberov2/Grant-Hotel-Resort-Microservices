@@ -2,7 +2,7 @@
 {
     using MediatR;
     using GHR.SharedKernel;
-    public class CreateAwardCommand : IRequest<IdentityResult<int>>
+    public class CreateAwardCommand : IRequest<Result<int>>
     {
         public int UsersId { get; set; }
         public int DepartmentId { get; set; }

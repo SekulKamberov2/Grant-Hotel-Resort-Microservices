@@ -2,7 +2,7 @@
 { 
     using MediatR;
     using GHR.SharedKernel;
-    public class UpdateRatingCommand : IRequest<IdentityResult<bool>>
+    public class UpdateRatingCommand : IRequest<Result<bool>>
     {
         public int Id { get; set; }
         public int Stars { get; set; }

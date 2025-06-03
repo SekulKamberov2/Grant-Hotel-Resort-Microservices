@@ -4,6 +4,6 @@
     using GHR.Rating.Application.DTOs;
     using GHR.SharedKernel;
 
-    public record GetAwardByUserIdQuery(int UserId) : IRequest<IdentityResult<RatingDto>>;
+    public record GetAwardByUserIdQuery(int UserId) : IRequest<Result<RatingDto>>;
 }
 

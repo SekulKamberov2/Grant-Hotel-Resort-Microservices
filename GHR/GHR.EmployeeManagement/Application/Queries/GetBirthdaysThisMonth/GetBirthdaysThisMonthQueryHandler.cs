@@ -5,11 +5,11 @@
     using GHR.EmployeeManagement.Application.Services;
     using GHR.SharedKernel;
 
-    public class GetBirthdaysThisMonthQueryHandler : IRequestHandler<GetBirthdaysThisMonthQuery, IdentityResult<IEnumerable<EmployeeDTO>>>
+    public class GetBirthdaysThisMonthQueryHandler : IRequestHandler<GetBirthdaysThisMonthQuery, Result<IEnumerable<EmployeeDTO>>>
     {
         private readonly IEmployeeService _employeeService; 
         public GetBirthdaysThisMonthQueryHandler(IEmployeeService employeeService) => _employeeService = employeeService;
-        public async Task<IdentityResult<IEnumerable<EmployeeDTO>>> Handle(GetBirthdaysThisMonthQuery request, CancellationToken cancellationToken)
+        public async Task<Result<IEnumerable<EmployeeDTO>>> Handle(GetBirthdaysThisMonthQuery request, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();
             return await _employeeService.GetBirthdaysThisMonthAsync();

@@ -4,5 +4,5 @@
     using GHR.Rating.Application.DTOs;
     using GHR.SharedKernel;
 
-    public record GetRatingsByServiceQuery(int ServiceId) : IRequest<IdentityResult<IEnumerable<RatingDto>>>;
+    public record GetRatingsByServiceQuery(int ServiceId) : IRequest<Result<IEnumerable<RatingDto>>>;
 }

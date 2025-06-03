@@ -1,0 +1,2 @@
+obj\Release\net9.0\Protos/Leaverequests.cs \
+obj\Release\net9.0\Protos/LeaverequestsGrpc.cs: Protos/leaverequests.proto

@@ -4,7 +4,7 @@
     using GHR.EmployeeManagement.Application.DTOs;
     using GHR.SharedKernel;
 
-    public class GetEmployeesByDepartmentQuery : IRequest<IdentityResult<IEnumerable<EmployeeDTO>>>
+    public class GetEmployeesByDepartmentQuery : IRequest<Result<IEnumerable<EmployeeDTO>>>
     {
         public int DepartmentId { get; }
 

@@ -4,7 +4,7 @@
     using GHR.Rating.Domain.Entities;
     using GHR.SharedKernel;
 
-    public class GetAwardsByPeriodQuery : IRequest<IdentityResult<IEnumerable<Award>>>
+    public class GetAwardsByPeriodQuery : IRequest<Result<IEnumerable<Award>>>
     {
         public string Period { get; set; } // Weekly, Monthly, Yearly 
         public GetAwardsByPeriodQuery(string period)
