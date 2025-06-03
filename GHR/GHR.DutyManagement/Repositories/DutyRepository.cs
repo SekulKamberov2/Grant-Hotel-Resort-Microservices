@@ -16,6 +16,7 @@
         Task<IEnumerable<Shift>> GetAllShiftsAsync();
         Task<IEnumerable<PeriodType>> GetAllPeriodTypesAsync();
         Task<IEnumerable<DutyAssignment>> GetDutyAssignmentsAsync(int dutyId);
+        Task<IEnumerable<Duty>> GetByFacilityAndStatusAsync(string facility, string status);
         Task<int> AssignDutyAsync(DutyAssignmentDTO dutyAssignment);
     }
 
@@ -72,6 +73,12 @@
         {
             var sql = "SELECT * FROM DutyAssignments WHERE DutyId = @DutyId";
             return await _connection.QueryAsync<DutyAssignment>(sql, new { DutyId = dutyId });
+        }
+
+        public async Task<IEnumerable<Duty>> GetByFacilityAndStatusAsync(string facility, string status)
+        {
+            var sql = @"SELECT * FROM Duties WHERE Facility = @Facility AND Status = @Status;";
+            return await _connection.QueryAsync<Duty>(sql, new { Facility = facility, Status = status });  
         }
 
         public async Task<Duty> GetDutyByIdAsync(int id)

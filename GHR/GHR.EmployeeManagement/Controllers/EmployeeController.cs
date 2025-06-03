@@ -1,5 +1,10 @@
 ﻿namespace GHR.EmployeeManagement.Controllers
 {
+
+    using Microsoft.AspNetCore.Mvc;
+    using Grpc.Core;
+    using MediatR;
+ 
     using GHR.EmployeeManagement.Application.Commands.Create;
     using GHR.EmployeeManagement.Application.Commands.Delete;
     using GHR.EmployeeManagement.Application.Commands.IncreaseSalary;
@@ -16,10 +21,7 @@
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesHiredAfter;
     using GHR.EmployeeManagement.Application.Queries.GetEmployeesSalaryAbove;
     using GHR.EmployeeManagement.Application.Queries.Search;
-    using Grpc.Core;
-    using MediatR;
-    using Microsoft.AspNetCore.Mvc;
-  
+   
     public class EmployeeController : BaseApiController
     {
         private readonly IMediator _mediator;

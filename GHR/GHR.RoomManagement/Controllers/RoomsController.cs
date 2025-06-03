@@ -1,0 +1,73 @@
+﻿namespace GHR.RoomManagement.Controllers
+{
+    using Microsoft.AspNetCore.Mvc;
+
+    using GHR.RoomManagement.DTOs;
+    using GHR.RoomManagement.Entities;
+    using GHR.RoomManagement.Services;
+
+    public class RoomsController : BaseApiController
+    {
+        private readonly IRoomService _roomManagementService; 
+        public RoomsController(IRoomService roomManagementService) => _roomManagementService = roomManagementService;
+
+        [HttpGet]
+        public async Task<IActionResult> GetRooms([FromQuery] int? floor, [FromQuery] string? type, [FromQuery] string? status) =>
+            AsActionResult(await _roomManagementService.GetRoomsAsync(status, floor, type)); 
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetRoom(int id) =>
+            AsActionResult(await _roomManagementService.GetRoomByIdAsync(id));  
+
+        [HttpPost]
+        public async Task<IActionResult> CreateRoom([FromBody] Room room) =>
+            AsActionResult(await _roomManagementService.CreateRoomAsync(room));   
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateRoom(int id, [FromBody] Room room)
+        {
+            if (id != room.Id) return BadRequest("Id mismatch"); 
+            return AsActionResult(await _roomManagementService.UpdateRoomAsync(id, room));
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteRoom(int id) =>
+            AsActionResult(await _roomManagementService.DeleteRoomAsync(id));
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllRoomTypes() =>
+            AsActionResult(await _roomManagementService.GetAllRoomTypesAsync());  
+
+        [HttpPost]
+        public async Task<IActionResult> CreateRoomType([FromBody] CreateRoomTypeDTO dto) =>
+            AsActionResult(await _roomManagementService.CreateRoomTypeAsync(dto));  
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateRoomType(int id, [FromBody] UpdateRoomTypeDTO dto)
+        {
+            if (id != dto.Id) return BadRequest("ID mismatch");
+            return AsActionResult(await _roomManagementService.UpdateRoomTypeAsync(dto));
+        } 
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteRoomType(int id) =>
+            AsActionResult(await _roomManagementService.DeleteRoomTypeAsync(id));
+
+        // GET /api/availability
+        [HttpGet]
+        public async Task<IActionResult> GetAll(
+            [FromQuery] DateTime? startDate, 
+            [FromQuery] DateTime? endDate, 
+            [FromQuery] string? type) =>
+            AsActionResult(await _roomManagementService.GetAvailableRoomsAsync(startDate, endDate, type)); 
+
+        // GET /api/availability/{roomId}
+        [HttpGet("{roomId}")]
+        public async Task<IActionResult> GetByRoomId(int roomId) =>
+            AsActionResult(await _roomManagementService.GetAvailabilityByRoomIdAsync(roomId));
+
+        [HttpGet("housekeeping/facility/{facility}/status/{status}")]
+        public async Task<IActionResult> GetAllHouseKeeping(string facility, string status) =>
+            AsActionResult(await _roomManagementService.GetAllHouseKeepingAsync(facility, status));
+    }
+}

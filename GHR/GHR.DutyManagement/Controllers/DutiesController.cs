@@ -47,6 +47,11 @@
 
         [HttpPost("assign")]
         public async Task<IActionResult> AssignDuty([FromBody] DutyAssignmentDTO dutyAssignment) =>
-            AsActionResult(await _dutyservice.AssignDutyAsync(dutyAssignment)); 
+            AsActionResult(await _dutyservice.AssignDutyAsync(dutyAssignment));
+
+        //
+        [HttpGet("housekeeping/facility/{facility}/status/{status}")]
+        public async Task<IActionResult> GetAllHouseKeeping(string facility, string status) =>
+            AsActionResult(await _dutyservice.GetByFacilityAndStatusAsync(facility, status));
     }
 }

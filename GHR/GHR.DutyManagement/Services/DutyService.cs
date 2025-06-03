@@ -14,6 +14,7 @@
         Task<Result<IEnumerable<Shift>>> GetAllShiftsAsync();
         Task<Result<IEnumerable<PeriodType>>> GetAllPeriodTypesAsync();
         Task<Result<IEnumerable<DutyAssignment>>> GetDutyAssignmentsAsync(int dutyId);
+        Task<Result<IEnumerable<Duty>>> GetByFacilityAndStatusAsync(string facility, string status);
         Task<Result<int>> AssignDutyAsync(DutyAssignmentDTO dutyAssignment);
     }
 
@@ -21,6 +22,19 @@
     {
         private readonly IDutyRepository _repository;
         public DutyService(IDutyRepository repository) => _repository = repository;
+
+        public async Task<Result<IEnumerable<Duty>>> GetByFacilityAndStatusAsync(string facility, string status)
+        {
+            try
+            {
+                var duties = await _repository.GetByFacilityAndStatusAsync(facility, status);
+                return Result<IEnumerable<Duty>>.Success(duties);
+            }
+            catch (Exception ex)
+            {
+                return Result<IEnumerable<Duty>>.Failure(ex.Message);
+            }
+        }
 
         public async Task<Result<int>> AssignDutyAsync(DutyAssignmentDTO dutyAssignment)
         {
@@ -111,7 +125,7 @@
             {
                 return Result<IEnumerable<DutyAssignment>>.Failure(ex.Message);
             }
-        }
+        } 
 
         public async Task<Result<Duty>> GetDutyByIdAsync(int id)
         {
