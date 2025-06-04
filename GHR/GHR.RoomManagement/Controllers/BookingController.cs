@@ -10,27 +10,27 @@
         private readonly IBookingService _bookingService;
         public BookingController(IBookingService bookingService) => _bookingService = bookingService;
 
-        [HttpGet]
+        [HttpGet("reservations")]
         public async Task<IActionResult> GetAllReservations() =>
             AsActionResult(await _bookingService.GetAllReservationsAsync());  
 
-        [HttpGet("{id}")]
+        [HttpGet("reservation/{id}")]
         public async Task<IActionResult> Get(int id) =>
             AsActionResult(await _bookingService.GetReservationByIdAsync(id));  
 
-        [HttpPost]
+        [HttpPost("create-reservation")]//
         public async Task<IActionResult> Create([FromBody] CreateReservationDTO dto) =>
             AsActionResult(await _bookingService.CreateReservationAsync(dto));  
 
-        [HttpPut("update/{id}")]
+        [HttpPut("update-reservation/{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateReservationDTO dto) =>
             AsActionResult(await _bookingService.UpdateReservationAsync(id, dto));   
 
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("delete-reservation/{id}")]
         public async Task<IActionResult> Delete(int id) =>
             AsActionResult(await _bookingService.DeleteReservationAsync(id));
 
-        [HttpGet]
+        [HttpGet("room-rates")]
         public async Task<IActionResult> GetAllRoomRates() =>
             AsActionResult(await _bookingService.GetAllRoomRatesAsync()); 
 
@@ -38,11 +38,11 @@
         public async Task<IActionResult> GetRoomRateById(int id) =>
             AsActionResult(await _bookingService.GetRoomRateByIdAsync(id)); 
 
-        [HttpPost]
+        [HttpPost("create-room-rate")]
         public async Task<IActionResult> CreateRoomRate([FromBody] CreateRoomRateDto dto) =>
             AsActionResult(await _bookingService.CreateRoomRateAsync(dto)); 
 
-        [HttpPut("{id}")]
+        [HttpPut("update-room-rate/{id}")]
         public async Task<IActionResult> UpdateRoomRate(int id, [FromBody] UpdateRoomRateDto dto) =>
             AsActionResult(await _bookingService.UpdateRoomRateAsync(id, dto));  
 

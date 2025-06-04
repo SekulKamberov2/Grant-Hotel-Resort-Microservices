@@ -37,7 +37,7 @@
         public async Task<Reservation?> GetReservationByIdAsync(int id)
         {
             const string sql = "SELECT * FROM Reservation WHERE Id = @id";
-            return await _db.QueryFirstOrDefaultAsync<Reservation>(sql, new { id });
+            return await _db.QueryFirstOrDefaultAsync<Reservation>(sql, new { id }); //null if no rows are found.
         }
 
         public async Task<int> CreateReservationAsync(Reservation reservation)

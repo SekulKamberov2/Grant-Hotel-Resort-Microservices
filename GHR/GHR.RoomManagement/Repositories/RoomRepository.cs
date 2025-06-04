@@ -1,11 +1,11 @@
 ﻿namespace GHR.RoomManagement.Repositories
 {
-    using System.Data;
     using Dapper;
-
     using GHR.RoomManagement.DTOs;
     using GHR.RoomManagement.Entities;
     using GHR.SharedKernel.Helpers;
+    using System.Data;
+    using System.Text.Json;
 
     public interface IRoomRepository
     {
@@ -163,12 +163,12 @@
               AND (@startDate IS NULL OR rr.ValidFrom <= @startDate AND (rr.ValidTo IS NULL OR rr.ValidTo >= @endDate))
         ";
 
-            return await _dbConnection.QueryAsync<RoomAvailabilityDTO>(sql, new
+              return await _dbConnection.QueryAsync<RoomAvailabilityDTO>(sql, new
             {
                 startDate,
                 endDate,
                 type
-            });
+            });  
         }
 
         public async Task<RoomAvailabilityDTO?> GetRoomAvailabilityByIdAsync(int roomId)

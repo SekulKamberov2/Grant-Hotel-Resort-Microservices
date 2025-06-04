@@ -58,7 +58,7 @@
         {
             try
             {
-                var data = await _bookingRepository.GetReservationByIdAsync(id);
+                var data = await _bookingRepository.GetReservationByIdAsync(id); 
                 return data is null
                     ? Result<Reservation?>.Failure("Reservation not found", 404)
                     : Result<Reservation?>.Success(data);

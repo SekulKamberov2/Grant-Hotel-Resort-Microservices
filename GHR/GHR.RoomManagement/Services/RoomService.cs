@@ -72,11 +72,12 @@
             {
                 if (string.IsNullOrWhiteSpace(room.RoomNumber))
                     return Result<int>.Failure("Room number is required", 400);
-
+             
                 var newId = await _roomsRepository.CreateAsync(room);
-                if (newId != 1)
-                    return Result<int>.Failure("Failed to create a room", 400);
-
+          
+                Console.WriteLine(newId);
+                if (newId == 0)
+                    return Result<int>.Failure("Failed to create a room", 400); 
                 return Result<int>.Success(newId);
             }
             catch (Exception ex)
@@ -145,7 +146,7 @@
                     Name = dto.Name,
                     Description = dto.Description
                 });
-                if (id != 1)
+                if (id == 0)
                     return Result<int>.Failure("Failed to create a room type", 400);
 
                 return Result<int>.Success(id);
@@ -205,8 +206,8 @@
             try
             {
                 var data = await _roomsRepository.GetAllAvailableRoomsAsync(start, end, type); 
-                if (data == null || !data.Any()) 
-                    return Result<IEnumerable<RoomAvailabilityDTO>>.Failure("No available rooms found for the specified criteria.", 404);
+                //if (data == null || !data.Any()) 
+                  //  return Result<IEnumerable<RoomAvailabilityDTO>>.Failure("No available rooms found for the specified criteria.", 404);
                 
                 return Result<IEnumerable<RoomAvailabilityDTO>>.Success(data);
             }
