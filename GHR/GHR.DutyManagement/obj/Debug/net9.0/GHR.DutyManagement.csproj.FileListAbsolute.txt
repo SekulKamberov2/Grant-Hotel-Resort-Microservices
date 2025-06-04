@@ -165,3 +165,7 @@ C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Serv
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DutyManagement\obj\Debug\net9.0\GHR.DutyManagement.pdb
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DutyManagement\obj\Debug\net9.0\GHR.DutyManagement.genruntimeconfig.cache
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DutyManagement\obj\Debug\net9.0\ref\GHR.DutyManagement.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DutyManagement\bin\Debug\net9.0\MassTransit.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DutyManagement\bin\Debug\net9.0\MassTransit.Abstractions.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DutyManagement\bin\Debug\net9.0\MassTransit.RabbitMqTransport.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DutyManagement\bin\Debug\net9.0\RabbitMQ.Client.dll

@@ -14,6 +14,7 @@
         Task<Result<IEnumerable<Shift>>> GetAllShiftsAsync();
         Task<Result<IEnumerable<PeriodType>>> GetAllPeriodTypesAsync();
         Task<Result<IEnumerable<DutyAssignment>>> GetDutyAssignmentsAsync(int dutyId);
+        Task<Result<IEnumerable<EmployeeIdManagerIdDTO>>> GetAvailableStaffAsync(string facility);
         Task<Result<IEnumerable<Duty>>> GetByFacilityAndStatusAsync(string facility, string status);
         Task<Result<int>> AssignDutyAsync(DutyAssignmentDTO dutyAssignment);
     }
@@ -124,6 +125,18 @@
             catch (Exception ex)
             {
                 return Result<IEnumerable<DutyAssignment>>.Failure(ex.Message);
+            }
+        } 
+        public async Task<Result<IEnumerable<EmployeeIdManagerIdDTO>>> GetAvailableStaffAsync(string facility)
+        {
+            try
+            {
+                var assignments = await _repository.GetAvailableStaffAsync(facility);
+                return Result<IEnumerable<EmployeeIdManagerIdDTO>>.Success(assignments);
+            }
+            catch (Exception ex)
+            {
+                return Result<IEnumerable<EmployeeIdManagerIdDTO>>.Failure(ex.Message);
             }
         } 
 

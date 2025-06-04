@@ -12,15 +12,13 @@ using GHR.SharedKernel;
  
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<IDbConnection>(sp => new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+builder.Services.AddScoped<IDbConnection>(sp => new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection"))); 
 builder.Services.AddScoped<IDutyRepository, DutyRepository>(); 
 builder.Services.AddScoped<IDutyService, DutyService>(); 
 
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();
 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Key));
-
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

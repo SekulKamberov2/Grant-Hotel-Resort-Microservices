@@ -45,6 +45,10 @@
         public async Task<IActionResult> GetDutyAssignments(int dutyId) =>
             AsActionResult(await _dutyservice.GetDutyAssignmentsAsync(dutyId));
 
+        [HttpGet("available-staff/{facility}")]
+        public async Task<IActionResult> GetAvailableStaff(string facility) =>
+            AsActionResult(await _dutyservice.GetAvailableStaffAsync(facility));
+
         [HttpPost("assign")]
         public async Task<IActionResult> AssignDuty([FromBody] DutyAssignmentDTO dutyAssignment) =>
             AsActionResult(await _dutyservice.AssignDutyAsync(dutyAssignment));
