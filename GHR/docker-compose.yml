@@ -151,7 +151,7 @@ services:
     environment:
       - MONGO_URI=mongodb://mongo:27017/fitness-db
       - PORT=3021
-      - JWT_SECRET=super-secret-key-diojszh$%^$*^^&TYGxduiashauish$@#%#^$&TIGYOTF%$E#^%$%^$*^^&TYGYF^$E#$%E%$ERGFJHYGUILasdhcsjkfhdsjgfd
+      - JWT_SECRET="super-secret-key-diojszh$%^$*^^&TYGxduiashauish$@#%#^$&TIGYOTF%$E#^%$%^$*^^&TYGYF^$E#$%E%$"
       - JWT_ISSUER=Grant Hotel Resort
       - JWT_AUDIENCE=my-app-Grant Hotel Resort
     depends_on:
@@ -174,7 +174,23 @@ services:
       - sqlserver
     networks:
       - hotelnet
-
+      
+  room-management:
+    build:
+      context: .
+      dockerfile: GHR.RoomManagement/Dockerfile
+    ports:
+      - "5093:93"
+      - "5094:94"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:93;http://+:94
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=RoomManagementDB;User=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+    networks:
+      - hotelnet 
+      
   mongo:
     image: mongo:6
     container_name: mongo

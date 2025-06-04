@@ -13,15 +13,12 @@
         Task<Reservation?> GetReservationByIdAsync(int id);
         Task<int> CreateReservationAsync(Reservation reservation);
         Task<bool> UpdateReservationAsync(Reservation reservation);
-        Task<bool> DeleteReservationAsync(int id);
-
-
+        Task<bool> DeleteReservationAsync(int id); 
         Task<IEnumerable<RoomRate>> GetAllRoomRatesAsync();
         Task<RoomRate?> GetRoomRateByIdAsync(int id);
         Task<int> CreateRoomRateAsync(RoomRate rate);
         Task<bool> UpdateRoomRateAsync(RoomRate rate);
-        Task<bool> DeleteRoomRateAsync(int id);
-
+        Task<bool> DeleteRoomRateAsync(int id); 
         Task<bool> CheckInAsync(int reservationId, int employeeId);
         Task<bool> CheckOutAsync(int reservationId, int employeeId);
     }

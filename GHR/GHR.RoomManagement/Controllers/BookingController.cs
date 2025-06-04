@@ -22,11 +22,11 @@
         public async Task<IActionResult> Create([FromBody] CreateReservationDTO dto) =>
             AsActionResult(await _bookingService.CreateReservationAsync(dto));  
 
-        [HttpPut("{id}")]
+        [HttpPut("update/{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateReservationDTO dto) =>
             AsActionResult(await _bookingService.UpdateReservationAsync(id, dto));   
 
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> Delete(int id) =>
             AsActionResult(await _bookingService.DeleteReservationAsync(id));
 
@@ -34,7 +34,7 @@
         public async Task<IActionResult> GetAllRoomRates() =>
             AsActionResult(await _bookingService.GetAllRoomRatesAsync()); 
 
-        [HttpGet("{id}")]
+        [HttpGet("room-rate/{id}")]
         public async Task<IActionResult> GetRoomRateById(int id) =>
             AsActionResult(await _bookingService.GetRoomRateByIdAsync(id)); 
 

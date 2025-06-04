@@ -1,10 +1,11 @@
 ﻿namespace GHR.RoomManagement.Repositories
 {
+    using System.Data;
     using Dapper;
+
     using GHR.RoomManagement.DTOs;
     using GHR.RoomManagement.Entities;
     using GHR.SharedKernel.Helpers;
-    using System.Data;
 
     public interface IRoomRepository
     {
@@ -12,15 +13,11 @@
         Task<Room?> GetByIdAsync(int id);
         Task<int> CreateAsync(Room room);
         Task<bool> UpdateAsync(int id, Room room);
-        Task<bool> DeleteAsync(int id);
-
-
+        Task<bool> DeleteAsync(int id); 
         Task<IEnumerable<RoomType>> GetAllRoomTypesAsync();
         Task<int> CreateRoomTypeAsync(RoomType type);
         Task<bool> UpdateRoomTypeAsync(RoomType type);
-        Task<bool> DeleteRoomTypeAsync(int id);
-
-
+        Task<bool> DeleteRoomTypeAsync(int id); 
         Task<IEnumerable<RoomAvailabilityDTO>> GetAllAvailableRoomsAsync(DateTime? startDate, DateTime? endDate, string? type);
         Task<RoomAvailabilityDTO?> GetRoomAvailabilityByIdAsync(int roomId);
     }

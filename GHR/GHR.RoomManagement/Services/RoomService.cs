@@ -4,7 +4,8 @@
     using GHR.RoomManagement.DTOs;
     using GHR.RoomManagement.Entities;
     using GHR.RoomManagement.Repositories;
-    using GHR.SharedKernel; 
+    using GHR.SharedKernel;
+    using System.Text.Json;
 
     public interface IRoomService
     {
@@ -29,11 +30,11 @@
     public class RoomService : IRoomService
     {
         private readonly IRoomRepository _roomsRepository;
-        private readonly HttpClient _httpClient;
-        public RoomService(IRoomRepository roomsRepository, HttpClient httpClient)
+        private readonly IHttpClientFactory _httpClientFactory;
+        public RoomService(IRoomRepository roomsRepository, IHttpClientFactory httpClientFactory)
         {
             _roomsRepository = roomsRepository;
-            _httpClient = httpClient;
+            _httpClientFactory = httpClientFactory;
         }
 
         public async Task<Result<IEnumerable<Room>>> GetRoomsAsync(string? status, int? floor, string? type)
@@ -236,16 +237,16 @@
         public async Task<Result<IEnumerable<DTOs.DutyDTO?>>> GetAllHouseKeepingAsync(string facility, string status)
         { 
             if (string.IsNullOrWhiteSpace(facility)) 
-                return Result<IEnumerable<DTOs.DutyDTO?>>.Failure("Facility parameter is required."); 
-              
+                return Result<IEnumerable<DTOs.DutyDTO?>>.Failure("Facility parameter is required.");  
 
             if (string.IsNullOrWhiteSpace(status))
                 return Result<IEnumerable<DTOs.DutyDTO?>>.Failure($"Status parameter is invalid. Allowed values.");
+               
+            var client = _httpClientFactory.CreateClient("DutyServiceClient");   
+            var url = $"/api/duties/housekeeping/facility/{facility}/status/{status}"; 
+            var response = await client.GetFromJsonAsync<Result<IEnumerable<Duty>>>(url);
 
-
-            var response = await _httpClient.GetFromJsonAsync<IEnumerable<Duty>>("/api/duties/housekeeping/facility/{facility}/status/{status}");
-
-            var result = response?.Select(r => new DTOs.DutyDTO
+            var result = response?.Data?.Select(r => new DTOs.DutyDTO
             {
                 Id = r.Id,
                 Title = r.Title,
@@ -261,9 +262,8 @@
                 CreatedAt = r.CreatedAt,
                 UpdatedAt = r.UpdatedAt
 
-            });
-            return Result<IEnumerable<DTOs.DutyDTO?>>.Success(result);
-           
+            }) ?? Enumerable.Empty<DTOs.DutyDTO>(); 
+            return Result<IEnumerable<DTOs.DutyDTO?>>.Success(result); 
         }
 
 

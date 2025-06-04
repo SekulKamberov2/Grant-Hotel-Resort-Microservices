@@ -167,7 +167,7 @@
       "LoadBalancerOptions": {
         "Type": "RoundRobin"
       }
-    },  
+    },
     {
       "DownstreamPathTemplate": "/api/users/me/info/{userId}",
       "DownstreamScheme": "http",
@@ -242,7 +242,37 @@
       "AddHeadersToRequest": {
         "X-Gateway-From": "Ocelot"
       }
+    },
+    {
+      "DownstreamPathTemplate": "/api/room/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "room-management",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/room/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 60,
+        "Limit": 10
+      },
+      "AddHeadersToRequest": {
+        "X-Gateway-From": "Ocelot"
+      },
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
     }
+  ]
+}
   ],
   "Aggregates": [
     {

@@ -2004,7 +2004,9 @@
       "Dapper >= 2.1.66",
       "GHR.DutyManagement >= 1.0.0",
       "GHR.SharedKernel >= 1.0.0",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.5",
       "Microsoft.AspNetCore.OpenApi >= 9.0.5",
+      "Microsoft.Data.SqlClient >= 6.0.2",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.22.1-Preview.1"
     ]
   },
@@ -2069,9 +2071,17 @@
             "target": "Package",
             "version": "[2.1.66, )"
           },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[9.0.5, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[9.0.5, )"
+          },
+          "Microsoft.Data.SqlClient": {
+            "target": "Package",
+            "version": "[6.0.2, )"
           },
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
