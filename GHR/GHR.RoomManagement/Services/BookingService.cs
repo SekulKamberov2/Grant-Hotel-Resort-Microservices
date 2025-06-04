@@ -1,10 +1,13 @@
 ﻿namespace GHR.RoomManagement.Services
 {
+    using MassTransit;
+
     using GHR.RoomManagement.DTOs;
-    using GHR.RoomManagement.Entities;
+    using GHR.RoomManagement.Entities; 
     using GHR.RoomManagement.Repositories;
     using GHR.SharedKernel;
-
+    using GHR.SharedKernel.Events;
+ 
     public interface IBookingService
     {
         Task<Result<IEnumerable<Reservation>>> GetAllReservationsAsync();
@@ -24,7 +27,14 @@
     public class BookingService : IBookingService
     {
         private readonly IBookingRepository _bookingRepository;
-        public BookingService(IBookingRepository bookingRepository) => _bookingRepository = bookingRepository;
+        private readonly IPublishEndpoint _publishEndpoint;
+        public BookingService(
+            IBookingRepository bookingRepository, 
+            IPublishEndpoint publishEndpoint)
+        {
+            _bookingRepository = bookingRepository;
+            _publishEndpoint = publishEndpoint;
+        }  
 
         public async Task<Result<IEnumerable<Reservation>>> GetAllReservationsAsync()
         {
@@ -247,10 +257,20 @@
                 if (reservationId <= 0 || employeeId <= 0)
                     return Result<bool>.Failure("Invalid input.", 400);
 
-                bool result = await _bookingRepository.CheckOutAsync(reservationId, employeeId);
-                return result
-                    ? Result<bool>.Success(true)
-                    : Result<bool>.Failure("Check-out failed or reservation not found.", 404);
+                bool result = await _bookingRepository.CheckOutAsync(reservationId, employeeId); 
+                if (result)
+                {
+                    var evt = new CheckOutCompletedEvent
+                    {
+                        Facility = "HOTEL ROOM",
+                        CheckInTime = DateTime.UtcNow
+                    }; 
+                    await _publishEndpoint.Publish(evt); 
+                    return Result<bool>.Success(true);
+                }
+
+                return Result<bool>.Failure("Check-in failed or reservation not found.", 404);
+
             }
             catch (Exception ex)
             {

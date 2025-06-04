@@ -4,6 +4,8 @@
     using GHR.DutyManagement.Entities;
     using GHR.DutyManagement.Repositories;
     using GHR.SharedKernel;
+    using System.Text.Json;
+
     public interface IDutyService
     {
         Task<Result<IEnumerable<Duty>>> GetAllDutiesAsync();
@@ -130,8 +132,9 @@
         public async Task<Result<IEnumerable<EmployeeIdManagerIdDTO>>> GetAvailableStaffAsync(string facility)
         {
             try
-            {
-                var assignments = await _repository.GetAvailableStaffAsync(facility);
+            { 
+                var assignments = await _repository.GetAvailableStaffAsync(facility); 
+    
                 return Result<IEnumerable<EmployeeIdManagerIdDTO>>.Success(assignments);
             }
             catch (Exception ex)

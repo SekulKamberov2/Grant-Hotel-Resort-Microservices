@@ -37,13 +37,26 @@
             return await _connection.ExecuteScalarAsync<int>(sql, dutyAssignment);
         }
 
+        //public async Task<int> CreateDutyAsync(DutyDTO duty)
+        //{
+        //    var sql = "INSERT INTO Duties (Title, Description, AssignedToUserId, AssignedByUserId, RoleRequired, Facility, Status, Priority, DueDate) " +
+        //              "VALUES (@Title, @Description, @AssignedToUserId, @AssignedByUserId, @RoleRequired, @Facility, @Status, @Priority, @DueDate); " +
+        //              "SELECT CAST(SCOPE_IDENTITY() AS INT);";
+        //    return await _connection.ExecuteScalarAsync<int>(sql, duty);
+        //}
         public async Task<int> CreateDutyAsync(DutyDTO duty)
         {
-            var sql = "INSERT INTO Duties (Title, Description, AssignedToUserId, AssignedByUserId, RoleRequired, Facility, Status, Priority, DueDate) " +
-                      "VALUES (@Title, @Description, @AssignedToUserId, @AssignedByUserId, @RoleRequired, @Facility, @Status, @Priority, @DueDate); " +
-                      "SELECT CAST(SCOPE_IDENTITY() AS INT);";
-            return await _connection.ExecuteScalarAsync<int>(sql, duty);
+            var sql = @"
+                INSERT INTO Duties 
+                    (Title, Description, AssignedToUserId, AssignedByUserId, RoleRequired, Facility, Status, Priority, DueDate)
+                OUTPUT INSERTED.Id
+                VALUES
+                     (@Title, @Description, @AssignedToUserId, @AssignedByUserId, @RoleRequired, @Facility, @Status, @Priority, @DueDate);";
+
+            var createdDutyId = await _connection.ExecuteScalarAsync<int>(sql, duty); 
+            return createdDutyId;
         }
+
 
         public async Task<bool> DeleteDutyAsync(int id)
         {

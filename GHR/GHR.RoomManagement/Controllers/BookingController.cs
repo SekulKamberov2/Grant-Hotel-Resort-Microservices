@@ -54,6 +54,7 @@
         public async Task<IActionResult> CheckIn(int reservationId, [FromBody] PerformActionDto dto) =>
             AsActionResult(await _bookingService.CheckInAsync(reservationId, dto.EmployeeId));
        
+        //rice event to duty and dutyassignment
         [HttpPost("checkout/{reservationId}")]
         public async Task<IActionResult> CheckOut(int reservationId, [FromBody] PerformActionDto dto) =>
             AsActionResult(await _bookingService.CheckOutAsync(reservationId, dto.EmployeeId)); 

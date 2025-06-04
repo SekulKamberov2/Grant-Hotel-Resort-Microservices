@@ -9,6 +9,7 @@ using GHR.DutyManagement.Services;
 using GHR.RoomManagement.Repositories;
 using GHR.RoomManagement.Services;
 using GHR.SharedKernel;
+using MassTransit; 
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IDbConnection>(sp => new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -22,6 +23,19 @@ builder.Services.AddHttpClient("DutyServiceClient", client =>
 {
     client.BaseAddress = new Uri("http://duty-service:8080");
 });
+
+builder.Services.AddMassTransit(x =>
+{ 
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("rabbitmq", "/", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+    });
+});
+ 
 
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();

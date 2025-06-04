@@ -28,6 +28,7 @@ services:
       - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=DutyManagementDB;User=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True;
     depends_on:
       - sqlserver
+      - rabbitmq
     networks:
       - hotelnet
 
@@ -188,6 +189,7 @@ services:
       - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=RoomManagementDB;User=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True;
     depends_on:
       - sqlserver
+      - rabbitmq
     networks:
       - hotelnet 
       
@@ -200,6 +202,19 @@ services:
       - mongo-data:/data/db
     networks:
       - hotelnet
+      
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"     # backend communication
+      - "15672:15672"   # RabbitMQ management UI
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    networks:
+      - hotelnet
+
 
 networks:
   hotelnet:

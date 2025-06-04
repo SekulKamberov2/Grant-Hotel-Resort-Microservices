@@ -1,20 +1,39 @@
-using System.Data;
-using System.Reflection;
-using System.Text;
-
+using GHR.DutyManagement.Repositories;
+using GHR.DutyManagement.Services;
+using GHR.DutyManagement.Services.Messaging.Consumers;
+using GHR.SharedKernel;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Data.SqlClient;
 using Microsoft.IdentityModel.Tokens;
-
-using GHR.DutyManagement.Repositories;
-using GHR.DutyManagement.Services;
-using GHR.SharedKernel;
+using System.Data;
+using System.Reflection;
+using System.Text;
  
 var builder = WebApplication.CreateBuilder(args);
-
+ 
 builder.Services.AddScoped<IDbConnection>(sp => new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection"))); 
 builder.Services.AddScoped<IDutyRepository, DutyRepository>(); 
-builder.Services.AddScoped<IDutyService, DutyService>(); 
+builder.Services.AddScoped<IDutyService, DutyService>();
+
+builder.Services.AddMassTransit(x =>
+{
+    x.AddConsumer<CheckOutCompletedConsumer>();
+
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("rabbitmq", "/", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+
+        cfg.ReceiveEndpoint("duty-service-checkin-events", e =>
+        {
+            e.ConfigureConsumer<CheckOutCompletedConsumer>(context);
+        });
+    });
+});
 
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();
