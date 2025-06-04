@@ -18,7 +18,7 @@
         public async Task<IActionResult> Get(int id) =>
             AsActionResult(await _bookingService.GetReservationByIdAsync(id));  
 
-        [HttpPost("create-reservation")]//
+        [HttpPost("create-reservation")]
         public async Task<IActionResult> Create([FromBody] CreateReservationDTO dto) =>
             AsActionResult(await _bookingService.CreateReservationAsync(dto));  
 

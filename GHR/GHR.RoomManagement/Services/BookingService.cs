@@ -11,16 +11,12 @@
         Task<Result<Reservation?>> GetReservationByIdAsync(int id);
         Task<Result<int>> CreateReservationAsync(CreateReservationDTO dto);
         Task<Result<bool>> UpdateReservationAsync(int id, UpdateReservationDTO dto);
-        Task<Result<bool>> DeleteReservationAsync(int id);
-
-
+        Task<Result<bool>> DeleteReservationAsync(int id); 
         Task<Result<IEnumerable<RoomRate>>> GetAllRoomRatesAsync();
         Task<Result<RoomRate?>> GetRoomRateByIdAsync(int id);
         Task<Result<int>> CreateRoomRateAsync(CreateRoomRateDto dto);
         Task<Result<bool>> UpdateRoomRateAsync(int id, UpdateRoomRateDto dto);
-        Task<Result<bool>> DeleteRoomRateAsync(int id);
-
-
+        Task<Result<bool>> DeleteRoomRateAsync(int id); 
         Task<Result<bool>> CheckInAsync(int reservationId, int employeeId);
         Task<Result<bool>> CheckOutAsync(int reservationId, int employeeId);
     }

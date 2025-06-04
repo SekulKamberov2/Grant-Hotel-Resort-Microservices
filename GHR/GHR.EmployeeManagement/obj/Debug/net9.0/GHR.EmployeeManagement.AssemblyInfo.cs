@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GHR.EmployeeManagement")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24ba61f0e800ac260227f76fd46e2f72f22e725a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+273db08e205238589f6fa2141e38c2c478d97305")]
 [assembly: System.Reflection.AssemblyProductAttribute("GHR.EmployeeManagement")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GHR.EmployeeManagement")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

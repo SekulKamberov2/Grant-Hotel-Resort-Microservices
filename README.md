@@ -406,8 +406,8 @@ BEGIN TRY
 			Id INT IDENTITY(1,1) PRIMARY KEY,
 			Title NVARCHAR(255) NOT NULL,
 			Description NVARCHAR(1000),
-			AssignedToUserId INT,
-			AssignedByUserId INT,
+			AssignedToUserId INT NOT NULL,
+			AssignedByUserId INT NOT NULL,
 			RoleRequired NVARCHAR(100),
 			Facility NVARCHAR(100),
 			Status NVARCHAR(50) DEFAULT 'Pending',
@@ -498,6 +498,9 @@ SET IDENTITY_INSERT Roles ON;
     VALUES (2, 'MANAGER', 'Manager role');  
     INSERT INTO Roles (Id, Name, Description)
     VALUES (3, 'HR ADMIN', 'Human Resources Admin role');
+    INSERT INTO Roles (Id, Name, Description) VALUES 
+    (4, 'HOUSEKEEPER', 'Room Attendant'),
+    (5, 'HOUSEKEEPER MANAGER', 'Room Attendant Manager');
   
 SET IDENTITY_INSERT Roles OFF;
 
