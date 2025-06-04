@@ -243,8 +243,7 @@
               "ViewState": "AgIAADgAAAAAAAAAAAAUwEQAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T14:20:38.355Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -254,7 +253,7 @@
               "RelativeDocumentMoniker": "GHR.RoomManagement\\Controllers\\BookingController.cs",
               "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.RoomManagement\\Controllers\\BookingController.cs",
               "RelativeToolTip": "GHR.RoomManagement\\Controllers\\BookingController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBQAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA4AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T18:10:38.479Z",
               "IsPinned": true,
@@ -284,8 +283,7 @@
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T17:36:10.81Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -298,8 +296,7 @@
               "ViewState": "AgIAAL8AAAAAAAAAAAAWwMQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T14:19:55.571Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -312,8 +309,7 @@
               "ViewState": "AgIAADIAAAAAAAAAAAAMwDwAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T18:12:05.146Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -326,8 +322,7 @@
               "ViewState": "AgIAAJoAAAAAAAAAAAApwKoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T14:14:50.394Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -340,8 +335,7 @@
               "ViewState": "AgIAAAIAAAAAAAAAAAD4vwwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T18:11:44.483Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -454,8 +448,7 @@
               "RelativeToolTip": "SharedKernel\\Helpers\\RepositoryHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T17:06:17.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T17:06:17.655Z"
             },
             {
               "$type": "Document",
@@ -467,8 +460,7 @@
               "RelativeToolTip": "GHR.RoomManagement\\DTOs\\CreateRoomTypeDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T17:16:55.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T17:16:55.439Z"
             },
             {
               "$type": "Document",
@@ -480,8 +472,7 @@
               "RelativeToolTip": "GHR.RoomManagement\\Entities\\Reservation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T18:12:17.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T18:12:17.578Z"
             },
             {
               "$type": "Document",
@@ -493,8 +484,7 @@
               "RelativeToolTip": "GHR.RoomManagement\\DTOs\\CreateReservationDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T18:12:33.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T18:12:33.541Z"
             },
             {
               "$type": "Document",
