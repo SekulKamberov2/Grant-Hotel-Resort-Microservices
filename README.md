@@ -501,6 +501,7 @@ SET IDENTITY_INSERT Roles ON;
     INSERT INTO Roles (Id, Name, Description) VALUES 
     (4, 'HOUSEKEEPER', 'Room Attendant'),
     (5, 'HOUSEKEEPER MANAGER', 'Room Attendant Manager');
+    (6, 'HOTEL GUEST', 'HOTEL GUEST is a client');
   
 SET IDENTITY_INSERT Roles OFF;
 

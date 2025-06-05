@@ -28,12 +28,15 @@
     {
         private readonly IBookingRepository _bookingRepository;
         private readonly IPublishEndpoint _publishEndpoint;
+        private readonly IHttpClientFactory _httpClientFactory;
         public BookingService(
             IBookingRepository bookingRepository, 
-            IPublishEndpoint publishEndpoint)
+            IPublishEndpoint publishEndpoint,
+            IHttpClientFactory httpClientFactory)
         {
             _bookingRepository = bookingRepository;
             _publishEndpoint = publishEndpoint;
+            _httpClientFactory = httpClientFactory;
         }  
 
         public async Task<Result<IEnumerable<Reservation>>> GetAllReservationsAsync()
@@ -75,10 +78,15 @@
             }
         }
 
-        public async Task<Result<int>> CreateReservationAsync(CreateReservationDTO dto)
+        public async Task<Result<int>> CreateReservationAsync(CreateReservationDTO dto) // TO DO: model validation
         {
             try
             {
+                var client = _httpClientFactory.CreateClient("DutyServiceClient");
+                var url = $"/api/duties/housekeeping/facility/{facility}/status/{status}";
+                var response = await client.GetFromJsonAsync<Result<IEnumerable<Duty>>>(url);
+
+
                 var reservation = new Reservation
                 {
                     GuestId = dto.GuestId,

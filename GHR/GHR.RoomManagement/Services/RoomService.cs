@@ -1,11 +1,9 @@
 ﻿ namespace GHR.RoomManagement.Services
-{
-    using GHR.DutyManagement.DTOs;
+{ 
     using GHR.RoomManagement.DTOs;
     using GHR.RoomManagement.Entities;
     using GHR.RoomManagement.Repositories;
-    using GHR.SharedKernel;
-    using System.Text.Json;
+    using GHR.SharedKernel; 
 
     public interface IRoomService
     {
@@ -19,9 +17,7 @@
         Task<Result<IEnumerable<RoomType>>> GetAllRoomTypesAsync();
         Task<Result<int>> CreateRoomTypeAsync(CreateRoomTypeDTO dto);
         Task<Result<bool>> UpdateRoomTypeAsync(UpdateRoomTypeDTO dto);
-        Task<Result<bool>> DeleteRoomTypeAsync(int id);
-
-
+        Task<Result<bool>> DeleteRoomTypeAsync(int id); 
         Task<Result<IEnumerable<RoomAvailabilityDTO>>> GetAvailableRoomsAsync(DateTime? start, DateTime? end, string? type);
         Task<Result<RoomAvailabilityDTO?>> GetAvailabilityByRoomIdAsync(int roomId);
         Task<Result<IEnumerable<DTOs.DutyDTO?>>> GetAllHouseKeepingAsync(string facility, string status);
@@ -91,7 +87,7 @@
             try
             {
                 if (id != room.Id)
-                    return Result<bool>.Failure("ID mismatch", 400);
+                    return Result<bool>.Failure("Id mismatch", 400);
 
                 var updated = await _roomsRepository.UpdateAsync(id, room);
                 if (!updated)
@@ -205,10 +201,7 @@
 
             try
             {
-                var data = await _roomsRepository.GetAllAvailableRoomsAsync(start, end, type); 
-                //if (data == null || !data.Any()) 
-                  //  return Result<IEnumerable<RoomAvailabilityDTO>>.Failure("No available rooms found for the specified criteria.", 404);
-                
+                var data = await _roomsRepository.GetAllAvailableRoomsAsync(start, end, type);  
                 return Result<IEnumerable<RoomAvailabilityDTO>>.Success(data);
             }
             catch (Exception ex)
