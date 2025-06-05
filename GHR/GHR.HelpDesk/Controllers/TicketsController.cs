@@ -1,10 +1,11 @@
 ﻿namespace GHR.HelpDesk.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+
     using GHR.HelpDesk.DTOs; 
     using GHR.HelpDesk.Services;
-    using GHR.SharedKernel.Extensions;
-    using Microsoft.AspNetCore.Authorization;
-    using Microsoft.AspNetCore.Mvc;
+    using GHR.SharedKernel.Extensions; 
+ 
     public class TicketsController : BaseApiController
     {
         private readonly ITicketService _ticketService; 
