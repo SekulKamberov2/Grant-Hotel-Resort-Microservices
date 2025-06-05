@@ -12,6 +12,8 @@
     using IdentityServer.Application.Interfaces; 
     using IdentityServer.Domain.Models;
     using IdentityServer.Domain.Exceptions;
+    using System.Net.WebSockets;
+    using IdentityServer.Application.Exceptions;
 
     public class UserRepository : IUserRepository
     {
@@ -53,7 +55,7 @@
             }
         }
          
-        public async Task<User?> UpdateUserAsync(User user)
+        public async Task<User> UpdateUserAsync(User user)
         {
             const string query = @"
                 UPDATE Users 
@@ -170,14 +172,17 @@
             }
         }
          
-        public async Task<User?> GetUserByIdAsync(int userId)
+        public async Task<User> GetUserByIdAsync(int userId)
         {
             const string query = "SELECT * FROM Users WHERE Id = @UserId";
             var parameters = new { UserId = userId };
 
             try
             {
-                return await _dbConnection.QuerySingleOrDefaultAsync<User>(query, parameters);
+                var result =  await _dbConnection.QuerySingleOrDefaultAsync<User>(query, parameters);
+                if (result == null) 
+                    throw new NotFoundException($"User with ID {userId} was not found."); 
+                return result;
             }
             catch (SqlException ex)
             {

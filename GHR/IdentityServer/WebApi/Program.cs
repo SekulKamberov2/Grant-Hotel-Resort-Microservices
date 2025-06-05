@@ -1,19 +1,25 @@
+using System.Data;
+using System.Reflection;
+using System.Text.Json;
+
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.Data.SqlClient;
+
 using FluentValidation;
+using MediatR;
+
+using AutoMapper;
+using IdentityServer.Application.Common.Mappings;
+
 using IdentityServer.Application.Behaviors;
-using IdentityServer.Application.Commands.CreateUser;
+using IdentityServer.Application.Commands.CreateUser; 
 using IdentityServer.Application.Exceptions;
 using IdentityServer.Application.Interfaces;
 using IdentityServer.Domain.Exceptions;
 using IdentityServer.Infrastructure.Identity;
 using IdentityServer.Infrastructure.Repositories;
-using MediatR;
-using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Server.Kestrel.Core;
-using Microsoft.Data.SqlClient;
-using System.Data;
-using System.Reflection;
-using System.Text.Json;
-
+ 
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure Kestrel to support HTTP/2 (for gRPC) on port 5000 without HTTPS 
@@ -44,6 +50,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<IDbConnection>(sp =>
     new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IUserManager, UserManager>();

@@ -1,9 +1,9 @@
 ﻿namespace IdentityServer.Application.Commands.SignIn
 {
-    using MediatR; 
     
     using IdentityServer.Application.Interfaces;
     using IdentityServer.Application.Results;  
+    using MediatR; 
     public class SignInCommandHandler : IRequestHandler<SignInCommand, IdentityResult<SignInResponse>> 
     {
         private readonly IUserManager _userManager;
@@ -29,7 +29,7 @@
                 return IdentityResult<SignInResponse>.Failure("Invalid credentials");
              
             var roles = await _roleManager.GetRolesAsync(user.Data.Id);  
-            var roleList = roles.Data?.Any() == true ? roles.Data : new[] { "EMPLOYEE" };
+            var roleList = roles.Data?.Any() == true ? roles.Data : new[] { "EMPLOYEE" }; // hmmm
              
             var tokenResult = _tokenService.GenerateToken(user.Data.Id.ToString(), user.Data, roleList);
             if (!tokenResult.IsSuccess)

@@ -23,6 +23,10 @@ builder.Services.AddHttpClient("DutyServiceClient", client =>
 {
     client.BaseAddress = new Uri("http://duty-service:8080");
 });
+builder.Services.AddHttpClient("CreateUserClient", client =>
+{
+    client.BaseAddress = new Uri("http://identity-service:8081");
+});
 
 builder.Services.AddMassTransit(x =>
 { 

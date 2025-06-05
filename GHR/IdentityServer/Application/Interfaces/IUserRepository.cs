@@ -8,8 +8,8 @@
         Task<IEnumerable<User>> GetUsersAsync(); 
         Task<User> UpdateUserAsync(User user); 
         Task<bool> DeleteUserAsync(int userId); 
-        Task<User?> GetUserByIdAsync(int userId); 
-        Task<User?> GetUserByEmailAsync(string email); 
+        Task<User> GetUserByIdAsync(int userId); 
+        Task<User> GetUserByEmailAsync(string email); 
         Task<bool> CheckPasswordAsync(int userId, string passwordHash); 
         Task<bool> ResetPasswordAsync(int userId, string newPassword);
         Task<IEnumerable<User>> GetUserProfilesByIds(IEnumerable<int> ids);

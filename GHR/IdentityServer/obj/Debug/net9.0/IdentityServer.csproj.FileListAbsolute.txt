@@ -202,6 +202,8 @@ C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Serv
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\IdentityServer.runtimeconfig.json
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\IdentityServer.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\IdentityServer.pdb
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\AutoMapper.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\Azure.Identity.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\IdentityServer\bin\Debug\net9.0\Dapper.dll

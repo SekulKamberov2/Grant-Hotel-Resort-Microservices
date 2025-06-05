@@ -228,19 +228,19 @@
             }
         }
 
-        public async Task<Result<IEnumerable<DTOs.DutyDTO?>>> GetAllHouseKeepingAsync(string facility, string status)
+        public async Task<Result<IEnumerable<DutyDTO?>>> GetAllHouseKeepingAsync(string facility, string status)
         { 
             if (string.IsNullOrWhiteSpace(facility)) 
-                return Result<IEnumerable<DTOs.DutyDTO?>>.Failure("Facility parameter is required.");  
+                return Result<IEnumerable<DutyDTO?>>.Failure("Facility parameter is required.");  
 
             if (string.IsNullOrWhiteSpace(status))
-                return Result<IEnumerable<DTOs.DutyDTO?>>.Failure($"Status parameter is invalid. Allowed values.");
+                return Result<IEnumerable<DutyDTO?>>.Failure($"Status parameter is invalid. Allowed values.");
                
             var client = _httpClientFactory.CreateClient("DutyServiceClient");   
             var url = $"/api/duties/housekeeping/facility/{facility}/status/{status}"; 
             var response = await client.GetFromJsonAsync<Result<IEnumerable<Duty>>>(url);
 
-            var result = response?.Data?.Select(r => new DTOs.DutyDTO
+            var result = response?.Data?.Select(r => new DutyDTO
             {
                 Id = r.Id,
                 Title = r.Title,

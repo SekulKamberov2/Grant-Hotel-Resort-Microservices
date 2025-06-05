@@ -1,13 +1,16 @@
 ﻿namespace GHR.RoomManagement.Services
 {
+    using System.Net.Http.Json;
+    using System.Text.Json;
+
     using MassTransit;
 
     using GHR.RoomManagement.DTOs;
     using GHR.RoomManagement.Entities; 
     using GHR.RoomManagement.Repositories;
     using GHR.SharedKernel;
+    using GHR.SharedKernel.Models;
     using GHR.SharedKernel.Events;
- 
     public interface IBookingService
     {
         Task<Result<IEnumerable<Reservation>>> GetAllReservationsAsync();
@@ -81,15 +84,21 @@
         public async Task<Result<int>> CreateReservationAsync(CreateReservationDTO dto) // TO DO: model validation
         {
             try
-            {
-                var client = _httpClientFactory.CreateClient("DutyServiceClient");
-                var url = $"/api/duties/housekeeping/facility/{facility}/status/{status}";
-                var response = await client.GetFromJsonAsync<Result<IEnumerable<Duty>>>(url);
-
-
+            {   var guest = new CreateUser(dto.Username, dto.Email, dto.Password, dto.PhoneNumber, 6); ; //6 is roleId HOTEL GUEST
+              
+                var client = _httpClientFactory.CreateClient("CreateUserClient"); 
+                var response = await client.PostAsJsonAsync($"/api/users/signup", guest); 
+                if (!response.IsSuccessStatusCode) 
+                    return Result<int>.Failure($"Failed to create reservation.", 500);
+               
+                var user = await response.Content.ReadFromJsonAsync<CreateUserResponse>();
+              
+                if (user == null)
+                    return Result<int>.Failure("User data not found in response.", 500);
+               
                 var reservation = new Reservation
                 {
-                    GuestId = dto.GuestId,
+                    GuestId = user.Id,
                     RoomId = dto.RoomId,
                     CheckInDate = dto.CheckInDate,
                     CheckOutDate = dto.CheckOutDate,

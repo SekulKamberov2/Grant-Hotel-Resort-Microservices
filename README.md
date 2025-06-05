@@ -500,7 +500,7 @@ SET IDENTITY_INSERT Roles ON;
     VALUES (3, 'HR ADMIN', 'Human Resources Admin role');
     INSERT INTO Roles (Id, Name, Description) VALUES 
     (4, 'HOUSEKEEPER', 'Room Attendant'),
-    (5, 'HOUSEKEEPER MANAGER', 'Room Attendant Manager');
+    (5, 'HOUSEKEEPER MANAGER', 'Room Attendant Manager'),
     (6, 'HOTEL GUEST', 'HOTEL GUEST is a client');
   
 SET IDENTITY_INSERT Roles OFF;
