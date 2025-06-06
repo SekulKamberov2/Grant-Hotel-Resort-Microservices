@@ -2,7 +2,88 @@
 
  ```sql
 
---RoomManagementDB
+-- DFM (Department Facility Management)
+IF NOT EXISTS (
+    SELECT name 
+    FROM sys.databases 
+    WHERE name = N'DFMDB'
+)
+BEGIN
+    CREATE DATABASE DFMDB;
+END
+
+USE DFMDB;
+GO
+
+BEGIN TRANSACTION; 
+
+	BEGIN TRY
+		CREATE TABLE Facilities (
+			Id INT IDENTITY(1,1) PRIMARY KEY,
+			Name NVARCHAR(100) NOT NULL,
+			Description NVARCHAR(500),
+			Location NVARCHAR(100),
+			Department NVARCHAR(100), -- Housekeeping, Maintenance
+			Status NVARCHAR(50),       -- Active, Under Maintenance 
+			CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+			UpdatedAt DATETIME2 NULL
+		);
+	 
+		CREATE TABLE FacilitySchedules (
+			ScheduleId INT IDENTITY(1,1) PRIMARY KEY,
+			FacilityId INT NOT NULL,
+			DayOfWeek INT NOT NULL, -- 0=Sunday, 1=Monday, ...
+			OpenTime TIME NOT NULL,
+			CloseTime TIME NOT NULL,
+			IsMaintenance BIT NOT NULL DEFAULT 0,
+			FOREIGN KEY (FacilityId) REFERENCES Facilities(Id)
+		); 
+
+		CREATE TABLE FacilityServices (
+			ServiceId INT IDENTITY(1,1) PRIMARY KEY,
+			FacilityId INT NOT NULL,
+			Name NVARCHAR(100) NOT NULL,
+			Description NVARCHAR(500),
+			Price DECIMAL(10,2),
+			DurationMinutes INT,
+			FOREIGN KEY (FacilityId) REFERENCES Facilities(Id)
+		);
+
+		CREATE TABLE FacilityReservations (
+			ReservationId INT IDENTITY(1,1) PRIMARY KEY,
+			FacilityId INT NOT NULL,
+			ReservedBy NVARCHAR(100) NOT NULL,
+			ReservationDate DATE NOT NULL,
+			StartTime TIME NOT NULL,
+			EndTime TIME NOT NULL,
+			Purpose NVARCHAR(200),
+			CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+			FOREIGN KEY (FacilityId) REFERENCES Facilities(Id)
+		); 
+		
+		CREATE TABLE FacilityIssues (
+			IssueId INT IDENTITY(1,1) PRIMARY KEY,
+			FacilityId INT NOT NULL,
+			ReportedBy NVARCHAR(100) NOT NULL,
+			Description NVARCHAR(1000) NOT NULL,
+			Status NVARCHAR(50) NOT NULL DEFAULT 'Open', -- Open, In Progress, Resolved
+			ReportedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+			AssignedTo NVARCHAR(100) NULL,
+			ResolvedAt DATETIME2 NULL,
+			FOREIGN KEY (FacilityId) REFERENCES Facilities(Id)
+		);  
+
+		COMMIT TRANSACTION;
+		PRINT 'All tables created successfully.';
+
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRANSACTION;
+		PRINT 'Error occurred. Transaction rolled back.';
+		PRINT ERROR_MESSAGE();
+	END CATCH; 
+
+-- RoomManagementDB
 IF NOT EXISTS (
     SELECT name 
     FROM sys.databases 
@@ -123,7 +204,7 @@ VALUES
 (1, 1);
 
 
---RatingGHRDB
+-- RatingGHRDB
 
 IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'RatingGHRDB')
 BEGIN
@@ -165,8 +246,8 @@ BEGIN TRY
         Comment NVARCHAR(1000) NULL,
         RatingDate DATETIME NOT NULL DEFAULT GETDATE(),
 
-        IsApproved BIT NOT NULL DEFAULT 0,           -- Approval status for moderation
-        IsDeleted BIT NOT NULL DEFAULT 0,            -- Soft delete flag
+        IsApproved BIT NOT NULL DEFAULT 0,            -- Approval status for moderation
+        IsDeleted BIT NOT NULL DEFAULT 0,             -- Soft delete flag
         ApprovedAt DATETIME NULL,                     -- When it was approved
         ApprovedBy INT NULL,                          -- Who approved (AdminId or StaffId)
         IsFlagged BIT NOT NULL DEFAULT 0,             -- Flag for moderation
