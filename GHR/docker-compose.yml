@@ -193,6 +193,24 @@ services:
     networks:
       - hotelnet 
       
+  dfm-service:
+    build:
+      context: .
+      dockerfile: GHR.DFM/Dockerfile
+    ports:
+      - "6002:6060"
+      - "6003:6061"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:6060;http://+:6061
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=DFMDB;User=sa;Password=SekulKamberov2025!@;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+      - rabbitmq
+    networks:
+      - hotelnet
+
+      
   mongo:
     image: mongo:6
     container_name: mongo

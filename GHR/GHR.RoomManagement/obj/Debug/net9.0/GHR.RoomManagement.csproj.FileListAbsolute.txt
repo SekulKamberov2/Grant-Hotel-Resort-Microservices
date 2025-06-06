@@ -11,9 +11,14 @@ C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Serv
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\GHR.RoomManagement.runtimeconfig.json
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\GHR.RoomManagement.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\GHR.RoomManagement.pdb
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\AutoMapper.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\Azure.Identity.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\Dapper.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\MassTransit.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\MassTransit.Abstractions.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\MassTransit.RabbitMqTransport.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -37,6 +42,7 @@ C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Serv
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\Microsoft.OpenApi.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\RabbitMQ.Client.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\System.ClientModel.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\System.Diagnostics.EventLog.dll
@@ -88,7 +94,3 @@ C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Serv
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\obj\Debug\net9.0\GHR.RoomManagement.pdb
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\obj\Debug\net9.0\GHR.RoomManagement.genruntimeconfig.cache
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\obj\Debug\net9.0\ref\GHR.RoomManagement.dll
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\MassTransit.dll
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\MassTransit.Abstractions.dll
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\MassTransit.RabbitMqTransport.dll
-C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.RoomManagement\bin\Debug\net9.0\RabbitMQ.Client.dll

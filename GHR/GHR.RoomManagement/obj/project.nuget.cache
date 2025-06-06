@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2DesNhekiUI=",
+  "dgSpecHash": "TCleIIp7wO8=",
   "success": true,
   "projectFilePath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.RoomManagement\\GHR.RoomManagement.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sekne\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\sekne\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\sekne\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\sekne\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
@@ -14,6 +16,7 @@
     "C:\\Users\\sekne\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.5\\microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
     "C:\\Users\\sekne\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\sekne\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.4\\microsoft.bcl.cryptography.9.0.4.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\sekne\\.nuget\\packages\\microsoft.data.sqlclient\\6.0.2\\microsoft.data.sqlclient.6.0.2.nupkg.sha512",
     "C:\\Users\\sekne\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\6.0.2\\microsoft.data.sqlclient.sni.runtime.6.0.2.nupkg.sha512",
     "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.4\\microsoft.extensions.caching.abstractions.9.0.4.nupkg.sha512",

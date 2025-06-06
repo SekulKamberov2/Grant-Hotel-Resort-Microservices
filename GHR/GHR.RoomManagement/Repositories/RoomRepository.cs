@@ -1,12 +1,12 @@
 ﻿namespace GHR.RoomManagement.Repositories
 {
+    using System.Data;
     using Dapper;
+
     using GHR.RoomManagement.DTOs;
     using GHR.RoomManagement.Entities;
     using GHR.SharedKernel.Helpers;
-    using System.Data;
-    using System.Text.Json;
-
+ 
     public interface IRoomRepository
     {
         Task<IEnumerable<Room>> GetAllAsync(string? status, int? floor, string? type);
@@ -51,9 +51,7 @@
             var sql = @"
             INSERT INTO Room (RoomNumber, Floor, TypeId, Status, Description)
             VALUES (@RoomNumber, @Floor, @TypeId, @Status, @Description);
-            SELECT CAST(SCOPE_IDENTITY() as int)"; 
-            //var id = await _dbConnection.QuerySingleAsync<int>(sql, room);
-            //return id; 
+            SELECT CAST(SCOPE_IDENTITY() as int)";  
             return await RepositoryHelper.ExecuteWithHandlingAsync(
               () => _dbConnection.QuerySingleAsync<int>(sql, room),
               "Failed to insert a room.");
@@ -69,18 +67,7 @@
                 Status = @Status,
                 Description = @Description
             WHERE Id = @Id";
-
-            //var affectedRows = await _dbConnection.ExecuteAsync(sql, new
-            //{
-            //    room.RoomNumber,
-            //    room.Floor,
-            //    room.TypeId,
-            //    room.Status,
-            //    room.Description,
-            //    Id = id
-            //});
-
-            //return affectedRows > 0;
+             
             var affectedRows = await RepositoryHelper.ExecuteWithHandlingAsync(
                 () => _dbConnection.ExecuteAsync(sql, new 
                 { room.RoomNumber, room.Floor, room.TypeId, room.Status, room.Description, Id = id }),
@@ -90,9 +77,7 @@
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var sql = "DELETE FROM Room WHERE Id = @Id";
-            //var affectedRows = await _dbConnection.ExecuteAsync(sql, new { Id = id });
-            //return affectedRows > 0;
+            var sql = "DELETE FROM Room WHERE Id = @Id"; 
               var affectedRows = await RepositoryHelper.ExecuteWithHandlingAsync(
                 () => _dbConnection.ExecuteAsync(sql, new { Id = id }),
                 "Failed to insert a room.");
@@ -138,8 +123,7 @@
                () => _dbConnection.ExecuteAsync(query, new { Id = id }),
                "Failed to create room type.");
             return affected > 0;
-        }
-
+        } 
 
         public async Task<IEnumerable<RoomAvailabilityDTO>> GetAllAvailableRoomsAsync(DateTime? startDate, DateTime? endDate, string? type)
         {

@@ -84,7 +84,8 @@
         public async Task<Result<int>> CreateReservationAsync(CreateReservationDTO dto) // TO DO: model validation
         {
             try
-            {   var guest = new CreateUser(dto.Username, dto.Email, dto.Password, dto.PhoneNumber, 6); ; //6 is roleId HOTEL GUEST
+            {   
+                var guest = new CreateUser(dto.Username, dto.Email, dto.Password, dto.PhoneNumber, 6); ; //6 is roleId HOTEL GUEST
               
                 var client = _httpClientFactory.CreateClient("CreateUserClient"); 
                 var response = await client.PostAsJsonAsync($"/api/users/signup", guest); 
