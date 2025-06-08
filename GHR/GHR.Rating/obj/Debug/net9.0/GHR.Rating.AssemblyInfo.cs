@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GHR.Rating")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+504508649809d663e75ac1178d930757b04d72ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39924ed967fd5f8357def27a401cf2d5ada60784")]
 [assembly: System.Reflection.AssemblyProductAttribute("GHR.Rating")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GHR.Rating")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

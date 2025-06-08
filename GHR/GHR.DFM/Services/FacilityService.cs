@@ -16,7 +16,8 @@
         Task<Result<bool>> UpdateFacilityStatusAsync(int id, string status); 
         Task<Result<IEnumerable<Facility>>> GetAvailableFacilitiesAsync();
         Task<Result<IEnumerable<FacilitySchedule>>> GetFacilityScheduleAsync(int facilityId);
-        Task<Result<bool>> UpdateFacilityScheduleAsync(int facilityId, IEnumerable<FacilitySchedule> schedules); 
+        Task<Result<bool>> UpdateFacilityScheduleAsync(int facilityId, IEnumerable<FacilitySchedule> schedules);  
+        Task<Result<bool>> CreateFacilityScheduleAsync(FacilitySchedule schedule);  
         Task<Result<IEnumerable<Facility>>> GetNearbyFacilitiesAsync(string location);
         Task<Result<IEnumerable<FacilityServiceItem>>> GetFacilityServicesAsync(int facilityId);
         Task<Result<int>> AddFacilityServiceAsync(FacilityServiceItem service); 
@@ -100,6 +101,9 @@
 
         public async Task<Result<IEnumerable<string>>> GetFacilityStatusesAsync() =>
             Result<IEnumerable<string>>.Success(await _repository.GetFacilityStatusesAsync()); 
+
+        public async Task<Result<bool>> CreateFacilityScheduleAsync(FacilitySchedule schedule) =>
+            Result<bool>.Success(await _repository.CreateFacilityScheduleAsync(schedule)); 
 
         public async Task<Result<bool>> UpdateFacilityStatusAsync(int id, string status)
         {

@@ -14,7 +14,7 @@
         private readonly IUserHttpClient _userManager;  
         public HRController(IUserHttpClient userManager) => _userManager = userManager;  
 
-        [Authorize(Roles = "HR ADMIN")]
+        //[Authorize(Roles = "HR ADMIN")]
         [HttpPost("signup")]   
         public async Task<IActionResult> SignUp([FromBody] SignUpRequestDTO user, CancellationToken cancellationToken)
         {
@@ -23,7 +23,7 @@
             return HandleResult(result);
         }
 
-        [Authorize(Roles = "MANAGER,HR ADMIN")]
+        //[Authorize(Roles = "MANAGER,HR ADMIN")]
         [HttpGet("all-users")]
         public async Task<IActionResult> GetAllUsers(CancellationToken cancellationToken)
         {
@@ -31,7 +31,7 @@
             return HandleResult(result);
         }
 
-        [Authorize(Roles = "HR ADMIN")]
+        //[Authorize(Roles = "HR ADMIN")]
         [HttpGet("admin/all-roles")]
         public async Task<IActionResult> GetAllRoles(CancellationToken cancellationToken)
         {
@@ -39,7 +39,7 @@
             return HandleResult(result);
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpPost("signin")]
         public async Task<IActionResult> SignIn([FromBody] SignInRequestDTO signIn, CancellationToken cancellationToken)
         {
@@ -47,7 +47,7 @@
             return HandleResult(result);
         }
 
-        [Authorize(Roles = "MANAGER,HR ADMIN")]
+        //[Authorize(Roles = "MANAGER,HR ADMIN")]
         [HttpPatch("update-user/{id}")]
         public async Task<IActionResult> UpdateAsync(
             int id,
@@ -58,7 +58,7 @@
             return HandleResult(result);
         }
 
-        [Authorize(Roles = "HR ADMIN")]
+        //[Authorize(Roles = "HR ADMIN")]
         [HttpDelete("delete-user/{userId}")]
         public async Task<IActionResult> DeleteAsync(int userId, CancellationToken cancellationToken)
         {
@@ -66,7 +66,7 @@
            return HandleResult(result);
         }
 
-        [Authorize(Roles = "HR ADMIN")]  
+        //[Authorize(Roles = "HR ADMIN")]  
         [HttpPost("admin/reset-password")]
         public async Task<IActionResult> ResetPasswordAsync([FromBody] ResetPasswordRequest body, CancellationToken cancellationToken)
         { 
@@ -75,7 +75,7 @@
             return HandleResult(result);
         }
 
-        [Authorize] 
+        //[Authorize] 
         [HttpPost("me/reset-password")]
         public async Task<IActionResult> ResetUserPasswordAsync(
             [FromBody] ResetPasswordRequest body,
@@ -88,7 +88,7 @@
             return HandleResult(result);
         }
 
-        [Authorize(Roles = "HR ADMIN")]
+        //[Authorize(Roles = "HR ADMIN")]
         [HttpPost("admin/assign-role")]
         public async Task<IActionResult> AssignRoleToUser(
             [FromBody] AssignRoleRequest body,
@@ -109,7 +109,7 @@
             return HandleResult(result);
         } 
 
-        [Authorize(Roles = "HR ADMIN")]
+        //[Authorize(Roles = "HR ADMIN")]
         [HttpPost("create-role")] 
         public async Task<IActionResult> CreateRole([FromBody] RoleBindingDTO roleModel, CancellationToken cancellationToken)
         {  
@@ -117,7 +117,7 @@
             return HandleResult(result);
         }
 
-        [Authorize(Roles = "HR ADMIN")]
+        //[Authorize(Roles = "HR ADMIN")]
         [HttpPatch("update-role/{id}")]
         public async Task<IActionResult> UpdateRole(int id, [FromBody] RoleBindingDTO roleModel, CancellationToken cancellationToken)
         { 
@@ -125,7 +125,7 @@
             return HandleResult(result);
         }
 
-        [Authorize(Roles = "HR ADMIN")]
+        //[Authorize(Roles = "HR ADMIN")]
         [HttpDelete("delete-role/{roleId}")] 
         public async Task<IActionResult> DeleteRole(int roleId, CancellationToken cancellationToken)  //OK
         {

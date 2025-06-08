@@ -371,7 +371,7 @@ CREATE TABLE Tickets (
     FOREIGN KEY (LocationId) REFERENCES Locations(Id),
     FOREIGN KEY (CategoryId) REFERENCES Categories(Id),
     FOREIGN KEY (PriorityId) REFERENCES Priorities(Id),
-    FOREIGN KEY (StatusId) REFERENCES Statuses(Id)
+    FOREIGN KEY (StatusId) REFERENCES Statuses(Id),
     FOREIGN KEY (TicketTypeId) REFERENCES TicketTypes(Id)
 );
 

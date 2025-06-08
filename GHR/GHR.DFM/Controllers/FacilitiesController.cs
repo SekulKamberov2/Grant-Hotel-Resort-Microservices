@@ -38,9 +38,9 @@
         //facilities/status
         [HttpGet("status")]
         public async Task<IActionResult> GetFacilityStatuses() =>
-            AsActionResult(await _service.GetFacilityStatusesAsync());  
+            AsActionResult(await _service.GetFacilityStatusesAsync());
 
-        //facilities/{id}/status
+        //facilities/{id}/status body-string only:  "Under Maintenance"
         [HttpPut("{id}/status")]
         public async Task<IActionResult> UpdateFacilityStatus(int id, [FromBody] string status) =>
             AsActionResult(await _service.UpdateFacilityStatusAsync(id, status));  
@@ -48,7 +48,12 @@
         //facilities/available
         [HttpGet("available")]
         public async Task<IActionResult> GetAvailableFacilities() =>
-            AsActionResult(await _service.GetAvailableFacilitiesAsync());  
+            AsActionResult(await _service.GetAvailableFacilitiesAsync());
+
+        //facilities/schedule
+        [HttpPost("schedule")]
+        public async Task<IActionResult> CreateFacilityScheduleAsync([FromBody] FacilitySchedule schedules) =>
+            AsActionResult(await _service.CreateFacilityScheduleAsync(schedules));
 
         //facilities/{id}/schedule
         [HttpGet("{id}/schedule")]
