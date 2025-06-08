@@ -18,7 +18,7 @@
         [HttpPost("signup")]   
         public async Task<IActionResult> SignUp([FromBody] SignUpRequestDTO user, CancellationToken cancellationToken)
         {
-            if (!User.IsInRole("HR ADMIN")) return Forbid();  
+            //if (!User.IsInRole("HR ADMIN")) return Forbid();  
             var result = await _userManager.SendAsync<SignUpRequestDTO, UserResponse>(HttpMethod.Post, "/api/users/signup", cancellationToken, user);
             return HandleResult(result);
         }

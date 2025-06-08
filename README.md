@@ -409,6 +409,41 @@ CREATE TABLE TicketComments
 
 COMMIT TRANSACTION;
 
+--Seeding Tickets
+ DECLARE @i INT = 0;
+
+WHILE @i < 100
+BEGIN
+    INSERT INTO Tickets (
+        Title,
+        Description,
+        UserId,
+        StaffId,
+        DepartmentId,
+        LocationId,
+        CategoryId,
+        PriorityId,
+        StatusId,
+        TicketTypeId,
+        CreatedAt
+    )
+    SELECT
+        'Test Ticket ' + CAST(@i AS NVARCHAR),
+        'Random Description for ticket #' + CAST(@i AS NVARCHAR),
+        ABS(CHECKSUM(NEWID())) % 10 + 1,  -- Assuming User IDs 1-10 exist
+        (SELECT TOP 1 Id FROM Staff ORDER BY NEWID()), -- Get valid random StaffId
+        (SELECT TOP 1 Id FROM Departments ORDER BY NEWID()),
+        (SELECT TOP 1 Id FROM Locations ORDER BY NEWID()),
+        (SELECT TOP 1 Id FROM Categories ORDER BY NEWID()),
+        (SELECT TOP 1 Id FROM Priorities ORDER BY NEWID()),
+        (SELECT TOP 1 Id FROM Statuses ORDER BY NEWID()),
+        (SELECT TOP 1 Id FROM TicketTypes ORDER BY NEWID()),
+        DATEADD(DAY, -ABS(CHECKSUM(NEWID()) % 30), GETDATE());
+
+    SET @i = @i + 1;
+END
+ 
+
 -- LeaveManagementGHRDB
 
 IF NOT EXISTS (
