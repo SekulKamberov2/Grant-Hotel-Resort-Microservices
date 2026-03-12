@@ -185,9 +185,8 @@ docker-compose restart identity-service
 
 ---
 
-# Access the Application
-
-Open your browser and go to:
+# 9. You rock Access the Application now
+ Open your browser and go to:
 
 ```
 http://localhost:3003
@@ -244,9 +243,7 @@ Authentication is implemented using:
 
 Benefits:
 
-- Protects against **XSS attacks**
-- No tokens stored in local storage
-- Centralized authentication via **API Gateway**
+- Protects against **XSS attacks**, No tokens stored in local storage, Centralized authentication via **API Gateway**
 
 ---
 
@@ -283,6 +280,10 @@ Each ASP.NET Core microservice is structured using **DDD + CQRS** principles.
 **gRPC**
 
 - Used for **high-performance service-to-service communication**
+
+**RabbitMQ**
+
+– Event-driven asynchronous messaging between microservices
 
 ---
 
@@ -332,21 +333,6 @@ Each domain can be implemented as an **independent microservice**, allowing the 
 
 ---
 
-## Containerized Environment
-
-All services run in isolated containers using:
-
-- **Docker**
-- **Docker Compose**
-
-This ensures:
-
-- Consistent environments
-- Easy local development
-- Simple deployment orchestration
-
----
-
 # About This Project
 
 **Grant Hotel Resort Microservices Platform** is a portfolio project demonstrating a modern **enterprise-style microservices architecture**.
@@ -372,4 +358,5 @@ The goal of this project is to demonstrate the design and implementation of a **
 Software Developer
 
 - GitHub: https://github.com/SekulKamberov2
-- LinkedIn: https://www.youtube.com/@SMKFullStackWebDevelopment
+- Youtube: https://www.youtube.com/@SMKFullStackWebDevelopment  
+- LinkedIn: https://www.linkedin.com/in/sekul-kamberov  
