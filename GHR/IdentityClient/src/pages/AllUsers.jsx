@@ -103,8 +103,8 @@ const AssignRoleButton = styled.button`
     background-color: darkred;
   }
 `;
-
-const RestPasswordButton = styled.button`
+  
+const ResetPasswordButton = styled.button`
   margin-top: 10px;
   padding: 6px 10px;
   font-size: 12px;
@@ -169,42 +169,53 @@ const ConfirmButton = styled.button`
   }
 `;
 
+
 const AllUsers = () => {
     const navigate = useNavigate();
-    const [isModalOpen, setIsModalOpen] = useState(false); 
-    const [isModalResetPassOpen, setIsModalResetPassOpen] = useState(false); 
-    const currentUser = useSelector((state) => state.auth.user); 
-    const [selectedRole, setSelectedRole] = useState('');
+    const currentUser = useSelector((state) => state.auth.user);
+
+    const [isAssignRoleModalOpen, setIsAssignRoleModalOpen] = useState(false);
+    const [isResetPasswordModalOpen, setIsResetPasswordModalOpen] = useState(false);
     const [selectedUser, setSelectedUser] = useState(null);
+
+    const [roles, setRoles] = useState([]);
+    const [selectedRole, setSelectedRole] = useState('');
+
     const [newPassword, setNewPassword] = useState('');
     const [passwordError, setPasswordError] = useState('');
-    const [roles, setRoles] = useState([]);  
 
-    const { data: users = [], error, isLoading, refetch } = useGetAllUsersQuery(undefined, { refetchOnMountOrArgChange: true });
-    const [deleteUser] = useDeleteUserMutation();  
- 
+    const { data: users = [], error, isLoading, refetch } = useGetAllUsersQuery(undefined, {
+        refetchOnMountOrArgChange: true,
+    });
+    const [deleteUser] = useDeleteUserMutation();
+
     useEffect(() => {
-      const fetchRoles = async () => {
-        try {
-          const token = localStorage.getItem('token'); 
-            const response = await fetch('http://localhost:5003/api/HR/admin/all-roles',{
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}` 
-                },
-          });
-          const data = await response.json(); 
-          setRoles(data.data);
-        } catch (err) {
-          console.error('Failed to fetch roles', err);
+        if (isAssignRoleModalOpen && selectedUser) {
+            const fetchRoles = async () => {
+                try {
+                    const response = await api.get('/users/admin/all-roles');
+                    setRoles(response.data.data || []);
+                } catch (err) {
+                    console.error('Failed to fetch roles', err);
+                }
+            };
+            fetchRoles();
         }
-      };
+    }, [isAssignRoleModalOpen, selectedUser]);
 
-      if (isModalOpen) {
-        fetchRoles();
-      }
-    }, [isModalOpen]);
+    const closeAssignRoleModal = () => {
+        setIsAssignRoleModalOpen(false);
+        setSelectedUser(null);
+        setSelectedRole('');
+        setRoles([]);
+    };
+
+    const closeResetPasswordModal = () => {
+        setIsResetPasswordModalOpen(false);
+        setSelectedUser(null);
+        setNewPassword('');
+        setPasswordError('');
+    };
 
     if (isLoading) return <p>Loading...</p>;
     if (error) return <p>Error loading users</p>;
@@ -212,25 +223,23 @@ const AllUsers = () => {
     const handleDelete = async (id) => {
         const confirmed = window.confirm('Are you sure you want to delete this user?');
         if (confirmed) {
-          try {
-            await deleteUser(id).unwrap();
-            refetch();  
-          } catch (err) {
-            alert('Failed to delete user.');
-          }
+            try {
+                await deleteUser(id).unwrap();
+                refetch();
+            } catch (err) {
+                alert('Failed to delete user.');
+            }
         }
-    }; 
+    };
 
     const handleAssignRole = async () => {
         if (!selectedUser || !selectedRole) return;
         try {
-            await api.post('/admin/assign-role', {
+            await api.post('/users/admin/assign-role', {
                 UserId: selectedUser.Id,
-                RoleId: selectedRole
+                RoleId: selectedRole,
             });
-            setIsModalOpen(false);
-            setSelectedUser(null);
-            setSelectedRole('');
+            closeAssignRoleModal();
             refetch();
         } catch (error) {
             alert('Error assigning role');
@@ -243,121 +252,116 @@ const AllUsers = () => {
             return;
         }
 
-        try { 
+        try {
             const endpoint = currentUser.id === selectedUser.Id
-                ? '/me/reset-password'
-                : '/admin/reset-password';
-                 
+                ? '/users/me/reset-password'
+                : '/users/admin/reset-password';
+
             await api.post(endpoint, {
                 Id: selectedUser.Id,
-                NewPassword: newPassword
+                NewPassword: newPassword,
             });
-             
-            setIsModalResetPassOpen(false);
-            setNewPassword('');
-            setPasswordError('');
+
+            closeResetPasswordModal();
         } catch (err) {
-            console.error('Error:', err); 
+            console.error('Error:', err);
             const errorMessage = err.response?.data?.message || 'An unexpected error occurred.';
             setPasswordError(errorMessage);
         }
     };
-    
+
     return (
         <PageWrapper>
-          <Title>All Users</Title>
-          {users.data.length > 0 ? (
-            <UserGrid>
-              {users?.data.slice().reverse().map((user) => (
-                <UserCard key={user.Id}>
-                    <span><strong>ID:</strong> {user.Id}</span>
-                    <span><strong>Email:</strong> {user.Email}</span>
-                    <span><strong>Username:</strong> {user.UserName}</span>
-                    <span><strong>Phone:</strong> {user.PhoneNumber}</span>
-                    <span><strong>Roles:</strong> {user?.Roles?.join(' & ')}</span>
-                    <span><strong>Created:</strong> {new Date(user.DateCreated).toLocaleString()}</span>
+            <Title>All Users</Title>
+            {users.data?.length > 0 ? (
+                <UserGrid>
+                    {users.data.slice().reverse().map((user) => (
+                        <UserCard key={user.Id}>
+                            <span><strong>ID:</strong> {user.Id}</span>
+                            <span><strong>Email:</strong> {user.Email}</span>
+                            <span><strong>Username:</strong> {user.UserName}</span>
+                            <span><strong>Phone:</strong> {user.PhoneNumber}</span>
+                            <span><strong>Roles:</strong> {user?.Roles?.join(' & ')}</span>
+                            <span><strong>Created:</strong> {new Date(user.DateCreated).toLocaleString()}</span>
 
-                    {isModalOpen && selectedUser?.Id === user.Id && (
-                        <ModalBackdrop onClick={() => setIsModalOpen(false)}>
-                            <Modal onClick={(e) => e.stopPropagation()}>
-                                <h3>Assign Role to {selectedUser?.UserName}</h3>
-                                <RoleSelect 
-                                    value={selectedRole} 
-                                    onChange={(e) => setSelectedRole(e.target.value)}
+                            <ButtonWrapper>
+                                <DeleteButton onClick={(e) => { e.stopPropagation(); handleDelete(user.Id); }}>
+                                    Delete
+                                </DeleteButton>
+
+                                <UpdateButton onClick={() => navigate(`/users/edit-user/${user.Id}`, { state: user })}>
+                                    Update
+                                </UpdateButton>
+
+                                <AssignRoleButton
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setSelectedUser(user);
+                                        setIsAssignRoleModalOpen(true);
+                                    }}
                                 >
-                                    <option value="">Select Role</option>
-                                    {roles?.map((role) => (
-                                        <option key={role.Id} value={role.Id}>
-                                            {role.Name}
-                                        </option>
-                                    ))}
-                                </RoleSelect>
-                                <ConfirmButton onClick={handleAssignRole}>Confirm</ConfirmButton>
-                            </Modal>
-                        </ModalBackdrop>
-                    )}
+                                    Assign Role
+                                </AssignRoleButton>
 
-                    <ButtonWrapper>
-                      <DeleteButton onClick={(e) => {
-                        e.stopPropagation();  
-                        handleDelete(user.Id);
-                      }}>
-                          Delete 
-                      </DeleteButton>
+                                <ResetPasswordButton
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setSelectedUser(user);
+                                        setIsResetPasswordModalOpen(true);
+                                    }}
+                                >
+                                    Reset Pass
+                                </ResetPasswordButton>
+                            </ButtonWrapper>
+                        </UserCard>
+                    ))}
+                </UserGrid>
+            ) : (
+                <p>No users found.</p>
+            )}
 
-                      <UpdateButton onClick={() => navigate(`/edit-user/${user.Id}`, { state: user })}>
-                          Update 
-                      </UpdateButton>
+            {isAssignRoleModalOpen && selectedUser && (
+                <ModalBackdrop onClick={closeAssignRoleModal}>
+                    <Modal onClick={(e) => e.stopPropagation()}>
+                        <h3>Assign Role to {selectedUser.UserName}</h3>
+                        <RoleSelect value={selectedRole} onChange={(e) => setSelectedRole(e.target.value)}>
+                            <option value="">Select Role</option>
+                            {roles.map((role) => (
+                                <option key={role.Id} value={role.Id}>
+                                    {role.Name}
+                                </option>
+                            ))}
+                        </RoleSelect>
+                        <ConfirmButton onClick={handleAssignRole}>Confirm</ConfirmButton>
+                    </Modal>
+                </ModalBackdrop>
+            )}
 
-                      <AssignRoleButton onClick={(e) => {
-                        e.stopPropagation();
-                        setSelectedUser(user);
-                        setIsModalOpen(true);
-                      }}>
-                          Assign Role
-                      </AssignRoleButton>
-                      {isModalResetPassOpen && selectedUser && (
-                        <ModalBackdrop onClick={() => setIsModalResetPassOpen(false)}>
-                          <Modal onClick={(e) => e.stopPropagation()}>
-                            <h3>Reset Password for {selectedUser.UserName}</h3>
-                            <input
-                              type="password"
-                              placeholder="Enter new password"
-                              value={newPassword}
-                              onChange={(e) => {
+            {isResetPasswordModalOpen && selectedUser && (
+                <ModalBackdrop onClick={closeResetPasswordModal}>
+                    <Modal onClick={(e) => e.stopPropagation()}>
+                        <h3>Reset Password for {selectedUser.UserName}</h3>
+                        <input
+                            type="password"
+                            placeholder="Enter new password"
+                            value={newPassword}
+                            onChange={(e) => {
                                 setNewPassword(e.target.value);
                                 setPasswordError('');
-                              }}
-                              style={{
+                            }}
+                            style={{
                                 width: '100%',
                                 padding: '10px',
                                 marginTop: '10px',
                                 borderRadius: '4px',
                                 border: '1px solid #ccc'
-                              }}
-                            />
-                            {passwordError && (
-                              <p style={{ color: 'red', marginTop: '5px' }}>{passwordError}</p>
-                            )}
-                            <ConfirmButton onClick={handleResetPassword}>Confirm Reset</ConfirmButton>
-                          </Modal>
-                        </ModalBackdrop>
-                      )}
-
-                      <RestPasswordButton onClick={(e) => {
-                        e.stopPropagation();  
-                        setSelectedUser(user);
-                        setIsModalResetPassOpen(true);
-                      }}>
-                          Reset Pass
-                      </RestPasswordButton>
-                    </ButtonWrapper>
-                </UserCard>
-              ))}
-            </UserGrid>
-          ) : (
-            <p>No users found.</p>
-          )}
+                            }}
+                        />
+                        {passwordError && <p style={{ color: 'red', marginTop: '5px' }}>{passwordError}</p>}
+                        <ConfirmButton onClick={handleResetPassword}>Confirm Reset</ConfirmButton>
+                    </Modal>
+                </ModalBackdrop>
+            )}
         </PageWrapper>
     );
 };

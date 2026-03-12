@@ -86,7 +86,7 @@ const SignUp = () => {
         e.preventDefault();
 
         try {
-            const response = await api.post('/signup', userData);
+            const response = await api.post('/users/signup', userData);
             const createdUser = response.data.data;
 
             setData(createdUser);

@@ -16,12 +16,15 @@
     using IdentityServer.Application.Queries.GetUserInfo;
     using IdentityServer.Application.Queries.GetAllUsers;
     using IdentityServer.Application.Queries.GetAllRoles;
+    using Microsoft.AspNetCore.Authorization;
 
+    [Authorize]
     public class UsersController : BaseApiController
     {
         private readonly IMediator _mediator;
         public UsersController(IMediator mediator) => _mediator = mediator;
 
+        [AllowAnonymous]
         [HttpPost("signin")]
         public async Task<IActionResult> SignIn([FromBody] SignInCommand command)
         {
@@ -42,6 +45,7 @@
             return AsActionResult(result);
         }
 
+        [AllowAnonymous]
         [HttpPost("signup")]
         public async Task<IActionResult> CreateUser([FromBody] CreateUserCommand command) =>
             AsActionResult(await _mediator.Send(command));

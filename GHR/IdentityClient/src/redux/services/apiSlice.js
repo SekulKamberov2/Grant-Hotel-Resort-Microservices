@@ -1,41 +1,50 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const api = createApi({
-  reducerPath: 'api',
-  baseQuery: fetchBaseQuery({
-      baseUrl: 'http://localhost:5003/api/HR',
-      credentials: 'include', 
-  }),
-  endpoints: (builder) => ({
-    getAllUsers: builder.query({
-      query: () => '/all-users', 
+    reducerPath: 'api',
+    baseQuery: fetchBaseQuery({
+        baseUrl: 'http://localhost:5000/api',
+        credentials: 'include',
     }),
-    getUserProfile: builder.mutation({
-      query: () => ({
-        url: '/SignIn',
-        method: 'POST',  
-      }),
+    tagTypes: ['Users'],
+    endpoints: (builder) => ({
+        getAllUsers: builder.query({
+            query: () => '/users/all-users',
+            providesTags: (result) =>
+                result?.data
+                    ? result.data.map(({ Id }) => ({ type: 'Users', id: Id }))
+                    : ['Users'],
+        }),
+
+        getUserProfile: builder.mutation({
+            query: () => ({
+                url: '/users/SignIn',
+                method: 'POST',
+            }),
+        }),
+
+        updateUser: builder.mutation({
+            query: (userData) => ({
+                url: `/users/update-user/${userData.id}`,
+                method: 'PATCH',
+                body: userData,
+            }),
+            invalidatesTags: (result, error, { id }) => [{ type: 'Users', id }],
+        }),
+
+        deleteUser: builder.mutation({
+            query: (id) => ({
+                url: `/users/delete-user/${id}`,
+                method: 'DELETE',
+            }),
+            invalidatesTags: (result, error, id) => [{ type: 'Users', id }],
+        }),
     }),
-    query: (id) => ({
-      url: `/delete-user/${id}`,
-      method: 'DELETE',
-    }),
-    updateUser: builder.mutation({
-      query: (userData) => ({
-        url: `/update-user/${userData.id}`,
-        method: 'PATCH',
-        body: userData,
-      }),
-    }),
-    deleteUser: builder.mutation({ 
-      query: (id) => ({
-        url: `/delete-user/${id}`,
-        method: 'DELETE',
-      }),
-      invalidatesTags: ['Users'],
-    }),
-  }),
 });
 
-export const { useGetAllUsersQuery, useGetUserProfileMutation,  
-  useUpdateUserMutation, useDeleteUserMutation } = api;   
+export const {
+    useGetAllUsersQuery,
+    useGetUserProfileMutation,
+    useUpdateUserMutation,
+    useDeleteUserMutation,
+} = api;

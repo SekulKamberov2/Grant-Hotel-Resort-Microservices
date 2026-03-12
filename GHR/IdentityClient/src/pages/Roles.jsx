@@ -119,7 +119,7 @@ const Roles = () => {
 
     const fetchRoles = async () => {
         try {
-            const response = await api.get('/admin/all-roles');
+            const response = await api.get('/users/admin/all-roles');
             setRoles(response.data.data); 
         } catch (err) {
             setError('Failed to load roles');
@@ -141,10 +141,10 @@ const Roles = () => {
 
         try {
             if (editingRoleId) {
-                await api.patch(`/update-role/${editingRoleId}`, form);
+                await api.patch(`/users/update-role/${editingRoleId}`, form);
                 setMessage('Role updated successfully');
             } else {
-                await api.post('/create-role', form);
+                await api.post('/users/create-role', form);
                 setMessage('Role created successfully');
             }
 
@@ -159,21 +159,21 @@ const Roles = () => {
     };
 
     const handleEdit = (role) => {
-        setForm({ Name: role.Name, Description: role.Description });
-        setEditingRoleId(role.Id);
+        setForm({ Name: role.name, Description: role.description });
+        setEditingRoleId(role.id);
         setShowForm(true);
     };
 
     const handleDelete = async (id) => {
         try {
-            await api.delete(`/delete-role/${id}`);
+            await api.delete(`/users/delete-role/${id}`);
             setMessage('Role deleted');
             fetchRoles();
         } catch (err) {
             setError('Delete failed');
         }
     };
-
+   
     return (
         <Container>
             <Title>Roles Management</Title>
@@ -200,13 +200,13 @@ const Roles = () => {
             {roles.length === 0 && <div>No roles found.</div>}
             <RoleCardContainer>
                 {roles.slice().reverse().map((role) => (
-                    <RoleCard key={role.Id}>
-                        <RoleTitle>{role.Name}</RoleTitle>
-                        <RoleDescription>{role.Description}</RoleDescription>
+                    <RoleCard key={role.id}>
+                        <RoleTitle>{role.name}</RoleTitle>
+                        <RoleDescription>{role.description}</RoleDescription>
 
                         <ButtonContainer>
                             <Button onClick={() => handleEdit(role)}>Edit</Button>
-                            <Button delete onClick={() => handleDelete(role.Id)}>Delete</Button>
+                            <Button delete onClick={() => handleDelete(role.id)}>Delete</Button>
                         </ButtonContainer>
                     </RoleCard>
                 ))}

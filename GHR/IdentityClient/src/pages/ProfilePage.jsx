@@ -135,7 +135,7 @@ const ProfilePage = () => {
         }
 
         try {
-            await api.post('/me/reset-password', {
+            await api.post('/users/me/reset-password', {
                 Id: user.id,
                 NewPassword: newPassword
             });

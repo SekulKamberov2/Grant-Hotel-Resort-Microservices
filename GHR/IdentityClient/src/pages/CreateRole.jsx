@@ -90,7 +90,7 @@ const CreateRole = () => {
         }
 
         try {
-            await api.post('/create-role', form);
+            await api.post('/users/create-role', form);
 
             navigate('/users');
             setSuccess('Role created successfully!');
