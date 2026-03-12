@@ -14,9 +14,9 @@
 
     public class TokenService : ITokenService
     {
-        private readonly string _issuer;// = "ukg";
-        private readonly string _audience;// = "my-app-users";
-        private readonly string _secretKey;// = "super-secret-key-1234567890-abcdef";
+        private readonly string _issuer; 
+        private readonly string _audience;
+        private readonly string _secretKey; 
 
         public TokenService(IConfiguration configuration)
         {
@@ -49,7 +49,7 @@
                 }
 
                 var keyBytes = Encoding.UTF8.GetBytes(_secretKey);
-                if (keyBytes.Length < 32) // Validate key length for HMACSHA256
+                if (keyBytes.Length < 32)  
                     return IdentityResult<string>.Failure("Secret key is too short for secure signing");
 
                 var key = new SymmetricSecurityKey(keyBytes);

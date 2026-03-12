@@ -11,6 +11,7 @@
     {
         Task<Ticket> GetByIdAsync(int ticketId);
         Task<IEnumerable<Ticket>> GetAllAsync();
+        Task<IEnumerable<Ticket>> GetAllUserTicketsAsync(int userId);
         Task<int> CreateAsync(Ticket ticket);
         Task<int> UpdateAsync(Ticket ticket);
         Task<int> DeleteAsync(int ticketId);
@@ -48,6 +49,14 @@
             const string sql = @"SELECT * FROM Tickets ORDER BY CreatedAt DESC";
             return RepositoryHelper.ExecuteWithHandlingAsync(
                 () => _dbConnection.QueryAsync<Ticket>(sql),
+                "Failed to retrieve all tickets.");
+        }
+
+        public Task<IEnumerable<Ticket>> GetAllUserTicketsAsync(int userId)
+        {
+            const string sql = @"SELECT * FROM Tickets WHERE UserId = @UserId ORDER BY CreatedAt DESC"; 
+            return RepositoryHelper.ExecuteWithHandlingAsync(
+                () => _dbConnection.QueryAsync<Ticket>(sql, new { UserId = userId }),
                 "Failed to retrieve all tickets.");
         }
 

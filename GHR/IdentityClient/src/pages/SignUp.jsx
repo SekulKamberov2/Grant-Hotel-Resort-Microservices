@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
-
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import ErrorNotification from '../components/ErrorNotification';
- 
+import api from '../api/axios';
+
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  width: 300px; 
+  width: 300px;
   padding: 2rem;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -40,26 +40,18 @@ const ProfileDetailsHeader = styled.div`
   color: #333;
   margin-bottom: 28px;
   text-align: center;
-  font-weight: 700; 
+  font-weight: 700;
 `;
 
-const ProfileContainer = styled.div` 
+const ProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  //padding: 21px; 
   background-color: ${({ theme }) => theme.background || '#f9f9f9'};
   color: ${({ theme }) => theme.text || '#333'};
- 
   margin-top: 7%;
-  height: 30vh;  
-  width: 30vw;  
-`;
-
-const Box = styled.div`
-  padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
+  height: 30vh;
+  width: 30vw;
 `;
 
 const ProfileInfo = styled.p`
@@ -67,110 +59,105 @@ const ProfileInfo = styled.p`
   color: #555;
   margin: 5px 0;
 `;
-const Field = styled.span` 
-  color: #555; 
+
+const Field = styled.span`
+  color: #555;
   font-weight: 650;
   padding-right: 7px;
 `;
 
 const SignUp = () => {
-  const navigate = useNavigate();
-  const [userData, setUserData] = useState({
-    UserName: '',
-    Email: '',
-    Password: '',
-    PhoneNumber: '',
-  });
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
- 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserData((prevData) => ({ ...prevData, [name]: value }));
-  };
+    const navigate = useNavigate();
+    const [userData, setUserData] = useState({
+        UserName: '',
+        Email: '',
+        Password: '',
+        PhoneNumber: '',
+    });
+    const [data, setData] = useState(null);
+    const [error, setError] = useState(null);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setUserData((prevData) => ({ ...prevData, [name]: value }));
+    };
 
-    try {
-      const token = localStorage.getItem('token');  
-        const response = await fetch('http://localhost:5003/api/HR/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          ...(token && { Authorization: `Bearer ${token}` }),
-        },
-        body: JSON.stringify(userData),
-      });
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-      const data = await response.json();
-      if (response.ok) {
-         setData(data.data);
-         navigate('/users');
-      } else { 
-        setError(data.error || 'Sign up failed');
-      }
-    } catch (err) {
-      setError(err.message );
-    }
-  };
+        try {
+            const response = await api.post('/signup', userData);
+            const createdUser = response.data.data;
 
-  return (
-    <> 
-     
-    {!data ?   
-   
-    <ProfileContainer> 
-      <Form onSubmit={handleSubmit}>
-          <h3>Qwerty1!@%</h3>
-        {error && <ErrorNotification message={error} />}
-        <Input
-          type="text"
-          name="UserName"
-          value={userData.UserName}
-          onChange={handleChange}
-          placeholder="Username"
-          required
-        />
-        <Input
-          type="email"
-          name="Email"
-          value={userData.Email}
-          onChange={handleChange}
-          placeholder="Email"
-          required
-        />
-        <Input
-          type="password"
-          name="Password"
-          value={userData.Password}
-          onChange={handleChange}
-          placeholder="Password"
-          required
-        />
-        <Input
-          type="text"
-          name="PhoneNumber"
-          value={userData.PhoneNumber}
-          onChange={handleChange}
-          placeholder="Phone Number"
-          required
-        />
-        <Button type="submit">Sign Up</Button>
-      </Form>
-       </ProfileContainer>
-      :   
-      <ProfileContainer> 
-        <ProfileDetailsHeader>Employee Created</ProfileDetailsHeader>
-        <ProfileInfo><Field>ID:</Field>{ data.Id}</ProfileInfo>
-        <ProfileInfo><Field>User:</Field>{ data.UserName}</ProfileInfo>
-        <ProfileInfo><Field>Email:</Field>{ data.Email}</ProfileInfo> 
-        <ProfileInfo><Field>Phone Number:</Field>{ data.PhoneNumber}</ProfileInfo>  
-        </ProfileContainer>
-        
-    }
-  </>
-  );
+            setData(createdUser);
+            navigate('/users');
+        } catch (err) {
+            const message = err.response?.data?.message || err.message || 'Sign up failed';
+            setError(message);
+        }
+    };
+
+    return (
+        <>
+            {!data ? (
+                <ProfileContainer>
+                    <Form onSubmit={handleSubmit}>
+                        <h3>Qwerty1!@%</h3>
+                        {error && <ErrorNotification message={error} />}
+                        <Input
+                            type="text"
+                            name="UserName"
+                            value={userData.UserName}
+                            onChange={handleChange}
+                            placeholder="Username"
+                            required
+                        />
+                        <Input
+                            type="email"
+                            name="Email"
+                            value={userData.Email}
+                            onChange={handleChange}
+                            placeholder="Email"
+                            required
+                        />
+                        <Input
+                            type="password"
+                            name="Password"
+                            value={userData.Password}
+                            onChange={handleChange}
+                            placeholder="Password"
+                            required
+                        />
+                        <Input
+                            type="text"
+                            name="PhoneNumber"
+                            value={userData.PhoneNumber}
+                            onChange={handleChange}
+                            placeholder="Phone Number"
+                            required
+                        />
+                        <Button type="submit">Sign Up</Button>
+                    </Form>
+                </ProfileContainer>
+            ) : (
+                <ProfileContainer>
+                    <ProfileDetailsHeader>Employee Created</ProfileDetailsHeader>
+                    <ProfileInfo>
+                        <Field>ID:</Field> {data.Id}
+                    </ProfileInfo>
+                    <ProfileInfo>
+                        <Field>User:</Field> {data.UserName}
+                    </ProfileInfo>
+                    <ProfileInfo>
+                        <Field>Email:</Field> {data.Email}
+                    </ProfileInfo>
+                    <ProfileInfo>
+                        <Field>Phone Number:</Field> {data.PhoneNumber}
+                    </ProfileInfo>
+                </ProfileContainer>
+            )}
+        </>
+    );
 };
 
 export default SignUp;

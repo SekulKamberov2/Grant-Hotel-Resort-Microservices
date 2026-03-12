@@ -1,10 +1,12 @@
 ﻿namespace GHR.DutyManagement.Controllers
 {
-    using Microsoft.AspNetCore.Mvc;
-
     using GHR.DutyManagement.DTOs;
     using GHR.DutyManagement.Entities;
     using GHR.DutyManagement.Services;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Mvc;
+
+    [Authorize]
     public class DutiesController : BaseController
     {
         private readonly IDutyService _dutyservice; 

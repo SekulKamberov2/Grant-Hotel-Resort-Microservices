@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
- 
+import api from '../api/axios'; 
+
 const Container = styled.div`
   max-width: 800px;
   margin: 2rem auto;
@@ -68,7 +69,6 @@ const RoleCardContainer = styled.div`
   }
 `;
 
-
 const RoleCard = styled.div`
   display: flex;
   flex-direction: column;
@@ -80,7 +80,6 @@ const RoleCard = styled.div`
   height: 100%;
   box-sizing: border-box;
 `;
-
 
 const RoleTitle = styled.strong`
   font-size: 1.1rem;
@@ -98,7 +97,7 @@ const ButtonContainer = styled.div`
 `;
 
 const ToggleButton = styled(Button)`
-background-color: white;
+  background-color: white;
   margin-bottom: 1rem; 
   border: 2px solid black;
   color: black;
@@ -110,137 +109,110 @@ background-color: white;
   }
 `;
 
-
 const Roles = () => {
     const [roles, setRoles] = useState([]);
     const [form, setForm] = useState({ Name: '', Description: '' });
     const [editingRoleId, setEditingRoleId] = useState(null);
     const [message, setMessage] = useState('');
     const [error, setError] = useState('');
-    const [showForm, setShowForm] = useState(false);  
+    const [showForm, setShowForm] = useState(false);
 
     const fetchRoles = async () => {
-      try {
-        const token = localStorage.getItem('token'); 
-          const res = await fetch('http://localhost:5003/api/HR/admin/all-roles', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}` 
-          }, 
-        });
-        const data = await res.json();
-        console.log('roles', data);
-        setRoles(data.data);
-      } catch (err) {
-        setError('Failed to load roles');
-      }
+        try {
+            const response = await api.get('/admin/all-roles');
+            setRoles(response.data.data); 
+        } catch (err) {
+            setError('Failed to load roles');
+        }
     };
-  
+
     useEffect(() => {
-      fetchRoles();
+        fetchRoles();
     }, []);
-  
+
     const handleChange = (e) => {
-      setForm({ ...form, [e.target.name]: e.target.value });
-      setError('');
-      setMessage('');
+        setForm({ ...form, [e.target.name]: e.target.value });
+        setError('');
+        setMessage('');
     };
-  
+
     const handleSubmit = async (e) => {
-      e.preventDefault();
-      const url = editingRoleId
-          ? `http://localhost:5003/api/HR/update-role/${editingRoleId}`
-          : 'http://localhost:5003/api/HR/create-role';
-  
-      const method = editingRoleId ? 'PATCH' : 'POST';
-  
-      try {
-        const token = localStorage.getItem('token'); 
-        const res = await fetch(url, {
-          method,
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}` 
-          },
-          body: JSON.stringify(form),
-        });
-  
-        if (!res.ok) throw new Error('Request failed');
-  
-        setForm({ Name: '', Description: '' });
-        setEditingRoleId(null);
-        setMessage(editingRoleId ? 'Role updated successfully' : 'Role created successfully');
-        setShowForm(false); 
-        fetchRoles();
-      } catch (err) {
-        setError('Error submitting form');
-      }
+        e.preventDefault();
+
+        try {
+            if (editingRoleId) {
+                await api.patch(`/update-role/${editingRoleId}`, form);
+                setMessage('Role updated successfully');
+            } else {
+                await api.post('/create-role', form);
+                setMessage('Role created successfully');
+            }
+
+            setForm({ Name: '', Description: '' });
+            setEditingRoleId(null);
+            setShowForm(false);
+            fetchRoles();
+        } catch (err) {
+            const msg = err.response?.data?.message || 'Error submitting form';
+            setError(msg);
+        }
     };
-  
+
     const handleEdit = (role) => {
-      setForm({ Name: role.Name, Description: role.Description });
-      setEditingRoleId(role.Id);
-      setShowForm(true);  
+        setForm({ Name: role.Name, Description: role.Description });
+        setEditingRoleId(role.Id);
+        setShowForm(true);
     };
-  
+
     const handleDelete = async (id) => {
-      try {
-        const token = localStorage.getItem('token');
-          const res = await fetch(`http://localhost:5003/api/HR/delete-role/${id}`, {
-          method: 'DELETE',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}` 
-          },
-        });
-        if (!res.ok) throw new Error('Delete failed');
-        setMessage('Role deleted');
-        fetchRoles();
-      } catch (err) {
-        setError('Delete failed');
-      }
+        try {
+            await api.delete(`/delete-role/${id}`);
+            setMessage('Role deleted');
+            fetchRoles();
+        } catch (err) {
+            setError('Delete failed');
+        }
     };
-  
+
     return (
-      <Container>
-        <Title>Roles Management</Title>
-  
-        <ToggleButton onClick={() => setShowForm(!showForm)}>
-          {showForm ? 'Cancel' : 'New Role'}
-        </ToggleButton>
-  
-        {showForm && (
-          <Form onSubmit={handleSubmit}>
-            {error && <Error>{error}</Error>}
-            {message && <Success>{message}</Success>}
-  
-            <label>Name</label>
-            <Input name="Name" value={form.Name} onChange={handleChange} />
-  
-            <label>Description</label>
-            <TextArea name="Description" rows="4" value={form.Description} onChange={handleChange} />
-  
-            <Button type="submit">{editingRoleId ? 'Update Role' : 'Create Role'}</Button>
-          </Form>
-        )}
-  
-        {roles.length === 0 && <div>No roles found.</div>}
-        <RoleCardContainer> 
-          {roles.reverse().map((role) => (
-            <RoleCard key={role.Id}>
-              <RoleTitle>{role.Name}</RoleTitle>
-              <RoleDescription>{role.Description}</RoleDescription>
-  
-              <ButtonContainer>
-                <Button onClick={() => handleEdit(role)}>Edit</Button>
-                <Button delete onClick={() => handleDelete(role.Id)}>Delete</Button>
-              </ButtonContainer>
-            </RoleCard>
-          ))}
-        </RoleCardContainer>
-      </Container>
+        <Container>
+            <Title>Roles Management</Title>
+
+            <ToggleButton onClick={() => setShowForm(!showForm)}>
+                {showForm ? 'Cancel' : 'New Role'}
+            </ToggleButton>
+
+            {showForm && (
+                <Form onSubmit={handleSubmit}>
+                    {error && <Error>{error}</Error>}
+                    {message && <Success>{message}</Success>}
+
+                    <label>Name</label>
+                    <Input name="Name" value={form.Name} onChange={handleChange} />
+
+                    <label>Description</label>
+                    <TextArea name="Description" rows="4" value={form.Description} onChange={handleChange} />
+
+                    <Button type="submit">{editingRoleId ? 'Update Role' : 'Create Role'}</Button>
+                </Form>
+            )}
+
+            {roles.length === 0 && <div>No roles found.</div>}
+            <RoleCardContainer>
+                {roles.slice().reverse().map((role) => (
+                    <RoleCard key={role.Id}>
+                        <RoleTitle>{role.Name}</RoleTitle>
+                        <RoleDescription>{role.Description}</RoleDescription>
+
+                        <ButtonContainer>
+                            <Button onClick={() => handleEdit(role)}>Edit</Button>
+                            <Button delete onClick={() => handleDelete(role.Id)}>Delete</Button>
+                        </ButtonContainer>
+                    </RoleCard>
+                ))}
+            </RoleCardContainer>
+        </Container>
     );
-  };
+};
 
 export default Roles;

@@ -11,8 +11,7 @@ try {
   console.warn('Error parsing user from localStorage:', err);
 }
 
-const initialState = {
-  token: localStorage.getItem('token') || null,
+const initialState = { 
   user: parsedUser,
 };
 const authSlice = createSlice({
@@ -20,17 +19,13 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     setCredentials: (state, action) => {
-      const { token, user } = action.payload;
-      state.token = token;
+      const { user } = action.payload;
       state.user = user;
 
-      localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
     },
     logout: (state) => {
-      state.token = null;
       state.user = null;
-      localStorage.removeItem('token');
       localStorage.removeItem('user');
     },
   },

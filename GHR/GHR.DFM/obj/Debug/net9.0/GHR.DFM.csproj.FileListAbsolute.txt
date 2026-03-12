@@ -81,3 +81,8 @@ C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Serv
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DFM\obj\Debug\net9.0\GHR.DFM.pdb
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DFM\obj\Debug\net9.0\GHR.DFM.genruntimeconfig.cache
 C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DFM\obj\Debug\net9.0\ref\GHR.DFM.dll
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DFM\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DFM\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DFM\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DFM\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\sekne\OneDrive\Desktop\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\GHR\GHR.DFM\obj\Debug\net9.0\swae.build.ex.cache

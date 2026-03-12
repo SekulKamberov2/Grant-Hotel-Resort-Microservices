@@ -8,7 +8,7 @@
     {
         private readonly IUserManager _userManager;
         private readonly IRoleManager _roleManager;
-        private readonly ITokenService _tokenService;
+        private readonly ITokenService _tokenService;  
 
         public SignInCommandHandler(
             IUserManager userManager, 

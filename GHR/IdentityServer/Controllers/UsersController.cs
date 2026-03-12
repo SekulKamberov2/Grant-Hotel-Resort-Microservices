@@ -23,8 +23,24 @@
         public UsersController(IMediator mediator) => _mediator = mediator;
 
         [HttpPost("signin")]
-        public async Task<IActionResult> SignIn([FromBody] SignInCommand command) =>
-            AsActionResult(await _mediator.Send(command));
+        public async Task<IActionResult> SignIn([FromBody] SignInCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (result.IsSuccess)
+            { 
+                var cookieOptions = new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = false,         
+                    SameSite = SameSiteMode.Lax,  
+                    Expires = DateTime.UtcNow.AddHours(2)  
+                };
+                Response.Cookies.Append("access_token", result.Data.Token, cookieOptions);
+                 
+                return Ok(new { user = result.Data.User });
+            } 
+            return AsActionResult(result);
+        }
 
         [HttpPost("signup")]
         public async Task<IActionResult> CreateUser([FromBody] CreateUserCommand command) =>

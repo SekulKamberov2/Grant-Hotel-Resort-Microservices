@@ -80,7 +80,6 @@ function App() {
             <Route path="/delete-user/:id"  />
         </Route>
 
-        {/* 404 fallback */}
         <Route path="*" element={<UnauthorizedPage/>} />
       </Routes>
     </Router>

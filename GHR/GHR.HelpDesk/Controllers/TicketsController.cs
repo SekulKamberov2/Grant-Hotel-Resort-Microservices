@@ -16,6 +16,10 @@
         public async Task<IActionResult> GetAllTickets() =>
             AsActionResult(await _ticketService.GetAllTicketsAsync());
 
+        [HttpGet("my-tickets")]
+        public async Task<IActionResult> GetAllUserTickets() =>
+           AsActionResult(await _ticketService.GetAllUserTicketsAsync(User.ToCurrentUser().Id));
+
         //only HD ADMIN & The owner of the ticket!
         //[Authorize]
         [HttpGet("{ticketId}")]

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import api from '../api/axios';
 import { useSelector } from 'react-redux';
 import { useGetAllUsersQuery, useDeleteUserMutation } from '../redux/services/apiSlice'; 
 import { useNavigate } from 'react-router-dom'; 
@@ -32,8 +33,7 @@ const UserGrid = styled.div`
 const UserCard = styled.div`
   background-color: white;
   padding: 20px;
-  border-radius: 10px;
-  border-left: 6px solid rgb(10, 86, 60);
+  border-radius: 10px; 
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
@@ -41,8 +41,7 @@ const UserCard = styled.div`
   cursor: pointer; 
   transition: border 0.2s ease, box-shadow 0.2s ease;
 
-  &:hover {
-    border-left: 6px solid orange; 
+  &:hover { 
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
   }
 
@@ -220,68 +219,47 @@ const AllUsers = () => {
             alert('Failed to delete user.');
           }
         }
-    };
+    }; 
 
     const handleAssignRole = async () => {
-        if (!selectedUser || !selectedRole) return; 
-        try {  
-            const token = localStorage.getItem('token'); 
-            const response = await fetch('http://localhost:5003/api/HR/admin/assign-role', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}` 
-                },
-            body: JSON.stringify({
+        if (!selectedUser || !selectedRole) return;
+        try {
+            await api.post('/admin/assign-role', {
                 UserId: selectedUser.Id,
                 RoleId: selectedRole
-            })
             });
-        
-            if (!response.ok) throw new Error('Failed to assign role');
-        
             setIsModalOpen(false);
             setSelectedUser(null);
             setSelectedRole('');
-            refetch(); 
+            refetch();
         } catch (error) {
             alert('Error assigning role');
         }
-    }; 
+    };
 
-    const handleResetPassword = async () => {  
+    const handleResetPassword = async () => {
         if (!newPassword || newPassword.length < 8) {
-          setPasswordError('Password must be at least 8 characters');
-          return;
-        } 
-        
+            setPasswordError('Password must be at least 8 characters');
+            return;
+        }
+
         try { 
-          const token = localStorage.getItem('token');  
-          const response = await fetch(
-              currentUser.id === selectedUser.Id ? 'http://localhost:5003/api/HR/me/reset-password' :
-            'http://localhost:5003/api/HR/admin/reset-password', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${token}`
-            },
-            body: JSON.stringify({
-              Id: selectedUser.Id,
-              NewPassword: newPassword
-            })
-          });
-          
-          if (response) { 
-            setIsModalResetPassOpen(false); 
+            const endpoint = currentUser.id === selectedUser.Id
+                ? '/me/reset-password'
+                : '/admin/reset-password';
+                 
+            await api.post(endpoint, {
+                Id: selectedUser.Id,
+                NewPassword: newPassword
+            });
+             
+            setIsModalResetPassOpen(false);
             setNewPassword('');
             setPasswordError('');
-          } else {
-            const errorData = await response.json();
-            setPasswordError(errorData.message || 'Failed to reset password');
-          }
         } catch (err) {
-          console.error('Error:', err); 
-          setPasswordError('An unexpected error occurred.' + err);
+            console.error('Error:', err); 
+            const errorMessage = err.response?.data?.message || 'An unexpected error occurred.';
+            setPasswordError(errorMessage);
         }
     };
     

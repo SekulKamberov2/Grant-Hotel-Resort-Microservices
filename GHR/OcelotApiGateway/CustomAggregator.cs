@@ -13,7 +13,7 @@
         public List<DutyAssignment> IdentityRoute { get; set; }
         public GetUserInfoQueryResponse HRPlatformRoute { get; set; }
         public List<LeaveApplication> LeaveManagementRoute { get; set; }
-        public List<Rating> RatingRoute { get; set; } // adjust type accordingly, or create a model
+        public List<Rating> RatingRoute { get; set; }  
     }
 
     public class Duty

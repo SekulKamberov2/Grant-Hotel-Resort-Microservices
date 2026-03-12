@@ -21,21 +21,19 @@ using IdentityServer.Infrastructure.Identity;
 using IdentityServer.Infrastructure.Repositories;
  
 var builder = WebApplication.CreateBuilder(args);
-
-// Configure Kestrel to support HTTP/2 (for gRPC) on port 5000 without HTTPS 
+ 
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(5000, listenOptions =>
     {
-        listenOptions.Protocols = Microsoft.AspNetCore.Server.Kestrel.Core.HttpProtocols.Http2; //gRPC
+        listenOptions.Protocols = Microsoft.AspNetCore.Server.Kestrel.Core.HttpProtocols.Http2;  
     });
     options.ListenAnyIP(8081, listenOptions =>
     {
-        listenOptions.Protocols = HttpProtocols.Http1; // REST API
+        listenOptions.Protocols = HttpProtocols.Http1;  
     });
 });
-
-// Add services
+ 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowGHRclient", policy =>
@@ -72,17 +70,13 @@ builder.Services.AddControllers();
 builder.Services.AddGrpc();
 
 var app = builder.Build();
-
-// Map gRPC services
+ 
 app.MapGrpcService<IdentityGrpcService>();
-
-// Map REST controllers
+ 
 app.MapControllers();
-
-// Use CORS
+ 
 app.UseCors("AllowGHRclient");
-
-// Global exception handling
+ 
 app.UseExceptionHandler(appError =>
 {
     appError.Run(async context =>

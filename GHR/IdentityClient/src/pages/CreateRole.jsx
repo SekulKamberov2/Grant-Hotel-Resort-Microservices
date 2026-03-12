@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import styled from 'styled-components';
- 
+import api from '../api/axios'; 
+
 const FormContainer = styled.div`
   max-width: 500px;
   margin: 2rem auto;
@@ -63,70 +63,62 @@ const SuccessMessage = styled.div`
 `;
 
 const CreateRole = () => {
-  const navigate = useNavigate();
-  const [form, setForm] = useState({ Name: '', Description: '' });
-  const [errors, setErrors] = useState({});
-  const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
+    const [form, setForm] = useState({ Name: '', Description: '' });
+    const [errors, setErrors] = useState({});
+    const [success, setSuccess] = useState('');
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: '' });
-    setSuccess('');
-  };
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+        setErrors({ ...errors, [e.target.name]: '' });
+        setSuccess('');
+    };
 
-  const validate = () => {
-    const newErrors = {};
-    if (!form.Name.trim()) newErrors.Name = 'Name is required';
-    if (!form.Description.trim()) newErrors.Description = 'Description is required';
-    return newErrors;
-  };
+    const validate = () => {
+        const newErrors = {};
+        if (!form.Name.trim()) newErrors.Name = 'Name is required';
+        if (!form.Description.trim()) newErrors.Description = 'Description is required';
+        return newErrors;
+    };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const validationErrors = validate();
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+            return;
+        }
 
-    try {
-      const token = localStorage.getItem('token'); 
-        const response = await fetch('http://localhost:5003/api/HR/create-role', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}` 
-            },
-        body: JSON.stringify(form),
-      });
+        try {
+            await api.post('/create-role', form);
 
-      if (!response.ok)  throw new Error('Failed to create role'); 
-      navigate('/users');
-      setSuccess('Role created successfully!');
-      setForm({ Name: '', Description: '' });
-    } catch (error) {
-      setErrors({ submit: error.message });
-    }
-  };
+            navigate('/users');
+            setSuccess('Role created successfully!');
+            setForm({ Name: '', Description: '' });
+        } catch (error) {
+            const message = error.response?.data?.message || error.message || 'Failed to create role';
+            setErrors({ submit: message });
+        }
+    };
 
-  return (
-    <FormContainer>
-      <Title>Create Role</Title>
-      <Form onSubmit={handleSubmit}>
-        <Label>Name</Label>
-        <Input name="Name" value={form.Name} onChange={handleChange} />
-        {errors.Name && <Error>{errors.Name}</Error>}
+    return (
+        <FormContainer>
+            <Title>Create Role</Title>
+            <Form onSubmit={handleSubmit}>
+                <Label>Name</Label>
+                <Input name="Name" value={form.Name} onChange={handleChange} />
+                {errors.Name && <Error>{errors.Name}</Error>}
 
-        <Label>Description</Label>
-        <TextArea name="Description" rows="4" value={form.Description} onChange={handleChange} />
-        {errors.Description && <Error>{errors.Description}</Error>}
+                <Label>Description</Label>
+                <TextArea name="Description" rows="4" value={form.Description} onChange={handleChange} />
+                {errors.Description && <Error>{errors.Description}</Error>}
 
-        {errors.submit && <Error>{errors.submit}</Error>}
-        <Button type="submit">Create</Button>
-        {success && <SuccessMessage>{success}</SuccessMessage>}
-      </Form>
-    </FormContainer>
-  );
+                {errors.submit && <Error>{errors.submit}</Error>}
+                <Button type="submit">Create</Button>
+                {success && <SuccessMessage>{success}</SuccessMessage>}
+            </Form>
+        </FormContainer>
+    );
 };
 
 export default CreateRole;
