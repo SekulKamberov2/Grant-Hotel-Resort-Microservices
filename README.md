@@ -185,7 +185,7 @@ docker-compose restart identity-service
 
 ---
 
-# 9. You rock Access the Application now
+# 9. Access the Application now
  Open your browser and go to:
 
 ```
