@@ -60,7 +60,7 @@
             AsActionResult(await _mediator.Send(new GetEmployeesByFacilityQuery(facilityId)));
 
         //http://localhost:7010/api/Employee/hiredafter/2021-12-22
-        [HttpGet("hiredafter/{date}")]  //to alter HiredData
+        [HttpGet("hiredafter/{date}")]  
         public async Task<IActionResult> GetHiredAfter(DateTime date) =>
             AsActionResult(await _mediator.Send(new GetEmployeesHiredAfterQuery(date)));
 
