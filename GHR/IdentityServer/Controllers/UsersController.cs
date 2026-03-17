@@ -1,7 +1,7 @@
 ﻿namespace IdentityServer.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-
+    using Microsoft.AspNetCore.Authorization;
     using MediatR;
 
     using IdentityServer.Application.Commands.CreateUser;
@@ -16,7 +16,7 @@
     using IdentityServer.Application.Queries.GetUserInfo;
     using IdentityServer.Application.Queries.GetAllUsers;
     using IdentityServer.Application.Queries.GetAllRoles;
-    using Microsoft.AspNetCore.Authorization;
+ 
 
     [Authorize]
     public class UsersController : BaseApiController

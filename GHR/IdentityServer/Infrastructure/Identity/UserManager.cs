@@ -29,36 +29,7 @@
             _passwordHasher = passwordHasher;
             _logger = logger;
             _mapper = mapper;
-        }
-
-        //private async Task<IdentityResult<T>> ExecuteWithLogging<T>(
-        //    Func<Task<T>> action,
-        //    string successMessage,
-        //    string errorMessage,
-        //    params object[] args)
-        //{
-        //    try
-        //    {
-        //        var result = await action();
-        //        if (EqualityComparer<T>.Default.Equals(result, default))
-        //        {
-        //            // Return failure when result is null or default
-        //            return IdentityResult<T>.Failure(errorMessage);
-        //        }
-        //        _logger.LogInformation(successMessage, args);
-        //        return IdentityResult<T>.Success(result);
-        //    }
-        //    catch (RepositoryException ex)
-        //    {
-        //        _logger.LogError(ex, errorMessage, args);
-        //        return IdentityResult<T>.Failure(errorMessage);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogError(ex, "Unexpected error occurred while executing action.");
-        //        throw; // Rethrow unexpected exceptions
-        //    }
-        //}
+        } 
 
         private async Task<IdentityResult<TDestination>> ExecuteWithLogging<TSource, TDestination>(
             Func<Task<TSource>> action,

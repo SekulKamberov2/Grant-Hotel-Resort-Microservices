@@ -1,33 +1,37 @@
 ﻿namespace IdentityServer.Infrastructure.Repositories
 {
-    using System.Data; 
-    using System.Threading.Tasks; 
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     using Microsoft.Data.SqlClient;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.Logging;
 
     using Dapper;
-
-    using IdentityServer.Application.Interfaces; 
-    using IdentityServer.Domain.Models;
-    using IdentityServer.Domain.Exceptions;
-    using System.Net.WebSockets;
     using IdentityServer.Application.Exceptions;
+    using IdentityServer.Application.Interfaces;
+    using IdentityServer.Domain.Exceptions;
+    using IdentityServer.Domain.Models;
 
     public class UserRepository : IUserRepository
     {
-        private readonly IDbConnection _dbConnection;
+        private readonly string _connectionString;
         private readonly ILogger<UserRepository> _logger;
 
         public UserRepository(IConfiguration configuration, ILogger<UserRepository> logger)
         {
-            _dbConnection = new SqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            _connectionString = configuration.GetConnectionString("DefaultConnection")
+                ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             _logger = logger;
-        } 
-         
+        }
+
+        private IDbConnection CreateConnection() => new SqlConnection(_connectionString);
+
         public async Task<User> CreateUserAsync(User user, string password)
         {
+            using var connection = CreateConnection();
             const string query = @"
                 INSERT INTO Users (Email, UserName, PhoneNumber, PasswordHash) 
                 OUTPUT INSERTED.Id, INSERTED.Email, INSERTED.UserName, INSERTED.PhoneNumber, INSERTED.DateCreated
@@ -37,7 +41,7 @@
 
             try
             {
-                var insertedUser = await _dbConnection.QuerySingleOrDefaultAsync<User>(query, parameters);
+                var insertedUser = await connection.QuerySingleOrDefaultAsync<User>(query, parameters);
                 if (insertedUser == null)
                     throw new RepositoryException("User creation failed.");
 
@@ -54,9 +58,10 @@
                 throw new RepositoryException("Unexpected error occurred while creating user.", ex);
             }
         }
-         
+
         public async Task<User> UpdateUserAsync(User user)
         {
+            using var connection = CreateConnection();
             const string query = @"
                 UPDATE Users 
                 SET PhoneNumber = @PhoneNumber, Email = @Email 
@@ -70,7 +75,11 @@
 
             try
             {
-                return await _dbConnection.QueryFirstOrDefaultAsync<User>(query, parameters);
+                var updatedUser = await connection.QueryFirstOrDefaultAsync<User>(query, parameters);
+                if (updatedUser == null)
+                    throw new NotFoundException($"User with ID {user.Id} not found after update.");
+
+                return updatedUser;
             }
             catch (SqlException ex)
             {
@@ -83,9 +92,10 @@
                 throw new RepositoryException("Unexpected error occurred while updating user.", ex);
             }
         }
-         
+
         public async Task<IEnumerable<User>> GetUsersAsync()
         {
+            using var connection = CreateConnection();
             const string sql = @"
                 SELECT u.Id, u.UserName, u.Email, u.PhoneNumber, u.DateCreated, r.Name AS RoleName
                 FROM Users u
@@ -96,7 +106,7 @@
             {
                 var userDictionary = new Dictionary<int, User>();
 
-                await _dbConnection.QueryAsync<User, string, User>(
+                await connection.QueryAsync<User, string, User>(
                     sql,
                     (user, roleName) =>
                     {
@@ -128,15 +138,16 @@
                 throw new RepositoryException("Unexpected error occurred while fetching users.", ex);
             }
         }
-         
+
         public async Task<bool> DeleteUserAsync(int userId)
         {
+            using var connection = CreateConnection();
             const string query = "DELETE FROM Users WHERE Id = @UserId";
             var parameters = new { UserId = userId };
 
             try
             {
-                var affectedRows = await _dbConnection.ExecuteAsync(query, parameters);
+                var affectedRows = await connection.ExecuteAsync(query, parameters);
                 return affectedRows > 0;
             }
             catch (SqlException ex)
@@ -150,15 +161,16 @@
                 throw new RepositoryException("Unexpected error occurred while deleting the user.", ex);
             }
         }
-         
+
         public async Task<User?> GetUserByEmailAsync(string email)
         {
+            using var connection = CreateConnection();
             const string query = "SELECT * FROM Users WHERE Email = @Email";
             var parameters = new { Email = email };
 
             try
             {
-                return await _dbConnection.QueryFirstOrDefaultAsync<User>(query, parameters);
+                return await connection.QueryFirstOrDefaultAsync<User>(query, parameters);
             }
             catch (SqlException ex)
             {
@@ -171,17 +183,18 @@
                 throw new RepositoryException("Unexpected error occurred while fetching user by email.", ex);
             }
         }
-         
+
         public async Task<User> GetUserByIdAsync(int userId)
         {
+            using var connection = CreateConnection();
             const string query = "SELECT * FROM Users WHERE Id = @UserId";
             var parameters = new { UserId = userId };
 
             try
             {
-                var result =  await _dbConnection.QuerySingleOrDefaultAsync<User>(query, parameters);
-                if (result == null) 
-                    throw new NotFoundException($"User with ID {userId} was not found."); 
+                var result = await connection.QuerySingleOrDefaultAsync<User>(query, parameters);
+                if (result == null)
+                    throw new NotFoundException($"User with ID {userId} was not found.");
                 return result;
             }
             catch (SqlException ex)
@@ -195,15 +208,16 @@
                 throw new RepositoryException("Unexpected error occurred while fetching user by ID.", ex);
             }
         }
-         
+
         public async Task<bool> CheckPasswordAsync(int userId, string passwordHash)
         {
+            using var connection = CreateConnection();
             const string query = "SELECT PasswordHash FROM Users WHERE Id = @Id";
             var parameters = new { Id = userId };
 
             try
             {
-                var storedHash = await _dbConnection.QuerySingleOrDefaultAsync<string>(query, parameters);
+                var storedHash = await connection.QuerySingleOrDefaultAsync<string>(query, parameters);
                 return storedHash == passwordHash;
             }
             catch (SqlException ex)
@@ -217,20 +231,20 @@
                 throw new RepositoryException("Unexpected error occurred while checking the password.", ex);
             }
         }
-         
+
         public async Task<string> GetRoleForUserAsync(int userId)
         {
+            using var connection = CreateConnection();
             const string query = @"
                 SELECT r.Name
                 FROM Roles r
                 INNER JOIN UserRoles ur ON r.Id = ur.RoleId
                 WHERE ur.UserId = @UserId";
-
             var parameters = new { UserId = userId };
 
             try
             {
-                return await _dbConnection.QueryFirstOrDefaultAsync<string>(query, parameters) ?? string.Empty;
+                return await connection.QueryFirstOrDefaultAsync<string>(query, parameters) ?? string.Empty;
             }
             catch (SqlException ex)
             {
@@ -243,15 +257,16 @@
                 throw new RepositoryException("Unexpected error occurred while retrieving user role.", ex);
             }
         }
-         
+
         public async Task<bool> ResetPasswordAsync(int userId, string newPassword)
         {
+            using var connection = CreateConnection();
             const string updateQuery = "UPDATE Users SET PasswordHash = @NewPassword WHERE Id = @UserId";
             var parameters = new { UserId = userId, NewPassword = newPassword };
 
             try
             {
-                return await _dbConnection.ExecuteAsync(updateQuery, parameters) > 0;
+                return await connection.ExecuteAsync(updateQuery, parameters) > 0;
             }
             catch (SqlException ex)
             {
@@ -268,8 +283,9 @@
         public async Task<IEnumerable<User>> GetUserProfilesByIds(IEnumerable<int> ids)
         {
             if (ids == null || !ids.Any()) return Enumerable.Empty<User>();
-            var sql = @"SELECT Id, Username, Email, PhoneNumber, DateCreated FROM Users WHERE Id IN @Ids;";
-            return await _dbConnection.QueryAsync<User>(sql, new { Ids = ids.ToArray() });
+            using var connection = CreateConnection();
+            var sql = @"SELECT Id, UserName, Email, PhoneNumber, DateCreated FROM Users WHERE Id IN @Ids;";
+            return await connection.QueryAsync<User>(sql, new { Ids = ids.ToArray() });
         }
-    } 
+    }
 }

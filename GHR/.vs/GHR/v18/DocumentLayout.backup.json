@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.hrplatform\\controllers\\hrcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|solutionrelative:ghr.hrplatform\\controllers\\hrcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\identityserver\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.hrplatform\\services\\userhttpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|solutionrelative:ghr.hrplatform\\services\\userhttpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\identityserver\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.hrplatform\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|solutionrelative:ghr.hrplatform\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\identityserver\\infrastructure\\repositories\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\infrastructure\\repositories\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.hrplatform\\models\\identityresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|solutionrelative:ghr.hrplatform\\models\\identityresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\identityserver\\application\\interfaces\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\application\\interfaces\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2855F85C-1063-4EA8-ACC9-AF7C8EFF393C}|GHR.DFM\\GHR.DFM.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.dfm\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2855F85C-1063-4EA8-ACC9-AF7C8EFF393C}|GHR.DFM\\GHR.DFM.csproj|solutionrelative:ghr.dfm\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\identityserver\\infrastructure\\identity\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\infrastructure\\identity\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\identityserver\\infrastructure\\identity\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\infrastructure\\identity\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\identityserver\\infrastructure\\identity\\rolemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\infrastructure\\identity\\rolemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\identityserver\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56604C4E-613A-40B3-980C-4D9A59BD4728}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,75 +42,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HRController.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Controllers\\HRController.cs",
-              "RelativeDocumentMoniker": "GHR.HRPlatform\\Controllers\\HRController.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Controllers\\HRController.cs",
-              "RelativeToolTip": "GHR.HRPlatform\\Controllers\\HRController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "BaseApiController.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Controllers\\BaseApiController.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\Controllers\\BaseApiController.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Controllers\\BaseApiController.cs",
+              "RelativeToolTip": "IdentityServer\\Controllers\\BaseApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T11:13:00.964Z",
+              "WhenOpened": "2026-03-17T14:31:28.231Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserHttpClient.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Services\\UserHttpClient.cs",
-              "RelativeDocumentMoniker": "GHR.HRPlatform\\Services\\UserHttpClient.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Services\\UserHttpClient.cs",
-              "RelativeToolTip": "GHR.HRPlatform\\Services\\UserHttpClient.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAcwIgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "IdentityServer\\Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T11:13:51.19Z",
+              "WhenOpened": "2026-03-17T14:30:58.489Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BaseApiController.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Controllers\\BaseApiController.cs",
-              "RelativeDocumentMoniker": "GHR.HRPlatform\\Controllers\\BaseApiController.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Controllers\\BaseApiController.cs",
-              "RelativeToolTip": "GHR.HRPlatform\\Controllers\\BaseApiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Title": "RoleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Infrastructure\\Repositories\\RoleRepository.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\Infrastructure\\Repositories\\RoleRepository.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Infrastructure\\Repositories\\RoleRepository.cs",
+              "RelativeToolTip": "IdentityServer\\Infrastructure\\Repositories\\RoleRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T11:12:56.044Z",
+              "WhenOpened": "2026-03-17T14:30:57.652Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IdentityResult.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Models\\IdentityResult.cs",
-              "RelativeDocumentMoniker": "GHR.HRPlatform\\Models\\IdentityResult.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Models\\IdentityResult.cs",
-              "RelativeToolTip": "GHR.HRPlatform\\Models\\IdentityResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Title": "IRoleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Application\\Interfaces\\IRoleRepository.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\Application\\Interfaces\\IRoleRepository.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Application\\Interfaces\\IRoleRepository.cs",
+              "RelativeToolTip": "IdentityServer\\Application\\Interfaces\\IRoleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T14:17:49.523Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BaseApiController.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.DFM\\Controllers\\BaseApiController.cs",
-              "RelativeDocumentMoniker": "GHR.DFM\\Controllers\\BaseApiController.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.DFM\\Controllers\\BaseApiController.cs",
-              "RelativeToolTip": "GHR.DFM\\Controllers\\BaseApiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T14:11:59.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T14:40:48.006Z",
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -107,6 +106,54 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "IdentityServer\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAqwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:31:29.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RoleManager.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Infrastructure\\Identity\\RoleManager.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\Infrastructure\\Identity\\RoleManager.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Infrastructure\\Identity\\RoleManager.cs",
+              "RelativeToolTip": "IdentityServer\\Infrastructure\\Identity\\RoleManager.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAowHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:31:17.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Infrastructure\\Identity\\TokenService.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\Infrastructure\\Identity\\TokenService.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Infrastructure\\Identity\\TokenService.cs",
+              "RelativeToolTip": "IdentityServer\\Infrastructure\\Identity\\TokenService.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAIwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:31:13.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserManager.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Infrastructure\\Identity\\UserManager.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\Infrastructure\\Identity\\UserManager.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\IdentityServer\\Infrastructure\\Identity\\UserManager.cs",
+              "RelativeToolTip": "IdentityServer\\Infrastructure\\Identity\\UserManager.cs",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAowO8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:31:11.218Z"
             }
           ]
         }
