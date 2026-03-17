@@ -2,7 +2,6 @@
 {
     using global::HRPlatform.Models;
     using Microsoft.AspNetCore.Mvc;
-     
 
     [ApiController]
     [Route("api/[controller]")]
@@ -10,19 +9,39 @@
     {
         protected IActionResult HandleResult<T>(IdentityResult<T>? result)
         {
-            if (result is null)
-                return BadRequest(IdentityResult<T>.Failure("Unexpected null result."));
+            if (result == null)
+                return NotFound("The requested result was not found.");
 
             if (result.IsSuccess)
             {
                 if (result.Data == null)
-                    return BadRequest(IdentityResult<T>.Failure("Result was successful, but no data was returned."));
+                    return NoContent();
 
                 return Ok(result);
             }
 
-            return BadRequest(result);
+            if (!string.IsNullOrWhiteSpace(result.Error))
+            {
+                if (result.StatusCode.HasValue)
+                    return StatusCode(result.StatusCode.Value, result.Error);
+
+                if (result.Error.Contains("not found", StringComparison.OrdinalIgnoreCase))
+                    return NotFound(result.Error);
+
+                if (result.Error.Contains("unauthorized", StringComparison.OrdinalIgnoreCase))
+                    return Unauthorized(result.Error);
+
+                if (result.Error.Contains("already exists", StringComparison.OrdinalIgnoreCase))
+                    return Conflict(result.Error);
+
+                if (result.Error.Contains("unexpected", StringComparison.OrdinalIgnoreCase) ||
+                    result.Error.Contains("error", StringComparison.OrdinalIgnoreCase))
+                    return StatusCode(StatusCodes.Status500InternalServerError, result.Error);
+
+                return BadRequest(result.Error);
+            }
+
+            return BadRequest("An unknown error occurred.");
         }
     }
 }
- 

@@ -1,7 +1,10 @@
 ﻿namespace HRPlatform.Services
 {
+    using System.Net.Http.Json;
     using System.Text.Json;
     using System.Threading;
+
+    using Microsoft.Extensions.Logging;
 
     using HRPlatform.Models;
 
@@ -22,7 +25,13 @@
     public class UserHttpClient : IUserHttpClient
     {
         private readonly HttpClient _http;
-        public UserHttpClient(HttpClient http) => _http = http;
+        private readonly ILogger<UserHttpClient> _logger;
+
+        public UserHttpClient(HttpClient http, ILogger<UserHttpClient> logger)
+        {
+            _http = http;
+            _logger = logger;
+        }
 
         public async Task<IdentityResult<TResponse>> SendAsync<TRequest, TResponse>(
             HttpMethod method,
@@ -30,34 +39,49 @@
             CancellationToken cancellationToken,
             TRequest? requestBody = default)
         {
-            var requestMessage = new HttpRequestMessage(method, endpoint);
-            if (requestBody is not null && method != HttpMethod.Get) requestMessage.Content = JsonContent.Create(requestBody);
-
-            var response = await _http.SendAsync(requestMessage, cancellationToken);
-            var rawJson = await response.Content.ReadAsStringAsync();
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                try
-                {
-                    var apiResponse = JsonSerializer.Deserialize<ApiResponse<TResponse>>(rawJson, new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    });
+                var requestMessage = new HttpRequestMessage(method, endpoint);
+                if (requestBody is not null && method != HttpMethod.Get)
+                    requestMessage.Content = JsonContent.Create(requestBody);
 
-                    if (apiResponse != null && apiResponse.IsSuccess)
-                        return IdentityResult<TResponse>.Success(apiResponse.Data);
-                    else
-                        return IdentityResult<TResponse>.Failure($"API Error: {apiResponse?.Error}");
-                }
-                catch (Exception ex)
+                var response = await _http.SendAsync(requestMessage, cancellationToken);
+                var rawJson = await response.Content.ReadAsStringAsync(cancellationToken);
+
+                if (response.IsSuccessStatusCode)
                 {
-                    return IdentityResult<TResponse>.Failure($"Deserialization error: {ex.Message}. Raw JSON: {rawJson}");
+                    try
+                    {
+                        var apiResponse = JsonSerializer.Deserialize<ApiResponse<TResponse>>(rawJson, new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true
+                        });
+
+                        if (apiResponse != null && apiResponse.IsSuccess)
+                            return IdentityResult<TResponse>.Success(apiResponse.Data);
+                        else
+                        {
+                            var error = apiResponse?.Error ?? "Unknown API error";
+                            _logger.LogWarning("API returned error for {Method} {Endpoint}: {Error}", method, endpoint, error);
+                            return IdentityResult<TResponse>.Failure(error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogError(ex, "Deserialization error for {Method} {Endpoint}. Raw JSON: {RawJson}", method, endpoint, rawJson);
+                        return IdentityResult<TResponse>.Failure($"Deserialization error. Please try again later.");
+                    }
+                }
+                else
+                {
+                    _logger.LogError("API call failed for {Method} {Endpoint} with status {StatusCode}: {RawJson}", method, endpoint, response.StatusCode, rawJson);
+                    return IdentityResult<TResponse>.Failure($"API Error: {response.StatusCode}");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                return IdentityResult<TResponse>.Failure($"API Error: {response.StatusCode}, {rawJson}");
+                _logger.LogError(ex, "Unexpected error in HTTP call to {Method} {Endpoint}", method, endpoint);
+                return IdentityResult<TResponse>.Failure("An unexpected error occurred. Please try again later.");
             }
         }
 
@@ -66,39 +90,47 @@
             string endpoint,
             CancellationToken cancellationToken)
         {
-            var requestMessage = new HttpRequestMessage(method, endpoint);
-            var response = await _http.SendAsync(requestMessage, cancellationToken);
-            var rawJson = await response.Content.ReadAsStringAsync();
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                try
-                {
-                    var apiResponse = JsonSerializer.Deserialize<ApiResponse<TResponse>>(rawJson, new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    });
+                var requestMessage = new HttpRequestMessage(method, endpoint);
+                var response = await _http.SendAsync(requestMessage, cancellationToken);
+                var rawJson = await response.Content.ReadAsStringAsync(cancellationToken);
 
-                    if (apiResponse != null && apiResponse.IsSuccess)
-                        return IdentityResult<TResponse>.Success(apiResponse.Data);
-                    else
-                        return IdentityResult<TResponse>.Failure($"API Error: {apiResponse?.Error}");
-                }
-                catch (Exception ex)
+                if (response.IsSuccessStatusCode)
                 {
-                    return IdentityResult<TResponse>.Failure($"Deserialization error: {ex.Message}. Raw JSON: {rawJson}");
+                    try
+                    {
+                        var apiResponse = JsonSerializer.Deserialize<ApiResponse<TResponse>>(rawJson, new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true
+                        });
+
+                        if (apiResponse != null && apiResponse.IsSuccess)
+                            return IdentityResult<TResponse>.Success(apiResponse.Data);
+                        else
+                        {
+                            var error = apiResponse?.Error ?? "Unknown API error";
+                            _logger.LogWarning("API returned error for {Method} {Endpoint}: {Error}", method, endpoint, error);
+                            return IdentityResult<TResponse>.Failure(error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogError(ex, "Deserialization error for {Method} {Endpoint}. Raw JSON: {RawJson}", method, endpoint, rawJson);
+                        return IdentityResult<TResponse>.Failure($"Deserialization error. Please try again later.");
+                    }
+                }
+                else
+                {
+                    _logger.LogError("API call failed for {Method} {Endpoint} with status {StatusCode}: {RawJson}", method, endpoint, response.StatusCode, rawJson);
+                    return IdentityResult<TResponse>.Failure($"API Error: {response.StatusCode}");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                return IdentityResult<TResponse>.Failure($"API Error: {response.StatusCode}, {rawJson}");
+                _logger.LogError(ex, "Unexpected error in HTTP call to {Method} {Endpoint}", method, endpoint);
+                return IdentityResult<TResponse>.Failure("An unexpected error occurred. Please try again later.");
             }
         }
     }
 }
-
-
-
-
-
-

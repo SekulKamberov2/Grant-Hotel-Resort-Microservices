@@ -2,8 +2,7 @@
 {
     using System.Security.Claims;
     using System.Threading;
-
-    using Microsoft.AspNetCore.Authorization; 
+     
     using Microsoft.AspNetCore.Mvc; 
 
     using HRPlatform.Models;
