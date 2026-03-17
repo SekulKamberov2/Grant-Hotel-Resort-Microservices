@@ -8,51 +8,69 @@
     using GHR.LeaveManagement.DTOs.Input;
     using GHR.LeaveManagement.Entities;
     using GHR.LeaveManagement.Repositories.Interfaces;
+
     public class LeaveRepository : ILeaveRepository
     {
-        private readonly IDbConnection _db;
+        private readonly string _connectionString;
 
-        public LeaveRepository(IConfiguration configuration) =>
-            _db = new SqlConnection(configuration.GetConnectionString("DefaultConnection"));
-        
+        public LeaveRepository(IConfiguration configuration)
+        {
+            _connectionString = configuration.GetConnectionString("DefaultConnection");
+        }
+
+        private IDbConnection CreateConnection() => new SqlConnection(_connectionString);
+
         public async Task<IEnumerable<LeaveApplication>> GetAllAsync()
         {
+            using var connection = CreateConnection();
             var sql = "SELECT * FROM LeaveApplications";
-            return await _db.QueryAsync<LeaveApplication>(sql);
+            return await connection.QueryAsync<LeaveApplication>(sql);
         }
 
         public async Task<LeaveApplication?> GetByIdAsync(int id)
         {
+            using var connection = CreateConnection();
             var sql = "SELECT * FROM LeaveApplications WHERE Id = @Id";
-            return await _db.QueryFirstOrDefaultAsync<LeaveApplication>(sql, new { Id = id });
+            return await connection.QueryFirstOrDefaultAsync<LeaveApplication>(sql, new { Id = id });
+        }
+
+        public async Task<IEnumerable<LeaveApplication>> GetByUserIdAsync(int userId)
+        {
+            using var connection = CreateConnection();
+            var sql = "SELECT * FROM LeaveApplications WHERE UserId = @UserId";
+            return await connection.QueryAsync<LeaveApplication>(sql, new { UserId = userId });
         }
 
         public async Task<int> AddAsync(LeaveAppBindingModel request)
         {
+            using var connection = CreateConnection();
             var sql = @"
-            INSERT INTO LeaveApplications (
-                UserId, LeaveTypeId, FullName, Department, Email, PhoneNumber, StartDate, EndDate, TotalDays, Reason, Status, ApproverId, DecisionDate, RequestedAt
-            )
-            VALUES (
-                @UserId, @LeaveTypeId, @FullName, @Department, @Email, @PhoneNumber, @StartDate, @EndDate, @TotalDays, @Reason, @Status, @ApproverId, @DecisionDate, @RequestedAt
-            );
-            SELECT CAST(SCOPE_IDENTITY() as int);
-        ";
+                INSERT INTO LeaveApplications (
+                    UserId, LeaveTypeId, FullName, Department, Email, PhoneNumber,
+                    StartDate, EndDate, TotalDays, Reason, Status, ApproverId, DecisionDate, RequestedAt
+                )
+                VALUES (
+                    @UserId, @LeaveTypeId, @FullName, @Department, @Email, @PhoneNumber,
+                    @StartDate, @EndDate, @TotalDays, @Reason, @Status, @ApproverId, @DecisionDate, @RequestedAt
+                );
+                SELECT CAST(SCOPE_IDENTITY() as int);
+            ";
 
             request.Status ??= "Pending";
             request.RequestedAt = DateTime.UtcNow;
 
-            return await _db.ExecuteScalarAsync<int>(sql, request);
+            return await connection.ExecuteScalarAsync<int>(sql, request);
         }
 
         public async Task<int> UpdateAsync(LeaveApplication request)
         {
+            using var connection = CreateConnection();
             var sql = @"
                 UPDATE LeaveApplications
                 SET
                     UserId = @UserId,
-                    FullName = @FullName, 
-                    Department = @Department, 
+                    FullName = @FullName,
+                    Department = @Department,
                     Email = @Email,
                     PhoneNumber = @PhoneNumber,
                     LeaveTypeId = @LeaveTypeId,
@@ -64,40 +82,46 @@
                     ApproverId = @ApproverId,
                     DecisionDate = @DecisionDate
                 WHERE Id = @Id
-            "; 
-            return await _db.ExecuteAsync(sql, request); 
+            ";
+            return await connection.ExecuteAsync(sql, request);
         }
 
         public async Task DeleteAsync(int id)
         {
+            using var connection = CreateConnection();
             var sql = "DELETE FROM LeaveApplications WHERE Id = @Id";
-            await _db.ExecuteAsync(sql, new { Id = id });
+            await connection.ExecuteAsync(sql, new { Id = id });
         }
+
         public async Task<IEnumerable<int>> GetLeaveApplicationsIdsAsync(string status)
         {
+            using var connection = CreateConnection();
             const string sql = @"SELECT UserId FROM LeaveApplications WHERE Status = @Status";
-            return await _db.QueryAsync<int>(sql, new { Status = status });
-
+            return await connection.QueryAsync<int>(sql, new { Status = status });
         }
 
         public async Task<bool> ExistAsync(int userId, string status)
         {
+            using var connection = CreateConnection();
             var sql = @"SELECT COUNT(1) FROM LeaveApplications WHERE UserId = @UserId AND Status = @Status";
-            return await _db.QueryFirstOrDefaultAsync<bool>(sql, new { UserId = userId, Status = status });
+            return await connection.ExecuteScalarAsync<bool>(sql, new { UserId = userId, Status = status });
         }
 
         public async Task<decimal> GetUsersRemainingDays(decimal userId)
         {
+            using var connection = CreateConnection();
             var sql = @"SELECT RemainingDays FROM LeaveApplications WHERE UserId = @UserId";
-            return await _db.QueryFirstOrDefaultAsync<decimal>(sql, new { UserId = userId });
+            return await connection.QueryFirstOrDefaultAsync<decimal>(sql, new { UserId = userId });
         }
 
         public async Task<int> ReduceUsersRemainingDays(decimal days, int userId)
         {
-            var sql = @"UPDATE LeaveApplications
-                        SET RemainingDays = RemainingDays - @Days
-                        WHERE UserId = @UserId;";
-            return await _db.QueryFirstOrDefaultAsync<int>(sql, new { Days = days, UserId = userId });
+            using var connection = CreateConnection();
+            var sql = @"
+                UPDATE LeaveApplications
+                SET RemainingDays = RemainingDays - @Days
+                WHERE UserId = @UserId";
+            return await connection.ExecuteAsync(sql, new { Days = days, UserId = userId });
         }
-    } 
+    }
 }

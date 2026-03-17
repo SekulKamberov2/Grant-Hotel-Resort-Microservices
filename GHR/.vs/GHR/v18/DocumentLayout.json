@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C04927E-58BC-443E-A657-8D83352C4CF6}|GHR.HelpDesk\\GHR.HelpDesk.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.helpdesk\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C04927E-58BC-443E-A657-8D83352C4CF6}|GHR.HelpDesk\\GHR.HelpDesk.csproj|solutionrelative:ghr.helpdesk\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.leavemanagement\\services\\leaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\services\\leaveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C04927E-58BC-443E-A657-8D83352C4CF6}|GHR.HelpDesk\\GHR.HelpDesk.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.helpdesk\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C04927E-58BC-443E-A657-8D83352C4CF6}|GHR.HelpDesk\\GHR.HelpDesk.csproj|solutionrelative:ghr.helpdesk\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.leavemanagement\\repositories\\leaverepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\repositories\\leaverepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C04927E-58BC-443E-A657-8D83352C4CF6}|GHR.HelpDesk\\GHR.HelpDesk.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.helpdesk\\repositories\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C04927E-58BC-443E-A657-8D83352C4CF6}|GHR.HelpDesk\\GHR.HelpDesk.csproj|solutionrelative:ghr.helpdesk\\repositories\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.leavemanagement\\repositories\\interfaces\\ileaverepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\repositories\\interfaces\\ileaverepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C04927E-58BC-443E-A657-8D83352C4CF6}|GHR.HelpDesk\\GHR.HelpDesk.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.helpdesk\\repositories\\repositoryhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C04927E-58BC-443E-A657-8D83352C4CF6}|GHR.HelpDesk\\GHR.HelpDesk.csproj|solutionrelative:ghr.helpdesk\\repositories\\repositoryhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.leavemanagement\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.employeemanagement\\infrastructure\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|solutionrelative:ghr.employeemanagement\\infrastructure\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.leavemanagement\\repositories\\leaverequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B610C808-AE95-18D2-0508-BF227768C988}|GHR.LeaveManagement\\GHR.LeaveManagement.csproj|solutionrelative:ghr.leavemanagement\\repositories\\leaverequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.employeemanagement\\application\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9B4A2FC-2E3B-47E0-9695-198BA12385F9}|GHR.EmployeeManagement\\GHR.EmployeeManagement.csproj|solutionrelative:ghr.employeemanagement\\application\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.hrplatform\\services\\userhttpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|solutionrelative:ghr.hrplatform\\services\\userhttpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.hrplatform\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|solutionrelative:ghr.hrplatform\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|c:\\users\\sekne\\onedrive\\desktop\\grant-hotel-resort-microservices-ocelot-sql-server-asp.net-core-9-api-cqrs-mediatr-react-ts\\ghr\\ghr.hrplatform\\controllers\\hrcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272F2276-BE2A-4E03-A6CC-55298C0CD7AD}|GHR.HRPlatform\\GHR.HRPlatform.csproj|solutionrelative:ghr.hrplatform\\controllers\\hrcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,89 +42,117 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Application\\Services\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Application\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "GHR.EmployeeManagement\\Application\\Services\\EmployeeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJsBAABCAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "HRController.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Controllers\\HRController.cs",
+              "RelativeDocumentMoniker": "GHR.HRPlatform\\Controllers\\HRController.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Controllers\\HRController.cs",
+              "RelativeToolTip": "GHR.HRPlatform\\Controllers\\HRController.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAgwIkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T07:43:40.642Z",
+              "WhenOpened": "2026-03-17T11:13:00.964Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmployeeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Infrastructure\\Repositories\\EmployeeRepository.cs",
-              "RelativeDocumentMoniker": "GHR.EmployeeManagement\\Infrastructure\\Repositories\\EmployeeRepository.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.EmployeeManagement\\Infrastructure\\Repositories\\EmployeeRepository.cs",
-              "RelativeToolTip": "GHR.EmployeeManagement\\Infrastructure\\Repositories\\EmployeeRepository.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAiwKkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T07:43:47.982Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TicketsController.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HelpDesk\\Controllers\\TicketsController.cs",
-              "RelativeDocumentMoniker": "GHR.HelpDesk\\Controllers\\TicketsController.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HelpDesk\\Controllers\\TicketsController.cs",
-              "RelativeToolTip": "GHR.HelpDesk\\Controllers\\TicketsController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T10:04:31.24Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "BaseApiController.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HelpDesk\\Controllers\\BaseApiController.cs",
-              "RelativeDocumentMoniker": "GHR.HelpDesk\\Controllers\\BaseApiController.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HelpDesk\\Controllers\\BaseApiController.cs",
-              "RelativeToolTip": "GHR.HelpDesk\\Controllers\\BaseApiController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAIwC4AAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Controllers\\BaseApiController.cs",
+              "RelativeDocumentMoniker": "GHR.HRPlatform\\Controllers\\BaseApiController.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Controllers\\BaseApiController.cs",
+              "RelativeToolTip": "GHR.HRPlatform\\Controllers\\BaseApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T10:04:28.743Z",
+              "WhenOpened": "2026-03-17T11:12:56.044Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TicketRepository.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HelpDesk\\Repositories\\TicketRepository.cs",
-              "RelativeDocumentMoniker": "GHR.HelpDesk\\Repositories\\TicketRepository.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HelpDesk\\Repositories\\TicketRepository.cs",
-              "RelativeToolTip": "GHR.HelpDesk\\Repositories\\TicketRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAkwCQAAAAXAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "UserHttpClient.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Services\\UserHttpClient.cs",
+              "RelativeDocumentMoniker": "GHR.HRPlatform\\Services\\UserHttpClient.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HRPlatform\\Services\\UserHttpClient.cs",
+              "RelativeToolTip": "GHR.HRPlatform\\Services\\UserHttpClient.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAIwGgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T10:04:38.51Z",
+              "WhenOpened": "2026-03-17T11:13:51.19Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "RepositoryHelper.cs",
-              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HelpDesk\\Repositories\\RepositoryHelper.cs",
-              "RelativeDocumentMoniker": "GHR.HelpDesk\\Repositories\\RepositoryHelper.cs",
-              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.HelpDesk\\Repositories\\RepositoryHelper.cs",
-              "RelativeToolTip": "GHR.HelpDesk\\Repositories\\RepositoryHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Title": "LeaveController.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.LeaveManagement\\Controllers\\LeaveController.cs",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Controllers\\LeaveController.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.LeaveManagement\\Controllers\\LeaveController.cs",
+              "RelativeToolTip": "GHR.LeaveManagement\\Controllers\\LeaveController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAcwDkAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T10:04:37.189Z",
+              "WhenOpened": "2026-03-17T11:16:04.803Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LeaveService.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.LeaveManagement\\Services\\LeaveService.cs",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Services\\LeaveService.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.LeaveManagement\\Services\\LeaveService.cs",
+              "RelativeToolTip": "GHR.LeaveManagement\\Services\\LeaveService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T11:16:22.642Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LeaveRequestRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.LeaveManagement\\Repositories\\LeaveRequestRepository.cs",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Repositories\\LeaveRequestRepository.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.LeaveManagement\\Repositories\\LeaveRequestRepository.cs",
+              "RelativeToolTip": "GHR.LeaveManagement\\Repositories\\LeaveRequestRepository.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAqwGQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T11:16:14.048Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LeaveRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
+              "RelativeToolTip": "GHR.LeaveManagement\\Repositories\\LeaveRepository.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAACcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T11:16:12.661Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ILeaveRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.LeaveManagement\\Repositories\\Interfaces\\ILeaveRepository.cs",
+              "RelativeDocumentMoniker": "GHR.LeaveManagement\\Repositories\\Interfaces\\ILeaveRepository.cs",
+              "ToolTip": "C:\\Users\\sekne\\OneDrive\\Desktop\\Grant-Hotel-Resort-Microservices-Ocelot-SQL-Server-ASP.NET-Core-9-API-CQRS-MediatR-React-TS\\GHR\\GHR.LeaveManagement\\Repositories\\Interfaces\\ILeaveRepository.cs",
+              "RelativeToolTip": "GHR.LeaveManagement\\Repositories\\Interfaces\\ILeaveRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T11:39:04.092Z",
               "EditorCaption": ""
             },
             {

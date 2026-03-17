@@ -24,7 +24,6 @@
         private readonly HttpClient _http;
         public UserHttpClient(HttpClient http) => _http = http;
 
-        //With dynamic, you can return any type of TResponse (like UserDTOResponse)
         public async Task<IdentityResult<TResponse>> SendAsync<TRequest, TResponse>(
             HttpMethod method,
             string endpoint,
@@ -32,10 +31,8 @@
             TRequest? requestBody = default)
         {
             var requestMessage = new HttpRequestMessage(method, endpoint);
-            // If there is a request body, add it to the request
             if (requestBody is not null && method != HttpMethod.Get) requestMessage.Content = JsonContent.Create(requestBody);
 
-            // Send the request and read the response content
             var response = await _http.SendAsync(requestMessage, cancellationToken);
             var rawJson = await response.Content.ReadAsStringAsync();
 
@@ -43,7 +40,6 @@
             {
                 try
                 {
-                    // Deserialize the response to ApiResponse<TResponse>
                     var apiResponse = JsonSerializer.Deserialize<ApiResponse<TResponse>>(rawJson, new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true

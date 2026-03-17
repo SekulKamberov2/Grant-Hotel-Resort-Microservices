@@ -14,35 +14,33 @@
              
             if (result.IsSuccess)
             {
-                if (result.Data == null) // No data available, but the operation was successful (DELETE, for instance)
-                    return NoContent(); // 204 No Content
+                if (result.Data == null)
+                    return NoContent();
 
-                return Ok(result); // 200 OK with content
+                return Ok(result);
             }
              
             if (!string.IsNullOrWhiteSpace(result.Error))
             {
-                // Return status codes based on error content
-                if (result.StatusCode.HasValue) // If custom status code is provided
-                    return StatusCode(result.StatusCode.Value, result.Error); // Custom status code
+                if (result.StatusCode.HasValue)
+                    return StatusCode(result.StatusCode.Value, result.Error);
 
-                // Specific error cases based on message content
                 if (result.Error.Contains("already exists", StringComparison.OrdinalIgnoreCase))
-                    return Conflict(result.Error); // 409 Conflict
+                    return Conflict(result.Error);
 
                 if (result.Error.Contains("not found", StringComparison.OrdinalIgnoreCase))
-                    return NotFound(result.Error); // 404 Not Found
+                    return NotFound(result.Error);
 
                 if (result.Error.Contains("unauthorized", StringComparison.OrdinalIgnoreCase))
-                    return Unauthorized(result.Error); // 401 Unauthorized
+                    return Unauthorized(result.Error);
 
                 if (result.Error.Contains("unexpected", StringComparison.OrdinalIgnoreCase))
-                    return StatusCode(StatusCodes.Status500InternalServerError, result.Error); // 500 Internal Server Error
+                    return StatusCode(StatusCodes.Status500InternalServerError, result.Error);
 
-                return BadRequest(result.Error); // 400 Bad Request for general validation failures
+                return BadRequest(result.Error);
             }
 
-            return BadRequest("An unknown error occurred."); // Default failure case
+            return BadRequest("An unknown error occurred.");
         }
     }
 }
