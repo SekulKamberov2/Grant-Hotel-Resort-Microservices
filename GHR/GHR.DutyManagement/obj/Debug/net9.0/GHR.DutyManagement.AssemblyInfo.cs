@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GHR.DutyManagement")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9952935c9f6f3431f230d3a57f790b5446ee64ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b1ba0c3da9aa9e040f45fe60e51d2e6f43fc0ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("GHR.DutyManagement")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GHR.DutyManagement")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
