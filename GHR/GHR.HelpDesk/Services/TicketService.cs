@@ -4,8 +4,7 @@
     using GHR.HelpDesk.Entities;
     using GHR.HelpDesk.Repositories;
     using GHR.SharedKernel;
-    using GHR.SharedKernel.Models;
-    using System.Text.Json;
+    using GHR.SharedKernel.Models; 
 
     public interface ITicketService
     {
@@ -34,19 +33,25 @@
     public class TicketService : ITicketService
     {
         private readonly ITicketRepository _ticketRepository;
-        public TicketService(ITicketRepository ticketRepository) => _ticketRepository = ticketRepository; 
+        private readonly ILogger<TicketService> _logger;
+
+        public TicketService(ITicketRepository ticketRepository, ILogger<TicketService> logger)
+        {
+            _ticketRepository = ticketRepository;
+            _logger = logger;
+        }
 
         public async Task<Result<TicketWithUserDetailsDto>> GetTicketAsync(int ticketId, CurrentUser currentUser, string? role)
-        {     
+        {
             try
             {
-                var ticket = await _ticketRepository.GetByIdAsync(ticketId); 
+                var ticket = await _ticketRepository.GetByIdAsync(ticketId);
                 if (ticket == null)
                     return Result<TicketWithUserDetailsDto>.Failure("Ticket not found.", 404);
-               
+
                 if (ticket.UserId != currentUser.Id && role != "HD ADMIN")
                     return Result<TicketWithUserDetailsDto>.Failure("Unauthorized access to this ticket.", 401);
-                
+
                 var result = new TicketWithUserDetailsDto
                 {
                     Id = ticket.Id,
@@ -61,19 +66,18 @@
                     StatusId = ticket.StatusId,
                     CreatedAt = ticket.CreatedAt,
                     UpdatedAt = ticket.UpdatedAt,
-
                     UserName = currentUser.UserName,
                     Email = currentUser.Email,
-                    PhoneNumber = currentUser.PhoneNumber 
-                };  
+                    PhoneNumber = currentUser.PhoneNumber
+                };
                 return Result<TicketWithUserDetailsDto>.Success(result);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error retrieving ticket {TicketId} for user {UserId}", ticketId, currentUser.Id);
                 return Result<TicketWithUserDetailsDto>.Failure("An error occurred while retrieving the ticket. Please try again later.", 500);
             }
         }
-
 
         public async Task<Result<IEnumerable<TicketDto>>> GetAllTicketsAsync()
         {
@@ -97,13 +101,15 @@
                 });
                 return Result<IEnumerable<TicketDto>>.Success(result);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error fetching all tickets");
                 return Result<IEnumerable<TicketDto>>.Failure("An error occurred while fetching tickets. Please try again later.", 500);
             }
-        } 
+        }
+
         public async Task<Result<IEnumerable<TicketDto>>> GetAllUserTicketsAsync(int userId)
-        { 
+        {
             try
             {
                 var tickets = await _ticketRepository.GetAllUserTicketsAsync(userId);
@@ -124,12 +130,12 @@
                 });
                 return Result<IEnumerable<TicketDto>>.Success(result);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error fetching tickets for user {UserId}", userId);
                 return Result<IEnumerable<TicketDto>>.Failure("An error occurred while fetching tickets. Please try again later.", 500);
             }
         }
-         
 
         public async Task<Result<TicketDto>> CreateTicketAsync(TicketDto ticketDto)
         {
@@ -139,7 +145,7 @@
                     return Result<TicketDto>.Failure("Invalid ticket data.", 400);
 
                 var entity = new Ticket
-                { 
+                {
                     Title = ticketDto.Title,
                     Description = ticketDto.Description,
                     UserId = ticketDto.UserId,
@@ -150,19 +156,20 @@
                     PriorityId = ticketDto.PriorityId,
                     StatusId = ticketDto.StatusId,
                     CreatedAt = ticketDto.CreatedAt,
-                    TicketTypeId = ticketDto.TicketTypeId  
+                    TicketTypeId = ticketDto.TicketTypeId
                 };
 
                 var id = await _ticketRepository.CreateAsync(entity);
-                if(id == 0)
-                    return Result<TicketDto>.Failure($"Failed to create the ticket", 500);
+                if (id == 0)
+                    return Result<TicketDto>.Failure("Failed to create the ticket", 500);
 
-                ticketDto.Id = id;  
+                ticketDto.Id = id;
                 return Result<TicketDto>.Success(ticketDto);
             }
-            catch(Exception e)
+            catch (Exception ex)
             {
-                return Result<TicketDto>.Failure($"Failed to create the ticket. Please try again later.{e.Message}", 500);
+                _logger.LogError(ex, "Error creating ticket for user {UserId}", ticketDto?.UserId);
+                return Result<TicketDto>.Failure("Failed to create the ticket. Please try again later.", 500);
             }
         }
 
@@ -197,8 +204,9 @@
 
                 return Result<bool>.Success(true);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error updating ticket {TicketId}", ticketDto?.Id);
                 return Result<bool>.Failure("Failed to update the ticket. Please try again later.", 500);
             }
         }
@@ -217,8 +225,9 @@
 
                 return Result<bool>.Success(true);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error deleting ticket {TicketId}", ticketId);
                 return Result<bool>.Failure("An error occurred while deleting the ticket. Please try again later.", 500);
             }
         }
@@ -237,11 +246,11 @@
                     CreatedByRole = log.CreatedByRole,
                     CreatedAt = log.CreatedAt
                 });
-
                 return Result<IEnumerable<TicketLogDto>>.Success(dtoLogs);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error fetching logs for ticket {TicketId}", ticketId);
                 return Result<IEnumerable<TicketLogDto>>.Failure("An error occurred while fetching ticket logs. Please try again later.", 500);
             }
         }
@@ -249,25 +258,27 @@
         public async Task<Result<bool>> AddTicketLogAsync(TicketLogDto logDto)
         {
             try
-            { 
+            {
                 if (logDto == null)
                     return Result<bool>.Failure("Invalid log data.", 400);
 
                 var log = new TicketLog
-                { 
+                {
                     TicketId = logDto.TicketId,
                     Comment = logDto.Comment,
                     CreatedBy = logDto.CreatedBy,
-                    CreatedByRole = logDto.CreatedByRole 
+                    CreatedByRole = logDto.CreatedByRole
                 };
 
                 var result = await _ticketRepository.AddLogAsync(log);
-                    if(result == 0) return Result<bool>.Failure("An error occurred while adding the ticket log.", 500);
+                if (result == 0)
+                    return Result<bool>.Failure("An error occurred while adding the ticket log.", 500);
 
                 return Result<bool>.Success(true);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error adding log for ticket {TicketId}", logDto?.TicketId);
                 return Result<bool>.Failure("An error occurred while adding the ticket log. Please try again later.", 500);
             }
         }
@@ -281,13 +292,14 @@
                     return Result<bool>.Failure("Ticket not found.", 404);
 
                 var result = await _ticketRepository.AssignStaffAsync(ticketId, staffId);
-                if(result == 0) 
+                if (result == 0)
                     return Result<bool>.Failure("Failed to assign the ticket.", 500);
 
                 return Result<bool>.Success(true);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error assigning ticket {TicketId} to staff {StaffId}", ticketId, staffId);
                 return Result<bool>.Failure("Failed to assign the ticket. Please try again later.", 500);
             }
         }
@@ -297,16 +309,18 @@
             try
             {
                 var ticket = await _ticketRepository.GetByIdAsync(ticketId);
-                if (ticket == null) return Result<bool>.Failure("Ticket not found.", 404);
+                if (ticket == null)
+                    return Result<bool>.Failure("Ticket not found.", 404);
 
                 var result = await _ticketRepository.UpdateStatusAsync(ticketId, statusId);
-                if(result == 0) 
+                if (result == 0)
                     return Result<bool>.Failure("Failed to update the ticket status.", 500);
 
                 return Result<bool>.Success(true);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error updating status for ticket {TicketId} to {StatusId}", ticketId, statusId);
                 return Result<bool>.Failure("Failed to update the ticket status. Please try again later.", 500);
             }
         }
@@ -333,8 +347,9 @@
                 });
                 return Result<IEnumerable<TicketDto>>.Success(result);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error fetching tickets by status {StatusId}", statusId);
                 return Result<IEnumerable<TicketDto>>.Failure("Failed to get tickets by status.", 500);
             }
         }
@@ -361,8 +376,9 @@
                 });
                 return Result<IEnumerable<TicketDto>>.Success(result);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error fetching tickets by staff {StaffId}", staffId);
                 return Result<IEnumerable<TicketDto>>.Failure("Failed to get tickets by staff.", 500);
             }
         }
@@ -371,8 +387,7 @@
         {
             try
             {
-                var tickets = await _ticketRepository.GetByDateRangeAsync(startDate, endDate); //unsuccess throws ecception
-
+                var tickets = await _ticketRepository.GetByDateRangeAsync(startDate, endDate);
                 var result = tickets.Select(t => new TicketDto
                 {
                     Id = t.Id,
@@ -390,8 +405,9 @@
                 });
                 return Result<IEnumerable<TicketDto>>.Success(result);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error fetching tickets by date range {StartDate} - {EndDate}", startDate, endDate);
                 return Result<IEnumerable<TicketDto>>.Failure("Failed to get tickets by date range.", 500);
             }
         }
@@ -411,11 +427,12 @@
                     CreatedByUserId = commentDto.CreatedByUserId
                 };
 
-                await _ticketRepository.AddCommentAsync(comment);   //in case of unsuccess throws an exception
+                await _ticketRepository.AddCommentAsync(comment);
                 return Result<bool>.Success(true);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error adding comment to ticket {TicketId}", commentDto?.TicketId);
                 return Result<bool>.Failure("Failed to add comment.", 500);
             }
         }
@@ -424,7 +441,7 @@
         {
             try
             {
-                var comments = await _ticketRepository.GetCommentsAsync(ticketId);  
+                var comments = await _ticketRepository.GetCommentsAsync(ticketId);
                 var result = comments.Select(c => new CommentDto
                 {
                     Id = c.Id,
@@ -435,8 +452,9 @@
                 });
                 return Result<IEnumerable<CommentDto>>.Success(result);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error fetching comments for ticket {TicketId}", ticketId);
                 return Result<IEnumerable<CommentDto>>.Failure("Failed to get comments.", 500);
             }
         }
@@ -448,8 +466,9 @@
                 var counts = await _ticketRepository.GetTicketCountGroupedByStatusAsync();
                 return Result<Dictionary<int, int>>.Success(counts);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error fetching ticket counts grouped by status");
                 return Result<Dictionary<int, int>>.Failure("Failed to get ticket counts by status.", 500);
             }
         }
@@ -461,12 +480,13 @@
                 var ticket = await _ticketRepository.GetByIdAsync(ticketId);
                 if (ticket == null)
                     return Result<bool>.Failure("Ticket not found.", 404);
-                 
+
                 await _ticketRepository.UpdateStatusAsync(ticketId, 1);
                 return Result<bool>.Success(true);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error reopening ticket {TicketId}", ticketId);
                 return Result<bool>.Failure("Failed to reopen ticket.", 500);
             }
         }
@@ -493,8 +513,9 @@
                 });
                 return Result<IEnumerable<TicketDto>>.Success(result);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error fetching tickets by priority {PriorityId}", priorityId);
                 return Result<IEnumerable<TicketDto>>.Failure("Failed to get tickets by priority.", 500);
             }
         }
@@ -507,13 +528,14 @@
                     return Result<bool>.Failure("No ticket IDs provided.", 400);
 
                 var rows = await _ticketRepository.BulkUpdateStatusAsync(ticketIds, statusId);
-                if(rows == 0) 
+                if (rows == 0)
                     return Result<bool>.Failure("Failed to bulk update ticket statuses.", 500);
 
                 return Result<bool>.Success(true);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error bulk updating status for {Count} tickets", ticketIds?.Count() ?? 0);
                 return Result<bool>.Failure("Failed to bulk update ticket statuses.", 500);
             }
         }
@@ -537,7 +559,7 @@
                     PriorityId = t.PriorityId,
                     StatusId = t.StatusId,
                     CreatedAt = t.CreatedAt,
-                    UpdatedAt = t.UpdatedAt 
+                    UpdatedAt = t.UpdatedAt
                 });
 
                 var pagedResult = new PagedResult<TicketDto>
@@ -550,11 +572,11 @@
 
                 return Result<PagedResult<TicketDto>>.Success(pagedResult);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Error fetching filtered tickets with filter {@Filter}, page {Page}, pageSize {PageSize}", filter, page, pageSize);
                 return Result<PagedResult<TicketDto>>.Failure("Failed to get filtered tickets.", 500);
             }
         }
-         
     }
 }

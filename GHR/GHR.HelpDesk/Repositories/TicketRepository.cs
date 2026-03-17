@@ -1,12 +1,12 @@
 ﻿namespace GHR.HelpDesk.Repositories
 {
     using System.Data;
-
+    using Microsoft.Data.SqlClient;
+ 
     using Dapper;
-
     using GHR.HelpDesk.DTOs;
     using GHR.HelpDesk.Entities;  
-    using GHR.SharedKernel.Exceptions;
+ 
     public interface ITicketRepository
     {
         Task<Ticket> GetByIdAsync(int ticketId);
@@ -28,53 +28,55 @@
         Task<IEnumerable<Ticket>> GetByPriorityAsync(int priorityId); 
         Task<int> BulkUpdateStatusAsync(IEnumerable<int> ticketIds, int statusId);
         Task<(IEnumerable<Ticket>, int totalCount)> GetFilteredTicketsPagedAsync(TicketFilterDto filter, int page, int pageSize);
-    }   
+    }
 
     public class TicketRepository : ITicketRepository
     {
-        private readonly IDbConnection _dbConnection; 
-        public TicketRepository(IDbConnection dbConnection) =>
-            _dbConnection = dbConnection;
+        private readonly string _connectionString;
 
-        public Task<Ticket?> GetByIdAsync(int ticketId)
+        public TicketRepository(IConfiguration configuration)
         {
+            _connectionString = configuration.GetConnectionString("DefaultConnection");
+        }
+
+        private IDbConnection CreateConnection() => new SqlConnection(_connectionString);
+
+        public async Task<Ticket?> GetByIdAsync(int ticketId)
+        {
+            using var connection = CreateConnection();
             const string sql = @"SELECT * FROM Tickets WHERE Id = @TicketId";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.QueryFirstOrDefaultAsync<Ticket>(sql, new { TicketId = ticketId }),
-                "Failed to retrieve ticket by Id.");
+            return await connection.QueryFirstOrDefaultAsync<Ticket>(sql, new { TicketId = ticketId });
         }
 
-        public Task<IEnumerable<Ticket>> GetAllAsync()
+        public async Task<IEnumerable<Ticket>> GetAllAsync()
         {
+            using var connection = CreateConnection();
             const string sql = @"SELECT * FROM Tickets ORDER BY CreatedAt DESC";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.QueryAsync<Ticket>(sql),
-                "Failed to retrieve all tickets.");
+            return await connection.QueryAsync<Ticket>(sql);
         }
 
-        public Task<IEnumerable<Ticket>> GetAllUserTicketsAsync(int userId)
+        public async Task<IEnumerable<Ticket>> GetAllUserTicketsAsync(int userId)
         {
-            const string sql = @"SELECT * FROM Tickets WHERE UserId = @UserId ORDER BY CreatedAt DESC"; 
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.QueryAsync<Ticket>(sql, new { UserId = userId }),
-                "Failed to retrieve all tickets.");
+            using var connection = CreateConnection();
+            const string sql = @"SELECT * FROM Tickets WHERE UserId = @UserId ORDER BY CreatedAt DESC";
+            return await connection.QueryAsync<Ticket>(sql, new { UserId = userId });
         }
 
-        public Task<int> CreateAsync(Ticket ticket)
+        public async Task<int> CreateAsync(Ticket ticket)
         {
+            using var connection = CreateConnection();
             const string sql = @"
-                INSERT INTO Tickets (Title, Description, UserId, StaffId, DepartmentId, LocationId, 
+                INSERT INTO Tickets (Title, Description, UserId, StaffId, DepartmentId, LocationId,
                                      CategoryId, PriorityId, StatusId, TicketTypeId, CreatedAt)
                 VALUES (@Title, @Description, @UserId, @StaffId, @DepartmentId, @LocationId,
                         @CategoryId, @PriorityId, @StatusId, @TicketTypeId, GETDATE());
                 SELECT CAST(SCOPE_IDENTITY() AS INT)";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.ExecuteScalarAsync<int>(sql, ticket),
-                "Failed to create ticket.");
+            return await connection.ExecuteScalarAsync<int>(sql, ticket);
         }
 
-        public Task<int> UpdateAsync(Ticket ticket)
+        public async Task<int> UpdateAsync(Ticket ticket)
         {
+            using var connection = CreateConnection();
             const string sql = @"
                 UPDATE Tickets
                 SET Title = @Title,
@@ -88,167 +90,181 @@
                     TicketTypeId = @TicketTypeId,
                     UpdatedAt = GETDATE()
                 WHERE Id = @Id";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.ExecuteAsync(sql, ticket),
-                "Failed to update ticket.");
+            return await connection.ExecuteAsync(sql, ticket);
         }
 
-        public Task<int> DeleteAsync(int ticketId)
+        public async Task<int> DeleteAsync(int ticketId)
         {
+            using var connection = CreateConnection();
             const string sql = @"DELETE FROM Tickets WHERE Id = @TicketId";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.ExecuteAsync(sql, new { TicketId = ticketId }),
-                "Failed to delete ticket.");
+            return await connection.ExecuteAsync(sql, new { TicketId = ticketId });
         }
 
-        public Task<IEnumerable<TicketLog>> GetLogsAsync(int ticketId)
+        public async Task<IEnumerable<TicketLog>> GetLogsAsync(int ticketId)
         {
+            using var connection = CreateConnection();
             const string sql = @"SELECT * FROM TicketLogs WHERE TicketId = @TicketId ORDER BY CreatedAt ASC";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.QueryAsync<TicketLog>(sql, new { TicketId = ticketId }),
-                "Failed to retrieve ticket logs.");
+            return await connection.QueryAsync<TicketLog>(sql, new { TicketId = ticketId });
         }
 
-        public Task<int> AddLogAsync(TicketLog log)
+        public async Task<int> AddLogAsync(TicketLog log)
         {
+            using var connection = CreateConnection();
             const string sql = @"
                 INSERT INTO TicketLogs (TicketId, Comment, CreatedBy, CreatedByRole, CreatedAt)
                 VALUES (@TicketId, @Comment, @CreatedBy, @CreatedByRole, GETDATE());
                 SELECT CAST(SCOPE_IDENTITY() AS INT)";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.ExecuteScalarAsync<int>(sql, log),
-                "Failed to add ticket log.");
+            return await connection.ExecuteScalarAsync<int>(sql, log);
         }
 
-        public Task<int> AssignStaffAsync(int ticketId, int staffId)
+        public async Task<int> AssignStaffAsync(int ticketId, int staffId)
         {
+            using var connection = CreateConnection();
             const string sql = @"UPDATE Tickets SET StaffId = @StaffId, UpdatedAt = GETDATE() WHERE Id = @TicketId";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.ExecuteAsync(sql, new { TicketId = ticketId, StaffId = staffId }),
-                "Failed to assign staff.");
+            return await connection.ExecuteAsync(sql, new { TicketId = ticketId, StaffId = staffId });
         }
 
-        public Task<int> UpdateStatusAsync(int ticketId, int statusId)
+        public async Task<int> UpdateStatusAsync(int ticketId, int statusId)
         {
+            using var connection = CreateConnection();
             const string sql = @"UPDATE Tickets SET StatusId = @StatusId, UpdatedAt = GETDATE() WHERE Id = @TicketId";
-            return  RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.ExecuteAsync(sql, new { TicketId = ticketId, StatusId = statusId }),
-                "Failed to update ticket status.");
+            return await connection.ExecuteAsync(sql, new { TicketId = ticketId, StatusId = statusId });
         }
 
-        public Task<IEnumerable<Ticket>> GetByStatusAsync(int statusId)
+        public async Task<IEnumerable<Ticket>> GetByStatusAsync(int statusId)
         {
+            using var connection = CreateConnection();
             const string sql = @"SELECT * FROM Tickets WHERE StatusId = @StatusId ORDER BY CreatedAt DESC";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.QueryAsync<Ticket>(sql, new { StatusId = statusId }),
-                "Failed to retrieve tickets by status.");
+            return await connection.QueryAsync<Ticket>(sql, new { StatusId = statusId });
         }
 
-        public Task<IEnumerable<Ticket>> GetByStaffAsync(int staffId)
+        public async Task<IEnumerable<Ticket>> GetByStaffAsync(int staffId)
         {
+            using var connection = CreateConnection();
             const string sql = @"SELECT * FROM Tickets WHERE StaffId = @StaffId ORDER BY CreatedAt DESC";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.QueryAsync<Ticket>(sql, new { StaffId = staffId }),
-                "Failed to retrieve tickets by staff.");
+            return await connection.QueryAsync<Ticket>(sql, new { StaffId = staffId });
         }
 
-        public Task<IEnumerable<Ticket>> GetByDateRangeAsync(DateTime startDate, DateTime endDate)
+        public async Task<IEnumerable<Ticket>> GetByDateRangeAsync(DateTime startDate, DateTime endDate)
         {
+            using var connection = CreateConnection();
             const string sql = @"
                 SELECT * FROM Tickets 
                 WHERE CreatedAt BETWEEN @StartDate AND @EndDate
                 ORDER BY CreatedAt DESC";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.QueryAsync<Ticket>(sql, new { StartDate = startDate, EndDate = endDate }),
-                "Failed to retrieve tickets by date range.");
+            return await connection.QueryAsync<Ticket>(sql, new { StartDate = startDate, EndDate = endDate });
         }
 
-        public Task<int> AddCommentAsync(Comment comment)
+        public async Task<int> AddCommentAsync(Comment comment)
         {
+            using var connection = CreateConnection();
             const string sql = @"
                 INSERT INTO TicketComments (TicketId, Text, CreatedByUserId, CreatedAt)
                 VALUES (@TicketId, @Text, @CreatedByUserId, GETDATE());
                 SELECT CAST(SCOPE_IDENTITY() AS INT)";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.ExecuteScalarAsync<int>(sql, comment),
-                "Failed to add comment.");
+            return await connection.ExecuteScalarAsync<int>(sql, comment);
         }
 
-        public Task<IEnumerable<Comment>> GetCommentsAsync(int ticketId)
+        public async Task<IEnumerable<Comment>> GetCommentsAsync(int ticketId)
         {
+            using var connection = CreateConnection();
             const string sql = @"SELECT * FROM TicketComments WHERE TicketId = @TicketId ORDER BY CreatedAt ASC";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.QueryAsync<Comment>(sql, new { TicketId = ticketId }),
-                "Failed to retrieve comments.");
+            return await connection.QueryAsync<Comment>(sql, new { TicketId = ticketId });
         }
 
-        public Task<Dictionary<int, int>> GetTicketCountGroupedByStatusAsync()
+        public async Task<Dictionary<int, int>> GetTicketCountGroupedByStatusAsync()
         {
+            using var connection = CreateConnection();
             const string sql = @"SELECT StatusId, COUNT(*) AS Count FROM Tickets GROUP BY StatusId";
-            return RepositoryHelper.ExecuteWithHandlingAsync(async () =>
-            {
-                var result = await _dbConnection.QueryAsync<(int StatusId, int Count)>(sql);
-                return result.ToDictionary(r => r.StatusId, r => r.Count);
-            }, "Failed to count tickets grouped by status.");
+            var result = await connection.QueryAsync<(int StatusId, int Count)>(sql);
+            return result.ToDictionary(r => r.StatusId, r => r.Count);
         }
 
-        public Task<IEnumerable<Ticket>> GetByPriorityAsync(int priorityId)
+        public async Task<IEnumerable<Ticket>> GetByPriorityAsync(int priorityId)
         {
+            using var connection = CreateConnection();
             const string sql = @"SELECT * FROM Tickets WHERE PriorityId = @PriorityId ORDER BY CreatedAt DESC";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.QueryAsync<Ticket>(sql, new { PriorityId = priorityId }),
-                "Failed to retrieve tickets by priority.");
+            return await connection.QueryAsync<Ticket>(sql, new { PriorityId = priorityId });
         }
 
-        public Task<int> BulkUpdateStatusAsync(IEnumerable<int> ticketIds, int statusId)
+        public async Task<int> BulkUpdateStatusAsync(IEnumerable<int> ticketIds, int statusId)
         {
+            using var connection = CreateConnection();
             const string sql = @"
                 UPDATE Tickets
                 SET StatusId = @StatusId, UpdatedAt = GETDATE()
                 WHERE Id IN @TicketIds";
-            return RepositoryHelper.ExecuteWithHandlingAsync(
-                () => _dbConnection.ExecuteAsync(sql, new { StatusId = statusId, TicketIds = ticketIds }),
-                "Failed to bulk update ticket statuses.");
+            return await connection.ExecuteAsync(sql, new { StatusId = statusId, TicketIds = ticketIds });
         }
 
         public async Task<(IEnumerable<Ticket>, int totalCount)> GetFilteredTicketsPagedAsync(TicketFilterDto filter, int page, int pageSize)
         {
-            try
+            using var connection = CreateConnection();
+            var sql = @"SELECT * FROM Tickets WHERE 1=1";
+            var countSql = @"SELECT COUNT(*) FROM Tickets WHERE 1=1";
+            var parameters = new DynamicParameters();
+            var whereClause = "";
+
+            if (filter.StatusId.HasValue)
             {
-                var sql = @"SELECT * FROM Tickets WHERE 1=1";
-                var countSql = @"SELECT COUNT(*) FROM Tickets WHERE 1=1";
-                var parameters = new DynamicParameters();
-                var whereClause = "";
-
-                if (filter.StatusId.HasValue) { whereClause += " AND StatusId = @StatusId"; parameters.Add("StatusId", filter.StatusId.Value); }
-                if (filter.StaffId.HasValue) { whereClause += " AND StaffId = @StaffId"; parameters.Add("StaffId", filter.StaffId.Value); }
-                if (filter.PriorityId.HasValue) { whereClause += " AND PriorityId = @PriorityId"; parameters.Add("PriorityId", filter.PriorityId.Value); }
-                if (filter.DepartmentId.HasValue) { whereClause += " AND DepartmentId = @DepartmentId"; parameters.Add("DepartmentId", filter.DepartmentId.Value); }
-                if (filter.UserId.HasValue) { whereClause += " AND UserId = @UserId"; parameters.Add("UserId", filter.UserId.Value); }
-                if (filter.LocationId.HasValue) { whereClause += " AND LocationId = @LocationId"; parameters.Add("LocationId", filter.LocationId.Value); }
-                if (filter.CategoryId.HasValue) { whereClause += " AND CategoryId = @CategoryId"; parameters.Add("CategoryId", filter.CategoryId.Value); }
-                if (filter.CreatedAfter.HasValue) { whereClause += " AND CreatedAt >= @CreatedAfter"; parameters.Add("CreatedAfter", filter.CreatedAfter.Value); }
-                if (filter.CreatedBefore.HasValue) { whereClause += " AND CreatedAt <= @CreatedBefore"; parameters.Add("CreatedBefore", filter.CreatedBefore.Value); }
-                if (!string.IsNullOrWhiteSpace(filter.SearchTerm))
-                {
-                    whereClause += " AND (Title LIKE @SearchTerm OR Description LIKE @SearchTerm)";
-                    parameters.Add("SearchTerm", $"%{filter.SearchTerm}%");
-                }
-
-                sql += whereClause + " ORDER BY CreatedAt DESC OFFSET @Offset ROWS FETCH NEXT @PageSize ROWS ONLY";
-                countSql += whereClause;
-                parameters.Add("Offset", (page - 1) * pageSize);
-                parameters.Add("PageSize", pageSize);
-
-                var tickets = await _dbConnection.QueryAsync<Ticket>(sql, parameters);
-                var totalCount = await _dbConnection.ExecuteScalarAsync<int>(countSql, parameters);
-
-                return (tickets, totalCount);
+                whereClause += " AND StatusId = @StatusId";
+                parameters.Add("StatusId", filter.StatusId.Value);
             }
-            catch (Exception ex)
+            if (filter.StaffId.HasValue)
             {
-                throw new RepositoryException("Failed to retrieve paged filtered tickets.", ex);
+                whereClause += " AND StaffId = @StaffId";
+                parameters.Add("StaffId", filter.StaffId.Value);
             }
-        } 
+            if (filter.PriorityId.HasValue)
+            {
+                whereClause += " AND PriorityId = @PriorityId";
+                parameters.Add("PriorityId", filter.PriorityId.Value);
+            }
+            if (filter.DepartmentId.HasValue)
+            {
+                whereClause += " AND DepartmentId = @DepartmentId";
+                parameters.Add("DepartmentId", filter.DepartmentId.Value);
+            }
+            if (filter.UserId.HasValue)
+            {
+                whereClause += " AND UserId = @UserId";
+                parameters.Add("UserId", filter.UserId.Value);
+            }
+            if (filter.LocationId.HasValue)
+            {
+                whereClause += " AND LocationId = @LocationId";
+                parameters.Add("LocationId", filter.LocationId.Value);
+            }
+            if (filter.CategoryId.HasValue)
+            {
+                whereClause += " AND CategoryId = @CategoryId";
+                parameters.Add("CategoryId", filter.CategoryId.Value);
+            }
+            if (filter.CreatedAfter.HasValue)
+            {
+                whereClause += " AND CreatedAt >= @CreatedAfter";
+                parameters.Add("CreatedAfter", filter.CreatedAfter.Value);
+            }
+            if (filter.CreatedBefore.HasValue)
+            {
+                whereClause += " AND CreatedAt <= @CreatedBefore";
+                parameters.Add("CreatedBefore", filter.CreatedBefore.Value);
+            }
+            if (!string.IsNullOrWhiteSpace(filter.SearchTerm))
+            {
+                whereClause += " AND (Title LIKE @SearchTerm OR Description LIKE @SearchTerm)";
+                parameters.Add("SearchTerm", $"%{filter.SearchTerm}%");
+            }
+
+            sql += whereClause + " ORDER BY CreatedAt DESC OFFSET @Offset ROWS FETCH NEXT @PageSize ROWS ONLY";
+            countSql += whereClause;
+            parameters.Add("Offset", (page - 1) * pageSize);
+            parameters.Add("PageSize", pageSize);
+
+            var tickets = await connection.QueryAsync<Ticket>(sql, parameters);
+            var totalCount = await connection.ExecuteScalarAsync<int>(countSql, parameters);
+
+            return (tickets, totalCount);
+        }
     }
 }

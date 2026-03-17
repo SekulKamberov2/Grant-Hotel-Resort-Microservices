@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GHR.LeaveManagement")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b1ba0c3da9aa9e040f45fe60e51d2e6f43fc0ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8907f6a3f63f0ca4e1b1d4ee486565e00be87fea")]
 [assembly: System.Reflection.AssemblyProductAttribute("GHR.LeaveManagement")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GHR.LeaveManagement")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
