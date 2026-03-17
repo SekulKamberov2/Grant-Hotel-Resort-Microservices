@@ -1,20 +1,28 @@
 ﻿namespace GHR.Rating.Infrastructure.Repositories
 {
     using System.Data;
-
+    using Microsoft.Data.SqlClient;
     using Dapper;
-    using GHR.Rating.Domain.Repositories;  
+    using GHR.Rating.Domain.Repositories;
+ 
+
     public class DepartmentRepository : IDepartmentRepository
     {
-        private readonly IDbConnection _db;
-        public DepartmentRepository(IDbConnection db) => _db = db;
+        private readonly string _connectionString;
+
+        public DepartmentRepository(IConfiguration configuration)
+        {
+            _connectionString = configuration.GetConnectionString("DefaultConnection");
+        }
+
+        private IDbConnection CreateConnection() => new SqlConnection(_connectionString);
 
         public async Task<bool> Exists(int departmentId)
         {
+            using var connection = CreateConnection();
             var sql = "SELECT CASE WHEN EXISTS (SELECT 1 FROM Departments WHERE Id = @Id) THEN 1 ELSE 0 END";
-            var exists = await _db.ExecuteScalarAsync<bool>(sql, new { Id = departmentId });
+            var exists = await connection.ExecuteScalarAsync<bool>(sql, new { Id = departmentId });
             return exists;
         }
-
     }
 }

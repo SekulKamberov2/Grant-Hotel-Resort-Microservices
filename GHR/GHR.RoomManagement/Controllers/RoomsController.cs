@@ -5,6 +5,7 @@
     using GHR.RoomManagement.DTOs;
     using GHR.RoomManagement.Entities;
     using GHR.RoomManagement.Services; 
+
     public class RoomsController : BaseApiController
     {
         private readonly IRoomService _roomManagementService; 

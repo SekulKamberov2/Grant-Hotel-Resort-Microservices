@@ -11,8 +11,14 @@
 
     public class AwardService : IAwardService
     {
-        private readonly IAwardRepository _awardRepository; 
-        public AwardService(IAwardRepository awardRepository) => _awardRepository = awardRepository;
+        private readonly IAwardRepository _awardRepository;
+        private readonly ILogger<AwardService> _logger;
+
+        public AwardService(IAwardRepository awardRepository, ILogger<AwardService> logger)
+        {
+            _awardRepository = awardRepository;
+            _logger = logger;
+        }
 
         public async Task<Result<int>> CreateAwardAsync(CreateAwardCommand command)
         {
@@ -29,7 +35,8 @@
             }
             catch (Exception ex)
             {
-                return Result<int>.Failure($"Failed to create award. {ex.Message}", 500);
+                _logger.LogError(ex, "Error creating award {@Command}", command);
+                return Result<int>.Failure("An error occurred while creating the award. Please try again later.", 500);
             }
         }
 
@@ -46,7 +53,8 @@
             }
             catch (Exception ex)
             {
-                return Result<bool>.Failure($"Failed to delete award. {ex.Message}", 500);
+                _logger.LogError(ex, "Error deleting award {AwardId}", awardId);
+                return Result<bool>.Failure("An error occurred while deleting the award. Please try again later.", 500);
             }
         }
 
@@ -69,7 +77,8 @@
             }
             catch (Exception ex)
             {
-                return Result<bool>.Failure($"Error updating award. {ex.Message}", 500);
+                _logger.LogError(ex, "Error updating award {@Command}", command);
+                return Result<bool>.Failure("An error occurred while updating the award. Please try again later.", 500);
             }
         }
 
@@ -81,7 +90,6 @@
                     return Result<Award>.Failure("Invalid award ID.", 400);
 
                 var award = await _awardRepository.GetAwardByIdAsync(id);
-
                 if (award == null)
                     return Result<Award>.Failure($"Award with ID {id} not found.", 404);
 
@@ -89,9 +97,11 @@
             }
             catch (Exception ex)
             {
-                return Result<Award>.Failure($"An error occurred while retrieving the award: {ex.Message}", 500);
+                _logger.LogError(ex, "Error fetching award {AwardId}", id);
+                return Result<Award>.Failure("An error occurred while retrieving the award. Please try again later.", 500);
             }
         }
+
         public async Task<Result<IEnumerable<Award>>> GetAwardsByPeriodAsync(string period)
         {
             try
@@ -104,17 +114,18 @@
                     return Result<IEnumerable<Award>>.Failure("Invalid period. Allowed values: Weekly, Monthly, Yearly.", 400);
 
                 var awards = await _awardRepository.GetAwardsByPeriodAsync(period);
-
                 if (awards == null || !awards.Any())
-                    return Result<IEnumerable<Award>>.Failure("No awards found for the specified period.", 404);
+                    return Result<IEnumerable<Award>>.Success(Enumerable.Empty<Award>()); // Not a failure
 
                 return Result<IEnumerable<Award>>.Success(awards);
             }
             catch (Exception ex)
             {
-                return Result<IEnumerable<Award>>.Failure($"An error occurred while fetching awards: {ex.Message}", 500);
+                _logger.LogError(ex, "Error fetching awards by period '{Period}'", period);
+                return Result<IEnumerable<Award>>.Failure("An error occurred while fetching awards. Please try again later.", 500);
             }
         }
+
         public async Task<Result<List<Award>>> GenerateAwardsAsync(string period)
         {
             try
@@ -127,12 +138,10 @@
                     return Result<List<Award>>.Failure("Invalid period. Valid values: Weekly, Monthly, Yearly.", 400);
 
                 var topPerformers = await _awardRepository.GetTopPerformersByPeriodAsync(period);
-
                 if (topPerformers == null || !topPerformers.Any())
-                    return Result<List<Award>>.Failure("No top performers found for the specified period.", 404);
+                    return Result<List<Award>>.Success(new List<Award>()); // No performers – not a failure
 
                 var createdAwards = new List<Award>();
-
                 foreach (var performer in topPerformers)
                 {
                     var command = new CreateAwardCommand
@@ -143,21 +152,20 @@
                         Period = period,
                         Date = DateTime.UtcNow
                     };
-                     
-                    var awardId = await _awardRepository.InsertAwardAsync(command); 
-                    var award = await _awardRepository.GetAwardByIdAsync(awardId);
 
-                    if (award != null) createdAwards.Add(award); 
+                    var awardId = await _awardRepository.InsertAwardAsync(command);
+                    var award = await _awardRepository.GetAwardByIdAsync(awardId);
+                    if (award != null)
+                        createdAwards.Add(award);
                 }
 
                 return Result<List<Award>>.Success(createdAwards);
             }
             catch (Exception ex)
             {
-                return Result<List<Award>>.Failure($"An error occurred while generating awards: {ex.Message}", 500);
+                _logger.LogError(ex, "Error generating awards for period '{Period}'", period);
+                return Result<List<Award>>.Failure("An error occurred while generating awards. Please try again later.", 500);
             }
         }
-
-
     }
 }
