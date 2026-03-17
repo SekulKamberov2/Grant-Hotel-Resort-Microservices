@@ -27,10 +27,16 @@
     {
         private readonly IRoomRepository _roomsRepository;
         private readonly IHttpClientFactory _httpClientFactory;
-        public RoomService(IRoomRepository roomsRepository, IHttpClientFactory httpClientFactory)
+        private readonly ILogger<RoomService> _logger;
+
+        public RoomService(
+            IRoomRepository roomsRepository,
+            IHttpClientFactory httpClientFactory,
+            ILogger<RoomService> logger)
         {
             _roomsRepository = roomsRepository;
             _httpClientFactory = httpClientFactory;
+            _logger = logger;
         }
 
         public async Task<Result<IEnumerable<Room>>> GetRoomsAsync(string? status, int? floor, string? type)
@@ -38,11 +44,12 @@
             try
             {
                 var rooms = await _roomsRepository.GetAllAsync(status, floor, type);
-                return Result<IEnumerable<Room>>.Success(rooms);
+                return Result<IEnumerable<Room>>.Success(rooms ?? Enumerable.Empty<Room>());
             }
             catch (Exception ex)
             {
-                return Result<IEnumerable<Room>>.Failure($"Failed to retrieve rooms. {ex.Message}", 500);
+                _logger.LogError(ex, "Error fetching rooms with status={Status}, floor={Floor}, type={Type}", status, floor, type);
+                return Result<IEnumerable<Room>>.Failure("An error occurred while retrieving rooms.", 500);
             }
         }
 
@@ -53,12 +60,12 @@
                 var room = await _roomsRepository.GetByIdAsync(id);
                 if (room == null)
                     return Result<Room?>.Failure("Room not found", 404);
-
                 return Result<Room?>.Success(room);
             }
             catch (Exception ex)
             {
-                return Result<Room?>.Failure($"Failed to retrieve room. {ex.Message}", 500);
+                _logger.LogError(ex, "Error fetching room by ID {Id}", id);
+                return Result<Room?>.Failure("An error occurred while retrieving the room.", 500);
             }
         }
 
@@ -68,17 +75,17 @@
             {
                 if (string.IsNullOrWhiteSpace(room.RoomNumber))
                     return Result<int>.Failure("Room number is required", 400);
-             
+
                 var newId = await _roomsRepository.CreateAsync(room);
-          
-                Console.WriteLine(newId);
                 if (newId == 0)
-                    return Result<int>.Failure("Failed to create a room", 400); 
+                    return Result<int>.Failure("Failed to create a room", 400);
+
                 return Result<int>.Success(newId);
             }
             catch (Exception ex)
             {
-                return Result<int>.Failure($"Failed to create a room. {ex.Message}", 500);
+                _logger.LogError(ex, "Error creating room {@Room}", room);
+                return Result<int>.Failure("An error occurred while creating the room.", 500);
             }
         }
 
@@ -87,7 +94,7 @@
             try
             {
                 if (id != room.Id)
-                    return Result<bool>.Failure("Id mismatch", 400);
+                    return Result<bool>.Failure("ID mismatch", 400);
 
                 var updated = await _roomsRepository.UpdateAsync(id, room);
                 if (!updated)
@@ -97,7 +104,8 @@
             }
             catch (Exception ex)
             {
-                return Result<bool>.Failure($"Failed to update room. {ex.Message}", 500);
+                _logger.LogError(ex, "Error updating room {Id} with {@Room}", id, room);
+                return Result<bool>.Failure("An error occurred while updating the room.", 500);
             }
         }
 
@@ -113,20 +121,22 @@
             }
             catch (Exception ex)
             {
-                return Result<bool>.Failure($"Failed to delete room. {ex.Message}", 500);
+                _logger.LogError(ex, "Error deleting room {Id}", id);
+                return Result<bool>.Failure("An error occurred while deleting the room.", 500);
             }
         }
-         
+
         public async Task<Result<IEnumerable<RoomType>>> GetAllRoomTypesAsync()
         {
             try
             {
                 var data = await _roomsRepository.GetAllRoomTypesAsync();
-                return Result<IEnumerable<RoomType>>.Success(data);
+                return Result<IEnumerable<RoomType>>.Success(data ?? Enumerable.Empty<RoomType>());
             }
             catch (Exception ex)
             {
-                return Result<IEnumerable<RoomType>>.Failure($"Error loading room types. {ex.Message}", 500);
+                _logger.LogError(ex, "Error fetching room types");
+                return Result<IEnumerable<RoomType>>.Failure("An error occurred while loading room types.", 500);
             }
         }
 
@@ -143,13 +153,14 @@
                     Description = dto.Description
                 });
                 if (id == 0)
-                    return Result<int>.Failure("Failed to create a room type", 400);
+                    return Result<int>.Failure("Failed to create room type", 400);
 
                 return Result<int>.Success(id);
             }
             catch (Exception ex)
             {
-                return Result<int>.Failure($"Error creating room type. {ex.Message}", 500);
+                _logger.LogError(ex, "Error creating room type {@Dto}", dto);
+                return Result<int>.Failure("An error occurred while creating room type.", 500);
             }
         }
 
@@ -163,7 +174,6 @@
                     Name = dto.Name,
                     Description = dto.Description
                 });
-
                 if (!updated)
                     return Result<bool>.Failure("Room type not found or update failed", 404);
 
@@ -171,7 +181,8 @@
             }
             catch (Exception ex)
             {
-                return Result<bool>.Failure($"Error updating room type. {ex.Message}", 500);
+                _logger.LogError(ex, "Error updating room type {@Dto}", dto);
+                return Result<bool>.Failure("An error occurred while updating room type.", 500);
             }
         }
 
@@ -187,80 +198,87 @@
             }
             catch (Exception ex)
             {
-                return Result<bool>.Failure($"Error deleting room type. {ex.Message}", 500);
+                _logger.LogError(ex, "Error deleting room type {Id}", id);
+                return Result<bool>.Failure("An error occurred while deleting room type.", 500);
             }
         }
 
         public async Task<Result<IEnumerable<RoomAvailabilityDTO>>> GetAvailableRoomsAsync(DateTime? start, DateTime? end, string? type)
-        { 
-            if (!start.HasValue || !end.HasValue) 
-                return Result<IEnumerable<RoomAvailabilityDTO>>.Failure("Start and end dates are required.", 400); 
-
-            if (start > end) 
-                return Result<IEnumerable<RoomAvailabilityDTO>>.Failure("Start date must be before end date.", 400); 
+        {
+            if (!start.HasValue || !end.HasValue)
+                return Result<IEnumerable<RoomAvailabilityDTO>>.Failure("Start and end dates are required.", 400);
+            if (start > end)
+                return Result<IEnumerable<RoomAvailabilityDTO>>.Failure("Start date must be before end date.", 400);
 
             try
             {
-                var data = await _roomsRepository.GetAllAvailableRoomsAsync(start, end, type);  
-                return Result<IEnumerable<RoomAvailabilityDTO>>.Success(data);
+                var data = await _roomsRepository.GetAllAvailableRoomsAsync(start, end, type);
+                return Result<IEnumerable<RoomAvailabilityDTO>>.Success(data ?? Enumerable.Empty<RoomAvailabilityDTO>());
             }
             catch (Exception ex)
-            { 
-                return Result<IEnumerable<RoomAvailabilityDTO>>.Failure($"An error occurred while retrieving room availability: {ex.Message}", 500);
+            {
+                _logger.LogError(ex, "Error fetching available rooms from {Start} to {End} of type {Type}", start, end, type);
+                return Result<IEnumerable<RoomAvailabilityDTO>>.Failure("An error occurred while retrieving room availability.", 500);
             }
-        } 
+        }
 
         public async Task<Result<RoomAvailabilityDTO?>> GetAvailabilityByRoomIdAsync(int roomId)
-        { 
-            if (roomId <= 0) 
-                return Result<RoomAvailabilityDTO?>.Failure("Invalid room ID provided.", 400);  
+        {
+            if (roomId <= 0)
+                return Result<RoomAvailabilityDTO?>.Failure("Invalid room ID provided.", 400);
+
             try
             {
-                var data = await _roomsRepository.GetRoomAvailabilityByIdAsync(roomId); 
-                if (data == null) 
-                    return Result<RoomAvailabilityDTO?>.Failure($"No availability found for room with ID {roomId}.", 404); 
+                var data = await _roomsRepository.GetRoomAvailabilityByIdAsync(roomId);
+                if (data == null)
+                    return Result<RoomAvailabilityDTO?>.Failure($"No availability found for room with ID {roomId}.", 404);
 
                 return Result<RoomAvailabilityDTO?>.Success(data);
             }
             catch (Exception ex)
-            { 
-                return Result<RoomAvailabilityDTO?>.Failure($"An unexpected error occurred while retrieving room availability: {ex.Message}", 500);
+            {
+                _logger.LogError(ex, "Error fetching availability for room {RoomId}", roomId);
+                return Result<RoomAvailabilityDTO?>.Failure("An unexpected error occurred while retrieving room availability.", 500);
             }
         }
 
         public async Task<Result<IEnumerable<DutyDTO?>>> GetAllHouseKeepingAsync(string facility, string status)
-        { 
-            if (string.IsNullOrWhiteSpace(facility)) 
-                return Result<IEnumerable<DutyDTO?>>.Failure("Facility parameter is required.");  
-
+        {
+            if (string.IsNullOrWhiteSpace(facility))
+                return Result<IEnumerable<DutyDTO?>>.Failure("Facility parameter is required.", 400);
             if (string.IsNullOrWhiteSpace(status))
-                return Result<IEnumerable<DutyDTO?>>.Failure($"Status parameter is invalid. Allowed values.");
-               
-            var client = _httpClientFactory.CreateClient("DutyServiceClient");   
-            var url = $"/api/duties/housekeeping/facility/{facility}/status/{status}"; 
-            var response = await client.GetFromJsonAsync<Result<IEnumerable<Duty>>>(url);
+                return Result<IEnumerable<DutyDTO?>>.Failure("Status parameter is required.", 400);
 
-            var result = response?.Data?.Select(r => new DutyDTO
+            try
             {
-                Id = r.Id,
-                Title = r.Title,
-                Description = r.Description,
-                AssignedToUserId = r.AssignedToUserId,
-                AssignedByUserId = r.AssignedByUserId,
-                RoleRequired = r.RoleRequired,
-                Facility = r.Facility,
-                Status = r.Status,
-                Priority = r.Priority,
-                DueDate = r.DueDate,
-                CompletionDate = r.CompletionDate,
-                CreatedAt = r.CreatedAt,
-                UpdatedAt = r.UpdatedAt
+                var client = _httpClientFactory.CreateClient("DutyServiceClient");
+                var url = $"/api/duties/housekeeping/facility/{facility}/status/{status}";
+                var response = await client.GetFromJsonAsync<Result<IEnumerable<Duty>>>(url);
 
-            }) ?? Enumerable.Empty<DTOs.DutyDTO>(); 
-            return Result<IEnumerable<DTOs.DutyDTO?>>.Success(result); 
+                var result = response?.Data?.Select(r => new DutyDTO
+                {
+                    Id = r.Id,
+                    Title = r.Title,
+                    Description = r.Description,
+                    AssignedToUserId = r.AssignedToUserId,
+                    AssignedByUserId = r.AssignedByUserId,
+                    RoleRequired = r.RoleRequired,
+                    Facility = r.Facility,
+                    Status = r.Status,
+                    Priority = r.Priority,
+                    DueDate = r.DueDate,
+                    CompletionDate = r.CompletionDate,
+                    CreatedAt = r.CreatedAt,
+                    UpdatedAt = r.UpdatedAt
+                }) ?? Enumerable.Empty<DutyDTO>();
+
+                return Result<IEnumerable<DutyDTO?>>.Success(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error fetching housekeeping duties for facility '{Facility}' and status '{Status}'", facility, status);
+                return Result<IEnumerable<DutyDTO?>>.Failure("An error occurred while retrieving housekeeping duties.", 500);
+            }
         }
-
-
     }
-
 }

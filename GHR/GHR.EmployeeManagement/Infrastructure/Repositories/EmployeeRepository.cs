@@ -32,7 +32,8 @@
 
         public EmployeeRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection");
+            _connectionString = configuration.GetConnectionString("DefaultConnection") ??
+                throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
         }
 
         private IDbConnection CreateConnection() => new SqlConnection(_connectionString);
